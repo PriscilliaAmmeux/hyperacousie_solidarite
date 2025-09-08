@@ -1,6 +1,7 @@
 ---
-import Navbar from '../NabBar/NavBar.astro';
+import Navbar from '../NavBar/NavBar.astro';
 import '../../src/styles/variables.css';
+import NavBarMobile from '../NavBarMobile/NavBarMobile.astro';
 
 export interface Props {
   currentPath?: string;
@@ -10,8 +11,9 @@ const { currentPath } = Astro.props;
 ---
 
 <header class="relative m-0 p-0">
+    <!-- Navigation desktop -->
   <section 
-    class="relative bg-gradient-to-r from-blue-50 to-blue-100 bg-cover bg-center bg-no-repeat py-72 m-0"
+    class="desktop-hero-section relative bg-gradient-to-r from-blue-50 to-blue-100 bg-cover bg-center bg-no-repeat py-72 m-0"
     style="background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('/background-header.webp');"
   >
     <div class="w-full py-24" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
@@ -25,10 +27,52 @@ const { currentPath } = Astro.props;
     </div>
   </section>
 
-  <!-- Navigation -->
-  <div class="bg-slate-800 text-white shadow-lg">
+
+  <section class="desktop-nav-section bg-slate-800 text-white shadow-lg">
     <div class="w-full py-4">
       <Navbar currentPath={currentPath} />
     </div>
+  </section>
+
+  <!-- Navigation mobile -->
+  <section class="mobile-logo-section py-4 px-4 flex justify-center items-center">
+      <img 
+        src="/logo-mobile.webp" 
+        alt="Logo Hyperacousie Solidarité"
+        class="h-16 "
+      />
+  </section>
+
+  <div class="mobile-navbar-container">
+    <NavBarMobile currentPath={currentPath} />
   </div>
 </header>
+
+<style>
+  .mobile-logo-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mobile-navbar-container {
+    display: block;
+  }
+
+  .desktop-hero-section,
+  .desktop-nav-section {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    .mobile-logo-section,
+    .mobile-navbar-container {
+      display: none !important;
+    }
+    
+    .desktop-hero-section,
+    .desktop-nav-section {
+      display: block !important;
+    }
+  }
+</style>
