@@ -1,4 +1,5 @@
 ---
+// Navigation component for Hyperacousie Solidarité
 import Button from '../Button/Button.astro';
 import { getNavigationItems, isCurrentPage } from '../../src/utils/helpers.ts';
 import '../../src/styles/variables.css';
@@ -7,19 +8,19 @@ const { currentPath = '' } = Astro.props;
 const navItems = getNavigationItems();
 ---
 
-<nav class="flex items-center w-full" style="display: flex !important; align-items: center !important; justify-content: space-between !important; width: 100% !important;">
+<nav class="flex items-center w-full" style="display: flex !important; align-items: center !important; justify-content: space-between !important; width: 100% !important;" role="navigation" aria-label="Navigation principale">
   <section class="flex-shrink-0" style="flex-shrink: 0 !important;">
-    <a href="/" class="flex items-center">
+    <a href="/" class="flex items-center" aria-label="Retour à l'accueil - Hyperacousie Solidarité">
       <img 
         src="/logo.webp" 
-        alt="Hyperacousie Solidarité Logo" 
+        alt="Logo Hyperacousie Solidarité"
         class="h-12 w-auto"
       />
     </a>
   </section>
   
   <section class="flex items-center justify-center" style="flex: 1 !important; display: flex !important; justify-content: center !important;">
-    <div class="flex items-center space-x-8" style="display: flex !important; align-items: center !important; gap: 2rem !important;">
+    <div class="flex items-center space-x-8" style="display: flex !important; align-items: center !important; gap: 2rem !important;" role="list">
       {navItems.map((item) => (
         <a 
           href={item.href}
@@ -28,6 +29,9 @@ const navItems = getNavigationItems();
               ? 'nav-link-active'
               : 'nav-link-default'
           }`}
+          role="listitem"
+          aria-current={isCurrentPage(item.href, currentPath) ? 'page' : undefined}
+          tabindex="0"
         >
           {item.label}
         </a>
@@ -35,12 +39,13 @@ const navItems = getNavigationItems();
     </div>
   </section>
 
-  <!-- CTA Button à droite -->
+  <!-- CTA Button on the right -->
   <section class="flex flex-shrink-0 pr-4" style="flex-shrink: 0 !important; padding-right: 1rem !important;">
     <Button 
       variant="teal" 
       size="sm"
       href="https://www.helloasso.com/associations/hyperacousie-solidarite"
+      aria-label="Adhérer à l'association ou faire un don via HelloAsso"
     >
       Adhérer / Faire un don
     </Button>
@@ -53,9 +58,12 @@ const navItems = getNavigationItems();
     text-decoration: none;
     position: relative;
     padding-bottom: 0.25rem;
+    border-radius: 2px;
+    outline: none;
   }
   
-  .nav-link-default:hover {
+  .nav-link-default:hover,
+  .nav-link-default:focus {
     color: var(--nav-text-hover);
     border-bottom: 2px solid var(--nav-text-hover);
   }
@@ -63,6 +71,24 @@ const navItems = getNavigationItems();
   .nav-link-active {
     color: var(--nav-text-active);
     border-bottom: 2px solid var(--nav-text-active);
+  }
+  
+  .nav-link-active:focus {
+    outline: none;
+  }
+  
+  /* Accessibility contrast improvements */
+  @media (prefers-reduced-motion: reduce) {
+    .nav-link {
+      transition: none;
+    }
+  }
+  
+  /* Dark mode support */
+  @media (prefers-color-scheme: dark) {
+    .nav-link {
+      color: var(--nav-text-color);
+    }
   }
 </style>
 
