@@ -1,0 +1,69 @@
+---
+import Button from '../Button/Button.astro';
+import { getNavigationItems, isCurrentPage } from '../../src/utils/helpers.ts';
+import '../../src/styles/variables.css';
+
+const { currentPath = '' } = Astro.props;
+const navItems = getNavigationItems();
+---
+
+<nav class="flex items-center w-full" style="display: flex !important; align-items: center !important; justify-content: space-between !important; width: 100% !important;">
+  <section class="flex-shrink-0" style="flex-shrink: 0 !important;">
+    <a href="/" class="flex items-center">
+      <img 
+        src="/logo.webp" 
+        alt="Hyperacousie Solidarité Logo" 
+        class="h-12 w-auto"
+      />
+    </a>
+  </section>
+  
+  <section class="flex items-center justify-center" style="flex: 1 !important; display: flex !important; justify-content: center !important;">
+    <div class="flex items-center space-x-8" style="display: flex !important; align-items: center !important; gap: 2rem !important;">
+      {navItems.map((item) => (
+        <a 
+          href={item.href}
+          class={`font-medium transition-all duration-300 whitespace-nowrap nav-link ${
+            isCurrentPage(item.href, currentPath)
+              ? 'nav-link-active'
+              : 'nav-link-default'
+          }`}
+        >
+          {item.label}
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- CTA Button à droite -->
+  <section class="flex flex-shrink-0 pr-4" style="flex-shrink: 0 !important; padding-right: 1rem !important;">
+    <Button 
+      variant="teal" 
+      size="sm"
+      href="https://www.helloasso.com/associations/hyperacousie-solidarite"
+    >
+      Adhérer / Faire un don
+    </Button>
+  </section>
+</nav>
+
+<style>
+  .nav-link {
+    color: var(--nav-text-color);
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 0.25rem;
+  }
+  
+  .nav-link-default:hover {
+    color: var(--nav-text-hover);
+    border-bottom: 2px solid var(--nav-text-hover);
+  }
+  
+  .nav-link-active {
+    color: var(--nav-text-active);
+    border-bottom: 2px solid var(--nav-text-active);
+  }
+</style>
+
+
