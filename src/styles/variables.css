@@ -1,0 +1,78 @@
+/* Variables CSS pour le projet Hyperacousie Solidarité */
+
+:root {
+  /* Couleurs principales du projet */
+  --color-coral: #ff6f61;
+  --color-teal: #12b6a8;
+  --color-white: #ffffff;
+  --color-black: #3c1914;
+  --color-background-white: #fffff7;
+
+  /* Variables pour les boutons */
+  --button-coral-bg: var(--color-coral);
+  --button-coral-text: var(--color-black);
+  --button-coral-border: var(--color-coral);
+  --button-coral-hover-bg: #ff5a4d;
+  --button-coral-hover-border: #ff5a4d;
+
+  --button-teal-bg: var(--color-teal);
+  --button-teal-text: var(--color-black);
+  --button-teal-border: var(--color-teal);
+  --button-teal-hover-bg: #10a396;
+  --button-teal-hover-border: #10a396;
+
+  --button-white-bg: var(--color-white);
+  --button-white-text: var(--color-black);
+  --button-white-border: #e5e7eb;
+  --button-white-hover-bg: #f9fafb;
+  --button-white-hover-border: #d1d5db;
+
+  /* Bordures */
+  --button-border-radius: 5px;
+  --button-border-width: 1px;
+
+  /* Transitions */
+  --button-transition: all 0.3s ease;
+
+  /* Focus */
+  --button-focus-ring: 0 0 0 3px rgba(59, 130, 246, 0.1);
+
+  /* Variables pour la navigation */
+  --nav-text-color: var(--color-black);
+  --nav-text-hover: var(--color-teal);
+  --nav-text-active: var(--color-coral);
+}
+
+/* Classes utilitaires pour les boutons */
+.btn-coral {
+  background-color: var(--button-coral-bg);
+  color: var(--button-coral-text);
+  border: var(--button-border-width) solid var(--button-coral-border);
+}
+
+.btn-coral:hover {
+  background-color: var(--button-coral-hover-bg);
+  border-color: var(--button-coral-hover-border);
+}
+
+.btn-teal {
+  background-color: var(--button-teal-bg);
+  color: var(--button-teal-text);
+  border: var(--button-border-width) solid var(--button-teal-border);
+}
+
+.btn-teal:hover {
+  background-color: var(--button-teal-hover-bg);
+  border-color: var(--button-teal-hover-border);
+}
+
+.btn-white {
+  background-color: var(--button-white-bg);
+  color: var(--button-white-text);
+  border: var(--button-border-width) solid var(--button-white-border);
+}
+
+.btn-white:hover {
+  background-color: var(--button-white-hover-bg);
+  border-color: var(--button-white-hover-border);
+}
