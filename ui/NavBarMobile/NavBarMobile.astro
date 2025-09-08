@@ -6,7 +6,7 @@ import '../../src/styles/variables.css';
 const { currentPath = '' } = Astro.props;
 const navItems = getNavigationItems();
 
-// Icônes pour chaque menu (utilisation d'icônes SVG simples)
+// Icons for each menu (using simple SVG icons)
 const getIcon = (href: string) => {
   switch (href) {
     case '/':
@@ -36,7 +36,7 @@ const getIcon = (href: string) => {
   }
 };
 
-// Labels courts pour mobile
+// Short labels for mobile
 const getMobileLabel = (href: string) => {
   switch (href) {
     case '/':
@@ -59,7 +59,7 @@ const getMobileLabel = (href: string) => {
 <nav 
   class="mobile-nav-bottom"
   role="navigation" 
-  aria-label="Navigation mobile principale"
+  aria-label="Main mobile navigation"
 >
   <div class="mobile-nav-container">
     {navItems.map((item) => (
@@ -71,7 +71,7 @@ const getMobileLabel = (href: string) => {
             : 'mobile-nav-default'
         }`}
         aria-current={isCurrentPage(item.href, currentPath) ? 'page' : undefined}
-        aria-label={`Aller à ${item.label}`}
+        aria-label={`Go to ${item.label}`}
       >
         <div class="mobile-nav-icon" set:html={getIcon(item.href)} />
         <span class="mobile-nav-label">{getMobileLabel(item.href)}</span>
@@ -91,7 +91,7 @@ const getMobileLabel = (href: string) => {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-    /* Visible seulement sur mobile */
+    /* Visible only on mobile */
     display: none;
   }
 
@@ -163,21 +163,21 @@ const getMobileLabel = (href: string) => {
     transform: scale(1.1);
   }
 
-  /* Affichage conditionnel selon la taille d'écran */
+  /* Conditional display based on screen size */
   @media (max-width: 768px) {
     .mobile-nav-bottom {
       display: block;
     }
   }
 
-  /* Padding bottom pour éviter que le contenu soit caché */
+  /* Bottom padding to prevent content from being hidden */
   @media (max-width: 768px) {
     :global(body) {
       padding-bottom: 5rem;
     }
   }
 
-  /* Support du mode sombre */
+  /* Dark mode support */
   @media (prefers-color-scheme: dark) {
     .mobile-nav-bottom {
       background-color: var(--color-black, #1a1a1a);
@@ -193,7 +193,7 @@ const getMobileLabel = (href: string) => {
     }
   }
 
-  /* Animation d'apparition */
+  /* Slide-up animation */
   @media (max-width: 768px) {
     .mobile-nav-bottom {
       animation: slideUp 0.3s ease-out;
@@ -209,7 +209,7 @@ const getMobileLabel = (href: string) => {
     }
   }
 
-  /* Réduction de mouvement pour l'accessibilité */
+  /* Motion reduction for accessibility */
   @media (prefers-reduced-motion: reduce) {
     .mobile-nav-item,
     .mobile-nav-icon {

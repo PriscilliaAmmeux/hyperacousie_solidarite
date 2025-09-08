@@ -1,25 +1,24 @@
-// Utilitaires pour le projet Hyperacousie Solidarité
-import type { NavigationItem } from '../types/index.ts';
+// Utilities for the Hyperacousie Solidarité project
+import type { NavigationItem } from "../types/index.ts";
 
 /**
- * Vérifie si une URL correspond à la page actuelle
+ * Checks if a URL matches the current page
  */
 export function isCurrentPage(href: string, currentPath: string): boolean {
-  if (href === '/' && currentPath === '/') return true;
-  if (href !== '/' && currentPath.startsWith(href)) return true;
+  if (href === "/" && currentPath === "/") return true;
+  if (href !== "/" && currentPath.startsWith(href)) return true;
   return false;
 }
 
 /**
- * Génère les éléments de navigation
+ * Generates navigation items
  */
 export function getNavigationItems(): NavigationItem[] {
   return [
-    { href: '/', label: 'Accueil' },
-    { href: '/comprendre', label: 'Comprendre l\'hyperacousie' },
-    { href: '/temoignages', label: 'Témoignages' },
-    { href: '/ressources', label: 'Ressources' },
-    { href: '/contact', label: 'Contact' },
+    { href: "/", label: "Accueil" },
+    { href: "/comprendre", label: "Comprendre l'hyperacousie" },
+    { href: "/temoignages", label: "Témoignages" },
+    { href: "/ressources", label: "Ressources" },
+    { href: "/contact", label: "Contact" },
   ];
 }
-

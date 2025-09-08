@@ -1,5 +1,3 @@
-// Types globaux pour le projet Hyperacousie Solidarité
-
 export interface NavigationItem {
   href: string;
   label: string;
@@ -21,6 +19,6 @@ export interface ButtonProps {
   class?: string;
   disabled?: boolean;
   type?: "button" | "submit" | "reset";
-  icon?: string; // Pour les icônes React/SVG
+  icon?: string;
   iconPosition?: "left" | "right";
 }
