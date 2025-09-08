@@ -1,5 +1,4 @@
 ---
-// Button component with different variants and props
 import type { ButtonProps } from '../../src/types/index.ts';
 
 export interface Props extends ButtonProps {}
@@ -16,7 +15,6 @@ const {
   iconPosition = 'left'
 } = Astro.props;
 
-// Classes de base avec styles essentiels
 const baseClasses = [
   'inline-flex',
   'items-center', 
@@ -34,21 +32,19 @@ const baseClasses = [
   'hover:drop-shadow-lg'
 ].join(' ');
 
-// Variantes de couleurs utilisant les variables CSS
 const variantClasses = {
   coral: 'btn-coral',
   teal: 'btn-teal', 
   white: 'btn-white'
 };
 
-// Tailles avec espacement approprié - simplifié pour éviter les conflits
 const sizeClasses = {
   sm: 'text-sm',
   md: 'text-base', 
   lg: 'text-lg'
 };
 
-// Construction des classes finales
+
 const selectedVariant = variantClasses[variant as keyof typeof variantClasses] || variantClasses.teal;
 const buttonClasses = [
   baseClasses,
@@ -60,7 +56,6 @@ const buttonClasses = [
 const Tag = href ? 'a' : 'button';
 ---
 
-<!-- Rendu du bouton avec tag dynamique -->
 <Tag
   class={buttonClasses}
   href={href}
@@ -68,7 +63,6 @@ const Tag = href ? 'a' : 'button';
   disabled={disabled}
   type={!href ? type : undefined}
 >
-  <!-- Icône à gauche si spécifiée -->
   {icon && iconPosition === 'left' && (
     <span 
       class="flex-shrink-0 inline-flex items-center" 
@@ -77,12 +71,10 @@ const Tag = href ? 'a' : 'button';
     />
   )}
   
-  <!-- Contenu du bouton -->
   <span class="flex items-center">
     <slot />
   </span>
   
-  <!-- Icône à droite si spécifiée -->
   {icon && iconPosition === 'right' && (
     <span 
       class="flex-shrink-0 inline-flex items-center" 
@@ -93,32 +85,25 @@ const Tag = href ? 'a' : 'button';
 </Tag>
 
 <style>
-  /* Import des variables CSS */
   @import '../../src/styles/variables.css';
   
-  /* Styles globaux pour tous les boutons personnalisés */
   :global(.btn-coral),
   :global(.btn-teal),
   :global(.btn-white) {
-    /* Utilisation des variables CSS définies */
     border-radius: var(--button-border-radius) !important;
     transition: var(--button-transition);
     
-    /* Alignement horizontal icône + texte */
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
     gap: 0.5rem !important;
     
-    /* Padding par défaut */
     padding: 0.75rem 1.5rem !important;
     
-    /* Amélioration de l'accessibilité */
     cursor: pointer;
     text-decoration: none;
   }
   
-  /* Padding spécifique par taille */
   :global(.text-sm.btn-coral),
   :global(.text-sm.btn-teal),
   :global(.text-sm.btn-white) {
@@ -131,14 +116,12 @@ const Tag = href ? 'a' : 'button';
     padding: 1rem 2rem !important;
   }
   
-  /* États hover et focus */
   :global(.btn-coral:hover),
   :global(.btn-teal:hover),
   :global(.btn-white:hover) {
     transform: translateY(-1px);
   }
   
-  /* État désactivé */
   :global(.btn-coral:disabled),
   :global(.btn-teal:disabled),
   :global(.btn-white:disabled) {
