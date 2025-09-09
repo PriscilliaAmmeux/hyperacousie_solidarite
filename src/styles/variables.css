@@ -4,6 +4,7 @@
   /* Couleurs principales du projet */
   --color-coral: #ff6f61;
   --color-teal: #12b6a8;
+  --color-teal-transparent: rgba(0, 128, 128, 0.5);
   --color-white: #ffffff;
   --color-black: #3c1914;
   --color-background-white: #fffff7;

@@ -1,46 +1,7 @@
 ---
 import Title from "../Title/Title.astro";
+import "./AssociationPresentation.css";
 ---
-
-<style>
-  .association-image {
-    width: auto;
-    height: 10rem;
-    border-radius: 0.75rem; 
-    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); 
-    object-fit: cover;
-  }
-
-  .association-container {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-    align-items: flex-start;
-    margin: 0 10rem;
-  }
-
-  .image-section {
-    display: flex;
-    justify-content: center;
-  }
-
-  .text-content {
-    flex: 1;
-  }
-
-  /* Desktop layout */
-  @media (min-width: 1024px) {
-    .association-container {
-      flex-direction: row;
-      align-items: flex-end;
-    }
-
-    .image-section {
-      justify-content: flex-start;
-      flex-shrink: 0;
-    }
-  }
-</style>
 
 <section class="py-16 px-6 bg-white">
   <div class="max-w-6xl mx-auto">
@@ -73,5 +34,35 @@ import Title from "../Title/Title.astro";
       </article>
       
     </div>
+
+    <!-- parallelogram section -->
+    <section class="parallelogram-section">
+      <div class="parallelogram">
+        <!-- Troisième parallélogramme - arrière-plan -->
+        <div class="third-parallelogram"></div>
+        
+        <Title
+          text="Qu'est-ce que l'hyperacousie ?"
+          className="mb-4 parallelogram-text"
+        />
+        <p class="parallelogram-text padding-left">
+          L'hyperacousie est un trouble de l'audition caractérisé par une intolérance aux sons du quotidien, même lorsqu'ils sont à un volume normalement tolérable pour la majorité des personnes. Elle peut fortement impacter la qualité de vie des personnes qui en souffrent. Elle est régulièrement accompagnée d'acouphènes.
+        </p>
+
+        <!-- Petit parallélogramme -->
+        <div class="second-parallelogram">
+          <p class="second-parallelogram-text size-text">
+            1,5 % à 2,5 % de la population
+          </p>
+          <p class="second-parallelogram-text font-size-small">
+            Estimation épidémiologique (LeMédecin.fr)
+          </p>
+          <p class="second-parallelogram-text font-size-small">
+            * Sources : Ministère de la Santé (Prévention des risques liés au bruit)
+          </p>
+        </div>
+      </div>
+    </section>
+    
   </div>
 </section>
