@@ -128,3 +128,11 @@
   font-size: 0.75rem;
   font-weight: normal;
 }
+
+.padding-top {
+  padding-top: 2rem;
+}
+
+.margin-top {
+  margin-top: 2rem;
+}
