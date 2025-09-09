@@ -1,45 +1,59 @@
-.association-image {
-  width: auto;
-  height: 10rem;
-  border-radius: 0.75rem;
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  object-fit: cover;
-}
+/* ========================================
+   ASSOCIATION PRESENTATION COMPONENT
+   ======================================== */
 
+/* ==========================================
+   1. ASSOCIATION SECTION (L'association)
+   ========================================== */
+
+/* Base styles */
 .association-container {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
-  align-items: flex-start;
-  margin: 0 10rem;
+  gap: 2rem;
+  align-items: center;
+  margin: 0 1rem;
+  padding: 1rem 0;
 }
 
 .image-section {
   display: flex;
   justify-content: center;
+  width: 100%;
+}
+
+.association-image {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  min-height: 6rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  object-fit: cover;
 }
 
 .text-content {
   flex: 1;
+  width: 100%;
+  max-width: 600px;
 }
 
-/* Desktop layout */
-@media (min-width: 1024px) {
-  .association-container {
-    flex-direction: row;
-    align-items: flex-end;
-  }
-
-  .image-section {
-    justify-content: flex-start;
-    flex-shrink: 0;
-  }
+.association-description {
+  color: var(--color-black);
+  opacity: 0.8;
+  line-height: 1.8;
+  text-align: justify;
+  font-size: 1rem;
+  margin-bottom: 0;
 }
 
-/* parallelogram */
+/* ==========================================
+   2. PARALLELOGRAM SECTION (Desktop only)
+   ========================================== */
+
 .parallelogram-section {
   margin: 0 5rem 1rem 5rem;
-  display: flex;
+  display: none; /* Hidden by default (mobile) */
   justify-content: center;
   position: relative;
   overflow: visible;
@@ -47,7 +61,7 @@
 
 .parallelogram {
   position: relative;
-  width: 90%; /* presque toute la largeur */
+  width: 90%;
   height: 12rem;
   background-color: rgba(131, 244, 214);
   transform: skewX(-15deg);
@@ -56,14 +70,14 @@
 }
 
 .parallelogram-text {
-  transform: skewX(15deg); /* on redresse */
+  transform: skewX(15deg);
   color: var(--color-black);
   width: 50%;
   line-height: 1.6;
   position: relative;
   z-index: 2;
 }
-/* Petit parallélogramme */
+
 .second-parallelogram {
   position: absolute;
   top: 3rem;
@@ -71,7 +85,7 @@
   width: 40%;
   height: 60%;
   background-color: var(--color-teal);
-  z-index: 1; /* il est sous le texte */
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -84,7 +98,6 @@
   margin: 0;
 }
 
-/* Troisième parallélogramme - derrière le premier */
 .third-parallelogram {
   position: absolute;
   top: 1rem;
@@ -92,22 +105,7 @@
   width: 50%;
   height: 80%;
   background-color: rgba(131, 244, 214, 0.3);
-  z-index: 0; /* derrière tous les autres */
-}
-
-.padding-left {
-  padding-left: 1.5rem;
-}
-
-.second-parallelogram-section {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 60%;
-  height: 15rem;
-  pointer-events: none;
-  z-index: 2;
-  margin: 0 3rem 1rem 3rem;
+  z-index: 0;
 }
 
 .second-parallelogram-text {
@@ -129,10 +127,170 @@
   font-weight: normal;
 }
 
+.padding-left {
+  padding-left: 1.5rem;
+}
+
 .padding-top {
   padding-top: 2rem;
 }
 
+/* ==========================================
+   3. GREEN SECTION (Mobile responsive)
+   ========================================== */
+
+.green-section.mobile-only {
+  display: block;
+  position: relative;
+  margin: 3rem 0 2rem 0;
+  background-color: var(--color-teal);
+  padding: 2rem 0;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+
+.green-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.section-title {
+  color: var(--color-black);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.content-columns {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.main-content {
+  flex: 1;
+}
+
+.description-text {
+  color: var(--color-black);
+  line-height: 1.8;
+  text-align: justify;
+  font-size: 1.1rem;
+}
+
+.stats-content {
+  display: flex;
+  justify-content: center;
+}
+
+.stat-card {
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  text-align: center;
+  max-width: 300px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-number {
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--color-black);
+  margin-bottom: 0.5rem;
+}
+
+.stat-description {
+  font-size: 0.9rem;
+  color: var(--color-black);
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.stat-source {
+  font-size: 0.75rem;
+  color: var(--color-black);
+  opacity: 0.8;
+  line-height: 1.3;
+}
+
+/* ==========================================
+   4. UTILITY CLASSES
+   ========================================== */
+
 .margin-top {
   margin-top: 2rem;
+}
+
+/* ==========================================
+   5. RESPONSIVE BREAKPOINTS
+   ========================================== */
+
+/* Tablet (768px+) */
+@media (min-width: 768px) {
+  /* Association section */
+  .association-container {
+    margin: 0 2rem;
+    gap: 2.5rem;
+  }
+
+  .association-image {
+    max-width: 350px;
+    min-height: 8rem;
+  }
+
+  .association-description {
+    font-size: 1.1rem;
+  }
+}
+
+/* Desktop (1024px+) */
+@media (min-width: 1024px) {
+  /* Association section */
+  .association-container {
+    flex-direction: row;
+    align-items: flex-end;
+    margin: 0 5rem;
+    gap: 4rem;
+  }
+
+  .image-section {
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: auto;
+  }
+
+  .association-image {
+    width: auto;
+    max-width: 400px;
+    height: 10rem;
+    min-height: auto;
+  }
+
+  .text-content {
+    width: auto;
+    max-width: none;
+  }
+
+  .association-description {
+    font-size: 1.25rem;
+  }
+
+  /* Show/hide sections */
+  .parallelogram-section {
+    display: flex; /* Show parallélogrammes on desktop */
+  }
+
+  .green-section.mobile-only {
+    display: none; /* Hide mobile version on desktop */
+  }
+}
+
+/* Large desktop (1440px+) */
+@media (min-width: 1440px) {
+  .association-container {
+    margin: 0 8rem;
+  }
 }
