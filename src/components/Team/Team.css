@@ -1,0 +1,237 @@
+/* ========================================
+   TEAM COMPONENT
+   ======================================== */
+
+/* Section principale avec background coral transparent */
+.team-section {
+  position: relative;
+  margin: 3rem 0;
+  background-color: rgba(
+    255,
+    111,
+    97,
+    0.5
+  ); /* FF6F61 avec 50% de transparence */
+  padding: 3rem 0;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%); /* Prend toute la largeur de l'écran */
+  overflow-x: hidden; /* Empêche le débordement horizontal */
+}
+
+.team-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.team-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.team-title {
+  color: var(--color-black);
+  margin-bottom: 1rem;
+}
+
+/* Grid des cartes équipe */
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Cartes individuelles */
+.team-card {
+  background-color: var(--color-white);
+  border-radius: 1rem;
+  padding: 2.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1 1 300px;
+  max-width: 500px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Header de la carte avec image et nom côte à côte */
+.team-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.team-card-image {
+  flex-shrink: 0;
+}
+
+.team-card-image img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.team-card-content {
+  text-align: left;
+}
+
+.team-member-name {
+  color: var(--color-black);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  flex: 1;
+}
+
+.team-member-bio {
+  color: var(--color-black);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  text-align: justify;
+  margin: 0;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+
+/* Mobile (max 640px) */
+@media (max-width: 640px) {
+  .team-section {
+    margin: 1.5rem 0;
+    padding: 2rem 0;
+  }
+
+  .team-container {
+    padding: 0 1rem;
+    max-width: 100%;
+  }
+
+  .team-header {
+    margin-bottom: 2rem;
+  }
+
+  .team-description {
+    font-size: 1rem;
+  }
+
+  .team-grid {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5rem;
+    padding: 0;
+    width: 100%;
+  }
+
+  .team-card {
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 100%;
+    flex: none;
+    box-sizing: border-box;
+  }
+
+  .team-card-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .team-card-content {
+    text-align: justify;
+  }
+
+  .team-card-image img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .team-member-name {
+    font-size: 1.3rem;
+  }
+
+  .team-member-bio {
+    font-size: 0.9rem;
+  }
+}
+
+/* Très petits écrans (max 480px) */
+@media (max-width: 480px) {
+  .team-section {
+    padding: 1.5rem 0;
+    margin: 1rem 0;
+  }
+
+  .team-container {
+    padding: 0 0.75rem;
+    max-width: 100%;
+  }
+
+  .team-grid {
+    padding: 0;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .team-card {
+    padding: 1rem;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .team-card-image img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .team-member-name {
+    font-size: 1.2rem;
+  }
+
+  .team-member-bio {
+    font-size: 0.85rem;
+  }
+}
+
+/* Tablette (641px - 1023px) */
+@media (min-width: 641px) and (max-width: 1023px) {
+  .team-card {
+    flex: 1 1 350px;
+    max-width: 450px;
+  }
+}
+
+/* Desktop (1024px+) */
+@media (min-width: 1024px) {
+  .team-section {
+    padding: 4rem 0;
+  }
+
+  .team-card {
+    padding: 3rem;
+    flex: 1 1 450px;
+    max-width: 550px;
+  }
+
+  .team-description {
+    font-size: 1.2rem;
+  }
+}
