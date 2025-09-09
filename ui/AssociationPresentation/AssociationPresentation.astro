@@ -1,0 +1,77 @@
+---
+import Title from "../Title/Title.astro";
+---
+
+<style>
+  .association-image {
+    width: auto;
+    height: 10rem;
+    border-radius: 0.75rem; 
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); 
+    object-fit: cover;
+  }
+
+  .association-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: flex-start;
+    margin: 0 10rem;
+  }
+
+  .image-section {
+    display: flex;
+    justify-content: center;
+  }
+
+  .text-content {
+    flex: 1;
+  }
+
+  /* Desktop layout */
+  @media (min-width: 1024px) {
+    .association-container {
+      flex-direction: row;
+      align-items: flex-end;
+    }
+
+    .image-section {
+      justify-content: flex-start;
+      flex-shrink: 0;
+    }
+  }
+</style>
+
+<section class="py-16 px-6 bg-white">
+  <div class="max-w-6xl mx-auto">
+    <div class="association-container">
+      
+      <!-- Image section -->
+      <figure class="image-section">
+        <div class="relative">
+          <img 
+            src="/image-femme-de-dos-avec-casque-antibruit.webp" 
+            alt="Femme de dos portant un casque antibruit, illustrant la protection auditive pour l'hyperacousie"
+            class="association-image"
+            loading="lazy"
+          />
+          
+        </div>
+      </figure>
+      
+      <!-- Text content -->
+      <article class="text-content space-y-6">
+        <section class="space-y-4">
+          <Title
+            text="L'association"
+            className="mb-4"
+          />
+          <p class="text-xl leading-relaxed " style="color: var(--color-black); opacity: 0.8; line-height: 1.8; text-align: justify;">
+            L'hyperacousie bouleverse la vie de celles et ceux qui en souffrent. Notre association est née de la volonté de briser l'isolement, de partager des informations fiables, d'offrir du soutien et de porter la voix des personnes concernées auprès du grand public et des institutions. Ensemble, nous avançons pour un avenir plus inclusif.
+          </p>
+        </section>
+      </article>
+      
+    </div>
+  </div>
+</section>
