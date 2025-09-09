@@ -1,0 +1,73 @@
+---
+import type { ButtonProps } from '../../types/index.ts';
+import '../../styles/variables.css';
+
+export interface Props extends ButtonProps {}
+
+const { 
+  variant = 'teal',
+  size = 'md',
+  href,
+  target,
+  class: className = '',
+  disabled = false,
+  type = 'button',
+  icon,
+  iconPosition = 'left'
+} = Astro.props;
+
+const baseClasses = 'btn-base';
+
+const variantClasses = {
+  coral: 'btn-coral',
+  teal: 'btn-teal', 
+  white: 'btn-white'
+};
+
+const sizeClasses = {
+  sm: 'btn-sm',
+  md: 'btn-md', 
+  lg: 'btn-lg'
+};
+
+const selectedVariant = variantClasses[variant as keyof typeof variantClasses] || variantClasses.teal;
+const buttonClasses = [
+  baseClasses,
+  selectedVariant,
+  sizeClasses[size],
+  className
+].filter(Boolean).join(' ');
+
+const Tag = href ? 'a' : 'button';
+---
+
+<Tag
+  class={buttonClasses}
+  style="border-radius: 5px !important;"
+  href={href}
+  target={target}
+  disabled={disabled}
+  type={!href ? type : undefined}
+>
+  {icon && iconPosition === 'left' && (
+    <span 
+      class="btn-icon-left" 
+      set:html={icon} 
+      aria-hidden="true"
+    />
+  )}
+  
+  <span class="btn-content">
+    <slot />
+  </span>
+  
+  {icon && iconPosition === 'right' && (
+    <span 
+      class="btn-icon-right" 
+      set:html={icon}
+      aria-hidden="true" 
+    />
+  )}
+</Tag>
+
+

@@ -1,0 +1,84 @@
+---
+// Mobile navigation component for Hyperacousie Solidarité
+import { getNavigationItems, isCurrentPage } from '../../utils/helpers.ts';
+import './NavBarMobile.css';
+import '../../styles/variables.css';
+
+const { currentPath = '' } = Astro.props;
+const navItems = getNavigationItems();
+
+// Icons for each menu (using simple SVG icons)
+const getIcon = (href: string) => {
+  switch (href) {
+    case '/':
+      return `<svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+      </svg>`;
+    case '/comprendre':
+      return `<svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+        <path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/>
+      </svg>`;
+    case '/temoignages':
+      return `<svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+        <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
+      </svg>`;
+    case '/ressources':
+      return `<svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+        <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+      </svg>`;
+    case '/contact':
+      return `<svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+      </svg>`;
+    default:
+      return `<svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+      </svg>`;
+  }
+};
+
+// Short labels for mobile
+const getMobileLabel = (href: string) => {
+  switch (href) {
+    case '/':
+      return 'Accueil';
+    case '/comprendre':
+      return 'Comprendre';
+    case '/temoignages':
+      return 'Témoignages';
+    case '/ressources':
+      return 'Ressources';
+    case '/contact':
+      return 'Contact';
+    default:
+      return 'Menu';
+  }
+};
+---
+
+<!-- Mobile Bottom Navigation -->
+<nav 
+  class="mobile-nav-bottom"
+  role="navigation" 
+  aria-label="Main mobile navigation"
+>
+  <div class="mobile-nav-container">
+    {navItems.map((item) => (
+      <a 
+        href={item.href}
+        class={`mobile-nav-item ${
+          isCurrentPage(item.href, currentPath)
+            ? 'mobile-nav-active'
+            : 'mobile-nav-default'
+        }`}
+        aria-current={isCurrentPage(item.href, currentPath) ? 'page' : undefined}
+        aria-label={`Go to ${item.label}`}
+      >
+        <div class="mobile-nav-icon" set:html={getIcon(item.href)} />
+        <span class="mobile-nav-label">{getMobileLabel(item.href)}</span>
+      </a>
+    ))}
+  </div>
+</nav>
+
+

@@ -1,0 +1,16 @@
+---
+// Title component with custom styling
+export interface Props {
+  text: string;
+  className?: string;
+}
+
+import './Title.css';
+import '../../styles/variables.css';
+
+const { text, className = '' } = Astro.props;
+---
+
+<h2 class={`title-component ${className}`}>
+  {text}
+</h2>
