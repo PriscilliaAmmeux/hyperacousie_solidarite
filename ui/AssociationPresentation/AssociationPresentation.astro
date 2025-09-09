@@ -1,6 +1,17 @@
 ---
 import Title from "../Title/Title.astro";
 import "./AssociationPresentation.css";
+
+// DRY principle - Define content once
+const hyperacousieContent = {
+  title: "Qu'est-ce que l'hyperacousie ?",
+  description: "L'hyperacousie est un trouble de l'audition caractérisé par une intolérance aux sons du quotidien, même lorsqu'ils sont à un volume normalement tolérable pour la majorité des personnes. Elle peut fortement impacter la qualité de vie des personnes qui en souffrent. Elle est régulièrement accompagnée d'acouphènes.",
+  stats: {
+    percentage: "1,5 % à 2,5 % de la population",
+    source: "Estimation épidémiologique (LeMédecin.fr)",
+    reference: "* Sources : Ministère de la Santé (Prévention des risques liés au bruit)"
+  }
+};
 ---
 
 <section class="margin-top">
@@ -41,23 +52,23 @@ import "./AssociationPresentation.css";
       <div class="third-parallelogram"></div>
       
       <Title
-        text="Qu'est-ce que l'hyperacousie ?"
+        text={hyperacousieContent.title}
         className="mb-4 parallelogram-text"
       />
       <p class="parallelogram-text padding-left">
-        L'hyperacousie est un trouble de l'audition caractérisé par une intolérance aux sons du quotidien, même lorsqu'ils sont à un volume normalement tolérable pour la majorité des personnes. Elle peut fortement impacter la qualité de vie des personnes qui en souffrent. Elle est régulièrement accompagnée d'acouphènes.
+        {hyperacousieContent.description}
       </p>
 
       <!-- Petit parallélogramme -->
       <div class="second-parallelogram">
         <p class="second-parallelogram-text size-text">
-          1,5 % à 2,5 % de la population
+          {hyperacousieContent.stats.percentage}
         </p>
         <p class="second-parallelogram-text font-size-small">
-          Estimation épidémiologique (LeMédecin.fr)
+          {hyperacousieContent.stats.source}
         </p>
         <p class="second-parallelogram-text font-size-small padding-top">
-          * Sources : Ministère de la Santé (Prévention des risques liés au bruit)
+          {hyperacousieContent.stats.reference}
         </p>
       </div>
     </div>
@@ -67,27 +78,27 @@ import "./AssociationPresentation.css";
   <section class="green-section mobile-only">
     <div class="green-content">
       <Title
-        text="Qu'est-ce que l'hyperacousie ?"
+        text={hyperacousieContent.title}
         className="mb-4 section-title"
       />
       
       <div class="content-columns">
         <div class="main-content">
           <p class="description-text">
-            L'hyperacousie est un trouble de l'audition caractérisé par une intolérance aux sons du quotidien, même lorsqu'ils sont à un volume normalement tolérable pour la majorité des personnes. Elle peut fortement impacter la qualité de vie des personnes qui en souffrent. Elle est régulièrement accompagnée d'acouphènes.
+            {hyperacousieContent.description}
           </p>
         </div>
         
         <div class="stats-content">
           <div class="stat-card">
             <p class="stat-number">
-              1,5 % à 2,5 % de la population
+              {hyperacousieContent.stats.percentage}
             </p>
             <p class="stat-description">
-              Estimation épidémiologique (LeMédecin.fr)
+              {hyperacousieContent.stats.source}
             </p>
             <p class="stat-source">
-              * Sources : Ministère de la Santé (Prévention des risques liés au bruit)
+              {hyperacousieContent.stats.reference}
             </p>
           </div>
         </div>
