@@ -1,0 +1,59 @@
+---
+import Title from "../../ui/Title/Title.astro";
+import "./Team.css";
+
+// Team members data
+const teamMembers = [
+  {
+    id: 1,
+    name: "Aurélien, 34 ans",
+    image: "/photo-aurélien.webp",
+    bio: "Suite à un traumatisme sonore en 2022, je vis avec une hyperacousie sévère, des acouphènes permanents et un syndrome tonique des muscles tenseurs. Ce handicap a bouleversé ma vie et m’a confronté à l’isolement, à l’errance médicale et au manque de reconnaissance. J’ai choisi de rejoindre cette association pour transformer cette souffrance en engagement : faire entendre nos voix, sensibiliser à la prévention et œuvrer pour une meilleure prise en charge et une réelle reconnaissance de notre handicap."
+  },
+  {
+    id: 2,
+    name: "Barbara",
+    image: "/photo-barbara.webp",
+    bio: "Les symptômes sont arrivés insidieusement et une nuit d’aout 2023 un acouphène violent m’a tiré de mon sommeil avec une surdité brusque à gauche. Le lendemain débutait l’enfer de ma vie. L’acouphène violent avait disparu pour laisser place à des sifflements permanents dans les deux oreilles et de l’hyperacousie douloureuse. Depuis ma vie est un enfer. Une errance médicale, l’incompréhension des soignants, le manque d’informations et de sensibilisation m’ont poussé à m’investir dans cette association. Il est temps de faire bouger les choses, de changer notre avenir."
+  },
+  {
+    id: 3,
+    name: "Corinne",
+    image: "/photo-corinne.webp",
+    bio: " Je subis au quotidien une hyperacousie douloureuse ainsi que des acouphènes depuis janvier 2024 suite à un trauma sonore. Ces pathologies m’ont volé ma vie. Difficile de réaliser qu’après une simple soirée on puisse se retrouver avec un tel handicap et tant de conséquences désastreuses. Depuis, mes journées sont rythmées par une errance médicale qui aboutit à la méconnaissance, à l’ignorance, à l’abandon et au mépris face à ces symptômes pourtant si dévastateurs. Ce parcours personnel m’a motivé à me joindre à l’association afin de pouvoir communiquer autour de ce sujet et faire entendre notre cause dans  l’espoir d’être pris au sérieux tous ensemble unis et plus forts."
+  }
+ 
+];
+---
+
+<section class="team-section">
+  <div class="team-container">
+    <div class="team-header">
+      <Title
+        text="L'équipe"
+        className="team-title"
+      />
+
+    </div>
+
+    <div class="team-grid">
+      {teamMembers.map(member => (
+        <article class="team-card">
+          <div class="team-card-header">
+            <div class="team-card-image">
+              <img 
+                src={member.image} 
+                alt={`Photo de ${member.name}`}
+                loading="lazy"
+              />
+            </div>
+            <h3 class="team-member-name">{member.name}</h3>
+          </div>
+          <div class="team-card-content">
+            <p class="team-member-bio">{member.bio}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
