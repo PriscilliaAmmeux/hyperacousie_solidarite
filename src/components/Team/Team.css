@@ -39,9 +39,9 @@
 /* Grid des cartes équipe */
 .team-grid {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 2rem;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  gap: 1.5rem;
   margin-top: 2rem;
 }
 
@@ -49,13 +49,13 @@
 .team-card {
   background-color: var(--color-white);
   border-radius: 1rem;
-  padding: 2.5rem;
+  padding: 2rem;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -4px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  flex: 1 1 300px;
-  max-width: 500px;
-  width: 100%;
+  flex: 1;
+  max-width: calc(33.333% - 1rem);
+  min-width: 280px;
   box-sizing: border-box;
 }
 
@@ -213,9 +213,29 @@
 
 /* Tablette (641px - 1023px) */
 @media (min-width: 641px) and (max-width: 1023px) {
+  .team-grid {
+    flex-wrap: nowrap;
+    gap: 1rem;
+  }
+
   .team-card {
-    flex: 1 1 350px;
-    max-width: 450px;
+    flex: 1;
+    max-width: calc(33.333% - 0.75rem);
+    min-width: 250px;
+    padding: 1.5rem;
+  }
+
+  .team-card-image img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .team-member-name {
+    font-size: 1.2rem;
+  }
+
+  .team-member-bio {
+    font-size: 0.85rem;
   }
 }
 
@@ -225,13 +245,27 @@
     padding: 4rem 0;
   }
 
+  .team-grid {
+    flex-wrap: nowrap;
+    gap: 2rem;
+  }
+
   .team-card {
-    padding: 3rem;
-    flex: 1 1 450px;
-    max-width: 550px;
+    padding: 2.5rem;
+    flex: 1;
+    max-width: calc(33.333% - 1.5rem);
+    min-width: 300px;
   }
 
   .team-description {
     font-size: 1.2rem;
+  }
+}
+
+/* Très grands écrans (1400px+) */
+@media (min-width: 1400px) {
+  .team-card {
+    padding: 3rem;
+    max-width: calc(33.333% - 2rem);
   }
 }
