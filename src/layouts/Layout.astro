@@ -1,6 +1,8 @@
 ---
-import Header from '../../ui/Header/Header.astro';
-import Footer from '../../ui/Footer/Footer.astro';
+import Footer from '../ui/Footer/Footer.astro';
+import Header from '../ui/Header/Header.astro';
+import '../styles/variables.css';
+import '../ui/Button/Button.css';
 
 export interface Props {
   title?: string;
@@ -36,10 +38,18 @@ const currentPath = Astro.url.pathname;
 				margin: 0 !important;
 				padding: 0 !important;
 				background-color: var(--color-background-white);
+				color: var(--color-black);
+				font-family: system-ui, -apple-system, sans-serif;
 			}
 			
 			h1, h2, h3, h4, h5, h6, p {
 				margin: 0 !important;
+				color: var(--color-black);
+			}
+			
+			/* Force la couleur pour tous les éléments de texte */
+			*, *::before, *::after {
+				color: var(--color-black);
 			}
 		</style>
 	</head>

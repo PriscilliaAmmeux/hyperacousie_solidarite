@@ -1,0 +1,100 @@
+/* Button CSS - Styles globaux simplifiés */
+
+/* Base button styles */
+.btn-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 1px solid;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  gap: 0.5rem;
+}
+
+.btn-base:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+.btn-base:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.btn-base:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Button variants */
+.btn-teal {
+  background-color: var(--button-teal-bg, #12b6a8);
+  color: var(--button-teal-text, #3c1914);
+  border-color: var(--button-teal-border, #12b6a8);
+}
+
+.btn-teal:hover {
+  background-color: var(--button-teal-hover-bg, #10a396);
+  border-color: var(--button-teal-hover-border, #10a396);
+}
+
+.btn-coral {
+  background-color: var(--button-coral-bg, #ff6f61);
+  color: var(--button-coral-text, #3c1914);
+  border-color: var(--button-coral-border, #ff6f61);
+}
+
+.btn-coral:hover {
+  background-color: var(--button-coral-hover-bg, #ff5a4d);
+  border-color: var(--button-coral-hover-border, #ff5a4d);
+}
+
+.btn-white {
+  background-color: var(--button-white-bg, #ffffff);
+  color: var(--button-white-text, #3c1914);
+  border-color: var(--button-white-border, #e5e7eb);
+}
+
+.btn-white:hover {
+  background-color: var(--button-white-hover-bg, #f9fafb);
+  border-color: var(--button-white-hover-border, #d1d5db);
+}
+
+/* Button sizes */
+.btn-sm {
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+}
+
+.btn-md {
+  font-size: 1rem;
+  padding: 1.25rem 2rem;
+  font-weight: 600;
+}
+
+.btn-lg {
+  font-size: 1.125rem;
+  padding: 1.5rem 2.5rem;
+  font-weight: 600;
+}
+
+/* Icon styles */
+.btn-icon-left,
+.btn-icon-right {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn-content {
+  display: flex;
+  align-items: center;
+}

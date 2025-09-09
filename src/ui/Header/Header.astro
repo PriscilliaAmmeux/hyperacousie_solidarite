@@ -1,7 +1,8 @@
 ---
 import Navbar from '../NavBar/NavBar.astro';
-import '../../src/styles/variables.css';
 import NavBarMobile from '../NavBarMobile/NavBarMobile.astro';
+import './Header.css';
+import '../../styles/variables.css';
 
 export interface Props {
   currentPath?: string;
@@ -48,31 +49,3 @@ const { currentPath } = Astro.props;
   </div>
 </header>
 
-<style>
-  .mobile-logo-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .mobile-navbar-container {
-    display: block;
-  }
-
-  .desktop-hero-section,
-  .desktop-nav-section {
-    display: none;
-  }
-
-  @media (min-width: 768px) {
-    .mobile-logo-section,
-    .mobile-navbar-container {
-      display: none !important;
-    }
-    
-    .desktop-hero-section,
-    .desktop-nav-section {
-      display: block !important;
-    }
-  }
-</style>

@@ -1,0 +1,42 @@
+---
+const currentYear = new Date().getFullYear();
+
+import './Footer.css';
+import '../../styles/variables.css';
+---
+
+
+<footer class="text-white mt-auto" style="background-color: var(--color-teal);">
+  <div class="max-w-7xl mx-auto py-10 px-6">
+    <img
+      src="/logo-footer.webp"
+      alt="Logo Hyperacousie Solidarité"
+      class="mb-6"
+      style="height: 150px; width: auto;"
+    />
+
+
+    <div class="footer-links grid grid-cols-1 md:grid-cols-2 gap-8 text-sm">
+      <ul>
+        <li><a href="/">Accueil</a></li>
+        <li><a href="/comprendre">Comprendre l'hyperacousie</a></li>
+        <li><a href="/temoignages">Témoignages</a></li>
+        <li><a href="/ressources">Ressources</a></li>
+      </ul>
+
+      <ul>
+        <li><a href="/adhesions">Adhésions et dons</a></li>
+        <li><a href="/mentions-legales">Mentions légales</a></li>
+        <li><a href="/confidentialite">Politiques de confidentialités</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom border-t border-black mt-6 pt-4 text-sm">
+    <p>&copy; {currentYear} Hyperacousie Solidarité. Tous droits réservés.</p>
+    <p class="mt-2">Site développé & designé par <a href="https://www.priscillia-ammeux-portfolio.fr/" target="_blank" rel="noopener noreferrer" class="footer-link"><span class="font-bold">Priscillia AMMEUX</span></a></p>
+  </div>
+
+
+</footer>

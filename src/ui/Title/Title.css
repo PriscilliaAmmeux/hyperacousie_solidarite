@@ -1,0 +1,20 @@
+.title-component {
+  color: #3c1914;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  line-height: 1.2;
+  margin: 0;
+}
+
+@media (min-width: 300px) {
+  .title-component {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .title-component {
+    font-size: 1.8rem;
+  }
+}
