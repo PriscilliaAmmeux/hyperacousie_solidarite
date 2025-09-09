@@ -1,0 +1,130 @@
+.association-image {
+  width: auto;
+  height: 10rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  object-fit: cover;
+}
+
+.association-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: flex-start;
+  margin: 0 10rem;
+}
+
+.image-section {
+  display: flex;
+  justify-content: center;
+}
+
+.text-content {
+  flex: 1;
+}
+
+/* Desktop layout */
+@media (min-width: 1024px) {
+  .association-container {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
+  .image-section {
+    justify-content: flex-start;
+    flex-shrink: 0;
+  }
+}
+
+/* parallelogram */
+.parallelogram-section {
+  margin: 0 5rem 1rem 5rem;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: visible;
+}
+
+.parallelogram {
+  position: relative;
+  width: 90%; /* presque toute la largeur */
+  height: 12rem;
+  background-color: rgba(131, 244, 214);
+  transform: skewX(-15deg);
+  padding: 2rem;
+  overflow: visible;
+}
+
+.parallelogram-text {
+  transform: skewX(15deg); /* on redresse */
+  color: var(--color-black);
+  width: 50%;
+  line-height: 1.6;
+  position: relative;
+  z-index: 2;
+}
+/* Petit parallélogramme */
+.second-parallelogram {
+  position: absolute;
+  top: 3rem;
+  right: -2rem;
+  width: 40%;
+  height: 60%;
+  background-color: var(--color-teal);
+  z-index: 1; /* il est sous le texte */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.1rem;
+  padding: 1rem;
+}
+
+.second-parallelogram p {
+  margin: 0;
+}
+
+/* Troisième parallélogramme - derrière le premier */
+.third-parallelogram {
+  position: absolute;
+  top: 1rem;
+  left: -3rem;
+  width: 50%;
+  height: 80%;
+  background-color: rgba(131, 244, 214, 0.3);
+  z-index: 0; /* derrière tous les autres */
+}
+
+.padding-left {
+  padding-left: 1.5rem;
+}
+
+.second-parallelogram-section {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 60%;
+  height: 15rem;
+  pointer-events: none;
+  z-index: 2;
+  margin: 0 3rem 1rem 3rem;
+}
+
+.second-parallelogram-text {
+  color: var(--color-black);
+  text-align: center;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  z-index: 1;
+  transform: skewX(15deg);
+}
+
+.size-text {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.font-size-small {
+  font-size: 0.75rem;
+  font-weight: normal;
+}
