@@ -44,7 +44,8 @@ const associationContent = {
       <section>
         <Title
           text={associationContent.title}
-          className="mb-4"
+          className="mb-4 section-title"
+          level="2"
         />
         <p class="association-description">
           {associationContent.description}
@@ -54,21 +55,23 @@ const associationContent = {
     
   </div>
 
+  <!--Section hyperacousie quesaco ?-->
   <!-- parallelogram section -->
   <section class="parallelogram-section">
     <div class="parallelogram">
-      <!-- Troisième parallélogramme - arrière-plan -->
+      <!-- Three parallelogramme - background -->
       <div class="third-parallelogram"></div>
       
       <Title
         text={hyperacousieContent.title}
         className="mb-4 parallelogram-text"
+        level="3"
       />
       <p class="parallelogram-text padding-left">
         {hyperacousieContent.description}
       </p>
 
-      <!-- Petit parallélogramme -->
+      <!-- Little parallelogramme -->
       <div class="second-parallelogram">
         <p class="second-parallelogram-text size-text">
           {hyperacousieContent.stats.percentage}
@@ -89,11 +92,12 @@ const associationContent = {
       <Title
         text={hyperacousieContent.title}
         className="mb-4 section-title"
+        level="3"
       />
       
       <div class="content-columns">
         <div class="main-content">
-          <p class="description-text">
+          <p class="description-text-hyperacousie-quesako">
             {hyperacousieContent.description}
           </p>
         </div>
