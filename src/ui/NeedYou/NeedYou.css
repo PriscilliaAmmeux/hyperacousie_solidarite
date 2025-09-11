@@ -1,0 +1,21 @@
+.need-you-section {
+  margin: 2rem;
+}
+
+.image-need-you {
+  height: 10rem;
+  margin: 2rem 0 4rem 0;
+}
+
+.need-you-section {
+  display: flex;
+  gap: 2rem; /* Espacement entre les colonnes */
+}
+
+.need-you-content {
+  flex: 0 0 70%; /* 70% de largeur fixe */
+}
+
+.need-you-image-container {
+  flex: 0 0 30%; /* 30% de largeur fixe */
+}

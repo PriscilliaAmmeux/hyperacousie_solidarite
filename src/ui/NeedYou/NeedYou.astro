@@ -1,0 +1,50 @@
+---
+import Title from "../../ui/Title/Title.astro";
+import Button from "../Button/Button.astro";
+import "./NeedYou.css";
+
+---
+<section class="need-you-section">
+  <div class="need-you-content ">
+    <Title 
+      text="Nous avons besoin de vous"
+      className="mb-4 text-center"
+    />
+    <p>
+     Adhérer à notre association c’est nous aider dans un parcours de reconnaissance du handicap. Actuellement l’hyperacousie n’est pas reconnue, ni comme maladie, ni comme handicap.
+    </p>
+    <p >Nous nous battons chaque jour pour que notre voix soit entendue et que nous puissions être prise en charge médicalement et dans la dignité.</p>
+    <p >Grâce à votre adhésion et/ou vos dons, nous pourrons :</p>
+    <ul>
+        <li> interpeller les professionnels de santé,</li>
+        <li>sensibiliser le grand public à travers différentes actions,</li>
+        <li>créer des ponts entre soignants et malades</li>
+        <li>soutenir et venir en aide aux personnes impactées par l’hyperacousie,</li>
+        <li>demander une reconnaissance auprès de différents organismes, tels que la CPAM et la MDPH,</li>
+        <li>faire avancer la recherche grâce à vos dons.</li>
+    </ul>
+    <p >Plus que jamais nous avons besoin de vous et de votre soutien.</p>
+  </div>
+  <div>
+
+    <img 
+          src="/public/money.webp"
+          alt="Illustration de soutien financier"
+          aria-label="Illustration de soutien financier"
+          class="image-need-you"
+          loading="lazy"
+        />
+
+      <Button 
+        variant="coral" 
+        size="sm"
+        href="https://www.helloasso.com/associations/hyperacousie-solidarite"
+        aria-label="Adhérer à l'association ou faire un don via HelloAsso"
+      >
+        Adhérer / Faire un don
+      </Button>
+  </div>
+</section>
+
+
+
