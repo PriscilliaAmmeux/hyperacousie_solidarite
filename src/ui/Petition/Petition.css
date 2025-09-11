@@ -1,0 +1,61 @@
+.association-section {
+  display: flex;
+  flex-direction: column; /* mobile par défaut */
+  align-items: center;
+  gap: 1.5rem;
+  border: 2px solid var(--color-teal);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem;
+  box-shadow: 0 4px 10px var(--color-teal);
+  background-color: #fff; /* contraste et lisibilité */
+}
+
+.association-image-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.image-petition {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.association-content {
+  text-align: center;
+}
+
+.description-text {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-top: 0.5rem;
+  margin-left: 0;
+  text-align: center;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .association-section {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+  }
+
+  .association-image-container {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .association-content {
+    flex: 2;
+    text-align: left; /* réaligné pour desktop */
+  }
+
+  .description-text {
+    font-size: 1.1rem;
+    margin-left: 1rem;
+  }
+}
