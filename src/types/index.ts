@@ -15,6 +15,7 @@ export interface ButtonProps {
     | "ghost";
   size?: "sm" | "md" | "lg";
   href?: string;
+  download?: string;
   target?: string;
   class?: string;
   disabled?: boolean;

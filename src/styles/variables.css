@@ -9,7 +9,6 @@
   --color-black: #3c1914;
   --color-background-white: #fffff7;
 
-
   /* Variables pour les boutons */
   --button-coral-bg: var(--color-coral);
   --button-coral-text: var(--color-black);
@@ -77,4 +76,7 @@
 .btn-white:hover {
   background-color: var(--button-white-hover-bg);
   border-color: var(--button-white-hover-border);
+}
+.text-bold {
+  font-weight: bold;
 }

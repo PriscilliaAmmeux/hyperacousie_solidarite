@@ -2,6 +2,7 @@
 import Title from "../../ui/Title/Title.astro";
 import "./Petition.css";
 import "../../styles/variables.css";
+import Button from "../Button/Button.astro";
 ---
 
 <section class="association-section">
@@ -22,8 +23,16 @@ import "../../styles/variables.css";
       className="mb-4 section-title"
       level="2"
     />
-    <p class="description-text">
+    <p class="description-text-petition">
       Soutenez le sous-titrage universel et en temps réel !
     </p>
+    <Button 
+      variant="coral" 
+      size="sm"
+      href="https://www.helloasso.com/associations/hyperacousie-solidarite"
+      aria-label="Adhérer à l'association ou faire un don via HelloAsso"
+    >
+      Signer la pétition
+    </Button>
   </div>
 </section>

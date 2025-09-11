@@ -39,7 +39,7 @@
 @media (min-width: 768px) {
   .association-section {
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
     gap: 2rem;
   }
@@ -54,8 +54,9 @@
     text-align: left; /* réaligné pour desktop */
   }
 
-  .description-text {
+  .description-text.petition {
     font-size: 1.1rem;
     margin-left: 1rem;
+    margin-bottom: 2rem;
   }
 }
