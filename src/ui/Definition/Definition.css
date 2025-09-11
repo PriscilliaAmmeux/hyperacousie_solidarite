@@ -1,0 +1,107 @@
+/* Base styles - Mobile */
+.definition-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 2rem 1rem;
+  padding: 1rem;
+}
+
+.definition-images-container {
+  display: none; /* Hide images container on mobile */
+}
+
+.definition-image {
+  max-width: 50vw; /* Enlarged from 30vw to 50vw for mobile */
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  align-self: center;
+}
+
+/* Image before text on mobile */
+.definition-image:first-child {
+  display: block;
+  order: 1; /* Display first */
+}
+
+/* Content in the middle */
+.definition-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  order: 2; /* Display second */
+}
+
+/* Image after text on mobile */
+.definition-image:last-child {
+  display: block;
+  order: 3; /* Display last */
+}
+
+.definition-section p {
+  color: var(--color-black);
+  line-height: 1.6;
+  text-align: justify;
+  margin: 0;
+}
+
+.definition-section ul {
+  color: var(--color-black);
+  line-height: 1.6;
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.definition-section li {
+  margin-bottom: 1rem;
+}
+
+/* Desktop - 2 columns: images on left, text on right */
+@media (min-width: 768px) {
+  .definition-section {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 3rem;
+    margin: 2rem;
+  }
+
+  /* Show images container on desktop */
+  .definition-images-container {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 30%;
+    align-items: flex-start;
+    gap: 1.5rem;
+    order: 1;
+  }
+
+  /* Hide individual images on desktop */
+  .definition-section > .definition-image {
+    display: none;
+  }
+
+  /* Show images in container - SIZE UNCHANGED */
+  .definition-images-container .definition-image {
+    display: block;
+    width: 100%;
+    /* No size modification for desktop */
+  }
+
+  .definition-content {
+    flex: 1;
+    order: 2;
+  }
+
+  .section-title {
+    margin-top: 0;
+  }
+}
+
+/* Large desktop */
+@media (min-width: 1024px) {
+  .definition-section {
+    margin: 3rem 5rem;
+    gap: 4rem;
+  }
+}
