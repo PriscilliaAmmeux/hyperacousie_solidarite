@@ -1,4 +1,5 @@
 ---
+import ShortTestimonials from '../components/ShortTestimonials/ShortTestimonials.astro';
 import Layout from '../layouts/Layout.astro';
 import Title from '../ui/Title/Title.astro';
 ---
@@ -9,10 +10,16 @@ import Title from '../ui/Title/Title.astro';
 >
   <div style="text-align:center;">
     <Title
+      text="Témoignages"
+      className="mb-4 section-title"
+      level="2"
+    />
+   <Title
       text="En cours de construction"
       className="mb-4 section-title"
       level="2"
-    /></div>
+    />
+  </div>
   
 
       <div style="text-align:center; margin-top:2rem;">
@@ -22,6 +29,7 @@ import Title from '../ui/Title/Title.astro';
       style="max-width:200px; width:100%; height:auto;" 
     />
   </div>
-    
+
+  <ShortTestimonials />
 
 </Layout>
