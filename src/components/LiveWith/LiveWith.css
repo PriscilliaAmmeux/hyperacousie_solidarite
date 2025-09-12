@@ -1,0 +1,20 @@
+/* Grille 3x3 */
+.livewith-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 2rem;
+  justify-items: center;
+  align-items: start;
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+
+/* Taille fixe pour les images */
+.livewith-grid img {
+  width: 10rem;
+  height: 5rem;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 1rem auto;
+}

@@ -1,0 +1,26 @@
+---
+import "./LiveWith.css";
+import Title from '../../ui/Title/Title.astro';
+import liveWithData from '../../data/liveWith.json' ;
+import { marked } from 'marked';
+---
+
+<section>
+   <Title
+      text="Vivre avec l’hyperacousie : soutien et accompagnement"
+      className="mb-4 section-title"
+      level="2"
+    />
+    <p>
+        L’hyperacousie n’est pas qu’une pathologie physique : c’est aussi une <span class="text-bold">épreuve psychologique</span>.
+    </p>
+    <p> L'association propose :</p>
+ <div class="livewith-grid">
+  {liveWithData.map(item => (
+    <div class="livewith-item">
+      <img src={item.image} alt="" />
+      <div set:html={marked(item.title)} />
+    </div>
+  ))}
+</div>
+</section>
