@@ -16,15 +16,19 @@ import { marked } from 'marked';
     </p>
     <p> L'association propose :</p>
  <div class="livewith-grid">
-  {liveWithData.map(item => (
-    <div class="livewith-item">
-      <img 
-      src={item.image} 
-      alt={item.title.replace(/<[^>]+>/g, '')} 
-      aria-label={item.title.replace(/<[^>]+>/g, '')} 
-      />
-      <div set:html={marked(item.title)} />
+    {liveWithData.map(item => (
+    <div class="livewith-item" aria-label={item.title.replace(/<[^>]+>/g, '')}>
+        <img src={item.image} alt={item.title.replace(/<[^>]+>/g, '')} width="80" height="80" />
+        <div set:html={marked(item.title)} />
+        {item.email && (
+        <a
+            href={`mailto:${item.email}`}
+            class="livewith-email"
+        >
+            {item.email}
+        </a>
+        )}
     </div>
-  ))}
+    ))}
 </div>
 </section>
