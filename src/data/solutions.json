@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "title": "Dès l’apparition des symptômes, un repos sonore sans se couper du bruit et une évaluation médicale sont indispensables.",
     "items": [
       "Consultation ORL spécialisée dans les troubles de l’audition. Idéalement ORL sensibilisé sur cette pathologie auditive. Les membres de l’AFREPA et Coupacou seront un peu plus disposés à élaborer un diagnostic.",
@@ -7,6 +8,7 @@
     ]
   },
   {
+    "id": 2,
     "title": "Thérapies sonores et rééducation auditive (avec précaution)",
     "items": [
       "Thérapie d’habituation sonore (TRT : Tinnitus Retraining Therapy). Il s’agit d’utilisation progressive de bruits blancs pour réentraîner le système auditif. **Attention !** sur certaines personnes, notamment celles atteintes d’hyperacousie **douloureuse**, il a été rapporté des cas d’aggravation. Il est important d’écouter vos ressentis et d’en parler librement avec le praticien.",
@@ -14,6 +16,7 @@
     ]
   },
   {
+    "id": 3,
     "title": "Approches complémentaires",
     "items": [
       "Kinésithérapie maxillo-faciale et ostéopathie crânienne pour soulager les tensions autour de l’oreille et de la mâchoire.",
@@ -22,6 +25,7 @@
     ]
   },
   {
+    "id": 4,
     "title": "Aides techniques et environnementales",
     "items": [
       "Protections auditives adaptées (moulées sur mesure), bouchons en mousse, casque à réducteur de son, casque antibruit.",

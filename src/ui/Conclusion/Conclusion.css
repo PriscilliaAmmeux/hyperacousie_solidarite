@@ -1,0 +1,38 @@
+.conclusion-text {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1.25rem;
+  text-align: justify;
+}
+
+.text-coral {
+  color: var(--color-coral);
+}
+
+.conclusion-image {
+  width: 10rem;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.section-conclusion {
+  margin: 0 10rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Responsive : mobile et tablette */
+@media (max-width: 900px) {
+  .section-conclusion {
+    margin: 0 2rem;
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+  .conclusion-image {
+    margin: 0 auto;
+    transform: rotate(90deg);
+    transition: transform 0.3s;
+  }
+}
