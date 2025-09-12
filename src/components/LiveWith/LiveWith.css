@@ -12,7 +12,7 @@
 
 .livewith-grid img {
   width: 10rem;
-  height: 5rem;
+  height: auto;
   object-fit: contain;
   display: block;
   margin: 0 auto 1rem auto;
