@@ -17,9 +17,25 @@
   width: 100%;
 }
 
+.section-title {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
 @media screen and (max-width: 768px) {
   .solutions-container {
-    margin: 0 2rem;
+    margin: 0 auto;
+    padding: 0 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .section-solutions-background {
+    margin: 2rem 0;
+    padding: 2rem 0.5rem;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
   }
 }
 
