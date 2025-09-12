@@ -1,0 +1,78 @@
+---
+import './Card.css';
+import '../../styles/variables.css';
+
+
+export interface Props {
+  subtitle?: string;
+  content?: string;
+  items: (string | { label: string; description: string; })[];
+  imageSrc?: string;
+  imageAlt?: string;
+  buttonText?: string;
+  buttonHref?: string;
+  className?: string;
+}
+
+const {  
+  subtitle, 
+  content, 
+  items, 
+  imageSrc, 
+  imageAlt, 
+  buttonText, 
+  buttonHref,
+  className = ""
+} = Astro.props;
+---
+<section class={`card ${className}`}>
+  <div class="card-content">
+    {(imageSrc && subtitle) && (
+      <div class="card-header">
+        <div class="card-image">
+          <img src={imageSrc} alt={imageAlt || ""} />
+        </div>
+        <h3 class="card-subtitle">{subtitle}</h3>
+      </div>
+    )}
+    
+    {(imageSrc && !subtitle) && (
+      <div class="card-image">
+        <img src={imageSrc} alt={imageAlt || ""} />
+      </div>
+    )}
+    
+    {(subtitle && !imageSrc) && (
+      <h3 class="card-subtitle">{subtitle}</h3>
+    )}
+    
+    {content && <p class="card-text">{content}</p>}
+    
+     {items && items.length > 0 && (
+      <ul class="card-list">
+        {items.map((item) => (
+          <li class="card-list-item">
+            {typeof item === 'string' ? (
+              item
+            ) : (
+              <>
+                <span class="text-bold">{item.label}</span>
+                <span>{item.description}</span>
+              </>
+            )}
+          </li>
+        ))}
+      </ul>
+    )}
+    
+    <slot />
+    
+    {buttonText && buttonHref && (
+      <div class="card-button-container">
+        <a href={buttonHref} class="card-button">
+          {buttonText}
+        </a>
+      </div>
+    )}
+  </div>
+</section>

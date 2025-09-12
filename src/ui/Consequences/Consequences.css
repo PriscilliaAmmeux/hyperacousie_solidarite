@@ -1,0 +1,26 @@
+.consequences-image {
+  width: 30rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.consequences-image:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.consequences-section,
+.section-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .consequences-image {
+    width: 20rem;
+    display: block;
+    margin: 0 auto;
+  }
+}

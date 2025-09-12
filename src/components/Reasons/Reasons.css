@@ -1,0 +1,119 @@
+.section-coral-background {
+  position: relative;
+  margin: 3rem 0;
+  background-color: rgba(255, 111, 97, 0.5); /* FF6F61 with 50% transparency */
+  padding: 3rem 1rem;
+  margin-left: calc(-50vw + 50%); /* Takes full screen width */
+  width: 100vw;
+  overflow-x: hidden; /* Prevents horizontal overflow */
+  box-sizing: border-box;
+}
+
+.reasons-container {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.reasons-container .section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.reasons-container p {
+  margin-bottom: 2rem;
+}
+
+/* Swiper styles */
+.reasons-swiper {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  padding-bottom: 3rem;
+  box-sizing: border-box;
+}
+
+.reasons-swiper .swiper-wrapper {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.reasons-swiper .swiper-slide {
+  height: auto;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Card styles */
+.reason-card {
+  background-color: var(--color-white);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+}
+
+.reason-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.reason-card .card-subtitle {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Swiper navigation customization */
+.reasons-swiper .swiper-button-next,
+.reasons-swiper .swiper-button-prev {
+  color: var(--color-coral, #ff6f61);
+}
+
+.reasons-swiper .swiper-pagination-bullet-active {
+  background-color: var(--color-coral, #ff6f61);
+}
+
+/* Responsive design */
+@media (max-width: 640px) {
+  .section-coral-background {
+    margin: 2rem 0;
+    padding: 2rem 0.5rem;
+  }
+
+  .reasons-container {
+    padding: 0 0.5rem;
+  }
+
+  .reason-card {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-coral-background {
+    padding: 1.5rem 0.25rem;
+    margin: 1rem 0;
+  }
+
+  .reasons-container {
+    padding: 0 0.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-coral-background {
+    padding: 4rem 1rem;
+  }
+
+  .reason-card {
+    padding: 2rem;
+  }
+}
