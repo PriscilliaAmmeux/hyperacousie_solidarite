@@ -1,6 +1,8 @@
 ---
 import Title from "../../ui/Title/Title.astro";
 import "./Team.css";
+import "../../styles/variables.css";
+import Card from "../Card/Card.astro";
 
 // Team members data
 const teamMembers = [
@@ -25,8 +27,7 @@ const teamMembers = [
  
 ];
 ---
-
-<section class="team-section">
+<section class="section-coral-background">
   <div class="team-container">
     <div class="team-header">
       <Title
@@ -34,27 +35,55 @@ const teamMembers = [
         className="team-title"
         level="2"
       />
-
     </div>
 
-    <div class="team-grid">
-      {teamMembers.map(member => (
-        <article class="team-card">
-          <div class="team-card-header">
-            <div class="team-card-image">
-              <img 
-                src={member.image} 
-                alt={`Photo de ${member.name}`}
-                loading="lazy"
-              />
-            </div>
-            <h3 class="team-member-name">{member.name}</h3>
+    <div class="swiper team-swiper">
+      <div class="swiper-wrapper">
+        {teamMembers.map(member => (
+          <div class="swiper-slide">
+            <Card 
+              subtitle={member.name}
+              content={member.bio}
+              imageSrc={member.image}
+              imageAlt={`Photo de ${member.name}`}
+              className="team-card"
+            />
           </div>
-          <div class="team-card-content">
-            <p class="team-member-bio">{member.bio}</p>
-          </div>
-        </article>
-      ))}
+        ))}
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
     </div>
   </div>
 </section>
+
+<script>
+  import { Swiper } from 'swiper';
+  import { Navigation, Pagination } from 'swiper/modules';
+  import 'swiper/css';
+  import 'swiper/css/navigation';
+  import 'swiper/css/pagination';
+
+  const teamSwiper = new Swiper('.team-swiper', {
+    modules: [Navigation, Pagination],
+    slidesPerView: 1,
+    spaceBetween: 30,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 1,
+      },
+      1024: {
+        slidesPerView: 2,
+      },
+    },
+  });
+</script>

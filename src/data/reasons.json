@@ -1,0 +1,46 @@
+[
+  {
+    "subtitle": "Causes auditives",
+    "items": [
+      {
+        "label": "Traumatisme sonore :",
+        "description": "exposition soudaine ou prolongée à des sons intenses (concert, pétard, sirène, casque audio trop fort…)"
+      },
+      {
+        "label": "Presbyacousie :",
+        "description": "altération naturelle de l'audition avec l'âge"
+      },
+      {
+        "label": "Maladies de l'oreille interne :",
+        "description": "maladie de Ménière, otospongiose, labyrinthite, neurinome de l'acoustique, syndrome de minor, paralysie faciale, etc."
+      },
+      {
+        "label": "Suites d'une chirurgie de l'oreille ou d'un traumatisme crânien.",
+        "description": ""
+      }
+    ]
+  },
+  {
+    "subtitle": "Causes neurologiques",
+    "items": [
+      "Dysfonctionnement du système nerveux central impliqué dans la régulation des sons",
+      "Troubles de la connectivité auditive dans le cerveau"
+    ]
+  },
+  {
+    "subtitle": "Causes liées à d’autres pathologies",
+    "items": [
+      "Syndrome de l’articulation temporo-mandibulaire (ATM).",
+      "Fibromyalgie, maladie de lyme, syndrome de fatigue chronique, troubles vestibulaires.",
+      "Troubles digestifs et inflammatoires pouvant influencer le système nerveux."
+    ]
+  },
+  {
+    "subtitle": "Causes médicamenteuses et autres facteurs :",
+    "items": [
+      "Certains médicaments ototoxiques (certains antibiotiques, chimiothérapies, etc.).",
+      "Stress chronique, burn-out, anxiété sévère.",
+      "Dans de rares cas, suites d’une infection virale, d’une maladie auto-immune ou de certaines vaccinations."
+    ]
+  }
+]

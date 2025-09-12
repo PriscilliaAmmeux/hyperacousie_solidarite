@@ -1,0 +1,65 @@
+---
+import Title from "../../ui/Title/Title.astro";
+import Card from "../Card/Card.astro";
+import './Reasons.css';
+import '../../styles/variables.css';
+import reasons from '../../data/reasons.json';
+---
+
+<section class="section-coral-background">
+    <div class="reasons-container">
+        <Title 
+        text="Les causes possibles de l'hyperacousie" 
+        className="mb-8 section-title" 
+        level="2" />
+
+        <p>L'hyperacousie peut avoir <span class="text-bold">plusieurs origines</span>. Et elles peuvent être cumulatives. Dans certains cas, elle reste inexpliquée. Parmi les causes identifiées :</p>
+
+        <div class="swiper reasons-swiper">
+            <div class="swiper-wrapper">
+                {reasons.map((reason) => (
+                    <div class="swiper-slide">
+                        <Card 
+                            subtitle={reason.subtitle}
+                               items={reason.items}
+                            className="reason-card"
+                        />
+                    </div>
+                ))}
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+</section>
+
+<script>
+    import { Swiper } from 'swiper';
+    import { Navigation, Pagination } from 'swiper/modules';
+    import 'swiper/css';
+    import 'swiper/css/navigation';
+    import 'swiper/css/pagination';
+
+    const swiper = new Swiper('.reasons-swiper', {
+        modules: [Navigation, Pagination],
+        slidesPerView: 1,
+        spaceBetween: 20,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 3,
+            },
+        },
+    });
+</script>

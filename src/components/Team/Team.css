@@ -2,33 +2,25 @@
    TEAM COMPONENT
    ======================================== */
 
-/* Section principale avec background coral transparent */
-.team-section {
+.section-coral-background {
   position: relative;
-  margin: 3rem 0;
-  background-color: rgba(
-    255,
-    111,
-    97,
-    0.5
-  ); /* FF6F61 avec 50% de transparence */
-  padding: 3rem 0;
-  width: 100vw;
-  margin-left: calc(-50vw + 50%); /* Prend toute la largeur de l'écran */
-  overflow-x: hidden; /* Empêche le débordement horizontal */
+  margin: 2rem 0;
+  background-color: rgba(255, 111, 97, 0.5); /* FF6F61 with 50% transparency */
+  margin-left: calc(-50vw + 50%); /* Takes full screen width */
+  overflow-x: hidden; /* Prevents horizontal overflow */
+  padding: 3rem 1rem;
 }
 
 .team-container {
-  max-width: 1200px;
+  max-width: 75rem;
   margin: 0 auto;
   padding: 0 1rem;
   box-sizing: border-box;
-  width: 100%;
 }
 
 .team-header {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .team-title {
@@ -36,26 +28,25 @@
   margin-bottom: 1rem;
 }
 
-/* Grid des cartes équipe */
-.team-grid {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  gap: 1.5rem;
-  margin-top: 2rem;
+/* Team swiper styles */
+.team-swiper {
+  width: 100%;
+  padding-bottom: 5rem;
 }
 
-/* Cartes individuelles */
+.team-swiper .swiper-slide {
+  height: auto;
+}
+
+/* Individual cards */
 .team-card {
   background-color: var(--color-white);
   border-radius: 1rem;
-  padding: 2rem;
+  padding: 1.5rem;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -4px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  flex: 1;
-  max-width: calc(33.333% - 1rem);
-  min-width: 280px;
+  height: 100%;
   box-sizing: border-box;
 }
 
@@ -65,45 +56,63 @@
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
-/* Header de la carte avec image et nom côte à côte */
-.team-card-header {
+/* Team card header with image and name side by side */
+.team-card .card-header {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
 }
 
-.team-card-image {
+/* Team card image styling */
+.team-card .card-image {
   flex-shrink: 0;
 }
 
-.team-card-image img {
-  width: 100px;
-  height: 100px;
+.team-card .card-image img {
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
-.team-card-content {
-  text-align: left;
-}
-
-.team-member-name {
-  color: var(--color-black);
+/* Team card subtitle (name) styling */
+.team-card .card-subtitle {
+  margin: 0;
   font-size: 1.5rem;
   font-weight: 600;
-  margin: 0;
-  flex: 1;
+  color: var(--color-coral, #ff6f61);
 }
 
-.team-member-bio {
-  color: var(--color-black);
-  font-size: 0.95rem;
-  line-height: 1.6;
-  opacity: 0.9;
+/* Team card text styling */
+.team-card .card-text {
   text-align: justify;
-  margin: 0;
+  line-height: 1.6;
+}
+
+/* Swiper navigation customization */
+.team-swiper .swiper-button-next,
+.team-swiper .swiper-button-prev {
+  color: var(--color-coral, #ff6f61);
+  top: auto;
+  bottom: 1rem;
+}
+
+.team-swiper .swiper-button-prev {
+  left: 45%;
+}
+
+.team-swiper .swiper-button-next {
+  right: 45%;
+}
+
+.team-swiper .swiper-pagination {
+  bottom: 3rem;
+}
+
+.team-swiper .swiper-pagination-bullet-active {
+  background-color: var(--color-coral, #ff6f61);
 }
 
 /* ==========================================
@@ -112,160 +121,70 @@
 
 /* Mobile (max 640px) */
 @media (max-width: 640px) {
-  .team-section {
+  .section-coral-background {
     margin: 1.5rem 0;
-    padding: 2rem 0;
+    padding: 2rem 1rem;
   }
 
   .team-container {
-    padding: 0 1rem;
-    max-width: 100%;
-  }
-
-  .team-header {
-    margin-bottom: 2rem;
-  }
-
-  .team-description {
-    font-size: 1rem;
-  }
-
-  .team-grid {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 1.5rem;
-    padding: 0;
-    width: 100%;
+    padding: 0 0.5rem;
   }
 
   .team-card {
     padding: 1.5rem;
-    width: 100%;
-    max-width: 100%;
-    flex: none;
-    box-sizing: border-box;
   }
 
-  .team-card-header {
-    flex-direction: column;
-    text-align: center;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
+  .team-card .card-image img {
+    width: 120px;
+    height: 120px;
   }
 
-  .team-card-content {
-    text-align: justify;
-  }
-
-  .team-card-image img {
-    width: 80px;
-    height: 80px;
-  }
-
-  .team-member-name {
+  .team-card .card-subtitle {
     font-size: 1.3rem;
-  }
-
-  .team-member-bio {
-    font-size: 0.9rem;
   }
 }
 
-/* Très petits écrans (max 480px) */
+/* Very small screens (max 480px) */
 @media (max-width: 480px) {
-  .team-section {
-    padding: 1.5rem 0;
+  .section-coral-background {
+    padding: 1.5rem 0.5rem;
     margin: 1rem 0;
   }
 
   .team-container {
-    padding: 0 0.75rem;
-    max-width: 100%;
+    padding: 0 0.25rem;
   }
 
-  .team-grid {
-    padding: 0;
-    gap: 1rem;
-    width: 100%;
+  .team-card .card-image img {
+    width: 100px;
+    height: 100px;
   }
 
-  .team-card {
-    padding: 1rem;
-    margin: 0;
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-  }
-
-  .team-card-image img {
-    width: 70px;
-    height: 70px;
-  }
-
-  .team-member-name {
+  .team-card .card-subtitle {
     font-size: 1.2rem;
-  }
-
-  .team-member-bio {
-    font-size: 0.85rem;
-  }
-}
-
-/* Tablette (641px - 1023px) */
-@media (min-width: 641px) and (max-width: 1023px) {
-  .team-grid {
-    flex-wrap: nowrap;
-    gap: 1rem;
-  }
-
-  .team-card {
-    flex: 1;
-    max-width: calc(33.333% - 0.75rem);
-    min-width: 250px;
-    padding: 1.5rem;
-  }
-
-  .team-card-image img {
-    width: 80px;
-    height: 80px;
-  }
-
-  .team-member-name {
-    font-size: 1.2rem;
-  }
-
-  .team-member-bio {
-    font-size: 0.85rem;
   }
 }
 
 /* Desktop (1024px+) */
 @media (min-width: 1024px) {
-  .team-section {
-    padding: 4rem 0;
-  }
-
-  .team-grid {
-    flex-wrap: nowrap;
-    gap: 2rem;
+  .section-coral-background {
+    padding: 4rem 1rem;
   }
 
   .team-card {
-    padding: 2.5rem;
-    flex: 1;
-    max-width: calc(33.333% - 1.5rem);
-    min-width: 300px;
+    padding: 2rem;
   }
 
-  .team-description {
-    font-size: 1.2rem;
+  .team-card .card-image img {
+    width: 180px;
+    height: 180px;
   }
-}
 
-/* Très grands écrans (1400px+) */
-@media (min-width: 1400px) {
-  .team-card {
-    padding: 3rem;
-    max-width: calc(33.333% - 2rem);
+  .team-card .card-subtitle {
+    font-size: 1.6rem;
+  }
+
+  .team-swiper .swiper-pagination {
+    bottom: 0.5rem;
   }
 }
