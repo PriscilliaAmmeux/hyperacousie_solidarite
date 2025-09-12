@@ -1,0 +1,32 @@
+---
+import Button from '../Button/Button.astro';
+import Title from '../Title/Title.astro';
+import './SectionButtonMore.css';
+---
+
+<section class="section-button-more">
+    <Title
+        text="Vous souhaitez aller plus loin ?"
+        className="mb-4 section-title"
+        level="2"
+    />
+    <div class="section-button-more-actions">
+        <Button 
+        variant="coral" 
+        size="sm"
+        href="https://www.helloasso.com/associations/hyperacousie-solidarite"
+        aria-label="Adhérer à l'association ou faire un don via HelloAsso"
+        >
+        Faire un don
+        </Button>
+
+        <Button 
+        variant="teal" 
+        size="sm"
+        href="https://www.helloasso.com/associations/hyperacousie-solidarite"
+        aria-label="Adhérer à l'association ou faire un don via HelloAsso"
+        >
+        Adhérer à l'association
+        </Button>
+    </div>
+</section>
