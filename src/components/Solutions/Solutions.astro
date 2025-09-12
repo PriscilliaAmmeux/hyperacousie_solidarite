@@ -1,0 +1,65 @@
+---
+import './Solutions.css';
+import Title from "../../ui/Title/Title.astro";
+import Card from "../Card/Card.astro";
+import solutions from '../../data/solutions.json';
+---
+
+<section class="section-solutions-background">
+    <div class="solutions-container">
+        <Title
+            text="Quelles solutions et pistes de prise en charge ?"
+            className="mb-4 section-title"
+            level="2"
+        />
+        <p>Actuellement, il n'existe pas de traitement unique pour "guérir" l'hyperacousie. La prise en charge repose sur plusieurs approches complémentaires :</p>
+
+        <div class="swiper solutions-swiper">
+            <div class="swiper-wrapper">
+                {solutions.map((solution) => (
+                    <div class="swiper-slide">
+                        <Card 
+                            subtitle={solution.title}
+                            items={solution.items}
+                            className="solution-card"
+                        />
+                    </div>
+                ))}
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+</section>
+
+
+<script>
+    import { Swiper } from 'swiper';
+    import { Navigation, Pagination } from 'swiper/modules';
+    import 'swiper/css';
+    import 'swiper/css/navigation';
+    import 'swiper/css/pagination';
+
+    const swiper = new Swiper('.solutions-swiper', {
+        modules: [Navigation, Pagination],
+        slidesPerView: 1,
+        spaceBetween: 20,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 3,
+            },
+        },
+    });
+</script>

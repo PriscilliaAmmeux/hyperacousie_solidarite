@@ -1,12 +1,12 @@
 ---
 import './Card.css';
 import '../../styles/variables.css';
-
+import { marked } from 'marked';
 
 export interface Props {
   subtitle?: string;
   content?: string;
-  items: (string | { label: string; description: string; })[];
+  items?: (string | { label: string; description: string; })[];
   imageSrc?: string;
   imageAlt?: string;
   buttonText?: string;
@@ -49,20 +49,21 @@ const {
     {content && <p class="card-text">{content}</p>}
     
      {items && items.length > 0 && (
-      <ul class="card-list">
-        {items.map((item) => (
-          <li class="card-list-item">
-            {typeof item === 'string' ? (
-              item
-            ) : (
-              <>
-                <span class="text-bold">{item.label}</span>
-                <span>{item.description}</span>
-              </>
-            )}
-          </li>
-        ))}
-      </ul>
+
+<ul class="card-list">
+  {items.map((item) => (
+    <li class="card-list-item">
+      {typeof item === 'string' ? (
+        <span set:html={marked(item)} />
+      ) : (
+        <>
+          <span class="text-bold">{item.label}</span>
+          <span>{item.description}</span>
+        </>
+      )}
+    </li>
+  ))}
+</ul>
     )}
     
     <slot />
