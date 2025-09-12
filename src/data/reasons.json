@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "subtitle": "Causes auditives",
     "items": [
       {
@@ -21,6 +22,7 @@
     ]
   },
   {
+    "id": 2,
     "subtitle": "Causes neurologiques",
     "items": [
       "Dysfonctionnement du système nerveux central impliqué dans la régulation des sons",
@@ -28,6 +30,7 @@
     ]
   },
   {
+    "id": 3,
     "subtitle": "Causes liées à d’autres pathologies",
     "items": [
       "Syndrome de l’articulation temporo-mandibulaire (ATM).",
@@ -36,6 +39,7 @@
     ]
   },
   {
+    "id": 4,
     "subtitle": "Causes médicamenteuses et autres facteurs :",
     "items": [
       "Certains médicaments ototoxiques (certains antibiotiques, chimiothérapies, etc.).",

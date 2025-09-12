@@ -18,7 +18,11 @@ import { marked } from 'marked';
  <div class="livewith-grid">
   {liveWithData.map(item => (
     <div class="livewith-item">
-      <img src={item.image} alt="" />
+      <img 
+      src={item.image} 
+      alt={item.title.replace(/<[^>]+>/g, '')} 
+      aria-label={item.title.replace(/<[^>]+>/g, '')} 
+      />
       <div set:html={marked(item.title)} />
     </div>
   ))}
