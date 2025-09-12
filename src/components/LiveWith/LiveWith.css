@@ -18,6 +18,21 @@
   margin: 0 auto 1rem auto;
 }
 
+.livewith-email {
+  color: var(--color-coral);
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.livewith-email:hover {
+  color: var(--color-teal);
+}
+
+.livewith-item {
+  text-align: center;
+}
+
 .section-livewith {
   margin: 0 2rem;
 }

@@ -31,7 +31,8 @@
   },
   {
     "id": 7,
-    "title": "Des **visioconférences** en nous écrivant directement à <a href=\"mailto:hyperacousiesolidarite@gmail.com\">hyperacousiesolidarite@gmail.com</a>.",
+    "title": "Des **visioconférences** en nous écrivant directement à :",
+    "email": "hyperacousiesolidarite@gmail.com",
     "image": "/conference.webp"
   },
   {
