@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  margin: 0 1rem;
+  margin: 0 1.5rem;
 }
 
 .need-you-content {
@@ -24,11 +24,17 @@
   border-radius: 0.5rem;
 }
 
+.need-you-content p {
+  text-align: justify;
+}
+
 /* Desktop */
 @media (min-width: 768px) {
   .need-you-section {
     flex-direction: row;
     align-items: flex-start;
+    margin: 0 1rem;
+    padding: 0 3rem;
   }
 
   .need-you-content {
@@ -37,7 +43,9 @@
 
   .need-you-image-container {
     flex: 0 0 30%;
-    align-items: flex-start;
+    align-items: center;
+    margin: 1rem 3rem;
+    text-align: center;
   }
 
   .image-need-you {
