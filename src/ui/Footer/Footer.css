@@ -1,8 +1,27 @@
-/* Styles for the Footer component */
 .footer-links {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 2rem;
+}
+
+footer {
+  position: relative;
+  overflow: visible;
+}
+
+.footer-logo-overlap {
+  position: absolute;
+  left: 1rem;
+  top: -70px;
+  transform: none;
+  z-index: 2;
+  height: 150px;
+  width: auto;
+}
+
+.max-w-7xl {
+  position: relative; /* Pour que le contenu reste bien positionné */
+  padding-top: 60px; /* Ajoute de l’espace pour ne pas masquer le contenu */
 }
 
 /* Responsive: 2 colonnes sur écrans moyens et plus */
@@ -38,9 +57,12 @@ footer img {
     padding-left: 1rem;
     padding-right: 1rem;
   }
+
+  .footer-logo-overlap {
+    top: -50px;
+  }
 }
 
-/* Force la suppression des puces */
 .footer-links ul {
   list-style: none !important;
   list-style-type: none !important;
