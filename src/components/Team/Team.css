@@ -82,7 +82,7 @@
   margin: 0;
   font-size: 1.5rem;
   font-weight: 600;
-  color: var(--color-coral, #ff6f61);
+  color: var(--color-coral);
 }
 
 /* Team card text styling */
@@ -94,8 +94,10 @@
 /* Swiper navigation customization */
 .team-swiper .swiper-button-next,
 .team-swiper .swiper-button-prev {
-  color: var(--color-coral, #ff6f61);
-  top: auto;
+  color: var(--color-coral);
+  top: 50% !important;
+  bottom: auto !important;
+  transform: translateY(-50%);
 }
 
 .team-swiper .swiper-button-prev {
@@ -111,7 +113,7 @@
 }
 
 .team-swiper .swiper-pagination-bullet-active {
-  background-color: var(--color-coral, #ff6f61);
+  background-color: var(--color-coral);
 }
 
 /* ==========================================
