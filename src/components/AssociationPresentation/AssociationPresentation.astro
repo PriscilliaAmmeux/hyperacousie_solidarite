@@ -8,8 +8,7 @@ const hyperacousieContent = {
   description: "L'hyperacousie est un trouble de l'audition caractérisé par une intolérance aux sons du quotidien, même lorsqu'ils sont à un volume normalement tolérable pour la majorité des personnes. Elle peut fortement impacter la qualité de vie des personnes qui en souffrent. Elle est régulièrement accompagnée d'acouphènes.",
   stats: {
     percentage: "1,5 % à 2,5 % de la population",
-    source: "Estimation épidémiologique (LeMédecin.fr)",
-    reference: "* Sources : Ministère de la Santé (Prévention des risques liés au bruit)"
+    reference: "* Source : Ministère de la Santé"
   }
 };
 
@@ -76,9 +75,6 @@ const associationContent = {
         <p class="second-parallelogram-text size-text">
           {hyperacousieContent.stats.percentage}
         </p>
-        <p class="second-parallelogram-text font-size-small">
-          {hyperacousieContent.stats.source}
-        </p>
         <p class="second-parallelogram-text font-size-small padding-top">
           {hyperacousieContent.stats.reference}
         </p>
@@ -106,9 +102,6 @@ const associationContent = {
           <div class="stat-card">
             <p class="stat-number">
               {hyperacousieContent.stats.percentage}
-            </p>
-            <p class="stat-description">
-              {hyperacousieContent.stats.source}
             </p>
             <p class="stat-source">
               {hyperacousieContent.stats.reference}

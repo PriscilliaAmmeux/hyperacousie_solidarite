@@ -17,6 +17,7 @@ export interface ButtonProps {
   href?: string;
   download?: string;
   target?: string;
+  rel?: string;
   class?: string;
   disabled?: boolean;
   type?: "button" | "submit" | "reset";
