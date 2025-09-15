@@ -85,6 +85,11 @@
   text-align: justify;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 main,
 body,
 html {
