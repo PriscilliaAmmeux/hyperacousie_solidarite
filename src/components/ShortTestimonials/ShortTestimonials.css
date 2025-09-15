@@ -1,0 +1,141 @@
+.short-testimonials-swiper {
+  width: 98vw;
+  max-width: 1200px;
+  min-width: 280px;
+  margin: 0 auto 2rem auto;
+  position: relative;
+  overflow: visible;
+}
+
+.swiper-wrapper {
+  display: flex;
+  align-items: center;
+  overflow: visible;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1vw;
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+.testimonial-card {
+  position: relative;
+  width: 100%;
+  max-width: 80vw;
+  background: rgba(18, 182, 161, 0.5);
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px #0001;
+  padding: 2.5rem 2rem 2rem 2rem;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+.quote-img {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  opacity: 1;
+  pointer-events: none;
+  user-select: none;
+  z-index: 12;
+}
+
+.quote-top-left {
+  top: -1.5rem;
+  left: -1.5rem;
+}
+
+.quote-bottom-right {
+  bottom: -1.5rem;
+  right: -1.5rem;
+}
+
+.testimonial-text {
+  font-size: 1.1rem;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  margin-top: 0;
+  text-align: left;
+}
+
+.testimonial-name {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #0a5c53;
+  align-self: flex-end;
+  margin: 0;
+  text-align: right;
+}
+
+/* Swiper pagination bullets */
+.swiper-pagination-bullet,
+.swiper-pagination-bullet-active {
+  background: var(--color-teal) !important;
+}
+
+/* Swiper navigation arrows */
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--color-teal) !important;
+  transform: translateY(-50%);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 1.5rem;
+}
+
+.swiper-pagination {
+  bottom: 10px !important;
+  text-align: center;
+}
+
+.short-testimonials-swiper,
+.swiper,
+.swiper-wrapper,
+.swiper-slide,
+.testimonial-card {
+  overflow: visible !important;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .testimonial-card {
+    max-width: 240px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 15px;
+    height: 15px;
+    font-size: 1.2rem;
+    transform: none !important;
+    position: absolute !important;
+    z-index: 10;
+  }
+  .swiper-button-next {
+    right: 0.5rem !important;
+    left: auto !important;
+  }
+  .swiper-button-prev {
+    left: 0.5rem !important;
+    right: auto !important;
+  }
+  .swiper-pagination {
+    bottom: 0.8rem !important;
+  }
+
+  .quote-img {
+    width: 50px;
+    height: 50px;
+  }
+}

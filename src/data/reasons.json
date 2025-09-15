@@ -13,7 +13,7 @@
       },
       {
         "label": "Maladies de l'oreille interne :",
-        "description": "maladie de Ménière, otospongiose, labyrinthite, neurinome de l'acoustique, syndrome de minor, paralysie faciale, etc."
+        "description": "maladie de Ménière, otospongiose, labyrinthite, neurinome de l’acoustique, syndrome de minor, etc."
       },
       {
         "label": "Suites d'une chirurgie de l'oreille ou d'un traumatisme crânien.",
@@ -34,6 +34,7 @@
     "subtitle": "Causes liées à d’autres pathologies",
     "items": [
       "Syndrome de l’articulation temporo-mandibulaire (ATM).",
+      "Paralysie faciale.",
       "Fibromyalgie, maladie de lyme, syndrome de fatigue chronique, troubles vestibulaires.",
       "Troubles digestifs et inflammatoires pouvant influencer le système nerveux."
     ]
@@ -44,7 +45,7 @@
     "items": [
       "Certains médicaments ototoxiques (certains antibiotiques, chimiothérapies, etc.).",
       "Stress chronique, burn-out, anxiété sévère.",
-      "Dans de rares cas, suites d’une infection virale, d’une maladie auto-immune ou de certaines vaccinations."
+      "Suites d’une infection virale, d’une maladie auto-immune ou de certaines vaccinations."
     ]
   }
 ]
