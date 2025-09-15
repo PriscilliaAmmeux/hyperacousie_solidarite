@@ -13,7 +13,7 @@ footer {
 .footer-logo-overlap {
   position: absolute;
   left: 1rem;
-  top: -70px;
+  top: -115px;
   transform: none;
   z-index: 2;
   height: 150px;
@@ -60,7 +60,7 @@ footer img {
   }
 
   .footer-logo-overlap {
-    top: -50px;
+    top: -100px;
   }
 }
 
