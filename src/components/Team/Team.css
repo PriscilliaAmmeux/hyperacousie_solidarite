@@ -1,7 +1,3 @@
-/* ========================================
-   TEAM COMPONENT
-   ======================================== */
-
 .section-coral-background {
   position: relative;
   margin: 2rem 0;
@@ -101,11 +97,11 @@
 }
 
 .team-swiper .swiper-button-prev {
-  left: 45%;
+  left: 0;
 }
 
 .team-swiper .swiper-button-next {
-  right: 45%;
+  right: 0;
 }
 
 .team-swiper .swiper-pagination {
