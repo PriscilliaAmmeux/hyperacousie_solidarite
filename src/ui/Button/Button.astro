@@ -9,6 +9,7 @@ const {
   size = 'md',
   href,
   target,
+  rel,
   class: className = '',
   disabled = false,
   type = 'button',
@@ -47,6 +48,7 @@ const Tag = href ? 'a' : 'button';
   style="border-radius: 5px !important;"
   href={href}
   target={target}
+  rel={rel}
   disabled={disabled}
   type={!href ? type : undefined}
 >

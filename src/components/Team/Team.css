@@ -127,6 +127,10 @@
     padding: 0 0.5rem;
   }
 
+  .team-card .card-text {
+    text-align: left;
+  }
+
   .team-card {
     padding: 1.5rem;
   }

@@ -62,11 +62,6 @@
   top: 50%;
   transform: translateY(-50%);
 }
-.solutions-swiper .swiper-button-next:hover,
-.solutions-swiper .swiper-button-prev:hover {
-  background: var(--color-teal);
-  border-color: var(--color-teal);
-}
 
 .solutions-swiper .swiper-button-next::after,
 .solutions-swiper .swiper-button-prev::after {

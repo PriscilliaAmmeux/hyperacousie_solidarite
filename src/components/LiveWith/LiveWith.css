@@ -24,6 +24,7 @@
   text-decoration: underline;
   cursor: pointer;
   transition: color 0.2s;
+  white-space: nowrap;
 }
 .livewith-email:hover {
   color: var(--color-teal);
@@ -33,8 +34,26 @@
   text-align: center;
 }
 
+.margin-left {
+  margin-left: 3rem;
+}
+
 .section-livewith {
   margin: 0 2rem;
+}
+
+.livewith-item a {
+  color: var(--color-coral, #ff6f61);
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.livewith-item a:visited {
+  color: var(--color-coral, #ff6f61);
+}
+
+.livewith-item a:hover {
+  color: var(--color-teal, #12b6a1);
 }
 
 @media (max-width: 1024px) {
@@ -47,5 +66,8 @@
   .livewith-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+  .margin-left {
+    margin-left: 0;
   }
 }
