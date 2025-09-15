@@ -7,6 +7,7 @@
 footer {
   position: relative;
   overflow: visible;
+  padding: 3rem 0;
 }
 
 .footer-logo-overlap {
@@ -101,9 +102,9 @@ footer {
   content: none !important;
 }
 
-/* Centrage du texte du bas de page */
 .footer-bottom {
   text-align: center !important;
+  margin-bottom: 2rem;
 }
 
 .footer-bottom p {
@@ -128,6 +129,7 @@ footer {
   .footer-bottom {
     padding-left: 1rem;
     padding-right: 1rem;
+    margin-bottom: 5rem;
   }
 
   .footer-bottom p {
