@@ -72,7 +72,7 @@
 /* Swiper navigation arrows */
 .swiper-button-next,
 .swiper-button-prev {
-  color: var(--color-teal);
+  color: #12b6a8 !important;
   width: 48px;
   height: 48px;
   display: flex;
@@ -83,6 +83,17 @@
   border: none;
   border-radius: 0;
   transition: none;
+  transform: translateY(-50%);
+}
+
+.swiper-pagination-bullet {
+  background: #12b6a8 !important; /* Teal */
+  opacity: 0.3;
+}
+
+.swiper-pagination-bullet-active {
+  background: #12b6a8 !important; /* Teal */
+  opacity: 1;
 }
 
 .swiper-button-prev {
@@ -92,26 +103,108 @@
   right: 0;
 }
 
-/* Responsive: hide quotes on mobile */
-@media (max-width: 500px) {
-  .testimonial-card {
-    max-width: 94vw;
-    height: 500px; /* même hauteur pour toutes les cards, ajuste selon ton besoin */
-    padding: 1.2rem 1rem;
-    border-radius: 0;
-    min-width: 0;
-    overflow-y: auto; /* scroll interne si besoin */
-    box-sizing: border-box;
-    background: rgba(18, 182, 161, 0.5);
+/* Responsive */
+/* ...existing code... */
 
+@media (max-width: 700px) {
+  .short-testimonials-section {
+    padding: 1rem 0.5rem;
+  }
+  .short-testimonials-swiper {
+    padding: 0 0.5rem;
+    max-width: 100%;
+    min-width: 0; /* Ajouté pour annuler le min-width du desktop */
+    box-sizing: border-box;
+    position: relative;
+  }
+  .swiper-slide {
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .testimonial-card {
+    border-radius: 1rem;
+    padding: 1.5rem 2.5rem;
+    margin: 1rem 0;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .testimonial-text {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    text-align: center;
+    margin: 1rem 0;
+  }
+  .testimonial-name {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    text-align: center;
   }
   .quote-img {
-    display: none;
+    z-index: 0;
+    width: 50px;
+    height: 50px;
   }
-  .swiper-button-next,
+  .quote-top-left {
+    top: -25px;
+    left: -5px;
+  }
+  .quote-bottom-right {
+    bottom: -25px;
+    right: -5px;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: absolute;
+    bottom: 16px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.3rem;
+    z-index: 11;
+    top: auto;
+    transform: none;
+    background: transparent;
+    box-shadow: none;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: absolute;
+    bottom: 16px;
+    top: auto;
+    width: 40px;
+    height: 40px;
+    font-size: 1.3rem;
+    z-index: 11;
+    background: transparent;
+    box-shadow: none;
+    transform: none;
+  }
   .swiper-button-prev {
-    width: 38px;
-    height: 38px;
-    font-size: 1.1rem;
+    left: 0;
+  }
+  .swiper-button-next {
+    right: 0;
+  }
+  .swiper-pagination {
+    position: absolute;
+    bottom: 16px !important;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    gap: 48px; /* Espace pour les flèches */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+  }
+  .swiper-controls-mobile .swiper-pagination {
+    position: static;
+    margin: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    pointer-events: auto;
   }
 }
