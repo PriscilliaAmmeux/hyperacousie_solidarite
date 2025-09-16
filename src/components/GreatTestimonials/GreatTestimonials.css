@@ -26,8 +26,8 @@
 }
 
 .great-testimonial-btn {
-  background-color: teal;
-  color: #fff;
+  background-color: var(--color-teal);
+  color: var(--color-white);
   border-radius: 6px;
   padding: 0.5em 1.2em;
   font-weight: 600;
@@ -42,8 +42,13 @@
 
 .swiper-button-prev,
 .swiper-button-next {
-  color: #ff6f61 !important;
-  fill: #ff6f61 !important;
+  color: var(--color-coral) !important;
+  fill: var(--color-coral) !important;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  color: var(--color-coral) !important;
 }
 
 .swiper-pagination-bullet {
