@@ -1,0 +1,42 @@
+---
+import testimonials from '../../data/greatTestimonials.json';
+import './GreatTestimonials.css';
+import '../../styles/variables.css';
+import Title from '../../ui/Title/Title.astro';
+---
+
+<section class="great-testimonials-section">
+
+  <Title 
+        text="Grands témoignages" 
+        className="mb-8 section-title" 
+        level="2" />
+
+  <div class="swiper great-testimonials-swiper">
+    <div class="swiper-wrapper">
+      {testimonials.map((item) => (
+        <div class="swiper-slide">
+          <div class="great-testimonial-card">
+              <Title 
+                text={item.title}
+                className="mb-8 section-title" 
+                level="3" />
+            <p class="great-testimonial-extract">"{item.extract}"</p>
+            <button
+              type="button"
+              class="great-testimonial-btn"
+              aria-label={`Télécharger le témoignage de ${item.title}`}
+              onclick={`window.open('/pdfs/${item.pdf}', '_blank')`}
+            >
+              Télécharger le témoignage
+            </button>
+          </div>
+        </div>
+      ))}
+    </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+  </div>
+</section>
+<script src="./GreatTestimonials.js"></script>
