@@ -4,11 +4,10 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-const swiper = new Swiper(".short-testimonials-swiper", {
+const swiper = new Swiper(".great-testimonials-swiper", {
   modules: [Navigation, Pagination],
   slidesPerView: 1,
   spaceBetween: 20,
-  autoHeight: true,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -22,7 +21,7 @@ const swiper = new Swiper(".short-testimonials-swiper", {
       slidesPerView: 1,
     },
     1024: {
-      slidesPerView: 1,
+      slidesPerView: 2,
     },
   },
 });
