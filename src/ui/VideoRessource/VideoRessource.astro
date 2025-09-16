@@ -1,17 +1,47 @@
 ---
 import Title from "../Title/Title.astro";
-
-
+import "./VideoRessource.css";
 
 ---
-
-<section>
- <Title 
-      text="Découvrez la chaine Youtube Hyperacusis Central :"
-      className="mb-4 section-title"
-      level="2"
-    />
-
-    
-
+<section class="video-ressource-section">
+  <Title 
+    text="Découvrez la chaine Youtube Hyperacusis Central :"
+    className="mb-4 section-title"
+    level="2"
+  />
+  <div class="video-ressource-container">
+    <div class="video-ressource-left">
+      <img 
+        src="/logo-hyperacusis-central.webp" 
+        alt="logo de la chaine Youtube Hyperacusis Central" 
+        class="video-ressource-logo"
+      />
+      <Title 
+      text="Hyperacusis Central"
+      className="mb-4 video-ressource-title"
+      level="3"
+      />
+      <p class="video-ressource-desc">Témoignages vidéos de Barbara</p>
+      <button
+        type="button"
+        class="youtube-btn"
+        aria-label="Regarder la vidéo YouTube"
+        onclick="window.open('https://www.youtube.com/watch?v=aHf-n-oh6Pw', '_blank', 'noopener')"
+      >
+        <svg class="youtube-btn-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+          <path d="M8 5v14l11-7z"/>
+        </svg>
+        Regarder la vidéo YouTube
+      </button>
+    </div>
+    <div class="video-ressource-right">
+      <iframe
+        src="https://www.youtube.com/embed/aHf-n-oh6Pw"
+        title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        class="video-ressource-iframe"
+      />
+    </div>
+  </div>
 </section>
