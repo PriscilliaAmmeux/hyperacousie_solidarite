@@ -5,7 +5,7 @@ import '../../styles/variables.css';
 ---
 
 <section class="short-testimonials-section">
-  <div class="swiper short-testimonials-swiper">
+  <div class="swiper testimonials-swiper short-testimonials-swiper">
     <div class="swiper-wrapper">
       {testimonials.map((item) => (
         <div class="swiper-slide">
@@ -14,13 +14,15 @@ import '../../styles/variables.css';
             <img src="/quote-bottom-right.webp" alt="" class="quote-img quote-bottom-right" aria-hidden="true" />
             <p class="testimonial-text">"{item.testimonial}"</p>
             <p class="testimonial-name">- {item.name}, {item.age}</p>
-          </div>
+        </div>
         </div>
       ))}
     </div>
-    <div class="swiper-pagination"></div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
+    <div class="swiper-controls-mobile">
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+</div>
   </div>
 </section>
 <script src="./ShortTestimonials.js"></script>
