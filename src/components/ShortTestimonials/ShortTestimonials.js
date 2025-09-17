@@ -26,3 +26,7 @@ const swiper = new Swiper(".short-testimonials-swiper", {
     },
   },
 });
+
+swiper.on("slideChangeTransitionEnd", function () {
+  swiper.updateAutoHeight(300); // 300ms d'animation, adapte si besoin
+});

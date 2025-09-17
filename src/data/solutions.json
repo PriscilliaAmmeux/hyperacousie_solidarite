@@ -17,11 +17,28 @@
   },
   {
     "id": 3,
+    "title": "Appareillage auditif adapté",
+    "items": [
+      "Certains audioprothésistes spécialisés proposent des appareils avec embouts sur mesure.",
+      {
+        "subtitle": "Leur rôle :",
+        "subitems": [
+          "**Filtrer les sons trop forts** (notamment les bruits soudains)",
+          "**Apporter un léger soutien auditif**, sans amplifier de façon excessive",
+          "**Favoriser une désensibilisation progressive** pour mieux tolérer les sons du quotidien"
+        ]
+      },
+      "Ce n’est pas une amplification classique : l’objectif est l’adaptation en douceur, pas de « corriger » l’oreille."
+    ]
+  },
+
+  {
+    "id": 3,
     "title": "Approches complémentaires",
     "items": [
       "Kinésithérapie maxillo-faciale et ostéopathie crânienne pour soulager les tensions autour de l’oreille et de la mâchoire.",
       "Techniques de gestion du stress : sophrologie, méditation, hypnose, cohérence cardiaque, acupuncture, shiatsu, massage bien-être et détente.",
-      "Prise en charge psychologique, notamment thérapies cognitivo-comportementales (TCC)."
+      "Prise en charge  psychiatrique/psychologique, notamment thérapies cognitivo-comportementales (TCC)."
     ]
   },
   {
