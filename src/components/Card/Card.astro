@@ -6,7 +6,14 @@ import { marked } from 'marked';
 export interface Props {
   subtitle?: string;
   content?: string;
-  items?: (string | { label: string; description: string; })[];
+   items?: (
+    string | {
+      subitems?: any;
+      subtitle?: string;
+      label?: string;
+      description?: string;
+    }
+  )[];
   imageSrc?: string;
   imageAlt?: string;
   buttonText?: string;
@@ -54,11 +61,20 @@ const {
   {items.map((item) => (
     <li class="card-list-item">
       {typeof item === 'string' ? (
-        <span set:html={marked(item)} />
+        <p set:html={marked(item)} />
+      ) : item.subitems ? (
+        <>
+          <strong>{item.subtitle}</strong>
+          <ul>
+            {item.subitems.map((subitem: string) => (
+              <li><p set:html={marked(subitem)} /></li>
+            ))}
+          </ul>
+        </>
       ) : (
         <>
-          <span class="text-bold">{item.label}</span>
-          <span>{item.description}</span>
+          <p class="text-bold">{item.label}</p>
+          <p>{item.description}</p>
         </>
       )}
     </li>
