@@ -1,5 +1,7 @@
 ---
+import Form from '../components/Form/Form.astro';
 import Layout from '../layouts/Layout.astro';
+import SectionButtonMore from '../ui/SectionButtonMore/SectionButtonMore.astro';
 import Title from '../ui/Title/Title.astro';
 ---
 
@@ -7,21 +9,13 @@ import Title from '../ui/Title/Title.astro';
   title="Contact "
   description="Contactez l'association Hyperacousie Solidarité"
 >
-  <div style="text-align:center;">
-    <Title
-      text="En cours de construction"
-      className="mb-4 section-title"
-      level="2"
-    /></div>
-  
 
-      <div style="text-align:center; margin-top:2rem;">
-    <img 
-      src="/construction.png" 
-      alt="Page en cours de construction" 
-      style="max-width:200px; width:100%; height:auto;" 
-    />
+  <div style="text-align:center">
+    <Title text="Contact" level='2' />
   </div>
-    
+
+  <Form />  
+  <SectionButtonMore />
+  
 
 </Layout>
