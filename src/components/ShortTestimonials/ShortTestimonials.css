@@ -3,6 +3,14 @@
   overflow-x: hidden;
 }
 
+.margin-text {
+  margin: 1rem 15rem 4rem 15rem;
+}
+
+.testimonial-text {
+  font-style: italic;
+}
+
 .short-testimonials-swiper,
 .short-testimonials-swiper .swiper,
 .short-testimonials-swiper .swiper-wrapper,
@@ -107,6 +115,11 @@
 /* ...existing code... */
 
 @media (max-width: 700px) {
+  .margin-text {
+    margin: 1rem 2rem 4rem 2rem;
+    text-align: justify;
+  }
+
   .short-testimonials-section {
     padding: 1rem 0.5rem;
   }
