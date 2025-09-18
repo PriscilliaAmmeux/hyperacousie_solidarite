@@ -1,63 +1,71 @@
 ---
 import Title from "../../ui/Title/Title.astro";
 import './NetworkingSharing.css';
+import { FaPlay } from "react-icons/fa";
+import { FaEarthEurope } from "react-icons/fa6";
+
 
 const cards = [
     {
         id: 1,
         buttonTopColor: "coral",
         contentTextButtonTop: "Vidéos",
-        img: "",
+        img: "/barb-hyper.webp",
         title: "Chaîne Youtube “Barb’Hyper”",
         text:"La chaîne dédiée à l’hyperacousie",
         buttonBotomColor: "red",
-        contentTextButtonBottom: "Voir la chaîne"
+        contentTextButtonBottom: "Voir la chaîne",
+        link:"https://youtube.com/@barbhyper?si=1zJ40FR9AwLz0q5F"
     },
     {
         id: 2,
         buttonTopColor: "teal",
         contentTextButtonTop: "Carte intéractive",
-        img: "",
+        img: "/map-france.webp",
         title: "Carte de France des ORL sensibilisé",
         text:"Liste et localisation des ORL sensibilisés à l’hyperacousie et aux acouphènes",
         buttonBotomColor: "white",
-        contentTextButtonBottom: "Accéder à la carte"
+        contentTextButtonBottom: "Accéder à la carte",
+        link:"https://maphub.net/Barb-Hyper/orl-sensibilise-a-lhyperacousie-et-aux-acouphenes"
     },
     {
         id: 3,
         buttonTopColor: "teal",
         contentTextButtonTop: "Carte intéractive",
-        img: "",
+        img: "/map-france.webp",
         title: "Carte de France des soignants partenaires",
         text:"Audioprothésistes, kiné-maxillo facial et soignants partenaires sensibilisés à l’hyperacousie",
          buttonBotomColor: "white",
-        contentTextButtonBottom: "Accéder à la carte"
+        contentTextButtonBottom: "Accéder à la carte",
+        link:"https://maphub.net/Barb-Hyper/audioprothesiste"
     },
     {
         id: 4,
         buttonTopColor: "teal",
         contentTextButtonTop: "Carte intéractive",
-        img: "",
+        img: "/map-italy.webp",
         title: "L’italie",
         text:"Parce que l’hyperacousie ne connaît pas de frontières, explorez notre carte de l’Europe et connectez-vous aux groupes Facebook des autres pays.",    
         buttonBotomColor: "teal",
-        contentTextButtonBottom: "Rejoindre le groupe Italie"
+        contentTextButtonBottom: "Rejoindre le groupe Italie",
+        link: ""
     },
       {
         id: 5,
         buttonTopColor: "teal",
         contentTextButtonTop: "Carte intéractive",
-        img: "",
+        img: "/map-flandres-pays-bas.webp",
         title: "Les Flandres et Pays bas",
         text:"Parce que l’hyperacousie ne connaît pas de frontières, explorez notre carte de l’Europe et connectez-vous aux groupes Facebook des autres pays.",    
         buttonBotomColor: "teal",
-        contentTextButtonBottom: "Rejoindre le groupe Flandres / Pays-Bas"
+        contentTextButtonBottom: "Rejoindre le groupe Flandres / Pays-Bas",
+        link: ""
     }
 ]
 
 ---
 
-<section>
+<section class="networking-sharing-section">
   <div style="text-align:center">
     <Title
       text="Réseaux & Partages"
@@ -67,19 +75,36 @@ const cards = [
   </div>
   <div class="networking-card-list">
     {cards.map((card) => (
-      <div class="networking-card" >
-        <p class={`networking-card-top-label ${card.buttonTopColor}`}>
-          {card.contentTextButtonTop}
-        </p>
-        <h3 class="networking-card-title">{card.title}</h3>
-        <p class="networking-card-text">{card.text}</p>
+      <div class="networking-card">
+  <p class={`networking-card-top-label ${card.buttonTopColor}`}>
+    {card.contentTextButtonTop}
+  </p>
+  <div class="networking-card-content-row">
+    <img
+      src={card.img}
+      alt={card.title}
+      class="networking-card-img"
+    />
+    <div class="networking-card-content-col">
+      <Title
+        text={card.title}
+        className="mb-4 networking-card-title"
+        level="3"
+      />
+      <p class="networking-card-text">{card.text}</p>
         <button
-          class={`btn-base btn-sm btn-${card.buttonBotomColor}`}
-          type="button"
+        class={`btn-base btn-sm btn-${card.buttonBotomColor}${(card.id === 2 || card.id === 3) ? ' btn-blue-text' : ''}`}
+        type="button"
+        onclick={`window.open('${card.link}', '_blank', 'noopener');`}
+        aria-label={`${card.contentTextButtonBottom.trim()} - ouvre un nouvel onglet`}
         >
-          {card.contentTextButtonBottom}
+        {card.id === 1 && <FaPlay />}
+        {(card.id === 2 || card.id === 3) && <FaEarthEurope />}
+        {card.contentTextButtonBottom}
         </button>
-      </div>
+    </div>
+  </div>
+</div>
     ))}
   </div>
 </section>
