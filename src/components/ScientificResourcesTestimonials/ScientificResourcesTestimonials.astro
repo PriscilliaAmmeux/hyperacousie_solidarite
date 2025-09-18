@@ -1,0 +1,90 @@
+---
+import Title from "../../ui/Title/Title.astro";
+import '../../styles/variables.css';
+import './ScientificResourcesTestimonials.css';
+import { FaEarthEurope } from "react-icons/fa6";
+
+
+const resources = [
+    {
+        id: 1,
+        textTopButton:"Etude scientifique",
+        colorButtonTop: "blue",
+        title: "\"L’hyperacousie : Etat de la science\"",
+        source:"HAL Open Science",
+        text: "Un état des lieux complet des connaissances scientifiques sur l’hyperacousie.",
+        textBottomButton:" Consulter l'étude",
+        colorButtonBottom: "gray",
+        link:"https://hal.science/hal-01202136v2/document"
+    },
+       {
+        id: 2,
+        textTopButton:"Témoignage expert",
+        colorButtonTop: "tealOpacity",
+        title: "Hyperacusis central ",
+        source:"Shelley Witt",
+        text: "Shelley Witt est une audiologiste pionnière à l’Université de l’Iowa. Elle est l’une des rares audiologiste à avoir reconnu qu’il y a des différences entre l’hyperacousie liée à l’intensité sonore (« loudness hyperacusis » en anglais) et l’hyperacousie douloureuse (« pain hyperacusis » en anglais). Dans cet article, elle explique comment elle a appris que la sagesse conventionnelle (les idées et croyances communément admises et largement acceptées) est préjudiciable et dangereuse pour les patients souffrant d’hyperacousie douloureuse (pain hyperacusis)",
+        textBottomButton:" Lire l'article",
+        colorButtonBottom: "gray",
+        link:"https://hyperacusiscentral.org/fr/ce-que-jai-appris-de-mes-patients-atteints-dhyperacousie/"
+    },
+       {
+        id: 3,
+        textTopButton:"Témoignage expert",
+        colorButtonTop: "tealOpacity",
+        title: "Hyperacousie ou la dualité du silence : entre refuge et isolement",
+        source:"Procom Solution - Audrey DUVAL LEBRET",
+        img:"/procom.webp",
+        textBottomButton:" Consulter l'étude",
+        colorButtonBottom: "gray",
+        link:"https://procomsolution.fr/hyperacousie-ou-la-dualite-du-silence-entre-refuge-et-isolement/"
+    },
+
+]
+
+---
+
+<section class="section-coral-background">
+  <Title
+    text="Ressources Scientifiques et témoignages"
+    className="mb-4 section-title-page-reflex"
+    level="2"
+  />
+
+  <div class="resources-card-list">
+    {resources.map((resource) => (
+      <div class="resource-custom-card">
+  <p class={`resource-top-label ${resource.colorButtonTop}`}>
+    {resource.textTopButton}
+  </p>
+  <div class="resource-header">
+    <Title
+      text={resource.title}
+      className="resource-title"
+      level="3"
+    />
+    <p class="resource-source">{resource.source}</p>
+  </div>
+  {resource.img && (
+    <img
+      src={resource.img}
+      alt={resource.title}
+      class="resource-img"
+    />
+  )}
+  {resource.text && (
+    <p class="resource-text">{resource.text}</p>
+  )}
+  
+ <button
+  class={`btn-base btn-sm btn-${resource.colorButtonBottom}`}
+  type="button"
+  onclick={`window.open('${resource.link}', '_blank', 'noopener');`}
+>
+  <FaEarthEurope />
+  {resource.textBottomButton}
+</button>
+</div>
+    ))}
+  </div>
+</section>

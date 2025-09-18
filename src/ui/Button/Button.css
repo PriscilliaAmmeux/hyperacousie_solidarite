@@ -67,6 +67,13 @@
   border-color: var(--button-white-hover-border, #d1d5db);
 }
 
+.btn-blue {
+  background-color: var(--button-blue-bg, #63bbfa);
+  color: black;
+  border-color: var(--button-blue-border, #63bbfa);
+}
+
+
 /* Button sizes */
 .btn-sm {
   font-size: 0.875rem;

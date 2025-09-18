@@ -7,12 +7,14 @@ export interface NavigationItem {
 export interface ButtonProps {
   variant?:
     | "coral"
+    | "blue"
     | "teal"
     | "white"
     | "primary"
     | "secondary"
     | "outline"
     | "ghost";
+
   size?: "sm" | "md" | "lg";
   href?: string;
   download?: string;
