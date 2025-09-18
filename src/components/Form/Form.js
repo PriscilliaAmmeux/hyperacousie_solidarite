@@ -1,5 +1,3 @@
-console.log(import.meta.env);
-
 import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
 
