@@ -1,0 +1,85 @@
+---
+import Title from "../../ui/Title/Title.astro";
+import './NetworkingSharing.css';
+
+const cards = [
+    {
+        id: 1,
+        buttonTopColor: "coral",
+        contentTextButtonTop: "Vidéos",
+        img: "",
+        title: "Chaîne Youtube “Barb’Hyper”",
+        text:"La chaîne dédiée à l’hyperacousie",
+        buttonBotomColor: "red",
+        contentTextButtonBottom: "Voir la chaîne"
+    },
+    {
+        id: 2,
+        buttonTopColor: "teal",
+        contentTextButtonTop: "Carte intéractive",
+        img: "",
+        title: "Carte de France des ORL sensibilisé",
+        text:"Liste et localisation des ORL sensibilisés à l’hyperacousie et aux acouphènes",
+        buttonBotomColor: "white",
+        contentTextButtonBottom: "Accéder à la carte"
+    },
+    {
+        id: 3,
+        buttonTopColor: "teal",
+        contentTextButtonTop: "Carte intéractive",
+        img: "",
+        title: "Carte de France des soignants partenaires",
+        text:"Audioprothésistes, kiné-maxillo facial et soignants partenaires sensibilisés à l’hyperacousie",
+         buttonBotomColor: "white",
+        contentTextButtonBottom: "Accéder à la carte"
+    },
+    {
+        id: 4,
+        buttonTopColor: "teal",
+        contentTextButtonTop: "Carte intéractive",
+        img: "",
+        title: "L’italie",
+        text:"Parce que l’hyperacousie ne connaît pas de frontières, explorez notre carte de l’Europe et connectez-vous aux groupes Facebook des autres pays.",    
+        buttonBotomColor: "teal",
+        contentTextButtonBottom: "Rejoindre le groupe Italie"
+    },
+      {
+        id: 5,
+        buttonTopColor: "teal",
+        contentTextButtonTop: "Carte intéractive",
+        img: "",
+        title: "Les Flandres et Pays bas",
+        text:"Parce que l’hyperacousie ne connaît pas de frontières, explorez notre carte de l’Europe et connectez-vous aux groupes Facebook des autres pays.",    
+        buttonBotomColor: "teal",
+        contentTextButtonBottom: "Rejoindre le groupe Flandres / Pays-Bas"
+    }
+]
+
+---
+
+<section>
+  <div style="text-align:center">
+    <Title
+      text="Réseaux & Partages"
+      className="mb-4 section-title-page"
+      level="2"
+    />
+  </div>
+  <div class="networking-card-list">
+    {cards.map((card) => (
+      <div class="networking-card" >
+        <p class={`networking-card-top-label ${card.buttonTopColor}`}>
+          {card.contentTextButtonTop}
+        </p>
+        <h3 class="networking-card-title">{card.title}</h3>
+        <p class="networking-card-text">{card.text}</p>
+        <button
+          class={`btn-base btn-sm btn-${card.buttonBotomColor}`}
+          type="button"
+        >
+          {card.contentTextButtonBottom}
+        </button>
+      </div>
+    ))}
+  </div>
+</section>
