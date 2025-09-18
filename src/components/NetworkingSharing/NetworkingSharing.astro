@@ -86,21 +86,21 @@ const cards = [
       class="networking-card-img"
     />
     <div class="networking-card-content-col">
-      <Title
-        text={card.title}
-        className="mb-4 networking-card-title"
-        level="3"
-      />
-      <p class="networking-card-text">{card.text}</p>
+        <Title
+            text={card.title}
+            className="mb-4 networking-card-title"
+            level="3"
+        />
+        <p class="networking-card-text">{card.text}</p>
         <button
-        class={`btn-base btn-sm btn-${card.buttonBotomColor}${(card.id === 2 || card.id === 3) ? ' btn-blue-text' : ''}`}
-        type="button"
-        onclick={`window.open('${card.link}', '_blank', 'noopener');`}
-        aria-label={`${card.contentTextButtonBottom.trim()} - ouvre un nouvel onglet`}
-        >
-        {card.id === 1 && <FaPlay />}
-        {(card.id === 2 || card.id === 3) && <FaEarthEurope />}
-        {card.contentTextButtonBottom}
+            class={`btn-base btn-sm btn-${card.buttonBotomColor}${(card.id === 2 || card.id === 3) ? ' btn-blue-text' : ''}`}
+            type="button"
+            onclick={`window.open('${card.link}', '_blank', 'noopener');`}
+            aria-label={`${card.contentTextButtonBottom.trim()} - ouvre un nouvel onglet`}
+            >
+            {card.id === 1 && <FaPlay aria-hidden="true" focusable="false" />}
+            {(card.id === 2 || card.id === 3) && <FaEarthEurope aria-hidden="true" focusable="false" />}
+            {card.contentTextButtonBottom}
         </button>
     </div>
   </div>

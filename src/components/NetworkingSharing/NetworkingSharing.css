@@ -1,15 +1,15 @@
-/* NetworkingSharing.css - cleaned and refactored for mobile/tablet/desktop */
-
 /* Section spacing */
 .networking-sharing-section {
   margin: 3rem 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 /* Card grid layout */
 .networking-card-list {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
 }
 
 /* Card row: image left, content right */
@@ -55,9 +55,8 @@
 /* First card: larger and full row */
 .networking-card-list > .networking-card:first-child {
   grid-column: 1 / 3;
-  max-width: 700px;
-  min-width: 600px;
-  min-height: 260px;
+  min-width: 700px;
+  min-height: 230px;
   font-size: 1.15rem;
   margin-left: auto;
   margin-right: auto;
@@ -184,8 +183,8 @@
   }
 
   .networking-card-title {
-  text-align: center;
-}
+    text-align: center;
+  }
 
   .networking-card-content-row {
     flex-direction: column;
