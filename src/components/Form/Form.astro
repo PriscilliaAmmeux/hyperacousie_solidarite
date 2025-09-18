@@ -13,6 +13,9 @@ import './Form.css';
   class="contact-form" 
   id="contact-form"
   autocomplete="off"
+  data-service-id={import.meta.env.VITE_SERVICE_ID}
+  data-template-id={import.meta.env.VITE_TEMPLATE_ID}
+  data-public-key={import.meta.env.VITE_PUBLIC_KEY}
 >
   <div class="form-group">
     <label for="lastname">Nom</label>
@@ -32,10 +35,15 @@ import './Form.css';
   type="tel"
   id="phone"
   name="user_phone"
+<input
+  type="tel"
+  id="phone"
+  name="user_phone"
   pattern="^[0-9\s\+\-]+$"
   inputmode="numeric"
   required
 />
+
   </div>
   <div class="form-group">
     <label for="message">Message</label>

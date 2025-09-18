@@ -46,9 +46,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Get EmailJS environment variables
-    const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
-    const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
-    const PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY;
+    const SERVICE_ID = form.dataset.serviceId;
+    const TEMPLATE_ID = form.dataset.templateId;
+    const PUBLIC_KEY = form.dataset.publicKey;
 
     if (!SERVICE_ID || !TEMPLATE_ID || !PUBLIC_KEY) {
       Swal.fire({
