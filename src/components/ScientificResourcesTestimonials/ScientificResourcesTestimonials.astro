@@ -21,7 +21,7 @@ const resources = [
         id: 2,
         textTopButton:"Témoignage expert",
         colorButtonTop: "tealOpacity",
-        title: "Hyperacusis central ",
+        title: "Hyperacusis central",
         source:"Shelley Witt",
         text: "Shelley Witt est une audiologiste pionnière à l’Université de l’Iowa. Elle est l’une des rares audiologiste à avoir reconnu qu’il y a des différences entre l’hyperacousie liée à l’intensité sonore (« loudness hyperacusis » en anglais) et l’hyperacousie douloureuse (« pain hyperacusis » en anglais). Dans cet article, elle explique comment elle a appris que la sagesse conventionnelle (les idées et croyances communément admises et largement acceptées) est préjudiciable et dangereuse pour les patients souffrant d’hyperacousie douloureuse (pain hyperacusis)",
         textBottomButton:" Lire l'article",
@@ -80,8 +80,9 @@ const resources = [
   class={`btn-base btn-sm btn-${resource.colorButtonBottom}`}
   type="button"
   onclick={`window.open('${resource.link}', '_blank', 'noopener');`}
+    aria-label={`${resource.textBottomButton.trim()} - ouvre un nouvel onglet`}
 >
-  <FaEarthEurope />
+    <FaEarthEurope aria-hidden="true" focusable="false" />
   {resource.textBottomButton}
 </button>
 </div>
