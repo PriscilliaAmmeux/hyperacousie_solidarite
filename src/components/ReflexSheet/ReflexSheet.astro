@@ -1,0 +1,66 @@
+---
+import Title from "../../ui/Title/Title.astro";
+import Button from "../../ui/Button/Button.astro";
+import './ReflexSheet.css';
+import '../../styles/variables.css';
+
+const pdfLogo = "/pdf-logo.webp";
+
+const reflexSheets = [
+  {
+    id: 1,
+    title: "La RQTH",
+    pdf: "/RQTH.pdf"
+  },
+  {
+    id: 2,
+    title: "France Services",
+    pdf: "/France services.pdf"
+  },
+  {
+    id: 3,
+    title: "France Services vs Assistante sociale",
+    pdf: "/France services vs Assistante sociale.pdf"
+  },
+  {
+    id: 4,
+    title: "Assistante sociale un allié essentiel",
+    pdf : "/Assistante sociale un allié essentiel.pdf"
+  },
+  {
+    id: 5,
+    title: "Les aides alimentaire",
+    pdf: "/Aides alimentaires.pdf"
+  }
+];
+---
+
+<section class= "reflex-sheet-section">
+  <Title
+    text="Fiches réflexes"
+    className="mb-4 section-title-page-reflex"
+    level="2"
+  />
+  <div class="reflex-sheet-list">
+    {reflexSheets.map((sheet) => (
+      <div class="reflex-sheet-card" >
+        <img src={pdfLogo} alt="PDF" class="reflex-sheet-img" />
+            <Title
+                text={sheet.title}
+                className="mb-4 reflex-sheet-title"
+                level="2"
+            />
+        <Button
+          variant="teal"
+          size="sm"
+          href={sheet.pdf}
+          target="_blank"
+          rel="noopener"
+          download="true"
+        >
+          Télécharger
+        </Button>
+      </div>
+    ))}
+  </div>
+</section>
