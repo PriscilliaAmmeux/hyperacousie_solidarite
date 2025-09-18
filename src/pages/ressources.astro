@@ -1,4 +1,5 @@
 ---
+import FactSheet from '../components/FactSheet/FactSheet.astro';
 import Layout from '../layouts/Layout.astro';
 import Title from '../ui/Title/Title.astro';
 ---
@@ -7,21 +8,14 @@ import Title from '../ui/Title/Title.astro';
   title="Ressources "
   description="Des ressources pour mieux comprendre et vivre avec l'hyperacousie"
 >
-  <div style="text-align:center;">
+ <div style="text-align:center">
     <Title
-      text="En cours de construction"
-      className="mb-4 section-title"
+      text="Ressources"
+      className="mb-4 section-title-page"
       level="2"
-    /></div>
-  
-
-      <div style="text-align:center; margin-top:2rem;">
-    <img 
-      src="/construction.png" 
-      alt="Page en cours de construction" 
-      style="max-width:200px; width:100%; height:auto;" 
     />
   </div>
-    
+
+<FactSheet />
 
 </Layout>

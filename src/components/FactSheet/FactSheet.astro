@@ -1,0 +1,58 @@
+---
+import Title from "../../ui/Title/Title.astro";
+import Card from "../Card/Card.astro";
+import Button from "../../ui/Button/Button.astro";
+import './FactSheet.css';
+import '../../styles/variables.css';
+
+const factSheets = [
+  {
+    id: 1,
+    title: "L'hyperacousie expliquée à l'entourage",
+    img: "/L'hyperacousie expliquée à l'entourage.pdf",
+    thumbnail: "/expliquer à l'entourage miniature.webp"
+  },
+  {
+    id: 2,
+    title: "Kit de survie de l'hyperacousique",
+    img: "/KIT de survie de l'hyperacousique.pdf",
+    thumbnail: "/kit survie miniature.webp"
+  },
+  {
+    id: 3,
+    title: "Casque et conduite hyperacousique",
+    img: "/Casque et conduite hyperacousique.pdf",
+    thumbnail: "/casque et conduite miniature.webp"
+  },
+];
+---
+<section class="section-fact-sheet">
+  <div class="section-title-page-left">
+    <Title
+      text="Fiches pratiques"
+      className="section-title-page-left"
+      level="2"
+    />
+  </div>
+  <div class="fact-sheet-list">
+    {factSheets.map((sheet) => (
+      <Card
+        className="fact-sheet-card"
+        subtitle={sheet.title}
+        imageSrc={sheet.thumbnail}
+        imageAlt={sheet.title}
+      >
+        <Button
+          variant="teal"
+          size="sm"
+          href={sheet.img}
+          target="_blank"
+          rel="noopener"
+          download="true"
+        >
+          Télécharger
+        </Button>
+      </Card>
+    ))}
+  </div>
+</section>
