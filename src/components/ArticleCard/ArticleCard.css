@@ -1,0 +1,55 @@
+/* Article cards grid: 2 columns on desktop/tablet, 1 column on mobile */
+.article-card-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.2rem;
+  margin-top: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+@media (min-width: 700px) {
+  .article-card-list {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+/* Article card */
+.article-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(18, 182, 161, 0.1);
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Title spacing */
+.article-card-title {
+  margin-bottom: 0.3rem;
+}
+
+/* Description and conclusion spacing */
+.article-card-desc,
+.article-card-conclusion {
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+/* List inside card: always vertical */
+.article-card ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin: 0.5rem 0 1rem 0;
+  padding: 0;
+}
+
+.article-card ul li {
+  list-style: disc inside;
+  margin-left: 1rem;
+}
