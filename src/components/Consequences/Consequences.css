@@ -10,11 +10,11 @@
 }
 
 .consequences-section,
-.section-title {
+.section-title-consequences {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 
 @media screen and (max-width: 768px) {
