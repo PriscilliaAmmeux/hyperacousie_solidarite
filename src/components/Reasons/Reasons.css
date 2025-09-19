@@ -9,6 +9,10 @@
   box-sizing: border-box;
 }
 
+.margin-bottom {
+  margin-bottom: 2rem;
+}
+
 .reasons-container {
   max-width: 75rem;
   margin: 0 auto;
@@ -20,10 +24,6 @@
 .reasons-container .section-title {
   text-align: center;
   margin-bottom: 2rem;
-}
-
-.reasons-container p {
-  margin-bottom: 0.5rem;
 }
 
 /* Swiper styles */
