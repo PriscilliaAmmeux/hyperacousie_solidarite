@@ -1,0 +1,69 @@
+[
+  {
+    "id": 1,
+    "title": "Responsable du traitement",
+    "content": [
+      {
+        "text": "Le traitement des données personnelles est assuré par l'association. Contact : hyperacousiesolidarite@gmail.com"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Données collectées",
+    "content": "Les données personnelles collectées via le formulaire sont : nom, prénom,e-mail, téléphone, message et consentement explicite."
+  },
+  {
+    "id": 3,
+    "title": "Finalité et base légale",
+    "content": "Les données sont collectées uniquement pour répondre aux demandes de contact. La base légale est le consentement, donné via la case à cocher obligatoire du formulaire."
+  },
+  {
+    "id": 4,
+    "title": "Destinataires des données",
+    "content": "Les données sont transmises uniquement via EmailJS pour nous être directement envoyées par e-mail. Elles ne sont ni vendues ni partagées."
+  },
+  {
+    "id": 5,
+    "title": "Durée de conservation",
+    "content": "Les messages sont conservés au maximum 12 mois, sauf obligation légale contraire."
+  },
+  {
+    "id": 6,
+    "title": "Vos droits",
+    "content": [
+      {
+        "text": "Vous disposez des droits d'accès, de rectification, d'effacement, de limitation, d'opposition et de portabilité. Vous pouvez retirer votre consentement à tout moment."
+      },
+      {
+        "text": "Pour exercer vos droits, contactez-nous à : hyperacousiesolidarite@gmail.com"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Cookies",
+    "content": [
+      {
+        "text": "Ce site n'utilise aucun cookie à des fins publicitaires, de suivi ou d'analyse. Aucun cookie n'est déposé sur votre appareil lors de la navigation."
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Transferts de données",
+    "content": [
+      {
+        "text": "EmailJS (formulaire de contact) respecte également les standards de protection des données européens."
+      },
+      {
+        "text": "Tous ces services disposent de mesures de protection adéquates selon la réglementation européenne."
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Sécurité",
+    "content": "Aucune mesure particulière n'est utilisée pour le site. Les données sont transmises uniquement via le formulaire de contact."
+  }
+]

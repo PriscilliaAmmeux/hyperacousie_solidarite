@@ -1,0 +1,30 @@
+---
+import Title from "../../ui/Title/Title.astro";
+import confidentialite from '../../data/confidentialite.json';
+import "../LegalNotices/LegalNotices.css";
+import '../../styles/variables.css';
+---
+
+ <section>
+  <header class="mentions-legales-section">
+    <div class="mentions-legales-header">
+      <Title text="Politique de confidentialité" level="3" />
+    </div>
+    <body class="mentions-legales-content">
+      {confidentialite.map((item) => (
+        <div class="mentions-legales-block">
+          <Title text={item.title} level="4" />
+          {Array.isArray(item.content) ? (
+           <ul class="confidentialite-list">
+            {item.content.map((subItem, idx) => (
+              <li>{subItem.text}</li>
+            ))}
+          </ul>
+          ) : (
+            <p class="mentions-legales-text">{item.content}</p>
+          )}
+        </div>
+      ))}
+    </body>
+  </header>
+</section>
