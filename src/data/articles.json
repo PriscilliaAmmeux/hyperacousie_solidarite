@@ -3,9 +3,12 @@
     "id": 1,
     "title": "Prévenir l’hyperacousie : protégez vos oreilles, préservez votre avenir 🎧",
     "description": {
-      "intro": "Nos oreilles sont précieuses… et fragiles. Une seule exposition à un bruit trop fort peut provoquer des dégâts irréversibles. L’hyperacousie — une hypersensibilité douloureuse aux sons — peut bouleverser une vie entière. Pourtant, dans la majorité des cas, elle pourrait être évitée grâce à la prévention et à la sensibilisation.",
-      "list": [],
-      "conclusion": ""
+      "intro": "Nos oreilles sont précieuses… et fragiles.",
+      "list": [
+        "Une seule exposition à un bruit trop fort peut provoquer des dégâts irréversibles.",
+        "L’hyperacousie — une hypersensibilité douloureuse aux sons — peut bouleverser une vie entière."
+      ],
+      "conclusion": "Pourtant, dans la majorité des cas, elle pourrait être évitée grâce à la prévention et à la sensibilisation."
     },
     "link": "/articles/article-1"
   },
