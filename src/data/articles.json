@@ -1,0 +1,78 @@
+[
+  {
+    "id": 1,
+    "title": "Prévenir l’hyperacousie : protégez vos oreilles, préservez votre avenir 🎧",
+    "description": {
+      "intro": "Nos oreilles sont précieuses… et fragiles. Une seule exposition à un bruit trop fort peut provoquer des dégâts irréversibles. L’hyperacousie — une hypersensibilité douloureuse aux sons — peut bouleverser une vie entière. Pourtant, dans la majorité des cas, elle pourrait être évitée grâce à la prévention et à la sensibilisation.",
+      "list": [],
+      "conclusion": ""
+    },
+    "link": "/articles/article-1"
+  },
+  {
+    "id": 2,
+    "title": "Pourquoi la prévention est essentielle ?",
+    "description": {
+      "intro": "Aujourd’hui, les chiffres parlent d’eux-mêmes :",
+      "list": [
+        "40 % des hyperacousies sont déclenchées par un traumatisme sonore — un seul bruit trop intense peut suffire à endommager les cellules auditives de manière irréversible.",
+        "Concerts, casques audio, pétards, bars, stades, écouteurs trop forts… les risques sont partout.",
+        "La bonne nouvelle ? Dans de nombreux cas, ces traumatismes sont évitables si l’on adopte de bons réflexes."
+      ],
+      "conclusion": "L’oreille humaine n’est pas conçue pour supporter les volumes sonores d’aujourd’hui. Dans nos vies modernes, les nuisances sonores sont devenues omniprésentes, mais nos oreilles, elles, ne s’adaptent pas."
+    },
+    "link": "/articles/article-2"
+  },
+  {
+    "id": 3,
+    "title": "Casques et écouteurs : le fléau silencieux de la jeune génération 🎧📱",
+    "description": {
+      "intro": "Chez les adolescents et les jeunes adultes, l’usage intensif des casques et des écouteurs est devenu la principale cause des futurs problèmes auditifs. La règle est simple : plus le volume est fort et l’écoute prolongée, plus le risque de lésion auditive augmente. Quelques repères :",
+      "list": [
+        "Au-delà de 85 dB, l’oreille commence à souffrir.",
+        "À 100 dB (volume élevé dans les écouteurs ou lors d’un concert), 15 minutes suffisent pour causer des dommages irréversibles.",
+        "La règle 60/60 est recommandée : pas plus de 60 % du volume maximum et pas plus de 60 minutes d’affilée."
+      ],
+      "conclusion": "Une génération entière risque de développer des troubles auditifs précoces si rien n’est fait pour informer et protéger."
+    },
+    "link": "/articles/article-3"
+  },
+  {
+    "id": 4,
+    "title": "Nos conseils pour protéger vos oreilles",
+    "description": {
+      "intro": "Protéger son audition, c’est agir avant que les dégâts ne soient irréversibles :",
+      "list": [
+        "Limiter l’exposition sonore : éviter les environnements bruyants prolongés.",
+        "Respecter la règle 60/60 pour l’écoute au casque.",
+        "Faire des pauses auditives pour laisser l’oreille récupérer.",
+        "S’éloigner des sources de bruit : même quelques mètres peuvent faire une grande différence.",
+        "Réagir vite en cas de choc sonore : repos auditif immédiat et consultation rapide d’un ORL."
+      ],
+      "conclusion": ""
+    },
+    "link": "/articles/article-4"
+  },
+  {
+    "id": 5,
+    "title": "Un message pour les parents et les jeunes",
+    "description": {
+      "intro": "Sensibiliser les enfants, adolescents et jeunes adultes est crucial. Le volume sonore élevé dans les écouteurs, les concerts sans protections et les soirées trop bruyantes laissent des séquelles invisibles mais durables.",
+      "list": [],
+      "conclusion": "L’hyperacousie, les acouphènes et la perte auditive ne touchent plus seulement les seniors. La jeune génération est en première ligne. Protéger ses oreilles aujourd’hui, c’est préserver son confort de vie demain."
+    },
+    "link": "/articles/article-5"
+  },
+  {
+    "id": 6,
+    "title": "Ensemble, faisons reculer l’hyperacousie",
+    "description": {
+      "intro": "La prévention reste le meilleur traitement.",
+      "list": [
+        "Plus nous serons nombreux à connaître les risques liés aux traumatismes sonores, plus nous pourrons protéger nos oreilles et éviter des vies brisées par l’hyperacousie."
+      ],
+      "conclusion": "Vos oreilles sont uniques. Protégez-les, elles ne se réparent pas."
+    },
+    "link": "/articles/article-6"
+  }
+]

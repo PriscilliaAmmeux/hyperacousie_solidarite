@@ -1,0 +1,39 @@
+---
+import Button from "../../ui/Button/Button.astro";
+import Title from "../../ui/Title/Title.astro";
+import '../../styles/variables.css';
+import './ArticleCard.css';
+
+const { title, description, link } = Astro.props;
+---
+
+<div class="article-card">
+  <Title
+    text={title}
+    className="article-card-title"
+    level="4"
+  />
+   <p class="article-card-desc">{description.intro}</p>
+  {description.list && description.list.length > 0 && (
+    <ul class="article-card-list">
+      {description.list.map((item: string) => (
+        <li>{item}</li>
+      ))}
+    </ul>
+  )}
+  {description.conclusion && description.conclusion.trim() !== "" && (
+    <p class="article-card-conclusion">{description.conclusion}</p>
+  )}
+
+  <Button
+    variant="teal"
+    size="sm"
+    href={link}
+    target="_blank"
+    rel="noopener"
+    aria-label={`Lire l'article ${title} - ouvre une nouvelle page`}
+  >
+    Lire l’article
+  </Button>
+  <slot />
+</div>
