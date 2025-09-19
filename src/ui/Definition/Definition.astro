@@ -17,46 +17,38 @@ const images = [
 ];
 ---
 
-<section class="definition-section">
-  {/* Mobile: first image above the text */}
-  <img 
-    src={images[0].src}
-    alt={images[0].alt}
-    aria-label={images[0].ariaLabel}
-    class="definition-image definition-image-mobile"
+<section class="definition-section-vertical">
+  <Title
+    text="Comprendre l'hyperacousie"
+    className="mb-4 section-title"
+    level="2"
   />
-
-  {/* Desktop: both images side by side */}
-  <div class="definition-images-container">
-    {images.map((img) => (
+  <p>
+    L'hyperacousie est un trouble de l'audition caractérisé par une intolérance aux sons du quotidien, même lorsqu'ils sont à un volume normalement tolérable pour la majorité des personnes. Elle peut fortement impacter la qualité de vie des personnes qui en souffrent. Elle est régulièrement accompagnée d'acouphènes.
+  </p>
+  <div class="definition-types-cols">
+    <div class="definition-col">
       <img 
-        src={img.src}
-        alt={img.alt}
-        aria-label={img.ariaLabel}
-        class="definition-image"
+        src={images[0].src}
+        alt={images[0].alt}
+        aria-label={images[0].ariaLabel}
+        class="definition-image-row"
       />
-    ))}
+      <p class="text-bold">L'hyperacousie sonore ou d'intensité (non douloureuse)</p>
+      <p>Les sons sont perçus comme anormalement forts ou envahissants, ce qui peut entraîner de l'anxiété, une fatigue auditive, de l'irritabilité, des troubles du sommeil, voire un isolement social pour éviter les environnements bruyants.</p>
+    </div>
+    <div class="definition-col">
+      <img 
+        src={images[1].src}
+        alt={images[1].alt}
+        aria-label={images[1].ariaLabel}
+        class="definition-image-row"
+      />
+      <p class="text-bold">L'hyperacousie douloureuse</p>
+      <p>Certains sons provoquent une douleur physique aiguë, décrite comme une brûlure, décharge électrique, des coups de couteaux ou d’aiguilles ressentis dans l’oreille et/ou la tête. Cette forme est extrêmement handicapante et entraîne une grande détresse psychologique, une forte réduction des activités sociales et/ou professionnelles.</p>
+    </div>
   </div>
-  
-  <div class="definition-content">
-    <Title
-      text="Comprendre l'hyperacousie"
-      className="mb-4 section-title"
-      level="2"
-    />
-    <p >L'hyperacousie est un trouble de l'audition caractérisé par une intolérance aux sons du quotidien, même lorsqu'ils sont à un volume normalement tolérable pour la majorité des personnes. Elle peut fortement impacter la qualité de vie des personnes qui en souffrent. Elle est régulièrement accompagnée d'acouphènes.</p>
-    <p >Il existe deux formes principales d'hyperacousie :</p>
-    <ul>
-      <li >L'hyperacousie sonore ou d'intensité (non douloureuse) : les sons sont perçus comme anormalement forts ou envahissants, ce qui peut entraîner de l'anxiété, une fatigue auditive, de l'irritabilité, des troubles du sommeil, voire un isolement social pour éviter les environnements bruyants.</li>
-      <li >L'hyperacousie douloureuse : certains sons provoquent une douleur physique aiguë, décrite comme une brûlure, décharge électrique, des coups de couteaux ou d'aiguilles ressentis dans l'oreille et/ou la tête. Cette forme est extrêmement handicapante et entraîne une grande détresse psychologique, une forte réduction des activités sociales et/ou professionnelles.</li>
-    </ul>
-  </div>
-
-  {/* Mobile: second image below the text */}
-  <img 
-    src={images[1].src}
-    alt={images[1].alt}
-    aria-label={images[1].ariaLabel}
-    class="definition-image definition-image-mobile"
-  />
+  <p class="text-justify text-bold">
+    L’évolution de l’hyperacousie peut varier d’une personne à l’autre. Certaines personnes constatent une amélioration significative, parfois jusqu’à une guérison complète, tandis que pour d’autres, les symptômes persistent plus longtemps et nécessitent des adaptations au quotidien. Il n’existe pas encore de solution universelle, mais différentes pistes de prise en charge et d’accompagnement permettent souvent de réduire l’impact de l’hyperacousie sur la vie quotidienne et d’essayer d’améliorer la qualité de vie.
+  </p>
 </section>
