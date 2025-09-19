@@ -7,6 +7,7 @@ import '../styles/variables.css';
 import '../styles/contact.css';
 import Donations from '../ui/Donations/Donations.astro';
 import HowWork from '../ui/HowWork/HowWork.astro';
+import ImageMoney from '../ui/imageMoney/imageMoney.astro';
 ---
 
 <Layout 
@@ -21,6 +22,7 @@ import HowWork from '../ui/HowWork/HowWork.astro';
 <section class="contact-sections">
   <Form />
   <div class="contact-donations">
+    <ImageMoney width={100} height={100} />
     <SectionButtonMore />
     <HowWork />
     <Donations />
