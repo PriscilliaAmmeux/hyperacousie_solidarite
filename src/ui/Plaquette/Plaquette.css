@@ -1,6 +1,6 @@
 /* Base styles - Mobile */
 .plaquette-section {
-  margin: 2rem 1rem;
+  margin: 4rem 1rem;
   display: flex;
   justify-content: center;
 }
@@ -17,7 +17,7 @@
 }
 
 .image-plaquette {
-  max-width: 120px; 
+  max-width: 120px;
   height: auto;
 }
 
@@ -34,9 +34,9 @@
   margin: 0;
 }
 
- .plaquette-content .btn-base {
-    align-self: center;
-  }
+.plaquette-content .btn-base {
+  align-self: center;
+}
 
 /* Desktop - Image à gauche, contenu à droite */
 @media (min-width: 768px) {
@@ -58,7 +58,7 @@
 
   .image-plaquette {
     width: 100%;
-    max-width: 180px; 
+    max-width: 180px;
   }
 
   .plaquette-content .btn-base {
