@@ -23,7 +23,8 @@ const cards = [
         buttonTopColor: "teal",
         contentTextButtonTop: "Carte intéractive",
         img: "/map-france.webp",
-        title: "Carte de France des ORL sensibilisé",
+        title: "Carte de France des ORL sensibilisés",
+        colorTitle: "purple",
         text:"Liste et localisation des ORL sensibilisés à l’hyperacousie et aux acouphènes",
         buttonBotomColor: "white",
         contentTextButtonBottom: "Accéder à la carte",
@@ -35,6 +36,7 @@ const cards = [
         contentTextButtonTop: "Carte intéractive",
         img: "/map-france.webp",
         title: "Carte de France des soignants partenaires",
+        colorTitle: "blue",
         text:"Audioprothésistes, kiné-maxillo facial et soignants partenaires sensibilisés à l’hyperacousie",
          buttonBotomColor: "white",
         contentTextButtonBottom: "Accéder à la carte",
@@ -70,7 +72,7 @@ const cards = [
   <div style="text-align:center">
     <Title
       text="Réseaux & Partages"
-      className="mb-4 section-title-page"
+      className="section-title-page"
       level="3"
     />
   </div>
@@ -89,7 +91,7 @@ const cards = [
     <div class="networking-card-content-col">
         <Title
             text={card.title}
-            className="mb-4 networking-card-title"
+                className={`mb-4 networking-card-title${card.id === 2 ? ' title-purple' : card.id === 3 ? ' title-blue' : ''}`}
             level="4"
         />
         <p class="networking-card-text">{card.text}</p>
