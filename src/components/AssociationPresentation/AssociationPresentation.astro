@@ -2,7 +2,6 @@
 import Title from "../../ui/Title/Title.astro";
 import "./AssociationPresentation.css";
 
-// DRY principle - Define content once
 const hyperacousieContent = {
   title: "Qu'est-ce que l'hyperacousie ?",
   description: "L'hyperacousie est un trouble de l'audition caractérisé par une intolérance aux sons du quotidien, même lorsqu'ils sont à un volume normalement tolérable pour la majorité des personnes. Elle peut fortement impacter la qualité de vie des personnes qui en souffrent. Elle est régulièrement accompagnée d'acouphènes.",
@@ -26,8 +25,7 @@ const associationContent = {
   <div class="association-container">
     
     <!-- Image section -->
-    <figure class="image-section">
-      <div class="relative">
+    <figure class="image-section relative">
         <img 
           src={associationContent.image.src}
           alt={associationContent.image.alt}
@@ -35,7 +33,7 @@ const associationContent = {
           class="association-image"
           loading="lazy"
         />
-      </div>
+
     </figure>
     
     <!-- Text content -->

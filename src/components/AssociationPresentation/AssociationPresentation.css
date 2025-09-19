@@ -248,9 +248,7 @@
   /* Association section */
   .association-container {
     flex-direction: row;
-    align-items: flex-end;
-    margin: 0 5rem;
-    gap: 4rem;
+    margin: 0 6rem;
   }
 
   .image-section {
