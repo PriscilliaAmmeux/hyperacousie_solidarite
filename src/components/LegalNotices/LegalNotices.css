@@ -1,0 +1,65 @@
+.mentions-legales-section {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgba(18, 182, 161, 0.5);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(18, 182, 161, 0.07);
+}
+
+.mentions-legales-header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.confidentialite-list {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.confidentialite-list li {
+  margin-left: 0;
+}
+
+.mentions-legales-intro {
+  font-size: 1.1rem;
+  color: var(--color-teal);
+  margin-top: 0.5rem;
+}
+
+.mentions-legales-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.mentions-legales-block {
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(18, 182, 161, 0.05);
+  padding: 1rem 1rem;
+}
+
+.mentions-legales-title {
+  font-size: 1.15rem;
+  color: var(--color-teal);
+  margin-bottom: 0.7rem;
+}
+
+.mentions-legales-list {
+  margin: 0.5rem 0 0 1.2rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.mentions-legales-list li {
+  list-style: disc inside;
+  color: #333;
+}
+
+.mentions-legales-text {
+  margin: 0;
+  color: #333;
+  font-size: 1rem;
+}

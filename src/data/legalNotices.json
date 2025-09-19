@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "title": "Informations légales",
+    "content": [
+      {
+        "text": "Nom de l'assocation: Hyperacousie Solidarité"
+      },
+      {
+        "text": "Adresse: situé en région parisienne"
+      },
+      {
+        "text": "Siret de l'établissement:"
+      },
+      {
+        "text": "Adresse e-mail: hyperacousiesolidarite@gmail.com"
+      },
+      {
+        "text": "Directrice de la publication: Priscillia Ammeux"
+      },
+      {
+        "text": "Hébergeur: Vercel"
+      },
+      {
+        "text": "Nom de domaine : OVH"
+      },
+      {
+        "text": " Entreprise en charge du développement du site et de sa maintenance : Priscillia Ammeux"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Propriété intellectuelle",
+    "content": "Tous les contenus présents sur ce site sont protégés par les droits d'auteur. Toute reproduction, même partielle, est interdite sans autorisation préalable. L'Utilisateur doit solliciter l'autorisation préalable du site pour toute reproduction, publication, copie des différents contenus. Il s'engage à une utilisation des contenus du site dans un cadre strictement privé, toute utilisation à des fins commerciales et publicitaires est strictement interdite. Il est rappelé conformément à l’article L122-5 du Code de propriété intellectuelle que l’Utilisateur qui reproduit, copie ou publie le contenu protégé doit citer l’auteur et sa source."
+  },
+  {
+    "id": 3,
+    "title": "Liens hypertextes",
+    "content": "Ce site peut contenir des liens hypertextes vers d'autres sites web. L'entreprise ne peut être tenue responsable du contenu de ces sites web ni des pratiques de ces sites en matière de protection de la vie privée."
+  },
+  {
+    "id": 4,
+    "title": "Conditions générales d'utilisation",
+    "content": "L'utilisation de ce site implique l'acceptation pleine et entière des conditions générales d'utilisation décrites ici."
+  },
+  {
+    "id": 5,
+    "title": "Responsabilité",
+    "content": "L'entreprise ne saurait être tenue responsable des dommages directs ou indirects pouvant résulter de l'accès ou de l'utilisation du site."
+  },
+  {
+    "id": 6,
+    "title": "Droit applicable et juridiction compétente",
+    "content": "Le présent site est soumis au droit français. En cas de litige, seuls les tribunaux français seront compétents."
+  },
+  {
+    "id": 7,
+    "title": "Cookies",
+    "content": "Ce site n’utilise pas de cookies à des fins publicitaires ou de suivi. Pour plus d’informations, consultez notre Politique de confidentialité."
+  },
+  {
+    "id": 8,
+    "title": "Médiation",
+    "content": "En cas de litige, vous pouvez recourir gratuitement à un médiateur de la consommation compétent."
+  }
+]

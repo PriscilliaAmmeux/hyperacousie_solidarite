@@ -1,0 +1,30 @@
+---
+import legalNotices from '../../data/legalNotices.json';
+import Title from '../../ui/Title/Title.astro';
+import '../../styles/variables.css';
+import './LegalNotices.css';
+
+---
+<section>
+     <header class="mentions-legales-section">
+    <div class="mentions-legales-header">
+      <Title text="Mentions légales" level="3" />
+     
+    </div>
+    <body class="mentions-legales-content">
+      {legalNotices.map((notice) => (
+        <div class="mentions-legales-block" >
+            <Title text={notice.title} level="4" />
+          {Array.isArray(notice.content) ? (
+            <ul class="mentions-legales-list">
+              {notice.content.map((item, idx) => (
+                <li>{item.text}</li>
+              ))}
+            </ul>
+          ) : (
+            <p class="mentions-legales-text">{notice.content}</p>
+          )}
+        </div>
+      ))}
+    </body>
+</header>
