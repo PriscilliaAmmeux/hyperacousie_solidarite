@@ -1,57 +1,15 @@
 [
   {
-    "id": 1,
-    "name": "Baptiste",
-    "age": "35 ans",
-    "testimonial": "Avant mon hyperacousie, mes amis étaient toute ma vie. Chaque semaine, je rendais visite à des amis ou je sortais. Aujourd'hui, je suis enfermé chez moi et j'ai du mal à supporter ma propre voix."
-  },
-  {
-    "id": 2,
-    "name": "Bastien",
-    "age": "27 ans",
-    "testimonial": "Pendant 1 an j allais 2 fois par semaine en boîte et la semaine je travaillais en crèche ce trop pleins de bruits au quotidien a fait qu un jour j ai commencé à avoir des acouphènes suivi d hyperacousie. Mes acouphènes et mon hyperacousie se sont très rapidement aggravé au point où maintenant je dois porter quotidiennement des boules quies et un casque anti bruit par dessus comme c est le cas pour me laver par exemple. Ma vie est devenu un véritable enfer. Et même en me protégeant les oreilles, il y a beaucoup de choses que je ne peux plus faire comme le fait de prendre le bus, sortir s'il pleut, allez dans les magasins où il y a de la musique, repas de famille... Sans protection, même les voix peuvent m être insupportable. Et si j ai le malheur de subir un Nième choc sonore, mes acouphènes et mon hyperacousie augmente direct sans jamais de diminution. Mes acouphènes sont tellement forts, aigue et envahissant que j ai fait une tentative de suicide. J ai tout perdu ma joie de vivre, ma copine, un travail. Je ne vis plus je survis."
-  },
-  {
-    "id": 3,
-    "name": "Hadem",
+    "id": 12,
+    "name": "Julia ",
     "age": "40 ans",
-    "testimonial": "Je souffre depuis 10 ans d’une hyperacousie sévère associée à des acouphènes réactif invalidant. Tous les petits bruits du quotidien (conversation, vaisselle, circulation, magasins, appareils ménagers…) me provoquent des douleurs immédiates et aggravent mes symptômes, même avec le port de protections auditives. Cette hypersensibilité sonore m’empêche de participer à des activités sociales, rend mes sorties extrêmement limitées et complique fortement toute activité professionnelle. J’ai également fait face à une longue errance médicale, sans prise en charge efficace à ce jour, ce qui accentue mon isolement et ma souffrance au quotidien."
+    "testimonial": "La danse était ma raison de vivre et mon exutoire chaque soir qu'il m'était possible de danser jusqu'à ce qu'il n'y ait plus un endroit d'ouvert dans la ville. Aujourd'hui, je ne peux plus mettre un pied dans un bar dansant. J'aimais les métiers de représentation et voulait faire de la politique. Maintenant, je suis enfermée chez moi la plupart du temps et suis épuisée après une discussion d'une trentaine de minutes avec une seule personne. La ville était mon terrain de jeu favori et elle est devenue mon cauchemar. J'entends les gens rire en bas de chez moi et je ne peux que rester enfermée dans mon silence chez moi. Je ne peux pas sortir même s'il est vendredi soir et que j'en ai envie. Mon quartier très vivant que j'aimais tant avec son charme unique et sa vie qui ne s'arrête jamais me rend malade aujourd'hui. Son bruit m'assomme et me fait fuir."
   },
   {
-    "id": 4,
-    "name": "Medhi",
-    "age": "45 ans",
-    "testimonial": "Depuis que j'ai perdu l'audition de l'oreille gauche depuis 4 mois l'hyperacousie et devenu plus haute par la force des choses vu que l'oreille droite prend tout , niveau interaction sociales c'était pas top avant mais là plus de musique moto vélo les repas en famille ou amis c'est très compliqué, j'attends d'ici quelques semaines pour voir le docteur Vincent pour statuer sur ma récupération en vu du appareillage..."
-  },
-  {
-    "id": 5,
-    "name": "Emma",
-    "age": "20 ans",
-    "testimonial": "Avant j’avais une vie des plus normales : je finissais mes études et sortais très souvent avec mes copines. Aujourd’hui, l’hyperacousie m’a tout pris : ma vie sociale et professionnelle, mes projets, même sortir dehors est devenue une épreuve sans une double protection. Je survis donc enfermée chez moi et mes seules sorties sont les rendez-vous médicaux. Parce que oui arrivée à ce stade ce n’est plus une vie mais une survie… Tout ça causé par des traumas sonores. Bien sûr je vis également une errance médicale et fais face à une incompréhension de ma maladie auprès des professionnels..."
-  },
-  {
-    "id": 6,
-    "name": "Barbara",
-    "age": "45 ans",
-    "testimonial": "Mes symptômes sont arrivés insidieusement et une nuit d’aout 2023 un acouphène violent m’a tiré de mon sommeil avec une surdité brusque à gauche. Le lendemain débutait l’enfer de ma vie. L’acouphène violent avait disparu pour laisser place à des sifflements permanents dans les deux oreilles et de l’hyperacousie douloureuse. Depuis ma vie est un enfer. Chaque bruit, chaque son me provoquent des douleurs dans les oreilles et le cerveau. Cela fait deux ans que je n’ai plus de vie tout court. Exit les sorties, les moments conviviaux, les vacances, la vie tout court quoi. Sans parler de l’errance médicale majeure dont je souffre aussi. Aucune reconnaissance, aucune prise en charge sérieuse. Ma vie se résume à ma maison et les sorties sont uniquement en cas de nécessité. Je ne sais pas combien de temps je pourrais tenir ainsi"
-  },
-  {
-    "id": 7,
-    "name": "Marlène",
-    "age": "53 ans",
-    "testimonial": "Depuis presque deux ans je souffre d'hyperacousie et d'acouphènes, ma vie a changé. J'ai perdu mon travail (hôtesse de caisse),pas de solution niveau médical. Je me sent abandonnée .J'essaie tant bien que mal a vivre le plus normalement possible mais je suis limité. J'adore les voyages que je ne fais plus depuis car trop peur .Et certaines personnes proche qui ne comprennent rien .La joie de vivre est très limité."
-  },
-  {
-    "id": 8,
-    "name": "Aurélien",
-    "age": "34 ans",
-    "testimonial": "Je souffre depuis un traumatisme sonore survenue en juillet 2022, d’hyperacousie sévère, d’acouphènes permanents et d’un syndrome tonique des muscles tenseurs. Cet handicap a transformé ma vie en un véritable cauchemar : chaque son est une agression, une souffrance, chaque sortie un parcours du combattant. Moi qui aimais la musique, le cinéma, les moments partagés, je vis désormais isolé, enfermé dans un silence imposé. Après avoir tout essayé comme un rat de laboratoire '' thérapie sonore, injections, médicaments, sophrologie... '' mon état n’a fait qu’empirer. Aujourd’hui, je reste sans solution et sans reconnaissance. L’errance médicale et administrative nous renvoie à une solitude immense, au point que parfois, on pense au pire. Ce dont nous avons besoin, c’est d’écoute, de respect et d’une véritable prise en charge par les institutions, et d'une réelle reconnaissance. Survivre ne devrait pas être notre seul horizon."
-  },
-  {
-    "id": 9,
-    "name": "Dany",
-    "age": "58 ans",
-    "testimonial": "Depuis l enfance j ai une hypersensibilité aux voix grave et aiguë ,j arrivais tout de même a vivre a peu près comme tout le monde avec les oreilles en feu en permanence . Mais voilà suite à un choc sonore routier ma vie a basculé il y a 20 ans . Lors des consultations ORL ont me dit faut vivre avec , ce que j ai fait avec une souffrance physique et psychologique . A bout de force il y a 10 ans j ai été hospitalisée en hôpital psychiatrique , ont m a diagnostiqué phonophobie . A la suite de cette hospitalisation j ai retrouvé un travail et de nouveaux choc sonore métallique. A l heure actuelle les bruits de la vie quotidienne sont douloureux, les voix , la vaisselle, les sacs papier , plastiques, claquement de porte , aspirateur , frigidaire que je n' ai plus , Vmc, ect , la liste est longue . J ai tout de même rebondis aux niveau de l emploi avec souffrance j y allais . Mais là je n en peux plus , j ai 58 ans et en arrêt maladie car je suis épuisée , je ne sort que pour faire mes courses, moment qui m épuise."
+    "id": 11,
+    "name": "Caroline",
+    "age": "39 ans",
+    "testimonial": "Chez moi ça s’est déclaré à l’apparition d’acouphènes en 2016, 1 oreille puis les 2, l’hyperacousie s’est installée 3 mois après mais j’ai pu être dans une pièce isolée du bruit. Les acouphènes se sont stabilisés et j’ai guéri de l’hyperacousie en moins de 6 mois mais elle était légère. Ça été diagnostiqué au Centre CEFON à cause de ma mâchoire, bruxisme, déglutition atypique, tension musculaire, peut-être mauvaise posture en plus. Puis lors de mon divorce, un bourdonnement est apparu à l’oreille gauche, l’hyperacousie était légère comme en 2016, j’ai vu un kiné en maxillo-faciale à Lille mais pas de résultat. J’ai été voir un kiné lambda près de chez mes parents qui avait décoincé le dos de ma Maman. J’avais les acouphènes qui s’accentuaient pendant 2 jours puis ça revenait à la normal. La séance que j’ai failli annuler, a été la séance de trop, mes acouphènes ne sont jamais redescendus. Il a tellement étiré mes muscles que j’ai mal à l’épaule droite si je m’endors dessus. Mon divorce et ce kiné m’ont bousillé la vie."
   },
   {
     "id": 10,
@@ -60,9 +18,57 @@
     "testimonial": "Je souffre d'hyperacousie et acouphènes invalidant depuis août 2018 suite à un traumatisme sonore. Depuis mon état c'est détérioré. Ma vie sociale est quasiment terminé, par exemple, je mange tout seul, fini Noël, les repas en famille, entre copains… Plu de vacances alors que j'ai deux enfants, la voiture devient un réel problème et les trajets de plus de 5 km sont pour aller chez le médecin. Le seul bruit d'une chasse d'eau ou d'un interrupteur, du vent, le fait de marcher sur du gravier...sont douloureux. Je vais devoir prendre des médicaments qui sont normalement donné à des gens dépressif alors que je n'en suis pas."
   },
   {
-    "id": 11,
-    "name": "Caroline",
-    "age": "39 ans",
-    "testimonial": "Chez moi ça s’est déclaré à l’apparition d’acouphènes en 2016, 1 oreille puis les 2, l’hyperacousie s’est installée 3 mois après mais j’ai pu être dans une pièce isolée du bruit. Les acouphènes se sont stabilisés et j’ai guéri de l’hyperacousie en moins de 6 mois mais elle était légère. Ça été diagnostiqué au Centre CEFON à cause de ma mâchoire, bruxisme, déglutition atypique, tension musculaire, peut-être mauvaise posture en plus. Puis lors de mon divorce, un bourdonnement est apparu à l’oreille gauche, l’hyperacousie était légère comme en 2016, j’ai vu un kiné en maxillo-faciale à Lille mais pas de résultat. J’ai été voir un kiné lambda près de chez mes parents qui avait décoincé le dos de ma Maman. J’avais les acouphènes qui s’accentuaient pendant 2 jours puis ça revenait à la normal. La séance que j’ai failli annuler, a été la séance de trop, mes acouphènes ne sont jamais redescendus. Il a tellement étiré mes muscles que j’ai mal à l’épaule droite si je m’endors dessus. Mon divorce et ce kiné m’ont bousillé la vie."
+    "id": 9,
+    "name": "Dany",
+    "age": "58 ans",
+    "testimonial": "Depuis l enfance j ai une hypersensibilité aux voix grave et aiguë ,j arrivais tout de même a vivre a peu près comme tout le monde avec les oreilles en feu en permanence . Mais voilà suite à un choc sonore routier ma vie a basculé il y a 20 ans . Lors des consultations ORL ont me dit faut vivre avec , ce que j ai fait avec une souffrance physique et psychologique . A bout de force il y a 10 ans j ai été hospitalisée en hôpital psychiatrique , ont m a diagnostiqué phonophobie . A la suite de cette hospitalisation j ai retrouvé un travail et de nouveaux choc sonore métallique. A l heure actuelle les bruits de la vie quotidienne sont douloureux, les voix , la vaisselle, les sacs papier , plastiques, claquement de porte , aspirateur , frigidaire que je n' ai plus , Vmc, ect , la liste est longue . J ai tout de même rebondis aux niveau de l emploi avec souffrance j y allais . Mais là je n en peux plus , j ai 58 ans et en arrêt maladie car je suis épuisée , je ne sort que pour faire mes courses, moment qui m épuise."
+  },
+  {
+    "id": 8,
+    "name": "Aurélien",
+    "age": "34 ans",
+    "testimonial": "Je souffre depuis un traumatisme sonore survenue en juillet 2022, d’hyperacousie sévère, d’acouphènes permanents et d’un syndrome tonique des muscles tenseurs. Cet handicap a transformé ma vie en un véritable cauchemar : chaque son est une agression, une souffrance, chaque sortie un parcours du combattant. Moi qui aimais la musique, le cinéma, les moments partagés, je vis désormais isolé, enfermé dans un silence imposé. Après avoir tout essayé comme un rat de laboratoire '' thérapie sonore, injections, médicaments, sophrologie... '' mon état n’a fait qu’empirer. Aujourd’hui, je reste sans solution et sans reconnaissance. L’errance médicale et administrative nous renvoie à une solitude immense, au point que parfois, on pense au pire. Ce dont nous avons besoin, c’est d’écoute, de respect et d’une véritable prise en charge par les institutions, et d'une réelle reconnaissance. Survivre ne devrait pas être notre seul horizon."
+  },
+  {
+    "id": 7,
+    "name": "Marlène",
+    "age": "53 ans",
+    "testimonial": "Depuis presque deux ans je souffre d'hyperacousie et d'acouphènes, ma vie a changé. J'ai perdu mon travail (hôtesse de caisse),pas de solution niveau médical. Je me sent abandonnée .J'essaie tant bien que mal a vivre le plus normalement possible mais je suis limité. J'adore les voyages que je ne fais plus depuis car trop peur .Et certaines personnes proche qui ne comprennent rien .La joie de vivre est très limité."
+  },
+  {
+    "id": 6,
+    "name": "Barbara",
+    "age": "45 ans",
+    "testimonial": "Mes symptômes sont arrivés insidieusement et une nuit d’aout 2023 un acouphène violent m’a tiré de mon sommeil avec une surdité brusque à gauche. Le lendemain débutait l’enfer de ma vie. L’acouphène violent avait disparu pour laisser place à des sifflements permanents dans les deux oreilles et de l’hyperacousie douloureuse. Depuis ma vie est un enfer. Chaque bruit, chaque son me provoquent des douleurs dans les oreilles et le cerveau. Cela fait deux ans que je n’ai plus de vie tout court. Exit les sorties, les moments conviviaux, les vacances, la vie tout court quoi. Sans parler de l’errance médicale majeure dont je souffre aussi. Aucune reconnaissance, aucune prise en charge sérieuse. Ma vie se résume à ma maison et les sorties sont uniquement en cas de nécessité. Je ne sais pas combien de temps je pourrais tenir ainsi"
+  },
+  {
+    "id": 5,
+    "name": "Emma",
+    "age": "26 ans",
+    "testimonial": "Avant j’avais une vie des plus normales : je finissais mes études et sortais très souvent avec mes copines. Aujourd’hui, l’hyperacousie m’a tout pris : ma vie sociale et professionnelle, mes projets, même sortir dehors est devenue une épreuve sans une double protection. Je survis donc enfermée chez moi et mes seules sorties sont les rendez-vous médicaux. Parce que oui arrivée à ce stade ce n’est plus une vie mais une survie… Tout ça causé par des traumas sonores. Bien sûr je vis également une errance médicale et fais face à une incompréhension de ma maladie auprès des professionnels..."
+  },
+  {
+    "id": 4,
+    "name": "Medhi",
+    "age": "45 ans",
+    "testimonial": "Depuis que j'ai perdu l'audition de l'oreille gauche depuis 4 mois l'hyperacousie et devenu plus haute par la force des choses vu que l'oreille droite prend tout , niveau interaction sociales c'était pas top avant mais là plus de musique moto vélo les repas en famille ou amis c'est très compliqué, j'attends d'ici quelques semaines pour voir le docteur Vincent pour statuer sur ma récupération en vu du appareillage..."
+  },
+  {
+    "id": 3,
+    "name": "Hadem",
+    "age": "40 ans",
+    "testimonial": "Je souffre depuis 10 ans d’une hyperacousie sévère associée à des acouphènes réactif invalidant. Tous les petits bruits du quotidien (conversation, vaisselle, circulation, magasins, appareils ménagers…) me provoquent des douleurs immédiates et aggravent mes symptômes, même avec le port de protections auditives. Cette hypersensibilité sonore m’empêche de participer à des activités sociales, rend mes sorties extrêmement limitées et complique fortement toute activité professionnelle. J’ai également fait face à une longue errance médicale, sans prise en charge efficace à ce jour, ce qui accentue mon isolement et ma souffrance au quotidien."
+  },
+  {
+    "id": 2,
+    "name": "Bastien",
+    "age": "27 ans",
+    "testimonial": "Pendant 1 an j allais 2 fois par semaine en boîte et la semaine je travaillais en crèche ce trop pleins de bruits au quotidien a fait qu un jour j ai commencé à avoir des acouphènes suivi d hyperacousie. Mes acouphènes et mon hyperacousie se sont très rapidement aggravé au point où maintenant je dois porter quotidiennement des boules quies et un casque anti bruit par dessus comme c est le cas pour me laver par exemple. Ma vie est devenu un véritable enfer. Et même en me protégeant les oreilles, il y a beaucoup de choses que je ne peux plus faire comme le fait de prendre le bus, sortir s'il pleut, allez dans les magasins où il y a de la musique, repas de famille... Sans protection, même les voix peuvent m être insupportable. Et si j ai le malheur de subir un Nième choc sonore, mes acouphènes et mon hyperacousie augmente direct sans jamais de diminution. Mes acouphènes sont tellement forts, aigue et envahissant que j ai fait une tentative de suicide. J ai tout perdu ma joie de vivre, ma copine, un travail. Je ne vis plus je survis."
+  },
+  {
+    "id": 1,
+    "name": "Baptiste",
+    "age": "35 ans",
+    "testimonial": "Avant mon hyperacousie, mes amis étaient toute ma vie. Chaque semaine, je rendais visite à des amis ou je sortais. Aujourd'hui, je suis enfermé chez moi et j'ai du mal à supporter ma propre voix."
   }
 ]
