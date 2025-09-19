@@ -7,16 +7,19 @@
         "text": "Nom de l'assocation: Hyperacousie Solidarité"
       },
       {
-        "text": "Adresse: situé en région parisienne"
-      },
-      {
-        "text": "Siret de l'établissement:"
+        "text": "Adresse: 77 Seine et Marne"
       },
       {
         "text": "Adresse e-mail: hyperacousiesolidarite@gmail.com"
       },
       {
-        "text": "Directrice de la publication: Priscillia Ammeux"
+        "text": "Directrice de la publication: Barbara, présidente de l'association"
+      },
+      {
+        "text": "Trésorier: Aurélien"
+      },
+      {
+        "text": "Secrétaire: Corinne"
       },
       {
         "text": "Hébergeur: Vercel"
@@ -37,7 +40,7 @@
   {
     "id": 3,
     "title": "Liens hypertextes",
-    "content": "Ce site peut contenir des liens hypertextes vers d'autres sites web. L'entreprise ne peut être tenue responsable du contenu de ces sites web ni des pratiques de ces sites en matière de protection de la vie privée."
+    "content": "Ce site peut contenir des liens hypertextes vers d'autres sites web. L'association ne peut être tenue responsable du contenu de ces sites web ni des pratiques de ces sites en matière de protection de la vie privée."
   },
   {
     "id": 4,
@@ -47,7 +50,7 @@
   {
     "id": 5,
     "title": "Responsabilité",
-    "content": "L'entreprise ne saurait être tenue responsable des dommages directs ou indirects pouvant résulter de l'accès ou de l'utilisation du site."
+    "content": "L'association ne saurait être tenue responsable des dommages directs ou indirects pouvant résulter de l'accès ou de l'utilisation du site."
   },
   {
     "id": 6,
