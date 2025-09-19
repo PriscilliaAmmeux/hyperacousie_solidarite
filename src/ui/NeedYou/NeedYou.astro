@@ -3,6 +3,7 @@ import Title from "../../ui/Title/Title.astro";
 import Button from "../Button/Button.astro";
 import "./NeedYou.css";
 import "../../styles/variables.css";
+import ImageMoney from "../imageMoney/imageMoney.astro";
 ---
 
 <section class="need-you-section">
@@ -37,14 +38,7 @@ import "../../styles/variables.css";
   </div>
 
   <div class="need-you-image-container">
-    <img 
-      src="/money.webp"
-      alt="Illustration symbolisant le soutien financier"
-      class="image-need-you"
-      loading="lazy"
-      width="200"
-      height="200"
-    />
+   <ImageMoney width={200} height={200} />
 
     <Button 
       variant="coral" 
