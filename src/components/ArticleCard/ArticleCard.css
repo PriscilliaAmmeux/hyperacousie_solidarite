@@ -8,6 +8,10 @@
   padding-right: 2rem;
 }
 
+.hide-article-btn {
+  display: none !important;
+}
+
 @media (min-width: 700px) {
   .article-card-list {
     grid-template-columns: 1fr 1fr;
