@@ -8,14 +8,6 @@
     ]
   },
   {
-    "id": 2,
-    "title": "Thérapies sonores et rééducation auditive (avec précaution)",
-    "items": [
-      "Thérapie d’habituation sonore (TRT : Tinnitus Retraining Therapy). Il s’agit d’utilisation progressive de bruits blancs pour réentraîner le système auditif. **Attention !** sur certaines personnes, notamment celles atteintes d’hyperacousie **douloureuse**, il a été rapporté des cas d’aggravation. Il est important d’écouter vos ressentis et d’en parler librement avec le praticien.",
-      "Importance d’éviter le silence total, qui peut aggraver la sensibilité."
-    ]
-  },
-  {
     "id": 3,
     "title": "Appareillage auditif adapté",
     "items": [
@@ -48,6 +40,14 @@
       "Protections auditives adaptées (moulées sur mesure), bouchons en mousse, casque à réducteur de son, casque antibruit.",
       "Aménagement du poste de travail ou du logement.",
       "Solutions dématérialisées pour réduire l’exposition au bruit dans la vie quotidienne."
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Thérapies sonores et rééducation auditive (avec précaution)",
+    "items": [
+      "Thérapie d’habituation sonore (TRT : Tinnitus Retraining Therapy). Il s’agit d’utilisation progressive de bruits blancs pour réentraîner le système auditif. **Attention !** sur certaines personnes, notamment celles atteintes d’hyperacousie **douloureuse**, il a été rapporté des cas d’aggravation. Il est important d’écouter vos ressentis et d’en parler librement avec le praticien.",
+      "Importance d’éviter le silence total, qui peut aggraver la sensibilité."
     ]
   }
 ]
