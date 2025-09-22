@@ -1,0 +1,22 @@
+---
+import HeaderArticle from "../../components/HeaderArticle/HeaderArticle.astro";
+import Layout from "../../layouts/Layout.astro";
+import { marked } from "marked";
+import casqueData from "../../data/casques-et-ecouteurs.json";
+import "../../styles/variables.css";
+import "../../styles/prevention.css";
+
+---
+
+<Layout>
+  <HeaderArticle
+    badge="Article"
+    title={casqueData.title}
+    subtitle="Comprendre les risques et adopter les bons réflexes"
+  />
+
+  <article class="article-page">
+
+  
+  </article>
+</Layout>
