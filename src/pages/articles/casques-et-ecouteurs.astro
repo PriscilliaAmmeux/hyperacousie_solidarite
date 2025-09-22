@@ -4,8 +4,8 @@ import Layout from "../../layouts/Layout.astro";
 import { marked } from "marked";
 import casqueData from "../../data/casques-et-ecouteurs.json";
 import "../../styles/variables.css";
-import "../../styles/prevention.css";
-
+import "../../styles/casques-et-ecouteurs.css";
+import Title from "../../ui/Title/Title.astro";
 ---
 
 <Layout>
@@ -15,8 +15,71 @@ import "../../styles/prevention.css";
     subtitle="Comprendre les risques et adopter les bons réflexes"
   />
 
-  <article class="article-page">
+  <main class="article-page" role="main">
+    <section class="article-section" aria-labelledby="intro-title">
+      <h2 id="intro-title" class="visually-hidden">Introduction</h2>
+      <div class="intro-bubble">
+        <p set:html={marked(casqueData.intro)} />
+      </div>
+    </section>
 
-  
-  </article>
+    {casqueData.sections.map((section, idx) => (
+  <section class="article-section">
+    {(idx === 0 || idx === 1) && section.img && (
+      <div class="section-img-container section-img-top">
+        <img
+          src={section.img}
+          alt={section.imgAlt}
+          class="section-img"
+        />
+      </div>
+    )}
+    {idx === 2 ? (
+      <div class="section-flex img-right">
+        <div class="section-content">
+          <Title text={section.title} level="3" />
+          {section.content &&
+            section.content.map((text, i) => (
+              <p set:html={marked(text)} />
+            ))}
+        </div>
+        {section.img && (
+          <div class="section-img-container section-img-center">
+            <img
+              src={section.img}
+              alt={section.imgAlt}
+              class="section-img"
+            />
+          </div>
+        )}
+      </div>
+    ) : (
+      <>
+        <Title text={section.title} level="3" />
+        {section.content &&
+          section.content.map((text, i) => (
+            <p set:html={marked(text)} />
+          ))}
+        {section.intro && <p set:html={marked(section.intro)} />}
+        {section.list && (
+          <ul>
+            {section.list.map((item, i) => (
+              <li set:html={marked(item)} />
+            ))}
+          </ul>
+        )}
+      </>
+    )}
+  </section>
+))}
+
+    <section class="article-section conclusion-section" aria-labelledby="conclusion-title">
+      <Title text="Conclusion" level="3"  />
+      <div class="conclusion-bubble">
+        {casqueData.conclusion.map((text, i) => (
+          <p set:html={marked(text)} />
+        ))}
+      </div>
+    </section>
+  </main>
 </Layout>
