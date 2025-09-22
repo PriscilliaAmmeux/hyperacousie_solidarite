@@ -164,3 +164,15 @@
     flex-direction: column;
   }
 }
+
+.section-title-page-prevenir {
+  color: var(--color-coral);
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.article-sources {
+  font-size: 0.85em;
+  color: #626161;
+  font-style: italic;
+}
