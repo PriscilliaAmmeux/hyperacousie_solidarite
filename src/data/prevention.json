@@ -1,0 +1,76 @@
+{
+  "sections": [
+    {
+      "id": 1,
+      "title": "Prévention au quotidien : le bruit, un danger invisible pour nos oreilles",
+      "content": [
+        "Chaque jour, nous sommes exposés à des bruits invisibles, parfois insidieux. Qu’il s’agisse d’un moment de bricolage, d’un trajet en avion ou d’un après-midi de jardinage, ces sons peuvent, à force, altérer notre audition.",
+        "Contrairement à une idée reçue, ce ne sont pas seulement les concerts ou les coups de klaxon qui abîment l’oreille. **Les bruits répétés et cumulés du quotidien**, tondeuse, perceuse, aspirateur, sèche-cheveux fragilisent progressivement notre système auditif.",
+        "Et le problème, c’est que **les cellules ciliées de l’oreille interne, essentielles pour entendre, ne se régénèrent pas**. Chaque exposition excessive accélère leur destruction… parfois **sans aucun signe d’alerte**."
+      ],
+      "img": "/tableau-vie-quotidienne.webp",
+      "imgAlt": "Illustration des niveaux sonores de la vie quotidienne",
+      "tips": [
+        "**Astuce** : Un bruit devient **dangereux au-delà de 85 dB**.",
+        "**Règle d’or** : Plus c’est fort, moins longtemps vous pouvez y rester sans risque."
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Pourquoi ces bruits sont dangereux, même sur le long terme ?",
+      "content": [
+        "Le danger ne vient pas seulement du **volume** mais aussi de la **durée** et de la **répétition** des expositions."
+      ],
+      "effects": {
+        "immediats": [
+          "Sensation d’oreilles “bouchées”.",
+          "Bourdonnements temporaires après l’exposition.",
+          "Fatigue et irritabilité."
+        ],
+        "cumulatifs": [
+          "Destruction progressive des cellules auditives.",
+          "Hyperacousie : intolérance au bruit, même faible.",
+          "Acouphènes chroniques.",
+          "Troubles du sommeil, du système nerveux et même de la digestion (via le stress).",
+          "Le bruit active cortisol, adrénaline et favorise les troubles cardio-vasculaires."
+        ],
+        "irreversibles": [
+          "Une fois les cellules ciliées détruites, il n’existe pas de traitement curatif. Le seul moyen de préserver l’audition est la prévention."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "title": "Dans un futur proche, très proche…",
+      "content": [
+        "D’ici 2050, sur une projection mondiale, plus de **2,5 milliards** de personnes pourraient souffrir de troubles auditifs.",
+        "**1 milliard de jeunes** actuellement menacés par des comportements d’écoute à risque (concerts, écouteurs trop forts).",
+        "En France, **60 % des moins de 25 ans** déclarent avoir déjà ressenti une gêne auditive liée au bruit."
+      ],
+      "conseils": [
+        "**Toujours** porter un **casque antibruit** ou des **bouchons filtrants** pour les activités bruyantes (bricolage, tondeuse, Karcher…).",
+        "**Volume des appareils** : limiter à **60 % du max**, rester sous **80 dB**.",
+        "Alterner les périodes bruyantes et les moments de **repos auditif**.",
+        "Équiper son téléphone d’une **application de mesure du bruit** (ex. : **Decibel X, NIOSH Sound Level Meter**) pour savoir quand se protéger.",
+        "Privilégier des appareils électroménagers **certifiés “silencieux”** (<65 dB)."
+      ],
+      "message": [
+        "Le bruit ne prévient pas, mais ses conséquences peuvent être irréversibles.",
+        "Quelques gestes simples, adoptés dès aujourd’hui, peuvent vous éviter des troubles auditifs à vie.",
+        "Préservez vos oreilles, c’est préserver votre santé, votre confort et votre autonomie."
+      ]
+    }
+  ],
+  "conclusion": [
+    "**Un usage répété d’outils bruyants sans protection, même quelques minutes par jour, peut suffire à déclencher des troubles auditifs irréversibles**.",
+    "Les acouphènes et l’hyperacousie se développent souvent en silence, sur des mois ou des années, avant que les symptômes ne deviennent invalidants."
+  ],
+  "sources": [
+    "OMS",
+    "Santé Publique France",
+    "Bruitparif",
+    "CDC / NIOSH",
+    "Fondation pour l’Audition",
+    "Verywell Health"
+  ]
+}
