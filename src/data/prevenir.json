@@ -52,7 +52,11 @@
     },
     "sanctions": {
       "subtitle": "Que risque l’employeur s’il ne respecte pas ces conditions ?",
-      "details": "Risques en cas de non-respect : amende (jusqu’à 1 500 € par salarié, 3 000 € en récidive), faute inexcusable, sanctions pénales (article 223-1 du Code pénal)."
+      "details": [
+        "Amende (jusqu’à 1 500 € par salarié, 3 000 € en récidive)",
+        "Faute inexcusable",
+        "Sanctions pénales (article 223-1 du Code pénal)"
+      ]
     },
     "droitsSalarié": {
       "subtitle": "Les droits du salarié en cas de non-respect de la réglementation et actions possibles",
