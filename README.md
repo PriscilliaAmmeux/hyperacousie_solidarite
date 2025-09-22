@@ -1,47 +1,59 @@
-# Astro Starter Kit: Basics
+# Hyperacousie Solidarité
 
-```sh
-npm create astro@latest -- --template basics
+Site d’entraide et d’information pour les personnes touchées par l’hyperacousie.
+
+## 🚀 Démarrer le projet
+
+```
+npm install
+npm run dev
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Le site sera accessible sur [localhost:4321](http://localhost:4321).
 
-## 🚀 Project Structure
+## 📁 Structure du projet
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
+```
 /
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
+├── public/                # Images et fichiers statiques
+├── src/
+│   ├── assets/            # Ressources graphiques
+│   ├── components/        # Composants Astro
+│   ├── layouts/           # Layouts Astro
+│   ├── pages/             # Pages du site
+│   ├── ui/                # Composants UI spécifiques
+│   └── data/              # Données JSON (témoignages, mentions légales, etc.)
 └── package.json
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## 🛠️ Scripts utiles
 
-## 🧞 Commands
+| Command           | Action                             |
+| ----------------- | ---------------------------------- |
+| `npm install`     | Installer les dépendances          |
+| `npm run dev`     | Lancer le serveur de développement |
+| `npm run build`   | Générer le site pour la production |
+| `npm run preview` | Prévisualiser le site généré       |
 
-All commands are run from the root of the project, from a terminal:
+## ✨ Fonctionnalités principales
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+- Présentation de l’association
+- Témoignages et ressources scientifiques
+- Cartes interactives des professionnels sensibilisés
+- Informations sur les causes et la prévention
+- Plaquette à télécharger
+- Mentions légales
 
-## 👀 Want to learn more?
+## 🤝 Contribuer
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-# hyperacousie_solidarite
+Toute suggestion ou aide est bienvenue !  
+Contact : <hyperacousiesolidarite@gmail.com>
+
+## 📄 Licence
+
+Ce projet est protégé par le droit d’auteur.  
+Toute reproduction, même partielle, est interdite sans autorisation préalable.
+
+---
+
+Site développé et maintenu par Priscillia Ammeux pour Hyperacousie Solidarité.

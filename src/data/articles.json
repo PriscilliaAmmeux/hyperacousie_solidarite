@@ -10,7 +10,8 @@
       ],
       "conclusion": "Pourtant, dans la majorité des cas, elle pourrait être évitée grâce à la prévention et à la sensibilisation."
     },
-    "link": "/articles/article-1"
+    "link": "/articles/prevenir",
+    "image": ""
   },
   {
     "id": 2,
@@ -24,7 +25,8 @@
       ],
       "conclusion": "L’oreille humaine n’est pas conçue pour supporter les volumes sonores d’aujourd’hui. Dans nos vies modernes, les nuisances sonores sont devenues omniprésentes, mais nos oreilles, elles, ne s’adaptent pas."
     },
-    "link": "/articles/article-2"
+    "link": "/articles/prevention",
+    "image": ""
   },
   {
     "id": 3,
@@ -38,7 +40,8 @@
       ],
       "conclusion": "Une génération entière risque de développer des troubles auditifs précoces si rien n’est fait pour informer et protéger."
     },
-    "link": "/articles/article-3"
+    "link": "/articles/casques-et-ecouteurs",
+    "image": ""
   },
   {
     "id": 4,
@@ -54,7 +57,8 @@
       ],
       "conclusion": ""
     },
-    "link": "/articles/article-4"
+    "link": "/articles/conseils-protection",
+    "image": ""
   },
   {
     "id": 5,
@@ -64,7 +68,8 @@
       "list": [],
       "conclusion": "L’hyperacousie, les acouphènes et la perte auditive ne touchent plus seulement les seniors. La jeune génération est en première ligne. Protéger ses oreilles aujourd’hui, c’est préserver son confort de vie demain."
     },
-    "link": "/articles/article-5"
+    "link": "/articles/message-parents-jeunes",
+    "image": ""
   },
   {
     "id": 6,
@@ -76,6 +81,7 @@
       ],
       "conclusion": "Vos oreilles sont uniques. Protégez-les, elles ne se réparent pas."
     },
-    "link": "/articles/article-6"
+    "link": "/articles/ensemble-prevenir",
+    "image": ""
   }
 ]

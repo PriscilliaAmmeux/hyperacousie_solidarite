@@ -1,0 +1,108 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Title from "../../ui/Title/Title.astro";
+import articleData from "../../data/prevenir.json";
+import '../../styles/variables.css';
+import '../../styles/prevenir.css';
+import { marked } from 'marked';
+import { GiInjustice } from "react-icons/gi";
+
+const article = articleData[0];
+---
+<Layout>
+  <article class="article-page">
+    <div class="article-top-flex">
+      <div class="article-top-content">
+        <section>
+          <Title text={article.title} level="3" />
+          {article.description.list.map(item => (
+            <p set:html={marked(item)} />
+          ))}
+        </section>
+
+    <section class="obligations-flex">
+       <div class="obligations-icon">
+    <GiInjustice size={80} color="coral" />
+  </div>
+  <div class="obligations-text">
+    <Title text={article.obligations.subtitle} level="3" className="subtitle-coral"/>
+    <p>{article.obligations.intro}</p>
+    <ul>
+      {article.obligations.list.map(item => (
+        <li set:html={marked(item)}></li>
+      ))}
+    </ul>
+  </div>
+ 
+</section>
+
+     
+      </div>
+      {article.description.img && (
+        <div class="article-top-img-container">
+          <img 
+            src={article.description.img} 
+            alt={article.title} 
+            class="article-top-img"
+          />
+        </div>
+      )}
+    </div>
+
+   <section>
+          <Title text={article.seuils.subtitle} level="3" className="subtitle-coral"/>
+          <p class="article-sources"><em>{article.seuils.sources}</em></p>
+          <table class="article-table">
+            <thead>
+              <tr>
+                <th>Nom</th>
+                <th>Niveau sonore</th>
+                <th>Action requise</th>
+                <th>Articles de loi</th>
+                <th>Définition</th>
+              </tr>
+            </thead>
+            <tbody>
+              {article.seuils.list.map(seuil => (
+                <tr>
+                  <td>{seuil.nom}</td>
+                  <td>{seuil.niveauSonore}</td>
+                  <td>{seuil.actionRequise}</td>
+                  <td>{seuil.articlesDeLoi}</td>
+                  <td>{seuil.definition}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+    </section>
+
+   <div class="article-bottom-columns">
+  <section class="section-article-prevention">
+    <Title text={article.sanctions.subtitle} level="3" className="subtitle-coral"/>
+    <p>{article.sanctions.details}</p>
+  </section>
+
+  <section class="section-article-prevention">
+    <Title text={article.droitsSalarié.subtitle} level="3" className="subtitle-coral"/>
+    <ul>
+      {article.droitsSalarié.list.map(item => (
+        <li set:html={marked(item)}></li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="section-article-prevention">
+    <Title text={article.prevention.subtitle} level="3" className="subtitle-coral"/>
+    {article.prevention.details.map(detail => (
+      <p>{detail}</p>
+    ))}
+    <p>
+      <strong>Sources principales :</strong><br />
+      {article.prevention.sources.map(source => (
+        <span class="article-sources"><em>{source}</em><br /></span>
+      ))}
+    </p>
+  </section>
+</div>
+  </article>
+</Layout>

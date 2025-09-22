@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "title": "Le bruit, un risque sous-estimé au travail",
+    "description": {
+      "list": [
+        "Le bruit est omniprésent dans de nombreux métiers et peut entraîner **fatigue auditive, stress, hyperacousie, acouphènes troubles du sommeil, ou perte auditive irréversible**. Le bruit au travail est l’un des principaux risques professionnels, mais aussi l’un des plus sous-estimés.",
+        "En France, **plus de 5 millions de travailleurs** sont exposés à des niveaux sonores potentiellement nocifs.",
+        "Le Code du travail impose à l’employeur une **obligation de sécurité de résultat** : il doit protéger la santé et la sécurité des salariés face aux risques liés au bruit (article L.4121-2).",
+        "Les salariés ont également des droits : **protection, information, suivi médical et recours en cas de danger**.",
+        "Voici le podium des professions les plus bruyantes, complété par d’autres secteurs à risque et du tertiaire souvent ignoré :"
+      ],
+      "img": "/visuel-top-metiers.webp"
+    },
+    "obligations": {
+      "subtitle": "Quelles sont les obligations légales de l’employeur ?",
+      "intro": "L’employeur doit :",
+      "list": [
+        "Évaluer le niveau sonore et l’exposition des salariés.",
+        "Mettre en place des **mesures de réduction du bruit à la source**.",
+        "Fournir des **protections auditives individuelles adaptées**.",
+        "Assurer un **suivi médical** renforcé pour les salariés exposés.",
+        "Former les salariés aux risques et aux bonnes pratiques."
+      ]
+    },
+    "seuils": {
+      "subtitle": "Les seuils réglementaires et les obligations de l’employeur",
+      "sources": "Sources : INRS, BruitParif",
+      "list": [
+        {
+          "nom": "VAI",
+          "niveauSonore": "80 dB(A)",
+          "actionRequise": "Sensibilisation, mise à disposition de protections auditives gratuites, suivi médical",
+          "articlesDeLoi": "Article R.4431-2",
+          "definition": "Valeur d'exposition inférieure déclenchant l'action de prévention"
+        },
+        {
+          "nom": "VAS",
+          "niveauSonore": "85 dB(A)",
+          "actionRequise": "Protection obligatoire, mesures techniques, signalétique",
+          "articlesDeLoi": "Articles R.4434-1 et suivants",
+          "definition": "Valeur d'exposition supérieure déclenchant l'action de prévention"
+        },
+        {
+          "nom": "VLE",
+          "niveauSonore": "87 dB(A)",
+          "actionRequise": "Aucune exposition tolérée, limitation de l’exposition, mesures renforcées",
+          "articlesDeLoi": "Articles R.4431-2 & R.4437-1",
+          "definition": "Valeur limite d’exposition"
+        }
+      ]
+    },
+    "sanctions": {
+      "subtitle": "Que risque l’employeur s’il ne respecte pas ces conditions ?",
+      "details": "Risques en cas de non-respect : amende (jusqu’à 1 500 € par salarié, 3 000 € en récidive), faute inexcusable, sanctions pénales (article 223-1 du Code pénal)."
+    },
+    "droitsSalarié": {
+      "subtitle": "Les droits du salarié en cas de non-respect de la réglementation et actions possibles",
+      "list": [
+        "**Informer l’employeur** des risques et demander des mesures correctives.",
+        "**Droit de retrait** : en cas de danger grave et imminent, le salarié peut se retirer de la situation à risque (article L.4131-1 du Code du travail).",
+        "**Saisir le médecin du travail** pour évaluation et suivi médical.",
+        "**Contacter l’inspection du travail** en cas de manquement grave.",
+        "Conserver **traces écrites** (courriers, e-mails, attestations)."
+      ]
+    },
+    "prevention": {
+      "subtitle": "Prévenir plutôt que subir",
+      "details": [
+        "La fatigue auditive peut survenir bien en dessous du seuil de douleur, et des environnements constants comme les magasins ou open spaces fragilisent l’audition sur le long terme.",
+        "Se protéger, faire respecter ses droits, demander la mesure du bruit au travail (mesurage, prévention acoustique) sont des actions vitales, même pour des secteurs souvent sous-estimés."
+      ],
+      "sources": [
+        "Source : santé publique France",
+        "Source : VivaSon",
+        "Source : INRS"
+      ]
+    }
+  }
+]
