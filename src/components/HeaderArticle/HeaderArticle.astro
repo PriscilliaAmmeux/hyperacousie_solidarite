@@ -1,0 +1,11 @@
+---
+import Title from "../../ui/Title/Title.astro";
+import './HeaderArticle.css';
+const { badge = "Article", title, subtitle } = Astro.props;
+---
+<div class="article-header">
+  <div class="article-badge">{badge}</div>
+  <Title text={title} className="section-title-page-article" level="2" />
+  {subtitle && <div class="section-subtitle-page-article">{subtitle}</div>}
+  <hr class="article-header-separator" />
+</div>

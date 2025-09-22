@@ -6,11 +6,18 @@ import '../../styles/variables.css';
 import '../../styles/prevenir.css';
 import { marked } from 'marked';
 import { GiInjustice } from "react-icons/gi";
+import Header from "../../ui/Header/Header.astro";
+import HeaderArticle from "../../components/HeaderArticle/HeaderArticle.astro";
 
 const article = articleData[0];
 ---
 <Layout>
-  <Title text="Risques auditifs au travail : protégeons nos oreilles" className="section-title-page-prevenir" level="3" />
+   <HeaderArticle
+    badge="Article"
+    title="Risques auditifs au travail : protégeons nos oreilles"
+    subtitle="Un guide pour comprendre et agir"
+  />
+  
   <article class="article-page">
     <div class="article-top-flex">
       <div class="article-top-content">
