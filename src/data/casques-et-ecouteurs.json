@@ -5,6 +5,8 @@
     {
       "id": 1,
       "title": "Un constat alarmant confirmé par les experts",
+      "img": "/casque-audio.webp",
+      "imgAlt": "Casque audio posé sur une table",
       "content": [
         "Selon l’Organisation mondiale de la santé (OMS), plus d’un milliard de jeunes dans le monde risquent une perte auditive à cause d’une exposition sonore excessive, notamment à travers les casques audios. En février 2025, l’OMS et l’Union internationale des télécommunications (UIT) ont publié la première norme mondiale dédiée à l’écoute sécurisée dans le jeu vidéo et l’e-sport. Cette norme (ITU-T H.872) recommande de mesurer l’exposition sonore hebdomadaire et fixe des seuils précis : 80 dBA pour 40 heures par semaine chez l’adulte, et 75 dBA chez l’enfant. Au-delà de ces limites, un avertissement doit apparaître et, en cas d’inaction de l’utilisateur, le volume doit être automatiquement réduit.",
         "Le professeur Hung Thai-Van, chef du service ORL et d’audiologie aux Hospices Civils de Lyon, rappelle régulièrement que « la surexposition aux sons par les casques et écouteurs constitue une cause majeure d’acouphènes et de surdité précoce ». Dans une interview à Lyon Mag, il soulignait déjà que les jeunes générations s’exposent à un « vieillissement prématuré de l’oreille interne », parfois irréversible.",
@@ -12,13 +14,15 @@
       ],
       "link": {
         "after": 1,
-        "label": "Article complet :",
+        "label": "Article complet ici",
         "url": "https://www.lyoncapitale.fr/sante/un-gamer-sur-deux-rapporte-des-troubles-auditifs-apres-une-partie-de-jeu-video"
       }
     },
     {
       "id": 2,
       "title": "Les conséquences possibles",
+      "img": "/casque-grenade.webp",
+      "imgAlt": "Casque audio stylisé en forme de grenade",
       "intro": "Les atteintes auditives dues aux casques sont multiples : ",
       "list": [
         "Acouphènes : sifflements ou bourdonnements persistants, parfois invalidants.",
@@ -30,6 +34,8 @@
     {
       "id": 3,
       "title": "Un déficit de sensibilisation",
+      "img": "/gaming.webp",
+      "imgAlt": "Enfant avec casque gaming devant un écran",
       "content": [
         "Une enquête menée en France montre que seuls 41 % des joueurs considèrent le jeu vidéo comme un risque pour l’audition, alors que 50 % d’entre eux rapportent avoir ressenti une gêne auditive après une session. Près d’un joueur sur cinq évoque même des symptômes d’hyperacousie. Ces chiffres révèlent un manque de prise de conscience alors que les risques sont documentés depuis des années."
       ]
@@ -37,6 +43,8 @@
     {
       "id": 4,
       "title": "Prévenir pour protéger l’audition",
+      "img": "",
+      "imgAlt": "Casque audio posé sur une table",
       "list": [
         "La prévention est essentielle car les dommages auditifs sont irréversibles. Selon la Fondation pour l’audition, quelques gestes simples permettent de réduire considérablement les risques :",
         "Limiter le volume : ne pas dépasser 60 % du volume maximum du casque.",
