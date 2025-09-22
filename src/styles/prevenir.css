@@ -71,6 +71,7 @@
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
   padding: 1rem;
   margin-bottom: 2rem;
+  gap: 1rem
 }
 .article-top-img {
   width: 100%;
@@ -145,6 +146,12 @@
   font-size: 0.85em;
   color: #626161;
   font-style: italic;
+}
+
+.article-top-img-container.img-col {
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 /* Responsive */

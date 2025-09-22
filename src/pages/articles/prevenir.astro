@@ -7,6 +7,7 @@ import '../../styles/prevenir.css';
 import { marked } from 'marked';
 import { GiInjustice } from "react-icons/gi";
 import HeaderArticle from "../../components/HeaderArticle/HeaderArticle.astro";
+import Button from "../../ui/Button/Button.astro";
 
 const article = articleData[0];
 ---
@@ -45,15 +46,24 @@ const article = articleData[0];
 
      
       </div>
-      {article.description.img && (
-        <div class="article-top-img-container">
-          <img 
-            src={article.description.img} 
-            alt={article.title} 
-            class="article-top-img"
-          />
-        </div>
-      )}
+        {article.description.img && (
+  <div class="article-top-img-container img-col">
+    <img 
+      src={article.description.img} 
+      alt={article.title} 
+      class="article-top-img"
+    />
+      <Button
+        href={article.description.img}
+        download="true"
+        target="_blank"
+        aria-label={`Télécharger l'image : ${article.title}`}
+        size="sm"
+      >
+        Télécharger l'image
+      </Button>
+  </div>
+)}
     </div>
 
    <section>
