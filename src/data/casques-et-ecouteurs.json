@@ -1,0 +1,55 @@
+{
+  "title": "Les dangers du casque sur l’audition : un risque sous-estimé",
+  "intro": "Le jeu vidéo occupe une place centrale dans la vie de millions de personnes, parfois plusieurs heures par jour. Mais derrière l’immersion sonore, un danger invisible menace : l’exposition prolongée aux sons élevés via les casques peut entraîner des atteintes irréversibles de l’audition. Acouphènes, hyperacousie, surdité partielle ou totale : les dégâts sont bien réels et trop souvent sous-estimés.",
+  "sections": [
+    {
+      "id": 1,
+      "title": "Un constat alarmant confirmé par les experts",
+      "content": [
+        "Selon l’Organisation mondiale de la santé (OMS), plus d’un milliard de jeunes dans le monde risquent une perte auditive à cause d’une exposition sonore excessive, notamment à travers les casques audios. En février 2025, l’OMS et l’Union internationale des télécommunications (UIT) ont publié la première norme mondiale dédiée à l’écoute sécurisée dans le jeu vidéo et l’e-sport. Cette norme (ITU-T H.872) recommande de mesurer l’exposition sonore hebdomadaire et fixe des seuils précis : 80 dBA pour 40 heures par semaine chez l’adulte, et 75 dBA chez l’enfant. Au-delà de ces limites, un avertissement doit apparaître et, en cas d’inaction de l’utilisateur, le volume doit être automatiquement réduit.",
+        "Le professeur Hung Thai-Van, chef du service ORL et d’audiologie aux Hospices Civils de Lyon, rappelle régulièrement que « la surexposition aux sons par les casques et écouteurs constitue une cause majeure d’acouphènes et de surdité précoce ». Dans une interview à Lyon Mag, il soulignait déjà que les jeunes générations s’exposent à un « vieillissement prématuré de l’oreille interne », parfois irréversible.",
+        "Une revue publiée en 2024 dans BMJ Public Health confirme ce constat : le gaming représente une source d’écoute non sécurisée, en particulier par la durée d’exposition et l’intensité sonore. Des mesures effectuées ont révélé des niveaux entre 84,6 et 91,2 dB(A). Pour donner un ordre d’idée, 85 dB correspond au bruit d’un aspirateur : au-delà, l’oreille commence à souffrir. À 100 dB, soit le niveau d’un concert, les dégâts peuvent apparaître en moins de 15 minutes. Or certains joueurs passent 8, 10, voire 12 heures d’affilée avec leur casque."
+      ],
+      "link": {
+        "after": 1,
+        "label": "Article complet :",
+        "url": "https://www.lyoncapitale.fr/sante/un-gamer-sur-deux-rapporte-des-troubles-auditifs-apres-une-partie-de-jeu-video"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Les conséquences possibles",
+      "intro": "Les atteintes auditives dues aux casques sont multiples : ",
+      "list": [
+        "Acouphènes : sifflements ou bourdonnements persistants, parfois invalidants.",
+        "Hyperacousie : une hypersensibilité douloureuse aux sons, qui rend difficile la vie sociale et professionnelle ou impossible pour les formes les plus sévères.",
+        "Surdité partielle ou totale : destruction irréversible des cellules ciliées de l’oreille interne.",
+        "Presbyacousie précoce : un vieillissement accéléré de l’audition, avec des pertes auditives apparaissant dès la jeunesse."
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Un déficit de sensibilisation",
+      "content": [
+        "Une enquête menée en France montre que seuls 41 % des joueurs considèrent le jeu vidéo comme un risque pour l’audition, alors que 50 % d’entre eux rapportent avoir ressenti une gêne auditive après une session. Près d’un joueur sur cinq évoque même des symptômes d’hyperacousie. Ces chiffres révèlent un manque de prise de conscience alors que les risques sont documentés depuis des années."
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Prévenir pour protéger l’audition",
+      "list": [
+        "La prévention est essentielle car les dommages auditifs sont irréversibles. Selon la Fondation pour l’audition, quelques gestes simples permettent de réduire considérablement les risques :",
+        "Limiter le volume : ne pas dépasser 60 % du volume maximum du casque.",
+        "Appliquer la règle des 60/60 : 60 minutes maximum d’écoute, suivies d’une pause d’au moins 10 minutes.",
+        "Privilégier les casques ouverts ou semi-ouverts, qui laissent respirer l’oreille et réduisent la pression sonore.",
+        "Faire des pauses régulières lors des sessions prolongées.",
+        "Être attentif aux signaux d’alerte : sifflements, sensation d’oreilles bouchées, difficultés à comprendre la parole après une session sont des signes que l’oreille a souffert.",
+        "Consulter un spécialiste au moindre doute, pour réaliser un bilan auditif.",
+        "Le professeur Thai-Van insiste : **« Une oreille abîmée ne se répare pas. La seule véritable arme reste la prévention. »**"
+      ]
+    }
+  ],
+  "conclusion": [
+    "Le jeu vidéo et l’e-sport ne doivent pas être synonymes de mise en danger. Les normes internationales existent, les experts alertent, et les chiffres parlent d’eux-mêmes : l’usage prolongé du casque à volume élevé détruit des vies en provoquant des handicaps auditifs invisibles mais lourds de conséquences. Sensibiliser, prévenir et responsabiliser les joueurs est aujourd’hui une priorité de santé publique."
+  ]
+}

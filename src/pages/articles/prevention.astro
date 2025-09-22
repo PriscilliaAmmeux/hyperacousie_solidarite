@@ -4,11 +4,11 @@ import Layout from "../../layouts/Layout.astro";
 import preventionData from "../../data/prevention.json";
 import { marked } from "marked";
 import { MdOutlineTipsAndUpdates } from "react-icons/md";
-import '../../styles/variables.css';
-import '../../styles/prevention.css';
+import "../../styles/variables.css";
+import "../../styles/prevention.css";
 import Button from "../../ui/Button/Button.astro";
-
 ---
+
 <Layout>
   <HeaderArticle
     badge="Article"
@@ -17,90 +17,100 @@ import Button from "../../ui/Button/Button.astro";
   />
 
   <article class="article-page">
-    {preventionData.sections.map(section => (
-      <section class="article-section">
+    {preventionData.sections.map((section) => (
+    <section class="article-section">
+        <div class="section-title-row">
         <h3>{section.title}</h3>
-        {section.content && section.content.map(text => (
-          <p set:html={marked(text)} />
-        ))}
+        </div>
+    
+        {section.content &&
+          section.content.map((text) => (
+            <p set:html={marked(text)} />
+          ))}
 
-{section.img && (
-  <div class="section-img-container">
-    <img 
-      src={section.img} 
-      alt={section.imgAlt} 
-      class="section-img" 
-      role="img" 
-      aria-label={section.imgAlt} 
-    />
-    <div class="download-img-btn-wrapper">
-      <Button
-        href={section.img}
-        download="true"
-        target="_blank"
-        class="download-img-hover"
-        aria-label={`Télécharger l'image : ${section.imgAlt}`}
-      >
-        Télécharger l'image
-      </Button>
-    </div>
-  </div>
-)}
+        {section.img && (
+          <div class="section-img-container">
+            <img
+              src={section.img}
+              alt={section.imgAlt}
+              class="section-img"
+              role="img"
+              aria-label={section.imgAlt}
+            />
+            <div class="download-img-btn-wrapper">
+              <Button
+                href={section.img}
+                download="true"
+                target="_blank"
+                class="download-img-hover"
+                aria-label={`Télécharger l'image : ${section.imgAlt}`}
+              >
+                Télécharger l'image
+              </Button>
+            </div>
+          </div>
+        )}
 
-     {section.tips && (
-  <div class="tips-bubble">
-    <span class="tips-icon">
-      <MdOutlineTipsAndUpdates  size={28} />
-    </span>
-    <div>
-      {section.tips.map(tip => (
-        <p set:html={marked(tip)} />
-      ))}
-    </div>
-  </div>
-)}
+        {section.tips && (
+          <div class="tips-bubble">
+            <span class="tips-icon">
+              <MdOutlineTipsAndUpdates size={28} />
+            </span>
+            <div>
+              {section.tips.map((tip) => (
+                <p set:html={marked(tip)} />
+              ))}
+            </div>
+          </div>
+        )}
 
-     {section.effects && (
-  <div class="effects-lists">
-    <p class="text-bold">Effets immédiats :</p>
-    <ul>
-      {section.effects.immediats.map(e => <li set:html={marked(e)} />)}
-    </ul>
-    <p class="text-bold">Effets cumulatifs :</p>
-    <ul>
-      {section.effects.cumulatifs.map(e => (
-       <li set:html={marked(e)} />
-      ))}
-    </ul>
-    <p class="text-bold">Effets irréversibles :</p>
-    <ul>
-      {section.effects.irreversibles.map(e => <li set:html={marked(e)} />)}
-    </ul>
-  </div>
-)}
+        {section.effects && (
+          <div class="effects-lists">
+            <p class="text-bold">Effets immédiats :</p>
+            <ul>
+              {section.effects.immediats.map((e) => (
+                <li set:html={marked(e)} />
+              ))}
+            </ul>
+            <p class="text-bold">Effets cumulatifs :</p>
+            <ul>
+              {section.effects.cumulatifs.map((e) => (
+                <li set:html={marked(e)} />
+              ))}
+            </ul>
+            <p class="text-bold">Effets irréversibles :</p>
+            <ul>
+              {section.effects.irreversibles.map((e) => (
+                <li set:html={marked(e)} />
+              ))}
+            </ul>
+          </div>
+        )}
 
         {section.conseils && (
           <>
             <p class="text-bold">Conseils pratiques pour protéger vos oreilles :</p>
             <ul>
-              {section.conseils.map(c => <li set:html={marked(c)} />)}
+              {section.conseils.map((c) => (
+                <li set:html={marked(c)} />
+              ))}
             </ul>
           </>
         )}
 
-       {section.message && (
-  <div class="section-message">
-    {section.message.map(msg => (
-      <p set:html={marked(msg)} />
-    ))}
-  </div>
-)}
+        {section.message && (
+          <div class="section-message">
+            {section.message.map((msg) => (
+              <p set:html={marked(msg)} />
+            ))}
+          </div>
+        )}
       </section>
     ))}
 
     <section class="article-section">
       <h3>Conclusion</h3>
-      {preventionData.conclusion.map(text => (
+      {preventionData.conclusion.map((text) => (
         <p set:html={marked(text)} />
       ))}
     </section>
@@ -108,12 +118,13 @@ import Button from "../../ui/Button/Button.astro";
     <section>
       <p>Sources principales :</p>
       <p class="article-sources">
-        {preventionData.sources.map(source => (
-          <span><em>{source}</em>{' • '}</span>
+        {preventionData.sources.map((source) => (
+          <span>
+            <em>{source}</em>
+            {" • "}
+          </span>
         ))}
       </p>
     </section>
   </article>
 </Layout>
-  </Layout> 
-
