@@ -1,0 +1,121 @@
+/* Page container */
+.article-page {
+  margin: 5rem auto;
+  max-width: 900px;
+  padding: 2rem;
+  background: #f8fafc;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+.download-img-hover {
+  padding: 0.25em 1em;
+  font-size: 0.98em;
+  min-height: unset;
+  line-height: 1.2;
+}
+
+.section-img-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 0 1rem 0;
+}
+
+.download-img-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.7rem;
+}
+
+.section-img {
+  max-width: 100%;
+  width: 500px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  background: #f8fafc;
+}
+
+/* Section design */
+.article-section {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  padding: 1.5rem 1rem;
+  margin-bottom: 2rem;
+  border-left: 6px solid #009688;
+  transition: box-shadow 0.2s;
+}
+
+/* Titre de section */
+.article-section h3 {
+  color: #009688;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+/* Astuce/tips bulle */
+.tips-bubble {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: var(--color-coral);
+  border-radius: 16px;
+  padding: 1rem 1.5rem;
+  margin: 1rem 0;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(255, 127, 80, 0.08);
+}
+
+/* Effets listes */
+.effects-lists strong {
+  display: block;
+  margin-top: 1rem;
+  color: #009688;
+}
+.effects-lists ul {
+  margin-bottom: 0.5rem;
+  margin-top: 0.2rem;
+  padding-left: 1.2em;
+}
+
+/* Conseils */
+.article-section ul {
+  margin-bottom: 1rem;
+  padding-left: 1.2em;
+}
+
+.section-message {
+  background: #ff6f61;
+  border-left: 6px solid var(--color-coral);
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(255, 127, 80, 0.08);
+  padding: 1.2rem 1.5rem;
+  margin: 2rem 0 1rem 0;
+  font-size: 1.08em;
+  font-weight: 500;
+}
+.section-message p {
+  margin: 0.5em 0;
+}
+
+/* Sources */
+.article-sources {
+  font-size: 0.85em;
+  color: #888;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .article-page {
+    margin: 1rem;
+    padding: 1rem;
+  }
+  .article-section {
+    padding: 1rem 0.5rem;
+  }
+}
