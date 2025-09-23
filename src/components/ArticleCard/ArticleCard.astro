@@ -7,24 +7,24 @@ import './ArticleCard.css';
 const { title, subtitle, image, link } = Astro.props;
 ---
 
-<div class="article-card">
+<section class="article-card-component">
   {image && image.trim() !== "" && (
-    <div class="article-card-img-wrapper">
+    <div class="article-card-component-img-wrapper">
       <img
         src={image}
         alt={`Illustration pour l'article ${title}`}
-        class="article-card-img"
+        class="article-card-component-img"
         loading="lazy"
       />
     </div>
   )}
-  <div class="article-card-content">
+  <div class="article-card-component-content">
     <Title
       text={title}
-      className="article-card-title"
+      className="article-card-component-title"
       level="4"
     />
-    {subtitle && <p class="article-card-subtitle">{subtitle}</p>}
+    {subtitle && <p class="article-card-component-subtitle">{subtitle}</p>}
     <Button
       class="hide-article-btn"
       variant="teal"
@@ -36,6 +36,5 @@ const { title, subtitle, image, link } = Astro.props;
     >
       Lire l’article
     </Button>
-    <slot />
   </div>
 </div>

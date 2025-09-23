@@ -8,3 +8,19 @@
   margin: 2rem 0;
   text-align: center;
 }
+
+.article-card-list-prevention-awareness {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin: 2rem 0;
+  padding: 0 1rem;
+}
+
+@media (min-width: 700px) {
+  .article-card-list-prevention-awareness {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2.5rem;
+    padding: 0 2rem;
+  }
+}
