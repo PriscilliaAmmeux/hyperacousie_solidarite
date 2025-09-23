@@ -1,0 +1,173 @@
+{
+  "title": "Les maladies de l’oreille et du système auditif",
+  "intro": "Nos oreilles, tout au long de notre vie peuvent être exposés à de multiples pathologies qui vont venir fragiliser notre système auditif. L’hyperacousie et les acouphènes n’apparaissent pas « par magie ». Souvent, **un mécanisme biologique** ou **une maladie** déclenche ou fragilise le système auditif. Comprendre ces causes aide à mieux prévenir, dépister et orienter vers des soins adaptés.",
+  "image": "/illustration-oreille-cassé.webp",
+  "sections": [
+    {
+      "title": "Les maladies de l’oreille et du système auditif",
+      "table": [
+        {
+          "maladie": "Maladie de Ménière",
+          "mecanisme": "Excès de liquide dans l’oreille interne → fluctuations de la pression",
+          "symptomes": "Vertiges, acouphènes, hypersensibilité sonore"
+        },
+        {
+          "maladie": "Otospongiose",
+          "mecanisme": "Anomalie osseuse bloquant l’étrier → mauvaise transmission sonore",
+          "symptomes": "Perte auditive, acouphènes, intolérance au son"
+        },
+        {
+          "maladie": "Surdité brusque",
+          "mecanisme": "Perte auditive rapide due à atteinte des cellules ciliées",
+          "symptomes": "Acouphènes + hyperacousie"
+        },
+        {
+          "maladie": "Labyrinthite/Névrite vestibulaire",
+          "mecanisme": "Infection virale/bactérienne de l’oreille interne",
+          "symptomes": "Vertiges, perte auditive, acouphènes"
+        },
+        {
+          "maladie": "Perte auditive liée au bruit",
+          "mecanisme": "Destruction des cellules ciliées externes et synaptopathie cochléaire",
+          "symptomes": "Hyperacousie, acouphènes permanents"
+        },
+        {
+          "maladie": "Maladie auto-immune de l’oreille",
+          "mecanisme": "Inflammation auto-immune → altération du nerf auditif",
+          "symptomes": "Troubles fluctuants, hypersensibilité"
+        },
+        {
+          "maladie": "Syndrome de Minor",
+          "mecanisme": "Défaut osseux du canal semi-circulaire supérieur→ hyper résonance des sons",
+          "symptomes": "Hyperacousie, autophonie, acouphènes, vertiges induits par le son"
+        },
+        {
+          "maladie": "Neurinome de l’acoustique",
+          "mecanisme": "Tumeur sur le nerf auditif/vestibulaire",
+          "symptomes": "Hyperacousie, acouphènes, baisse auditive progressive"
+        },
+        {
+          "maladie": "Otite aigue",
+          "mecanisme": "Infection bactérienne ou virale de l’oreille moyenne",
+          "symptomes": "Douleur, fièvre, baisse auditive temporaire, acouphènes"
+        },
+        {
+          "maladie": "Otite chronique",
+          "mecanisme": "Inflammation persistante de l’oreille moyenne",
+          "symptomes": "Perte auditive progressive, acouphènes, hyperacousie"
+        }
+      ]
+    },
+    {
+      "title": "Les causes mécaniques et traumatismes",
+      "table": [
+        {
+          "traumatisme": "Barotraumatisme",
+          "mecanisme": "Variation brutale de pression (avion, plongée…).",
+          "symptomes": "Douleurs, baisse d’audition, acouphènes, hyperacousie"
+        },
+        {
+          "traumatisme": "Choc crânien",
+          "mecanisme": "Lésions directes ou transmission au système auditif",
+          "symptomes": "Vertiges, acouphènes, hyperacousie, baisse auditive"
+        }
+      ]
+    },
+    {
+      "title": "Les causes métaboliques",
+      "table": [
+        {
+          "pathologie": "Carence en magnésium",
+          "mecanisme": "Rôle essentiel dans la protection des cellules ciliées → déficit = vulnérabilité",
+          "impact": "Fatigue, nervosité, aggravation acouphènes/hyperacousie."
+        },
+        {
+          "pathologie": "Carence en vitamine B12",
+          "mecanisme": "Atteinte des nerfs auditifs et voies centrales",
+          "impact": "Fatigue, paresthésies, troubles auditifs"
+        },
+        {
+          "pathologie": "Hypothyroïdie / Hyperthyroïdie",
+          "mecanisme": "Déséquilibre hormonal perturbant la régulation cochléaire",
+          "impact": "Acouphènes, baisse auditive, hyperacousie"
+        }
+      ]
+    },
+    {
+      "title": "Les causes neurologiques et vasculaires",
+      "table": [
+        {
+          "pathologie": "Accidents vasculaires auditifs",
+          "mecanisme": "Infarctus du labyrinthe, atteinte microcirculatoire",
+          "impact": "Surdité brutale, acouphènes, vertiges"
+        },
+        {
+          "pathologie": "Hypertension / troubles circulatoires",
+          "mecanisme": "Excès de pression dans les vaisseaux auditifs",
+          "impact": "Acouphènes pulsatiles, fatigue auditive"
+        },
+        {
+          "pathologie": "Névralgie du trijumeau",
+          "mecanisme": "Compression/inflammation du nerf V → douleurs et hypersensibilité sonore",
+          "impact": "Douleur faciale, hyperacousie réflexe possible"
+        }
+      ]
+    },
+    {
+      "title": "Les causes inflammatoires",
+      "table": [
+        {
+          "pathologie": "Maladies auto-immunes (ex. lupus, polyarthrite, Hashimoto)",
+          "mecanisme": "Réactions inflammatoires ciblant l’oreille interne",
+          "impact": "Acouphènes, hyperacousie, baisse auditive progressive"
+        }
+      ]
+    },
+    {
+      "title": "Autres causes",
+      "table": [
+        {
+          "pathologie": "ATM & dysfonction mandibulaire",
+          "mecanisme": "Lien oreille-mâchoire → tensions musculaires et nerveuses.",
+          "impact": "Douleurs, hyperacousie somatosensorielle, acouphènes modulés"
+        },
+        {
+          "pathologie": "Stress & anxiété chronique",
+          "mecanisme": "Surproduction de cortisol & adrénaline → sensibilisation auditive.",
+          "impact": "Hyperacousie accrue, acouphènes amplifiés, troubles du sommeil"
+        }
+      ]
+    },
+    {
+      "title": "Causes médicamenteuses",
+      "table": [
+        {
+          "pathologie": "Médicaments ototoxiques (Aminosides, chimiothérapies, AINS, diurétiques…)",
+          "mecanisme": "Atteinte directe des cellules ciliées",
+          "impact": "Hyperacousie, acouphènes, perte auditive"
+        }
+      ]
+    },
+    {
+      "title": "Quand consulter ?",
+      "content": [
+        "**ORL spécialisé** : bilan complet avec audiogramme, recherche de causes.",
+        "**Neurologue** si suspicion atteinte centrale.",
+        "**Bilan biologique** si carence suspectée.",
+        "**Dentiste / kiné maxillo-facial** si suspicion ATM.",
+        "**Psychologue ou TCC** pour gérer la détresse et limiter la chronicisation."
+      ]
+    },
+    {
+      "title": "Conseils pratiques immédiats (pour la personne concernée)",
+      "content": [
+        "Éviter nouvelles expositions bruyantes ; utiliser protections auditives adaptées.",
+        "Tenir un **journal** des événements déclencheurs (bruit, stress, médicaments) utile pour le médecin.",
+        "Consulter un **ORL** et demander un bilan audiologique complet.",
+        "Si l’impact est important (sommeil, travail, dépression), demander **orientation vers TCC** ou soutien psychologique.",
+        "Éviter isolement : groupes de soutien / chaînes d’information (associations, vidéos pédagogiques) peuvent aider."
+      ]
+    }
+  ],
+  "conclusion": "De nombreuses affections peuvent aboutir à l’hyperacousie, qu’il s’agisse de troubles auditifs, neurologiques ou encore infectieux. On estime qu’un patient sur trois environ, présentant une pathologie de l’oreille interne ou un trouble neurologique, peut développer une sensibilité auditive exacerbée. La reconnaissance de ce lien entre maladies et hyperacousie reste une étape clé pour mieux orienter le diagnostic et éviter l’errance thérapeutiques."
+}

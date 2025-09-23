@@ -8,9 +8,25 @@
   padding-right: 2rem;
 }
 
+.hide-article-btn {
+  display: block;
+  margin: 1rem auto 0 auto;
+  text-align: center;
+}
+
+.article-card-content {
+  display: flex;
+  flex-direction: column;
+}
+.hide-article-btn {
+  margin-top: 1rem;
+  margin-left: 0;
+  margin-right: 0;
+}
+
 @media (min-width: 700px) {
   .article-card-list {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 1.5rem;
     padding-left: 4rem;
     padding-right: 4rem;

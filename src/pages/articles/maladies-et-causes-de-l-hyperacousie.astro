@@ -1,0 +1,77 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import HeaderArticle from "../../components/HeaderArticle/HeaderArticle.astro";
+import Title from "../../ui/Title/Title.astro";
+import maladiesData from "../../data/maladies.json";
+import { marked } from "marked";
+import "../../styles/variables.css";
+import "../../styles/maladies.css";
+---
+
+<Layout>
+   
+  <HeaderArticle
+    badge="Article"
+    title={maladiesData.title}
+    subtitle="Comprendre les maladies et causes de l’hyperacousie"
+  />
+ <section class="article-page">
+    <div class="intro-flex">
+  {maladiesData.image && (
+    <div class="article-illustration">
+      <img
+        src={maladiesData.image}
+        alt="Illustration maladies de l’oreille"
+        class="article-illustration-img"
+        loading="lazy"
+      />
+    </div>
+  )}
+  <div class="intro-text">
+    <p set:html={marked(maladiesData.intro)} />
+  </div>
+</div>
+
+    {maladiesData.sections.map((section) => (
+      <section class="article-section">
+        <Title text={section.title} level="3" />
+
+        {section.table && (
+  <div class="table-wrapper">
+    <div class="table-scroll-hint">
+      ↔ Faites défiler le tableau ou basculez votre téléphone en mode paysage pour une meilleure lecture.
+    </div>
+    <table>
+      <thead>
+        <tr>
+          {Object.keys(section.table[0]).map((col) => (
+            <th>{col.charAt(0).toUpperCase() + col.slice(1)}</th>
+          ))}
+        </tr>
+      </thead>
+      <tbody>
+        {section.table.map((row) => (
+          <tr>
+            {Object.values(row).map((cell) => (
+              <td>{cell ?? ""}</td>
+            ))}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+)}
+
+        {section.content && section.content.map((text) => (
+          <p set:html={marked(text)} />
+        ))}
+      </section>
+    ))}
+
+    <section class="article-section">
+      <Title text="Conclusion" level="3" />
+      <p set:html={marked(maladiesData.conclusion)} />
+    </section></section>
+ 
+  </article>
+</Layout>

@@ -1,0 +1,77 @@
+---
+import HeaderArticle from "../../components/HeaderArticle/HeaderArticle.astro";
+import Layout from "../../layouts/Layout.astro";
+import vieData from "../../data/petition.json";
+import { marked } from "marked";
+import "../../styles/variables.css";
+import "../../styles/petition.css";
+import Title from "../../ui/Title/Title.astro";
+
+type SectionItem =
+  | string
+  | { list: string[] }
+  | { subtitle: string; list: string[]; link?: { label: string; url: string } };
+
+type Section = {
+  title: string;
+  content: SectionItem[];
+};
+---
+
+<Layout>
+  <HeaderArticle
+    badge="Article"
+    title={vieData.title}
+    subtitle={vieData.subtitle}
+  />
+
+  <main class="article-page" role="main">
+    <section class="article-section">
+      {vieData.intro.map((text) => (
+        <p set:html={marked(text)} />
+      ))}
+    </section>
+
+    {vieData.sections.map((section) => (
+      <section class="article-section">
+        <Title text={section.title} className="" level="3" />
+        {section.content.map((item) =>
+          typeof item === "string" ? (
+            <p set:html={marked(item)} />
+          ) : "subtitle" in item ? (
+            <>
+              <Title text={item.subtitle} className="" level="4" />
+              {item.list.map((li) => (
+                <p set:html={marked(li)} />
+              ))}
+              {"link" in item && item.link && (
+                <p>
+                  <a
+                    href={item.link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {item.link.label}
+                  </a>
+                </p>
+              )}
+            </>
+          ) : "list" in item ? (
+            <ul>
+              {item.list.map((li) => (
+                <li set:html={marked(li)} />
+              ))}
+            </ul>
+          ) : null
+        )}
+      </section>
+    ))}
+
+    <section class="article-section">
+      <Title text="Conclusion" className="" level="3" />
+      {vieData.conclusion.map((text) => (
+        <p set:html={marked(text)} />
+      ))}
+    </section>
+  </main>
+</Layout>

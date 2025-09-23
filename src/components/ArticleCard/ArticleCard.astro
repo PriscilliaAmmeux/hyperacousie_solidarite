@@ -4,37 +4,38 @@ import Title from "../../ui/Title/Title.astro";
 import '../../styles/variables.css';
 import './ArticleCard.css';
 
-const { title, description, link } = Astro.props;
+const { title, subtitle, image, link } = Astro.props;
 ---
 
 <div class="article-card">
-  <Title
-    text={title}
-    className="article-card-title"
-    level="4"
-  />
-   <p class="article-card-desc">{description.intro}</p>
-  {description.list && description.list.length > 0 && (
-    <ul class="article-card-list">
-      {description.list.map((item: string) => (
-        <li>{item}</li>
-      ))}
-    </ul>
+  {image && image.trim() !== "" && (
+    <div class="article-card-img-wrapper">
+      <img
+        src={image}
+        alt={`Illustration pour l'article ${title}`}
+        class="article-card-img"
+        loading="lazy"
+      />
+    </div>
   )}
-  {description.conclusion && description.conclusion.trim() !== "" && (
-    <p class="article-card-conclusion">{description.conclusion}</p>
-  )}
-
-  <Button
-    class="hide-article-btn"
-    variant="teal"
-    size="sm"
-    href={link}
-    target="_blank"
-    rel="noopener"
-    aria-label={`Lire l'article ${title} - ouvre une nouvelle page`}
-  >
-    Lire l’article
-  </Button>
-  <slot />
+  <div class="article-card-content">
+    <Title
+      text={title}
+      className="article-card-title"
+      level="4"
+    />
+    {subtitle && <p class="article-card-subtitle">{subtitle}</p>}
+    <Button
+      class="hide-article-btn"
+      variant="teal"
+      size="sm"
+      href={link}
+      target="_blank"
+      rel="noopener"
+      aria-label={`Lire l'article ${title} - ouvre une nouvelle page`}
+    >
+      Lire l’article
+    </Button>
+    <slot />
+  </div>
 </div>
