@@ -1,0 +1,118 @@
+{
+  "title": "Agir ensemble pour des “heures calmes” : le droit au silence",
+  "subtitle": "Pourquoi c’est important ?",
+  "intro": [
+    "Aujourd’hui, **le bruit est partout** !",
+    "Dans les **magasins**, de la musique d’ambiance constante, des annonces au micro.",
+    "Dans les **rues**, haut-parleurs, animations, terrasses bruyantes.",
+    "Dans les **transports**, annonces, klaxons, portes qui claquent.",
+    "Dans les **espaces publics**, parcs, marchés, salles d’attente…"
+  ],
+  "sections": [
+    {
+      "id": 1,
+      "title": "Pour qui ?",
+      "content": [
+        "Pour certains, cela passe inaperçu…",
+        "Pour d’autres, c’est un **enfer sonore quotidien** :",
+        {
+          "list": [
+            "Personnes **atteintes d’hyperacousie**, d’acouphènes, de maladie de l’oreille.",
+            "Enfants et adultes **atteints de troubles du spectre autistique** ou **hypersensibles**.",
+            "Personnes âgées, migraineuses ou souffrant de stress post-traumatique.",
+            "Et toutes celles et ceux qui **n’en peuvent plus du bruit**."
+          ]
+        },
+        "Le bruit **épuise, isole** et **empêche de vivre** normalement."
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Mais une solution simple existe : les “heures calmes” : une mesure qui change la vie.",
+      "content": [
+        "Les **heures calmes**, ce sont des créneaux dédiés, plusieurs heures par jour et par semaine, pendant lesquels :",
+        {
+          "list": [
+            "La **musique est coupée**.",
+            "Les annonces sonores sont limitées au strict nécessaire.",
+            "L’éclairage peut être adapté.",
+            "L’ambiance générale devient **reposante et inclusive**."
+          ]
+        },
+        "Plusieurs enseignes ont déjà mis en place ces dispositifs pour **favoriser l’accessibilité des personnes** hypersensibles au bruit.",
+        "Le résultat :",
+        {
+          "list": [
+            "Moins d’anxiété pour les clients.",
+            "Une meilleure expérience pour tout le monde.",
+            "Une image positive pour les commerçants et les villes."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Pourquoi agir, et comment",
+      "content": [
+        "Le problème ? Ces initiatives ne sont **pas systématiques**.",
+        "Sans demande, rien ne changera.",
+        "**Chacun de nous peut agir, et ensemble, nous pouvons peser**."
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Comment passer à l’action ?",
+      "content": [
+        {
+          "subtitle": "Créer, signez et partagez des pétitions au niveau local.",
+          "list": [
+            "Un exemple concret :",
+            "La ville de **Provins**: Une pétition a permis la mise en place **d’heures calmes** chez Intermarché et Leclerc !",
+            "Cette pétition a abouti à la mise en place d’heures calmes dans les 2 supermarchés de la ville.",
+            "Vous pouvez en créer une dans votre ville.",
+            "Chaque signature compte : plus nous serons nombreux, plus nous serons entendus.",
+            "Astuce : diffusez vos pétitions sur les réseaux sociaux, groupes Facebook, Instagram, etc."
+          ],
+          "link": {
+            "label": "Voir la pétition",
+            "url": "https://www.mesopinions.com/petition/social/mise-place-temps-silencieux-calmes-supermarche/231490"
+          }
+        },
+        {
+          "subtitle": "Écrivez aux mairies et aux magasins",
+          "list": [
+            "Demandez la mise en place d’heures calmes dans les commerces et les espaces publics.",
+            "Expliquez l’impact du bruit sur la santé.",
+            "Proposez des aménagements simples : couper la musique, limiter les annonces, créer des zones silencieuses."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Le bruit est un problème de santé publique",
+      "content": [
+        "Selon l’**OMS** :",
+        "L’exposition prolongée à des niveaux sonores supérieurs à **55 dB** augmente le risque de **stress chronique, troubles du sommeil, troubles cardiovasculaires**.",
+        "En Europe, **près de 113 millions de personnes** sont exposées à des niveaux de bruit nocifs au quotidien.",
+        "Réduire le bruit, c’est :",
+        {
+          "list": [
+            "Préserver la santé auditive.",
+            "Réduire l’anxiété.",
+            "Améliorer la qualité de vie pour tous."
+          ]
+        }
+      ]
+    }
+  ],
+  "conclusion": [
+    "Ensemble, faisons entendre notre voix pour le silence.",
+    "L’hyperacousie, les acouphènes et l’hypersensibilité sonore sont encore méconnus.",
+    "Pourtant, nous pouvons faire bouger les lignes si nous agissons collectivement :",
+    "Une signature.",
+    "Un message.",
+    "Une demande claire.",
+    "C’est comme ça que les choses pourront avancer."
+  ]
+}
