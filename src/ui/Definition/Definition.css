@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: row;
   gap: 2rem;
-  justify-content: center;
   margin: 2rem 0;
 }
 
@@ -15,12 +14,33 @@
   border-radius: 16px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
   padding: 2rem 1rem;
+  min-width: 0;
+}
+
+.definition-col figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.definition-col figcaption {
+  font-weight: bold;
+  font-size: 1.08em;
+  margin-bottom: 1.2rem;
+  min-height: 2.5em;
+  display: flex;
+  align-items: center;
+}
+
+.margin-page-comprendre {
+  margin: 0 3rem;
 }
 
 .definition-image-row {
-  width: 220px;
+  width: auto;
   max-width: 100%;
-  height: auto;
+  height: 240px;
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 1rem;
@@ -30,17 +50,32 @@
   margin: 2rem 4rem;
 }
 
-.definition-section-vertical p {
-  text-align: justify;
-}
-
 @media (max-width: 900px) {
   .definition-types-cols {
     flex-direction: column;
     gap: 2rem;
+    align-items: left;
+    display: flex;
+    padding: 0;
+    margin: 1rem;
+  }
+
+  .definition-col {
+    width: 100%;
+    max-width: 300px; 
+    margin: 0 auto;
   }
 
   .definition-section-vertical {
-    margin: 1rem 2rem;
+    margin: 1rem 0.5rem;
+  }
+
+  .margin-page-comprendre {
+    margin: 0 0.5rem;
+  }
+
+  .definition-image-row {
+    height: 180px; /* image plus petite sur mobile */
+    max-width: 100%;
   }
 }

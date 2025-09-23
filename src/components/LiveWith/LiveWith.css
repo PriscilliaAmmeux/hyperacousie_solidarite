@@ -4,9 +4,8 @@
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, auto);
   gap: 2rem;
-  justify-items: center;
   align-items: start;
-  margin: 2rem auto;
+  margin: 2rem 6rem;
   max-width: 1200px;
 }
 
@@ -34,12 +33,12 @@
   text-align: center;
 }
 
-.margin-left {
-  margin-left: 4rem;
+.margin-section-liveWith {
+  margin-left: 6rem;
 }
 
 .section-livewith {
-  margin: 0 2rem;
+  margin: 0 4rem;
 }
 
 .livewith-item a {
@@ -67,7 +66,11 @@
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-  .margin-left {
+  .margin-section-liveWith {
     margin-left: 0;
+  }
+  .section-livewith,
+  .livewith-grid {
+    margin: 1rem;
   }
 }
