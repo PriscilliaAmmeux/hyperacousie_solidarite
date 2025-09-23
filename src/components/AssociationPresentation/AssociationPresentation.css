@@ -42,7 +42,6 @@
   color: var(--color-black);
   opacity: 0.8;
   line-height: 1.8;
-  text-align: justify;
   font-size: 1rem;
   margin-bottom: 0;
 }
@@ -77,7 +76,6 @@
   position: relative;
   z-index: 2;
   font-size: 1rem;
-  text-align: justify;
 }
 
 .second-parallelogram {
@@ -170,7 +168,6 @@
 .description-text-hyperacousie-quesako {
   color: var(--color-black);
   line-height: 1.6;
-  text-align: justify;
   font-size: 1rem;
   margin: 1rem;
 }

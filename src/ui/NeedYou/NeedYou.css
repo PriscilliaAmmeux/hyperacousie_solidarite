@@ -24,10 +24,6 @@
   border-radius: 0.5rem;
 }
 
-.need-you-content p {
-  text-align: justify;
-}
-
 /* Desktop */
 @media (min-width: 768px) {
   .need-you-section {
