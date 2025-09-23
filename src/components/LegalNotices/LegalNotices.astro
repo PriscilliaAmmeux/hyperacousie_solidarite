@@ -8,23 +8,23 @@ import './LegalNotices.css';
 <section>
   <header class="mentions-legales-section">
     <div class="mentions-legales-header">
-      <Title text={legalNotices.title ?? "Mentions légales"} level="3" />
+      <Title text="Mentions légales" level="3" />
     </div>
     <div class="mentions-legales-content">
-      {(legalNotices.notices ?? legalNotices).map((notice) => (
-        <div class="mentions-legales-block">
-          <Title text={notice.title} level="4" />
-          {Array.isArray(notice.content) ? (
-            <ul class="mentions-legales-list">
-              {notice.content.map((item, idx) => (
-                <li key={idx}>{item.text}</li>
-              ))}
-            </ul>
-          ) : (
-            <p class="mentions-legales-text">{notice.content}</p>
-          )}
-        </div>
-      ))}
+      {legalNotices.map((notice) => (
+      <div class="mentions-legales-block">
+        <Title text={notice.title} level="4" />
+        {Array.isArray(notice.content) ? (
+          <ul class="mentions-legales-list">
+            {notice.content.map((item) => (
+              <li>{item.text}</li>
+            ))}
+          </ul>
+        ) : (
+          <p class="mentions-legales-text">{notice.content}</p>
+        )}
+      </div>
+))}
       <div class="mentions-legales-block">
         <Title text="Droit de rétractation" level="4" />
         <p class="mentions-legales-text">

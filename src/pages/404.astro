@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Title from '../ui/Title/Title.astro';
+import '../styles/404.css';
+import '../styles/variables.css';
+---
+
+<Layout title="Page introuvable">
+  <section class="error-404-section">
+        <img 
+      src="/404.webp" 
+      alt="Illustration erreur 404" 
+      class="error-404-img"
+      width="220"
+      height="220"
+      loading="lazy"
+    />
+    <Title text="Oups, page introuvable !" level="2" className="error-404-title" />
+    <p class="error-404-message">
+      La page que vous cherchez n’existe pas ou a été déplacée.<br />
+      <span class="error-404-fun">Mais pas de panique, vous pouvez revenir à l’accueil !</span>
+    </p>
+    <a href="/" class="error-404-link">Retour à l’accueil</a>
+  </section>
+</Layout>

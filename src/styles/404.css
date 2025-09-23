@@ -1,0 +1,24 @@
+.error-404-section {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+.error-404-link {
+  display: inline-block;
+  margin-top: 2rem;
+  color: var(--color-teal, #12b6a1);
+  font-weight: 600;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+.error-404-link:hover {
+  color: var(--color-coral, #ff6f61);
+}
+
+.error-404-img {
+  display: block;
+  margin: 0 auto 1.2rem auto;
+  max-width: 220px;
+  width: 100%;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(18, 182, 161, 0.1);
+}
