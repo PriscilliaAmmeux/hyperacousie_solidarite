@@ -1,7 +1,5 @@
-/* Variables CSS pour le projet Hyperacousie Solidarité */
-
 :root {
-  /* Couleurs principales du projet */
+
   --color-coral: #ff6f61;
   --color-teal: #12b6a8;
   --color-teal-transparent: rgba(0, 128, 128, 0.5);
@@ -9,7 +7,7 @@
   --color-black: #3c1914;
   --color-background-white: #fffff7;
 
-  /* Variables pour les boutons */
+
   --button-coral-bg: var(--color-coral);
   --button-coral-text: var(--color-black);
   --button-coral-border: var(--color-coral);
@@ -38,13 +36,12 @@
   /* Focus */
   --button-focus-ring: 0 0 0 3px rgba(59, 130, 246, 0.1);
 
-  /* Variables pour la navigation */
+  /* Navigation */
   --nav-text-color: var(--color-black);
   --nav-text-hover: var(--color-teal);
   --nav-text-active: var(--color-coral);
 }
 
-/* Classes utilitaires pour les boutons */
 .btn-coral {
   background-color: var(--button-coral-bg);
   color: var(--button-coral-text);
