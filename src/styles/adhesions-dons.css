@@ -1,0 +1,42 @@
+.adhesions-header {
+  margin: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.adhesions-header img {
+  margin-bottom: 0.5rem;
+}
+
+.adhesions-intro {
+  font-size: 1.15em;
+  font-weight: bold;
+  color: var(--color-coral);
+  margin: 0 6rem;
+  width: 800px;
+  align-items: flex-start;
+}
+
+.adhesions-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 700px) {
+  .adhesions-header {
+    padding: 1.2rem 0.5rem 1.5rem 0.5rem;
+    border-radius: 10px;
+  }
+  .adhesions-content {
+    gap: 1.2rem;
+  }
+  .adhesions-intro {
+    margin: 0;
+    width: auto;
+    font-size: 1em;
+  }
+}

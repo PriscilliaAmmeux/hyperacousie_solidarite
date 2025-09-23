@@ -1,11 +1,19 @@
 ---
 // Mobile navigation component for Hyperacousie Solidarité
-import { getNavigationItems, isCurrentPage } from '../../utils/helpers.ts';
+import { isCurrentPage } from '../../utils/helpers.ts';
 import './NavBarMobile.css';
 import '../../styles/variables.css';
 
 const { currentPath = '' } = Astro.props;
-const navItems = getNavigationItems();
+
+const mobileNavigationItems = [
+  { href: "/", label: "Accueil" },
+  { href: "/comprendre", label: "Comprendre l'hyperacousie" },
+  { href: "/temoignages", label: "Témoignages" },
+  { href: "/ressources", label: "Ressources" },
+  { href: "/adhesions-dons", label: "Adhésions et dons" }, // uniquement mobile
+  { href: "/contact", label: "Contact" },
+];
 
 // Icons for each menu (using simple SVG icons)
 const getIcon = (href: string) => {
@@ -30,10 +38,15 @@ const getIcon = (href: string) => {
       return `<svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
         <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
       </svg>`;
+    case '/adhesions-dons':
+      return `<svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+        <path d="M12 2C8.13 2 5 5.13 5 9c0 3.87 3.13 7 7 7s7-3.13 7-7c0-3.87-3.13-7-7-7zm0 12c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0 3c-4.97 0-9 4.03-9 9h2c0-3.87 3.13-7 7-7s7 3.13 7 7h2c0-4.97-4.03-9-9-9z"/>
+      </svg>`;  
     default:
       return `<svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
         <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
       </svg>`;
+
   }
 };
 
@@ -50,6 +63,8 @@ const getMobileLabel = (href: string) => {
       return 'Ressources';
     case '/contact':
       return 'Contact';
+    case '/adhesions-dons':
+      return 'Adhésions-Dons';
     default:
       return 'Menu';
   }
@@ -63,7 +78,7 @@ const getMobileLabel = (href: string) => {
   aria-label="Main mobile navigation"
 >
   <div class="mobile-nav-container">
-    {navItems.map((item) => (
+    {mobileNavigationItems.map((item) => (
       <a 
         href={item.href}
         class={`mobile-nav-item ${
