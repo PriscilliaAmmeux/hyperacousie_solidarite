@@ -26,6 +26,24 @@
   margin-bottom: 2rem;
 }
 
+.donation-form-link {
+  display: inline-block;
+  min-width: 0;
+  width: auto;
+  text-align: center;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  white-space: nowrap;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.adhesions-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (max-width: 700px) {
   .adhesions-header {
     padding: 1.2rem 0.5rem 1.5rem 0.5rem;
