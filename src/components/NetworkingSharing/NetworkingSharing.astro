@@ -26,6 +26,7 @@ const cards = [
         title: "Carte de France des ORL sensibilisés",
         colorTitle: "purple",
         text:"Liste et localisation des ORL sensibilisés à l’hyperacousie et aux acouphènes",
+        info: "Ces informations sont fournies à titre indicatif. Nous recommandons de vérifier la disponibilité et l’expertise médicale avant toute consultation.",
         buttonBotomColor: "white",
         contentTextButtonBottom: "Accéder à la carte",
         link:"https://maphub.net/Barb-Hyper/orl-sensibilise-a-lhyperacousie-et-aux-acouphenes"
@@ -38,7 +39,8 @@ const cards = [
         title: "Carte de France des soignants partenaires",
         colorTitle: "blue",
         text:"Audioprothésistes, kiné-maxillo facial et soignants partenaires sensibilisés à l’hyperacousie",
-         buttonBotomColor: "white",
+        info: "Ces informations sont fournies à titre indicatif. Nous recommandons de vérifier la disponibilité et l’expertise médicale avant toute consultation.",
+        buttonBotomColor: "white",
         contentTextButtonBottom: "Accéder à la carte",
         link:"https://maphub.net/Barb-Hyper/audioprothesiste"
     },
@@ -95,6 +97,7 @@ const cards = [
             level="4"
         />
         <p class="networking-card-text">{card.text}</p>
+        <p class="networking-card-info">{card.info}</p>
         <button
             class={`btn-base btn-sm btn-${card.buttonBotomColor}${(card.id === 2 || card.id === 3) ? ' btn-blue-text' : ''}`}
             type="button"
