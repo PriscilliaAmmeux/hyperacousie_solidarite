@@ -2,6 +2,7 @@
 import Title from "../Title/Title.astro";
 import '../../styles/variables.css';
 import './Donations.css';
+import Button from "../Button/Button.astro";
 
 ---
 
@@ -20,7 +21,37 @@ import './Donations.css';
     </ul>
     Il est aussi possible de faire un don libre sans adhérer.<br />
     <br />
-    <strong>Offre spéciale :</strong> l’adhésion est offerte jusqu’à la fin de l’année, car l’adhésion est normalement calendaire.<br />
-    Toute adhésion aujourd’hui est valable jusqu’au <strong>31/12/2026</strong>.
+    <strong>Offre spéciale :</strong> pour toute adhésion effectuée dès maintenant, les derniers mois de l’année 2025 sont offerts. <strong>L’adhésion reste valable jusqu’au 31/12/2026.</strong>
   </p>
+
+  <div class="donation-form-download">
+    <Title text="Paiement par chèque ou virement" level="4" className="donation-form-title" />
+    <p>
+      Pour tout paiement par chèque ou virement, merci de télécharger et compléter le formulaire ci-dessous, puis de le retourner à l’adresse indiquée.
+    </p>
+    <div class="donation-form-actions">
+  <Button
+    href="/formulaire-adhesion-don.pdf"
+    download="true"
+    target="_blank"
+    variant="teal"
+    size="sm"
+    aria-label="Télécharger le formulaire d'adhésion et don PDF"
+    class="donation-form-link"
+  >
+    Télécharger le formulaire PDF
+  </Button>
+  <Button 
+    variant="teal" 
+    size="sm"
+    href="https://www.helloasso.com/associations/hyperacousie-solidarite"
+    aria-label="Adhérer à l'association ou faire un don via HelloAsso"
+    target="_blank"
+    rel="noopener"
+    class="donation-form-link"
+  >
+    Adhérer / Faire un don
+  </Button>
+</div>
+  </div>
 </section>

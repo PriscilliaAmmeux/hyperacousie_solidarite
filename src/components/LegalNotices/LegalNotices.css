@@ -29,14 +29,11 @@
 }
 
 .mentions-legales-content {
-  display: flex;
-  flex-direction: column;
-}
-
-.mentions-legales-block {
   background: #fff;
   box-shadow: 0 1px 4px rgba(18, 182, 161, 0.05);
   padding: 1rem 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .mentions-legales-title {
@@ -62,4 +59,18 @@
   margin: 0;
   color: #333;
   font-size: 1rem;
+}
+
+.mentions-legales-link {
+  color: var(--color-teal, #12b6a1);
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s;
+  margin: 0 0.2em;
+}
+
+.mentions-legales-link:hover,
+.mentions-legales-link:focus {
+  color: var(--color-coral, #ff6f61);
+  text-decoration: underline;
 }

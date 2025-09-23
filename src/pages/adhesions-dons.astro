@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SectionButtonMore from '../ui/SectionButtonMore/SectionButtonMore.astro';
+import Title from '../ui/Title/Title.astro';
+import '../styles/variables.css';
+import '../styles/adhesions-dons.css';
+import Donations from '../ui/Donations/Donations.astro';
+import HowWork from '../ui/HowWork/HowWork.astro';
+import ImageMoney from '../ui/imageMoney/imageMoney.astro';
+---
+
+<Layout 
+  title="Adhésions et dons "
+description="Adhérez à l’association Hyperacousie Solidarité ou faites un don pour soutenir la recherche, la sensibilisation et l’accompagnement des personnes touchées par l’hyperacousie et les troubles auditifs. Découvrez nos offres d’adhésion, nos supports dédiés et les modalités de paiement en ligne, par chèque ou virement. Rejoignez une communauté engagée pour améliorer la qualité de vie et la reconnaissance du handicap auditif."
+>
+  <section class="adhesions-header">
+    <ImageMoney width={100} height={100} />
+    <Title text="Adhésions et dons" level='2' />
+    
+    <section class="adhesions-content">
+    <p class="adhesions-intro">
+      Soutenez l’association Hyperacousie Solidarité: adhérez ou faites un don pour permettre nos actions et recevoir nos supports dédiés.
+    </p>  
+    <HowWork />
+    <Donations />
+  </section>
+   
+  </section>
+
+
+</Layout>

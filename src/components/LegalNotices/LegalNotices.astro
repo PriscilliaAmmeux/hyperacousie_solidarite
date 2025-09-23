@@ -3,22 +3,21 @@ import legalNotices from '../../data/legalNotices.json';
 import Title from '../../ui/Title/Title.astro';
 import '../../styles/variables.css';
 import './LegalNotices.css';
-
 ---
+
 <section>
-     <header class="mentions-legales-section">
+  <header class="mentions-legales-section">
     <div class="mentions-legales-header">
-      <Title text="Mentions légales" level="3" />
-     
+      <Title text={legalNotices.title ?? "Mentions légales"} level="3" />
     </div>
-    <body class="mentions-legales-content">
-      {legalNotices.map((notice) => (
-        <div class="mentions-legales-block" >
-            <Title text={notice.title} level="4" />
+    <div class="mentions-legales-content">
+      {(legalNotices.notices ?? legalNotices).map((notice) => (
+        <div class="mentions-legales-block">
+          <Title text={notice.title} level="4" />
           {Array.isArray(notice.content) ? (
             <ul class="mentions-legales-list">
               {notice.content.map((item, idx) => (
-                <li>{item.text}</li>
+                <li key={idx}>{item.text}</li>
               ))}
             </ul>
           ) : (
@@ -26,5 +25,16 @@ import './LegalNotices.css';
           )}
         </div>
       ))}
-    </body>
-</header>
+      <div class="mentions-legales-block">
+        <Title text="Droit de rétractation" level="4" />
+        <p class="mentions-legales-text">
+          Conformément à la législation en vigueur, toute adhésion ou don effectué en ligne ou à distance bénéficie d’un droit de rétractation de 14 jours. Pour exercer ce droit, vous pouvez en faire la demande par
+          <a href="mailto:hyperacousiesolidarite@gmail.com" class="mentions-legales-link">e-mail</a>
+          ou via la
+          <a href="/contact" class="mentions-legales-link">page contact</a>
+          dans ce délai. Le remboursement sera effectué dans les meilleurs délais, conformément aux dispositions légales.
+        </p>
+      </div>
+    </div>
+  </header>
+</section>
