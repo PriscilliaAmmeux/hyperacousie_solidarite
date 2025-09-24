@@ -23,21 +23,19 @@ import Button from '../ui/Button/Button.astro';
       Soutenez l’association Hyperacousie Solidarité: adhérez ou faites un don pour permettre nos actions et recevoir nos supports dédiés.
     </p>  
     <HowWork />
+   <section class="adhesions-content-flex">
+  <div class="adhesions-donations-col">
     <Donations />
-    <div class="adhesions-arrow">
-      <BsArrowDownCircle size={50} color="#ff6f61" aria-hidden="true" focusable="false" />
+  </div>
+  <div class="adhesions-images-col">
+    <div class="adhesions-images">
+      <img src="/stickers.webp" alt="stickers" class="adhesions-img img-top" width="260" height="auto" />
+      <img src="/carte handicap.webp" alt="carte" class="adhesions-img img-bottom" width="260" height="auto" />
     </div>
-    <Button 
-      variant="teal" 
-      size="sm"
-      href="https://www.helloasso.com/associations/hyperacousie-solidarite"
-      aria-label="Adhérer à l'association ou faire un don via HelloAsso"
-      target="_blank"
-      rel="noopener"
-      class="donation-form-link"
-    >
-      Adhérer / Faire un don
-    </Button>
+  </div>
+</section>
+   
+  
    
   </section>
 
