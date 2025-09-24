@@ -5,6 +5,7 @@
   "sections": [
     {
       "title": "Les maladies de l’oreille et du système auditif",
+      "img": "/oreille.webp",
       "table": [
         {
           "maladie": "Maladie de Ménière",
@@ -60,6 +61,7 @@
     },
     {
       "title": "Les causes mécaniques et traumatismes",
+      "img": "/traumatisme.webp",
       "table": [
         {
           "traumatisme": "Barotraumatisme",
@@ -75,6 +77,7 @@
     },
     {
       "title": "Les causes métaboliques",
+      "img": "/metabolique.webp",
       "table": [
         {
           "pathologie": "Carence en magnésium",
@@ -95,6 +98,7 @@
     },
     {
       "title": "Les causes neurologiques et vasculaires",
+      "img": "/cerveau.webp",
       "table": [
         {
           "pathologie": "Accidents vasculaires auditifs",

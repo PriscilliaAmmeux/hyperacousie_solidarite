@@ -1,4 +1,3 @@
-/* Article cards grid: 2 columns on desktop/tablet, 1 column on mobile */
 .article-card-list {
   display: grid;
   grid-template-columns: 1fr;
@@ -24,6 +23,23 @@
 .hide-article-btn {
   margin-top: auto;
   margin-bottom: 0;
+}
+
+.article-card-component-img-wrapper {
+  height: 140px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.7rem;
+}
+
+.article-card-component-img {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 14px;
+  object-fit: cover;
+  display: block;
 }
 
 @media (min-width: 700px) {

@@ -9,71 +9,81 @@ import "../../styles/maladies.css";
 ---
 
 <Layout
-title="Hyperacousie et maladies de l’oreille : comprendre les causes"
-description="Hyperacousie, acouphènes et troubles auditifs : explorez les maladies, causes et facteurs de risque pour mieux prévenir et protéger votre audition."
-   >
+  title="Hyperacousie et maladies de l’oreille : comprendre les causes"
+  description="Hyperacousie, acouphènes et troubles auditifs : explorez les maladies, causes et facteurs de risque pour mieux prévenir et protéger votre audition."
+>
   <HeaderArticle
     badge="Article"
     title={maladiesData.title}
     subtitle="Comprendre les maladies et causes de l’hyperacousie"
   />
- <section class="article-page">
+  <section class="article-page">
     <div class="intro-flex">
-  {maladiesData.image && (
-    <div class="article-illustration">
-      <img
-        src={maladiesData.image}
-        alt="Illustration maladies de l’oreille"
-        class="article-illustration-img"
-        loading="lazy"
-      />
+      {maladiesData.image && (
+        <div class="article-illustration">
+          <img
+            src={maladiesData.image}
+            alt="Illustration maladies de l’oreille"
+            class="article-illustration-img"
+            loading="lazy"
+          />
+        </div>
+      )}
+      <div class="intro-text">
+        <p set:html={marked(maladiesData.intro)} />
+      </div>
     </div>
-  )}
-  <div class="intro-text">
-    <p set:html={marked(maladiesData.intro)} />
-  </div>
-</div>
 
     {maladiesData.sections.map((section) => (
-      <section class="article-section">
-        <Title text={section.title} level="3" />
-
-        {section.table && (
-  <div class="table-wrapper">
-    <div class="table-scroll-hint">
-      ↔ Faites défiler le tableau ou basculez votre téléphone en mode paysage pour une meilleure lecture.
+  <section class="article-section">
+    <div class="section-title-img-row">
+      <Title text={section.title} level="3" />
+      {section.img && (
+        <img
+          src={section.img}
+          alt={section.title}
+          class="section-title-img"
+          width="120"
+          height="120"
+        />
+      )}
     </div>
-    <table>
-      <thead>
-        <tr>
-          {Object.keys(section.table[0]).map((col) => (
-            <th>{col.charAt(0).toUpperCase() + col.slice(1)}</th>
-          ))}
-        </tr>
-      </thead>
-      <tbody>
-        {section.table.map((row) => (
-          <tr>
-            {Object.values(row).map((cell) => (
-              <td>{cell ?? ""}</td>
-            ))}
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  </div>
-)}
 
-        {section.content && section.content.map((text) => (
-          <p set:html={marked(text)} />
-        ))}
-      </section>
+    {section.table && (
+      <div class="table-wrapper">
+        <div class="table-scroll-hint">
+          ↔ Faites défiler le tableau ou basculez votre téléphone en mode paysage pour une meilleure lecture.
+        </div>
+        <table>
+          <thead>
+            <tr>
+              {Object.keys(section.table[0]).map((col) => (
+                <th>{col.charAt(0).toUpperCase() + col.slice(1)}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {section.table.map((row) => (
+              <tr>
+                {Object.values(row).map((cell) => (
+                  <td>{cell ?? ""}</td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    )}
+
+    {section.content && section.content.map((text) => (
+      <p set:html={marked(text)} />
     ))}
+  </section>
+  ))}
 
     <section class="article-section">
       <Title text="Conclusion" level="3" />
       <p set:html={marked(maladiesData.conclusion)} />
-    </section></section>
- 
-  </article>
+    </section>
+  </section>
 </Layout>
