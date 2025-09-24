@@ -4,34 +4,34 @@
     "title": "Vie quotidienne",
     "subtitle": "“Ces bruits du quotidien que tout le monde ignore… sauf nos oreilles.”",
     "link": "/articles/vie-quotidienne",
-    "image": ""
+    "image": "/aspirateur.webp"
   },
   {
     "id": 2,
     "title": "Vie professionnelle (métiers à risque + droits)",
     "subtitle": "“Certains métiers détruisent l’ouïe : connaissez-vous vos droits face au bruit ?”",
     "link": "/articles/vie-professionnelle",
-    "image": ""
+    "image": "/camion.webp"
   },
   {
     "id": 3,
     "title": "Écouteurs, casques et gaming",
     "subtitle": " “Un fléau silencieux.”",
     "link": "/articles/casques-et-ecouteurs",
-    "image": ""
+    "image": "/casque-grenade.webp"
   },
   {
     "id": 4,
     "title": "Pétitions et démarches ",
     "subtitle": "“ Changer les règles du jeu : un clic, une avancée.”",
     "link": "/articles/petitions",
-    "image": ""
+    "image": "/petition-action.webp"
   },
   {
     "id": 5,
     "title": "Maladies et causes de l’hyperacousie ",
     "subtitle": "“Quand la santé déclenche le bruit intérieur : comprendre pour mieux agir.”",
     "link": "/articles/maladies-et-causes-de-l-hyperacousie",
-    "image": ""
+    "image": "/illustration-oreille-cassé.webp"
   }
 ]
