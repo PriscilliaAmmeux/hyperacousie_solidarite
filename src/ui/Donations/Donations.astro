@@ -9,20 +9,35 @@ import Button from "../Button/Button.astro";
 <section class="explanation">
   <Title text="Adhésions & Dons" level='3' className="explanation-title"/>
   <p>
-    Il existe deux types d’adhésion&nbsp;:
-    <ul>
-      <li>
-        <strong>Solidaire</strong> : envoi gratuit à la demande de 2 stickers «&nbsp;Handicap hyperacousie&nbsp;».
-      </li>
-      <li>
-        <strong>Premium</strong> : envoi gratuit à la demande de 2 stickers «Handicap hyperacousie» + une carte «Handicap auditif».
-      </li>
-    </ul>
-    Il est aussi possible de faire un don libre sans adhérer.<br />
-    <br />
-    <strong>Offre spéciale :</strong> pour toute adhésion effectuée dès maintenant, les derniers mois de l’année 2025 sont offerts. <strong>L’adhésion reste valable jusqu’au 31/12/2026.</strong>
-  </p>
-
+  Il existe deux types d’adhésion :
+  <ul>
+    <li>
+      <span class="text-bold">Solidaire</span> : envoi gratuit à la demande de 2 stickers «&nbsp;Handicap hyperacousie&nbsp;».
+    </li>
+    <li>
+      <span class="text-bold">Premium</span> : envoi gratuit à la demande de 2 stickers «Handicap hyperacousie» + une carte «Handicap auditif».
+    </li>
+  </ul>
+</p>
+<p>Il est aussi possible de faire un don libre sans adhérer.</p>
+<p class="text-bold">Offre spéciale :</p>
+<p>
+  Pour toute adhésion effectuée dès maintenant, les derniers mois de l’année 2025 sont offerts.
+  <span class="text-bold">L’adhésion reste valable jusqu’au 31/12/2026.</span>
+</p>
+<div style="text-align:center;">
+  <Button 
+    variant="teal" 
+    size="sm"
+    href="https://www.helloasso.com/associations/hyperacousie-solidarite"
+    aria-label="Adhérer à l'association ou faire un don via HelloAsso"
+    target="_blank"
+    rel="noopener"
+    class="donation-form-link"
+  >
+    Adhérer / Faire un don
+  </Button>
+</div>
   <div class="donation-form-download">
     <Title text="Paiement par chèque ou virement" level="3" className="donation-form-title" />
     <p>

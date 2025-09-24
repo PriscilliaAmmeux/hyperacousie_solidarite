@@ -44,6 +44,64 @@
   align-items: center;
 }
 
+.adhesions-content-flex {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.adhesions-donations-col {
+  flex: 1 1 340px;
+  min-width: 0;
+}
+
+.adhesions-images-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.adhesions-images {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.adhesions-img {
+  max-width: 100%;
+  height: auto;
+}
+
+.img-top {
+  transform: rotate(-7deg) scale(1.04);
+}
+
+.img-bottom {
+  transform: rotate(8deg) scale(0.98);
+}
+
+@media (max-width: 900px) {
+  .adhesions-content-flex {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: stretch;
+  }
+  .adhesions-images-col,
+  .adhesions-images {
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+  }
+  .adhesions-img {
+    max-width: 140px;
+  }
+}
+
 @media (max-width: 700px) {
   .adhesions-header {
     padding: 1.2rem 0.5rem 1.5rem 0.5rem;
