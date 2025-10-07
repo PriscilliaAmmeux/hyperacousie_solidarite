@@ -10,7 +10,6 @@
   align-items: flex-start;
   justify-content: center;
   min-height: 400px;
-  height: 220px;
   transition: background 0.3s;
 }
 
@@ -25,4 +24,22 @@
   position: relative;
   overflow: hidden;
   padding: 0 1rem;
+}
+
+@media (max-width: 700px) {
+  .healthcare-voices {
+    margin: 0 1rem;
+  }
+  .healthcare-voices-swiper {
+    padding: 0;
+  }
+  .card-voices {
+    padding: 1rem 2rem;
+  }
+  .healthcare-voices {
+    margin: 0 1rem;
+  }
+  .voice-text {
+    padding: 1rem;
+  }
 }
