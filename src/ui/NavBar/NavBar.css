@@ -149,3 +149,9 @@
     color: var(--nav-text-color);
   }
 }
+
+@media (max-width: 900px) {
+  .navbar-container {
+    display: none;
+  }
+}

@@ -96,7 +96,7 @@
   justify-content: center; /* centre les cards horizontalement */
 }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   .fact-sheet-list {
     flex-direction: column;
     align-items: center;

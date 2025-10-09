@@ -39,7 +39,7 @@
 }
 
 /* Desktop - Image à gauche, contenu à droite */
-@media (min-width: 768px) {
+@media (min-width: 900px) {
   .plaquette-container {
     flex-direction: row;
     align-items: flex-start;

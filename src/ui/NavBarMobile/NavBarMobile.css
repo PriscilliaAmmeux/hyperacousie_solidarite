@@ -87,14 +87,14 @@
 }
 
 /* Conditional display based on screen size */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .mobile-nav-bottom {
-    display: block;
+    display: block !important;
   }
 }
 
 /* Bottom padding to prevent content from being hidden */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   :global(body) {
     padding-bottom: 5rem;
   }
@@ -117,7 +117,7 @@
 }
 
 /* Slide-up animation */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .mobile-nav-bottom {
     animation: slideUp 0.3s ease-out;
   }

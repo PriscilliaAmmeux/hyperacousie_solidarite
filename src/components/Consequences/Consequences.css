@@ -4,6 +4,8 @@
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+
+
 .consequences-image:hover {
   transform: scale(1.05);
   opacity: 0.9;
@@ -17,10 +19,16 @@
   margin-bottom: 4rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   .consequences-image {
     width: 20rem;
     display: block;
     margin: 0 auto;
+  }
+
+  .consequences-content {
+    padding: 0 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
   }
 }
