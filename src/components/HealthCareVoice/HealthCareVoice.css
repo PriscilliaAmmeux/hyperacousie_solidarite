@@ -14,7 +14,11 @@
 }
 
 .healthcare-voices {
-  margin: 0 4rem;
+  margin: 3rem 15rem;
+}
+
+.margin-text-healthcare {
+  margin-bottom: 4rem;
 }
 
 .healthcare-voices-swiper {
@@ -27,14 +31,12 @@
 }
 
 @media (max-width: 700px) {
-  .healthcare-voices {
-    margin: 0 1rem;
-  }
   .healthcare-voices-swiper {
     padding: 0;
   }
   .card-voices {
     padding: 1rem 2rem;
+    margin: 0 1rem 0 0;
   }
   .healthcare-voices {
     margin: 0 1rem;
