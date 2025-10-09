@@ -174,7 +174,7 @@
 }
 
 /* Responsive: all cards in column on mobile */
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   .networking-card-list {
     display: block; /* stack cards vertically */
     grid-template-columns: none;

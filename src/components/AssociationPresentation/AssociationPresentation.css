@@ -222,8 +222,7 @@
    5. RESPONSIVE BREAKPOINTS
    ========================================== */
 
-/* Tablet (768px+) */
-@media (min-width: 768px) {
+@media (min-width: 901px) {
   /* Association section */
   .association-container {
     margin: 0 2rem;

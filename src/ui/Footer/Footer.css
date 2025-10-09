@@ -38,7 +38,7 @@ footer img {
   height: auto;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 900px) {
   footer img {
     height: 120px !important;
     margin: 0 auto;
@@ -125,7 +125,7 @@ footer {
 }
 
 /* Responsive pour le bas de page */
-@media (max-width: 767px) {
+@media (max-width: 900px) {
   .footer-bottom {
     padding-left: 1rem;
     padding-right: 1rem;

@@ -1,6 +1,6 @@
 .contact-form-section {
   max-width: 800px;
-  margin: 3rem auto;
+  margin: 2rem auto 4rem auto;
   padding: 2rem;
   background: #fff;
   border-radius: 12px;
@@ -56,7 +56,7 @@ button[type="submit"] {
   width: 100%;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .contact-form-section {
     padding: 1rem;
     margin: 0 1rem;
