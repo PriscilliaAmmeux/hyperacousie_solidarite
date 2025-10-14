@@ -20,6 +20,7 @@
     "swiper": "^12.0.2"
   },
   "devDependencies": {
+    "prettier-plugin-astro": "^0.14.1",
     "tailwindcss": "^4.1.14"
   }
 }
