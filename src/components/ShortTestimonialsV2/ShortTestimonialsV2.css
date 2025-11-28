@@ -1,0 +1,122 @@
+.margin-text {
+  margin: 0 auto 2rem;
+  max-width: 1200px;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.short-testimonials-section {
+  padding: 3rem 1rem;
+}
+
+.testimonials-accordion {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.accordion-item {
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.accordion-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.accordion-header {
+  width: 100%;
+  padding: 1.25rem 1.5rem;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: 1rem;
+}
+
+/* Colonne de gauche (impairs en grille 2 colonnes) : corail puis turquoise */
+.accordion-item:nth-child(4n + 1) .accordion-header,
+.accordion-item:nth-child(4n + 4) .accordion-header {
+  background: var(--color-coral-transparent, #ffded9);
+}
+
+.accordion-item:nth-child(4n + 1) .accordion-header:hover,
+.accordion-item:nth-child(4n + 4) .accordion-header:hover {
+  background: var(--color-coral, #ff6f61);
+}
+
+.accordion-item:nth-child(4n + 1).active .accordion-header,
+.accordion-item:nth-child(4n + 4).active .accordion-header {
+  background: var(--color-coral, #ff6f61);
+}
+
+/* Colonne de droite (pairs en grille 2 colonnes) : turquoise puis corail */
+.accordion-item:nth-child(4n + 2) .accordion-header,
+.accordion-item:nth-child(4n + 3) .accordion-header {
+  background: var(--color-teal-transparent, #d4f1ee);
+}
+
+.accordion-item:nth-child(4n + 2) .accordion-header:hover,
+.accordion-item:nth-child(4n + 3) .accordion-header:hover {
+  background: var(--color-teal, #12b6a8);
+}
+
+.accordion-item:nth-child(4n + 2).active .accordion-header,
+.accordion-item:nth-child(4n + 3).active .accordion-header {
+  background: var(--color-teal, #12b6a8);
+}
+
+.accordion-name {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.accordion-icon {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #1f2937;
+  transition: transform 0.3s ease;
+  line-height: 1;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background: #fff;
+}
+
+.accordion-item.active .accordion-content {
+  max-height: 500px;
+  padding: 1.5rem;
+}
+
+.testimonial-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #374151;
+  margin: 0;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .testimonials-accordion {
+    grid-template-columns: 1fr;
+  }
+
+  .accordion-header {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .accordion-item.active .accordion-content {
+    padding: 1rem;
+  }
+}

@@ -1,6 +1,7 @@
 :root {
   --color-coral: #ff6f61;
   --color-teal: #12b6a8;
+  --color-coral-transparent: rgba(255, 111, 97, 0.5);
   --color-teal-transparent: rgba(0, 128, 128, 0.5);
   --color-white: #ffffff;
   --color-black: #3c1914;

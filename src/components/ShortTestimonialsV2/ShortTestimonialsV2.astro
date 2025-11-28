@@ -1,0 +1,25 @@
+---
+import testimonials from '../../data/shortTestimonials.json';
+import './ShortTestimonialsV2.css';
+import '../../styles/variables.css';
+---
+
+<section class="short-testimonials-section">
+  <p class="margin-text">Derrière chaque hyperacousie, il y a une histoire. Ici, découvrez des témoignages intimes : récits complets, mini-récaps de vie et vidéos authentiques. Des vécus uniques, mais une même réalité : la nôtre.</p>
+  
+  <div class="testimonials-accordion">
+    {testimonials.map((item, index) => (
+      <div class="accordion-item">
+        <button class="accordion-header" data-index={index}>
+          <span class="accordion-name">{item.name}, {item.age}</span>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <p class="testimonial-text">"{item.testimonial}"</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+<script src="./ShortTestimonialsV2.js"></script>
