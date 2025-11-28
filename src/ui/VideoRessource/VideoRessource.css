@@ -9,37 +9,41 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 1rem;
 }
 
-.video-ressource-container {
+/* Conteneurs vidéos communs */
+.video-ressource-container,
+.video-fredo-container {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
   width: 100%;
   max-width: 900px;
   align-items: center;
   justify-content: center;
+}
+
+.video-ressource-container {
   margin-bottom: 4rem;
 }
 
-@media (min-width: 768px) {
-  .video-ressource-container {
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-  .video-ressource-left {
-    width: 35%;
-  }
-  .video-ressource-right {
-    width: 60%;
-  }
-}
-
-.video-ressource-left {
+/* Colonnes gauche/droite et contenu */
+.video-ressource-left,
+.video-fredo-content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.video-ressource-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .video-ressource-logo {
@@ -58,19 +62,12 @@
   font-size: 1rem;
 }
 
-.video-ressource-right {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .video-ressource-iframe {
   width: 100%;
-  max-width: 600px;
+  max-width: 100%;
   aspect-ratio: 16/9;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
-  margin-bottom: 1rem;
   border: none;
 }
 
@@ -88,7 +85,6 @@
   text-decoration: none;
   box-shadow: 0 2px 8px rgba(245, 6, 6, 0.12);
   transition: background 0.2s;
-  margin-top: 1rem;
   border: 1px solid;
   cursor: pointer;
 }
@@ -100,4 +96,30 @@
 .youtube-btn-icon {
   display: inline-block;
   vertical-align: middle;
+}
+
+/* Responsive desktop */
+@media (min-width: 768px) {
+  .video-ressource-container,
+  .video-fredo-container {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .video-ressource-left {
+    width: 35%;
+  }
+
+  .video-ressource-right {
+    width: 60%;
+  }
+
+  .video-ressource-iframe {
+    max-width: 600px;
+  }
+
+  .video-fredo-container .video-ressource-iframe,
+  .video-fredo-content {
+    flex: 1;
+  }
 }

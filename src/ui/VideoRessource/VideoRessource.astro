@@ -46,33 +46,32 @@ import "./VideoRessource.css";
         class="video-ressource-iframe"
       />
     </div>
-    
   </div>
 
   {/* Video Ressource Content Fredo */}
-  <div class="mt-8" style="display: flex; gap: 1rem; align-items: center;">
-    <iframe
-        src="https://www.youtube.com/embed/3CNcgG0G37g"
-        title="YouTube video player"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-        class="video-ressource-iframe"
-        style="flex: 1;"
-      />
-    <div style="flex: 1; display: flex; flex-direction: column; gap: 1rem; align-items: center;">
-      <p>Témoignage de Frédo, musicien, dans "Complément d'enquête" diffusé sur France 2 le 14 juin 2018.</p>
-      <button
-          type="button"
-          class="youtube-btn"
-          aria-label="Regarder la vidéo YouTube"
-          onclick="window.open('https://www.youtube.com/watch?v=3CNcgG0G37g', '_blank', 'noopener')"
-        >
-          <svg class="youtube-btn-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="white" aria-hidden="true">
-            <path d="M8 5v14l11-7z"/>
-          </svg>
-          Regarder la vidéo YouTube
-      </button>
-    </div>
-    </div>
+<div class="video-fredo-container">
+  <iframe
+      src="https://www.youtube.com/embed/3CNcgG0G37g"
+      title="YouTube video player"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+      class="video-ressource-iframe"
+    />
+  <div class="video-fredo-content">
+    <p>Témoignage de Frédo, musicien, dans "Complément d'enquête" diffusé sur France 2 le 14 juin 2018.</p>
+    <button
+        type="button"
+        class="youtube-btn"
+        aria-label="Regarder la vidéo YouTube"
+        onclick="window.open('https://www.youtube.com/watch?v=3CNcgG0G37g', '_blank', 'noopener')"
+      >
+        <svg class="youtube-btn-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+          <path d="M8 5v14l11-7z"/>
+        </svg>
+        Regarder la vidéo YouTube
+    </button>
+  </div>
+</div>
+   
  
 </section>
