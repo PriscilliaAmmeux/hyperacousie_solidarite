@@ -14,7 +14,7 @@
     "astro": "^5.16.3",
     "marked": "^17.0.1",
     "react": "^19.1.1",
-    "react-dom": "^19.2.0",
+    "react-dom": "^19.2.3",
     "react-icons": "^5.5.0",
     "sweetalert2": "^11.26.3",
     "swiper": "^12.0.3"
