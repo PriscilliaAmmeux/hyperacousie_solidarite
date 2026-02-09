@@ -1,30 +1,28 @@
 .short-testimonials-section {
   padding: 2rem 0;
-  overflow-x: hidden;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .margin-text {
-  margin: 1rem 15rem 4rem 15rem;
+  margin: 1rem 10rem;
+  text-align: left;
 }
 
 .testimonial-text {
   font-style: italic;
 }
 
-.short-testimonials-swiper,
-.short-testimonials-swiper .swiper,
-.short-testimonials-swiper .swiper-wrapper,
-.short-testimonials-swiper .swiper-slide {
-  overflow: visible !important;
-}
-
 .short-testimonials-swiper {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1000px;
+  margin: 0 auto;
   min-width: 280px;
   position: relative;
-  overflow: visible;
-  padding: 0 1rem;
+  padding: 2rem 0;
+  box-sizing: border-box;
 }
 
 .testimonial-name {
@@ -38,7 +36,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: visible;
 }
 
 .testimonial-card {
@@ -54,7 +51,6 @@
   flex-direction: column;
   justify-content: space-between;
   margin: 0 auto;
-  overflow: visible;
 }
 
 .testimonial-content {
@@ -111,22 +107,37 @@
 .swiper-button-next,
 .swiper-button-prev {
   color: #12b6a8 !important;
-  width: 48px;
-  height: 48px;
-  display: flex;
+  width: 50px;
+  height: 50px;
+  display: flex !important;
   align-items: center;
   justify-content: center;
   top: 50%;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  font-weight: bold;
   border: none;
-  border-radius: 0;
-  transition: none;
+  transition: all 0.3s ease;
   transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 10;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 1.3rem;
+  font-weight: bold;
 }
 
 .swiper-pagination-bullet {
   background: #12b6a8 !important; /* Teal */
   opacity: 0.3;
+  width: 10px;
+  height: 10px;
 }
 
 .swiper-pagination-bullet-active {
@@ -135,22 +146,23 @@
 }
 
 .swiper-button-prev {
-  left: 0;
+  left: 10px;
 }
 .swiper-button-next {
-  right: 0;
+  right: 10px;
 }
 
 @media (max-width: 700px) {
   .margin-text {
-    margin: 1rem;
+    margin: 1rem 1rem 2rem 1rem;
+    text-align: center;
   }
 
   .short-testimonials-section {
-    padding: 1rem 0.5rem;
+    padding: 1rem 0;
   }
   .short-testimonials-swiper {
-    padding: 0 0.5rem;
+    padding: 0;
     max-width: 100%;
     min-width: 0; /* Ajouté pour annuler le min-width du desktop */
     box-sizing: border-box;
@@ -160,6 +172,7 @@
     margin: 0;
     width: 100%;
     box-sizing: border-box;
+    padding: 0 1rem;
   }
   .testimonial-card {
     border-radius: 1rem;
