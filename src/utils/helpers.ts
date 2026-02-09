@@ -19,6 +19,6 @@ export function getNavigationItems(): NavigationItem[] {
     { href: "/comprendre", label: "Comprendre l'hyperacousie" },
     { href: "/temoignages", label: "Témoignages" },
     { href: "/ressources", label: "Ressources" },
-    { href: "/contact", label: "Contact" },
+    { href: "mailto:hyperacousiesolidarite@gmail.com", label: "Contact" },
   ];
 }
