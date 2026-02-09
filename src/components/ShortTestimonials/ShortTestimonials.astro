@@ -2,6 +2,12 @@
 import testimonials from '../../data/shortTestimonials.json';
 import './ShortTestimonials.css';
 import '../../styles/variables.css';
+
+// Mélanger aléatoirement les témoignages
+const shuffledTestimonials = [...testimonials].sort(() => Math.random() - 0.5);
+
+// Fonction pour tronquer le texte
+const MAX_CHARS = 300;
 ---
 
 <section class="short-testimonials-section">
@@ -9,16 +15,32 @@ import '../../styles/variables.css';
   <p></p>
   <div class="swiper testimonials-swiper short-testimonials-swiper">
     <div class="swiper-wrapper">
-      {testimonials.map((item) => (
-        <div class="swiper-slide">
-          <div class="testimonial-card">
-            <img src="/quote-top-left.webp" alt="" class="quote-img quote-top-left" aria-hidden="true" />
-            <img src="/quote-bottom-right.webp" alt="" class="quote-img quote-bottom-right" aria-hidden="true" />
-            <p class="testimonial-text">"{item.testimonial}"</p>
-            <p class="testimonial-name">- {item.name}, {item.age}</p>
-        </div>
-        </div>
-      ))}
+      {shuffledTestimonials.map((item) => {
+        const isLong = item.testimonial.length > MAX_CHARS;
+        const truncatedText = isLong ? item.testimonial.substring(0, MAX_CHARS) + '...' : item.testimonial;
+        
+        return (
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <img src="/quote-top-left.webp" alt="" class="quote-img quote-top-left" aria-hidden="true" />
+              <img src="/quote-bottom-right.webp" alt="" class="quote-img quote-bottom-right" aria-hidden="true" />
+              <div class="testimonial-content">
+                <p class="testimonial-text testimonial-short">"{truncatedText}"</p>
+                {isLong && (
+                  <p class="testimonial-text testimonial-full" style="display: none;">"{item.testimonial}"</p>
+                )}
+              </div>
+              {isLong && (
+                <button class="read-more-btn" aria-label="Voir plus">
+                  <span class="read-more-text">Voir plus</span>
+                  <span class="read-less-text" style="display: none;">Voir moins</span>
+                </button>
+              )}
+              <p class="testimonial-name">- {item.name}, {item.age}</p>
+            </div>
+          </div>
+        );
+      })}
     </div>
     <div class="swiper-controls-mobile">
       <div class="swiper-button-prev"></div>
