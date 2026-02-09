@@ -1,145 +1,203 @@
-.mobile-nav-bottom {
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  overflow-x: hidden;
-  box-sizing: border-box;
-  z-index: 50;
-  background-color: var(--color-white);
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-  /* Visible only on mobile */
+/* Mobile Burger Menu */
+.mobile-nav-burger {
   display: none;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
 }
 
-.mobile-nav-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 0.5rem 0.5rem;
-  max-width: 100%;
-  margin: 0 auto;
-  width: 100%;
-  box-sizing: border-box;
-  overflow-x: hidden;
-}
-
-.mobile-nav-item {
+/* Burger Button */
+.burger-button {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 0.5rem 0;
-  text-decoration: none;
-  color: var(--color-teal, #12b6a8);
-  transition: all 0.2s ease;
+  justify-content: space-around;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--color-white);
+  border: 2px solid var(--color-teal, #12b6a8);
   border-radius: 0.5rem;
-  min-width: 3.5rem;
-  text-align: center;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.mobile-nav-icon {
-  margin-bottom: 0.25rem;
-  transition: transform 0.2s ease;
-  width: 24px;
-  height: 24px;
+.burger-button:hover {
+  background-color: var(--color-teal, #12b6a8);
+  transform: scale(1.05);
+}
+
+.burger-button:hover .burger-line {
+  background-color: var(--color-white);
+}
+
+.burger-line {
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-teal, #12b6a8);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.burger-button:hover .burger-line {
+  background-color: var(--color-white);
+}
+
+/* Menu Overlay */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+  z-index: 999;
+}
+
+.menu-overlay.overlay-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Menu Panel */
+.menu-panel {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  max-width: 400px;
+  height: 100%;
+  background-color: var(--color-white);
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.menu-panel.menu-open {
+  right: 0;
+}
+
+/* Menu Header */
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.menu-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-teal, #12b6a8);
+  margin: 0;
+}
+
+.close-button {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.mobile-nav-icon svg {
-  width: 24px !important;
-  height: 24px !important;
-  fill: currentColor !important;
-  color: inherit !important;
-}
-
-.mobile-nav-label {
-  font-size: 0.8rem;
-  font-weight: 600;
-  line-height: 1;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 100%;
-}
-
-.mobile-nav-default:hover,
-.mobile-nav-default:focus {
-  color: var(--color-black, #3c1914);
-}
-
-.mobile-nav-default:hover .mobile-nav-icon,
-.mobile-nav-default:focus .mobile-nav-icon {
-  transform: translateY(-2px);
-}
-
-.mobile-nav-active {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: transparent;
+  border: 2px solid var(--color-coral, #ff6f61);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
   color: var(--color-coral, #ff6f61);
 }
 
-.mobile-nav-active .mobile-nav-icon {
-  transform: scale(1.1);
+.close-button:hover {
+  background-color: var(--color-coral, #ff6f61);
+  color: var(--color-white);
+  transform: rotate(90deg);
 }
 
-/* Conditional display based on screen size */
+.close-button svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* Menu List */
+.menu-list {
+  list-style: none;
+  padding: 1rem 0;
+  margin: 0;
+}
+
+.menu-item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.menu-link {
+  display: block;
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+  color: var(--color-black, #3c1914);
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.menu-link:hover,
+.menu-link:focus {
+  background-color: var(--color-teal, #12b6a8);
+  color: var(--color-white);
+  padding-left: 2rem;
+}
+
+.menu-link[aria-current="page"] {
+  color: var(--color-coral, #ff6f61);
+  font-weight: 700;
+  border-left: 4px solid var(--color-coral, #ff6f61);
+  padding-left: 1.5rem;
+}
+
+/* Responsive Display */
 @media (max-width: 900px) {
-  .mobile-nav-bottom {
-    display: block !important;
+  .mobile-nav-burger {
+    display: block;
   }
 }
 
-/* Bottom padding to prevent content from being hidden */
-@media (max-width: 900px) {
-  :global(body) {
-    padding-bottom: 5rem;
-  }
-}
-
-/* Dark mode support */
+/* Dark Mode */
 @media (prefers-color-scheme: dark) {
-  .mobile-nav-bottom {
+  .burger-button {
     background-color: var(--color-black, #1a1a1a);
-    border-top-color: rgba(255, 255, 255, 0.1);
+    border-color: var(--color-teal, #12b6a8);
   }
 
-  .mobile-nav-item {
-    color: rgba(255, 255, 255, 0.7);
+  .menu-panel {
+    background-color: var(--color-black, #1a1a1a);
   }
 
-  .mobile-nav-active {
-    color: var(--color-teal);
+  .menu-header {
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .menu-item {
+    border-bottom-color: rgba(255, 255, 255, 0.05);
+  }
+
+  .menu-link {
+    color: rgba(255, 255, 255, 0.9);
   }
 }
 
-/* Slide-up animation */
-@media (max-width: 900px) {
-  .mobile-nav-bottom {
-    animation: slideUp 0.3s ease-out;
-  }
-}
-
-@keyframes slideUp {
-  from {
-    transform: translateY(100%);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
-
-/* Motion reduction for accessibility */
+/* Accessibility */
 @media (prefers-reduced-motion: reduce) {
-  .mobile-nav-item,
-  .mobile-nav-icon {
+  .burger-button,
+  .menu-overlay,
+  .menu-panel,
+  .close-button,
+  .menu-link {
     transition: none;
-  }
-
-  .mobile-nav-bottom {
-    animation: none;
   }
 }
