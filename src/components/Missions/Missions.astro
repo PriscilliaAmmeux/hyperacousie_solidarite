@@ -1,0 +1,68 @@
+---
+import Title from "../../ui/Title/Title.astro";
+import './Missions.css';
+
+// data missions
+const missions = [
+  {
+    icon: '🏛️',
+    title: 'Reconnaissance',
+    items: [
+      "Demander une reconnaissance de l'hyperacousie en tant que handicap auprès du gouvernement",
+      "L'amélioration urgente des dispositifs de : MDPH, RQTH, ALD, invalidité",
+      "Interpeller les professionnels de santé et les sensibiliser",
+      "Un cadre clair pour les adaptations professionnelles, notamment en télétravail et réorientation professionnelle"
+    ]
+  },
+  {
+    icon: '🤝',
+    title: 'Soutien aux personnes concernées et aux proches',
+    items: [
+      'Un <a href="https://www.facebook.com/groups/1038131074387271/?ref=share" target="_blank" rel="noopener noreferrer">groupe de soutien</a> entre personnes concernées via nos forums (FB, Instagram, LinkedIn)',
+      "Des visioconférences pour partager, échanger, se soutenir, s'aider",
+      "Différentes cartes de France sur lesquelles vous pourrez rencontrer des personnes hyperacousiques, trouver des ORL sensibilisés au handicap, trouver différents soignants engagés et sensibilisés (kiné maxillo-facial, audioprothésiste, psychologue…)",
+      "Une application dédiée aux matériels spécifiques utilisés par les hypers",
+      "Des fiches pratiques pour mieux comprendre et gérer l'hyperacousie"
+    ]
+  },
+  {
+    icon: '🔬',
+    title: 'Recherche et sensibilisation',
+    items: [
+      "Créer des partenariats entre chercheurs et l'association",
+      "Faire avancer la recherche grâce à vos dons",
+      "Sensibiliser le grand public à travers différentes actions"
+    ]
+  }
+];
+---
+
+
+<section class="missions-carousel">
+    <Title text="Nos missions" level="2" className="section-title" />
+    <div class="swiper missions-swiper">
+        <div class="swiper-wrapper">
+            {missions.map(mission => (
+                <div class="swiper-slide">
+                    <div class="mission-card">
+                        <Title text={mission.title} level="3" className="mission-title" />
+                        <ul class="mission-items">
+                            {mission.items.map(item => (
+                                <li class="link-missions-item" set:html={item}></li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
+            ))}
+        </div>
+
+        <!-- Navigation -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        
+        <!-- Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+
+<script src="./Missions.js"></script>

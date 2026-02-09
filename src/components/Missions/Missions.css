@@ -1,0 +1,208 @@
+.missions-carousel {
+  padding: 1rem 1rem;
+}
+
+.missions-carousel .section-title {
+  text-align: center;
+}
+
+.missions-swiper {
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  padding: 2rem 4rem 4rem;
+}
+
+.swiper-slide {
+  height: auto;
+  display: flex;
+  align-items: stretch;
+}
+
+.mission-card {
+  width: 100%;
+  background: white;
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.mission-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.mission-icon {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.mission-title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.link-missions-item {
+  color: var(--color-coral, #ff6f61);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.mission-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.mission-items li {
+  padding: 1rem 0 1rem 2.5rem;
+  position: relative;
+  line-height: 1.6;
+  color: #555;
+  font-size: 1.05rem;
+}
+
+.mission-items li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #4caf50;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.mission-items li a {
+  color: var(--color-coral, #ff6f61);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.mission-items li a:hover {
+  color: #ff8577;
+  text-decoration: underline;
+}
+
+.mission-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.mission-list li {
+  padding: 1rem 0 1rem 2.5rem;
+  position: relative;
+  line-height: 1.6;
+  color: #555;
+  font-size: 1.05rem;
+}
+
+.mission-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #4caf50;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Styles Swiper Navigation */
+.missions-swiper .swiper-button-prev,
+.missions-swiper .swiper-button-next {
+  color: var(--color-coral, #ff6f61);
+  width: 50px;
+  height: 50px;
+  transition: all 0.3s ease;
+}
+
+.missions-swiper .swiper-button-prev:after,
+.missions-swiper .swiper-button-next:after {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.missions-swiper .swiper-button-prev:hover,
+.missions-swiper .swiper-button-next:hover {
+  transform: scale(1.1);
+}
+
+.missions-swiper .swiper-button-prev:hover:after,
+.missions-swiper .swiper-button-next:hover:after {
+  color: white;
+}
+
+.missions-swiper .swiper-button-disabled {
+  opacity: 0.35;
+}
+
+/* Styles Swiper Pagination */
+.missions-swiper .swiper-pagination {
+  bottom: 0;
+}
+
+.missions-swiper .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: transparent;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.missions-swiper .swiper-pagination-bullet:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .missions-carousel {
+    padding: 1rem 0.5rem;
+  }
+
+  .missions-swiper {
+    padding: 1rem 0.5rem;
+  }
+
+  /* Désactiver le comportement de slider en mobile */
+  .missions-swiper .swiper-wrapper {
+    display: flex;
+    flex-direction: column;
+    transform: none !important;
+    gap: 1rem;
+  }
+
+  .swiper-slide {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .mission-card {
+    padding: 1rem;
+    margin-bottom: 0;
+  }
+
+  .mission-list li {
+    font-size: 0.95rem;
+    padding-left: 2rem;
+  }
+
+  /* Cacher les boutons de navigation et pagination en mobile */
+  .missions-swiper .swiper-button-prev,
+  .missions-swiper .swiper-button-next,
+  .missions-swiper .swiper-pagination {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .missions-swiper {
+    padding: 2rem 3rem 4rem;
+  }
+}
