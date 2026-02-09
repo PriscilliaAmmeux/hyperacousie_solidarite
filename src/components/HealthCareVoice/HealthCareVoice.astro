@@ -25,23 +25,28 @@ const voices = [
 <section class="healthcare-voices">
   <header>
     <Title text="Paroles de soignants" level="2" className="mb-4 section-title"/>
-    <p>Dans cette rubrique, nous partageons des témoignages de personnes atteintes d’hyperacousie qui, au lieu de trouver écoute et réconfort auprès de professionnels de santé, se sont heurtées à l’incompréhension, à la minimisation ou parfois même à des paroles blessantes. Ces récits ne sont pas isolés : ils reflètent une réalité que vivent trop de patients, déjà fragilisés par la douleur et l’épuisement.
-    </p>
+    <p>Cette rubrique rassemble des témoignages de personnes atteintes d’hyperacousie confrontées à l’incompréhension, à la minimisation ou à des paroles blessantes de la part de soignants. Ces situations sont loin d’être isolées.</p>
     <p>Nous savons que la médecine ne peut pas tout, et qu’il est possible qu’un soignant ne connaisse pas encore bien l’hyperacousie. Mais, il est fondamental de rappeler qu’un patient a d’abord besoin d’être entendu, cru et respecté dans sa souffrance. L’écoute bienveillante, la reconnaissance de la douleur, l’humilité de dire "je ne sais pas" et l’orientation vers un confrère plus compétent sont des gestes simples mais essentiels.
 </p>
 <p>
-    L’ignorance médicale ne doit jamais conduire à des propos qui aggravent la détresse du patient. Un mot maladroit peut être dévastateur pour une personne déjà au bord du gouffre. À l’inverse, une écoute attentive et une attitude respectueuse peuvent sauver une vie.
-</p>
+   L’hyperacousie est encore mal connue, mais un patient a avant tout besoin d’être <span class="text-bold">écouté, cru et respecté</span>. Reconnaître la douleur, dire « je ne sais pas » et orienter vers un confrère compétent sont essentiels.</span></p>
 <p class="text-bold mb-4 margin-text-healthcare">Ces témoignages visent à interpeller, à sensibiliser, mais aussi à rappeler le rôle primordial des soignants : accompagner, soutenir et aider, même quand on ne détient pas toutes les réponses.
+</p>
+<p>Un mot maladroit peut aggraver une détresse profonde. Une écoute bienveillante, au contraire, peut tout changer.
+</p>
+<p>Ces témoignages visent à <span class="text-bold">sensibiliser</span> et rappeler le rôle fondamental des soignants : <span class="text-bold">accompagner et soutenir, même sans toutes les réponses.</span>
 </p>
   </header>
 
    <div class="swiper healthcare-voices-swiper">
   <div class="swiper-wrapper">
-    {voices.map((voice) => (
-      <div class="swiper-slide">
+    {voices.map((voice, index) => (
+      <div class="swiper-slide" data-voice-index={index}>
         <div class="card-voices"> 
-            <p class="voice-text" set:html={marked.parse(voice)}></p>
+            <div class="voice-content">
+              <div class="voice-text" set:html={marked.parse(voice)}></div>
+            </div>
+            <button class="toggle-btn" aria-label="Voir plus">Voir plus</button>
         </div>
       </div>
     ))}

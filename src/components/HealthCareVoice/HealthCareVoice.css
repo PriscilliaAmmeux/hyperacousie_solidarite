@@ -8,13 +8,67 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
-  min-height: 400px;
-  transition: background 0.3s;
+  justify-content: space-between;
+  height: 450px;
+  transition: height 0.3s ease, background 0.3s;
+  position: relative;
+}
+
+.card-voices.expanded {
+  height: auto;
+}
+
+.voice-content {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.voice-content.collapsed {
+  max-height: 300px;
+  overflow: hidden;
+}
+
+.voice-content.expanded {
+  max-height: none;
+  overflow: visible;
+}
+
+.voice-text {
+  line-height: 1.6;
+}
+
+.toggle-btn {
+  background: #12b6a1;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9em;
+  font-weight: 500;
+  transition: background 0.3s, transform 0.2s;
+  align-self: center;
+  margin-top: auto;
+}
+
+.toggle-btn:hover {
+  background: #0f9d8a;
+  transform: translateY(-2px);
+}
+
+.toggle-btn:active {
+  transform: translateY(0);
+}
+
+.toggle-btn.hidden {
+  display: none;
 }
 
 .healthcare-voices {
-  margin: 3rem 15rem;
+  margin: 3rem 2rem;
 }
 
 .margin-text-healthcare {
@@ -66,9 +120,13 @@
   .card-voices {
     box-sizing: border-box;
     width: 100%;
-    min-height: 200px;
+    height: 150px;
     padding: 1rem;
     font-size: 1em;
+  }
+  
+  .voice-content.collapsed {
+    max-height: 250px;
   }
   .margin-text-healthcare {
     margin-bottom: 2rem;
