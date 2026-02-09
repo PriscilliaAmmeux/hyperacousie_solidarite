@@ -1,0 +1,31 @@
+---
+import FactSheet from '../components/FactSheet/FactSheet.astro';
+import ReflexSheet from '../components/ReflexSheet/ReflexSheet.astro';
+import Layout from '../layouts/Layout.astro';
+import Title from '../ui/Title/Title.astro';
+import '../styles/variables.css';
+---
+
+<Layout 
+  title="Fiches pratiques - Conseils et repères sur l'hyperacousie"
+  description="Fiches pratiques et conseils pour mieux comprendre et gérer l'hyperacousie au quotidien"
+>
+  <nav style="padding: 1rem 2rem; margin-bottom: 1rem;">
+    <a href="/ressources" style="color: var(--color-teal); text-decoration: none; font-size: 1rem; display: inline-flex; align-items: center; gap: 0.5rem;">
+      <span style="font-size: 1.2rem;">←</span>
+      <span>Retour aux Ressources</span>
+    </a>
+  </nav>
+
+  <div style="text-align:center">
+    <Title
+      text="Conseils pratiques & repères"
+      className="section-title-page"
+      level="2"
+    />
+  </div>
+
+  <FactSheet />
+  <ReflexSheet />
+
+</Layout>
