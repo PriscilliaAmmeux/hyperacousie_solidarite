@@ -64,14 +64,14 @@
   height: 12rem;
   background-color: rgba(131, 244, 214);
   transform: skewX(-15deg);
-  padding: 2rem;
+  padding: 0.5rem 1rem 0rem 1rem;
   overflow: visible;
 }
 
 .parallelogram-text {
   transform: skewX(15deg);
   color: var(--color-black);
-  width: 50%;
+  width: 60%;
   line-height: 1.6;
   position: relative;
   z-index: 2;
