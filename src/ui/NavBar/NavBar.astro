@@ -10,7 +10,6 @@ const { currentPath = '' } = Astro.props;
 const navigationStructure = [
   {
     title: "Accueil",
-    subtitle: "Page d'orientation",
     href: "/",
     items: [
       { label: "L'association", href: "/#association" },
@@ -152,7 +151,6 @@ const navigationStructure = [
             aria-current={isCurrentPage(section.href, currentPath) ? 'page' : undefined}
           >
             {section.title}
-            {section.subtitle && <span class="menu-column-subtitle">({section.subtitle})</span>}
           </a>
           {section.items.length > 0 && (
             <ul class="menu-column-links">

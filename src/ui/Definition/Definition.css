@@ -47,7 +47,7 @@
 }
 
 .definition-section-vertical {
-  margin: 2rem 4rem;
+  margin: 12rem 4rem 2rem 4rem;
 }
 
 @media (max-width: 900px) {
@@ -67,7 +67,7 @@
   }
 
   .definition-section-vertical {
-    margin: 1rem 0.5rem;
+    margin: 12rem 0.5rem 1rem 0.5rem;
   }
 
   .margin-page-comprendre {

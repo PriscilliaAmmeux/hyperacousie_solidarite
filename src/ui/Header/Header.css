@@ -1,11 +1,53 @@
-/* Header container */
+/* ===== STICKY HEADER - Fixe en permanence ===== */
+
+/* Header container fixe */
 .header-container {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  background: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: white;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, box-shadow;
+  isolation: isolate;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
+/* Animation lors du scroll */
+.header-container.scrolled {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Wrapper du header */
 .header-wrapper {
   width: 100%;
+  max-width: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Mobile */
+@media (max-width: 768px) {
+  .header-container {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header-container.scrolled {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+  }
+}
+
+/* Desktop */
+@media (min-width: 769px) {
+  .header-container {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
 }
