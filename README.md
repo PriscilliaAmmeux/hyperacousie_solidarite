@@ -56,4 +56,4 @@ Toute reproduction, même partielle, est interdite sans autorisation préalable.
 
 ---
 
-Site développé et maintenu par Priscillia Ammeux pour Hyperacousie Solidarité.
+Site développé et maintenu par Pixelia&Co (Priscillia AMMEUX) pour Hyperacousie Solidarité.

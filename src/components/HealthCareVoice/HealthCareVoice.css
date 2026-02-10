@@ -67,6 +67,10 @@
   display: none;
 }
 
+.margin-text-healthcare{
+  margin-left:2rem;
+}
+
 .healthcare-voices {
   margin: 3rem 2rem;
 }
