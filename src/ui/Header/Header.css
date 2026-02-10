@@ -1,6 +1,6 @@
 .mobile-logo-section {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -12,6 +12,26 @@
 .desktop-nav-section {
   display: none;
 }
+
+.logo-text-mobile{
+   font-family: 'Oleo Script Swash Caps', cursive;
+   font-size: 1.3rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   line-height: 1.2;
+}
+
+.logo-text-mobile p {
+   margin: 0;
+   padding: 0;
+}
+
+.size-logo-mobile {
+  height: 6rem;
+  width: auto;
+}
+
 
 @media (min-width: 900px) {
   .mobile-logo-section,

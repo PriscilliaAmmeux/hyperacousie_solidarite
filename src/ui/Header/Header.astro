@@ -14,23 +14,24 @@ const { currentPath } = Astro.props;
 <header class="relative m-0 p-0">
 
 
-
+<!-- Navigation desktop -->
   <section class="desktop-nav-section bg-slate-800 text-white shadow-lg">
-    <h1 class="text-4xl md:text-6xl font-bold text-black tracking-tight py-8 text-center w-full" style="color: var(--color-black);">
-        Hyperacousie Solidarité
-      </h1>
     <div class="w-full py-4">
       <Navbar currentPath={currentPath} />
     </div>
   </section>
 
   <!-- Navigation mobile -->
-  <section class="mobile-logo-section py-4 px-4 flex justify-center items-center">
+  <section class="mobile-logo-section py-4 px-4 flex justify-start items-center">
       <img 
-        src="/logo-mobile.webp" 
+        src="/logo.webp" 
         alt="Logo Hyperacousie Solidarité"
-        class="h-16 "
+        class="size-logo-mobile "
       />
+       <div class="logo-text-mobile">
+          <p>Hyperacousie</p>
+          <p>Solidarité</p>
+        </div>
   </section>
 
   <div class="mobile-navbar-container">
