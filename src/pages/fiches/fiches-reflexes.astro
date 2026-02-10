@@ -1,0 +1,34 @@
+---
+import ReflexSheet from "../../components/ReflexSheet/ReflexSheet.astro";
+import Layout from "../../layouts/Layout.astro";
+import Title from "../../ui/Title/Title.astro";
+
+---
+
+<Layout 
+  title="Fiches réflexes - Aides, démarches et accompagnement sur l'hyperacousie"
+  description="Fiches réflexes et informations pour mieux comprendre les aides, démarches et accompagnement liés à l'hyperacousie"
+>
+  <nav style="padding: 1rem 2rem; margin-bottom: 1rem; display: flex; justify-content: space-between; align-items: center;">
+    <a href="/ressources" style="color: var(--color-teal); text-decoration: none; font-size: 1rem; display: inline-flex; align-items: center; gap: 0.5rem;">
+      <span style="font-size: 1.2rem;">←</span>
+      <span>Retour aux Ressources</span>
+    </a>
+    <a href="/fiches/fiches-pratiques" style="color: var(--color-teal); text-decoration: none; font-size: 1rem; display: inline-flex; align-items: center; gap: 0.5rem;">
+      <span>Conseils pratiques & repères</span>
+      <span style="font-size: 1.2rem;">→</span>
+    </a>
+  </nav>
+
+  <div style="text-align:center">
+    <Title
+      text="Aides, démarches & accompagnement"
+      className="section-title-page"
+      level="2"
+    />
+  </div>
+
+
+  <ReflexSheet />
+
+</Layout>

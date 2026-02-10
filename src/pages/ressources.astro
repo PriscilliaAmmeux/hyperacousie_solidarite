@@ -9,6 +9,7 @@ import Plaquette from '../ui/Plaquette/Plaquette.astro';
 import Title from '../ui/Title/Title.astro';
 import Button from '../ui/Button/Button.astro';
 import '../styles/variables.css';
+import SectionFiches from '../ui/SectionFiches/SectionFiches.astro';
 ---
 
 <Layout 
@@ -23,19 +24,7 @@ import '../styles/variables.css';
     />
   </section>
 
-<section style="text-align:center; margin: 3rem auto; padding: 2.5rem; max-width: 800px; background: #fff; border: 3px solid var(--color-teal); border-radius: 12px;">
-  <p style="font-size: 1.2rem; margin-bottom: 1.5rem; color: var(--color-black); font-weight: 500;">
-    💡 Découvrez nos fiches pratiques pour mieux vivre au quotidien
-  </p>
-  <Button
-    variant="teal"
-    size="sm"
-    href="/fiches"
-  >
-    Accéder aux conseils pratiques & repères →
-  </Button>
-</section>
-
+<SectionFiches />
 <ScientificResourcesTestimonials />
 <NetworkingSharing />
 <PreventionAwareness />
