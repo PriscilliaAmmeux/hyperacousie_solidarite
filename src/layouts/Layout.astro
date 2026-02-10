@@ -39,12 +39,23 @@ const currentPath = Astro.url.pathname;
         padding: 0 !important;
         box-sizing: border-box;
       }
+      html {
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+      }
       html, body {
         margin: 0 !important;
         padding: 0 !important;
         background-color: var(--color-background-white);
         color: var(--color-black);
         font-family: system-ui, -apple-system, sans-serif;
+        min-height: 100vh;
+      }
+      body {
+        position: relative;
+        overflow-x: hidden;
+        /* Espace pour le header fixe - sera ajusté dynamiquement */
+        padding-top: var(--header-height, 120px);
       }
       h1, h2, h3, h4, h5, h6, p {
         margin: 0 !important;
@@ -52,6 +63,11 @@ const currentPath = Astro.url.pathname;
       }
       *, *::before, *::after {
         color: var(--color-black);
+      }
+      /* Fix pour le header fixe */
+      body > header {
+        margin: 0 !important;
+        padding: 0 !important;
       }
     </style>
 
@@ -72,11 +88,48 @@ const currentPath = Astro.url.pathname;
   <body class="min-h-screen flex flex-col">
     <Header currentPath={currentPath} />
 
-    <main class="flex-1 w-full">
+    <main class="flex-1 w-full" id="main-content">
       <slot />
       <ScrollToTop />
     </main>
 
     <Footer />
+
+    <!-- Script pour gérer le header fixe -->
+    <script is:inline>
+      (function() {
+        // Calculer et définir la hauteur du header
+        function setHeaderHeight() {
+          const header = document.querySelector('.header-container');
+          if (header) {
+            const height = header.offsetHeight;
+            document.documentElement.style.setProperty('--header-height', height + 'px');
+          }
+        }
+
+        // Ajouter la classe scrolled lors du scroll
+        function handleScroll() {
+          const header = document.querySelector('.header-container');
+          if (header) {
+            if (window.scrollY > 10) {
+              header.classList.add('scrolled');
+            } else {
+              header.classList.remove('scrolled');
+            }
+          }
+        }
+
+        // Initialiser
+        setHeaderHeight();
+        handleScroll();
+
+        // Écouter les événements
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        window.addEventListener('resize', setHeaderHeight);
+
+        // Recalculer après le chargement complet
+        window.addEventListener('load', setHeaderHeight);
+      })();
+    </script>
   </body>
 </html>

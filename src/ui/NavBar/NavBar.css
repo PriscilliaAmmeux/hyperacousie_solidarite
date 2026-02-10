@@ -40,6 +40,10 @@
 .navbar-container {
   position: relative;
   width: 100%;
+  max-width: 100%;
+  background-color: white;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .navbar-container::after {
@@ -65,6 +69,7 @@
   padding: 1.5rem 0;
   background-color: white;
   z-index: 100;
+  margin: 0 !important;
 }
 
 /* Logo section */
@@ -236,7 +241,9 @@
   transform: translateY(-10px);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   pointer-events: none;
-  z-index: 99;
+  z-index: 999;
+  max-height: calc(100vh - 100%);
+  overflow-y: auto;
 }
 
 /* S'assurer que l'attribut hidden fonctionne correctement */
