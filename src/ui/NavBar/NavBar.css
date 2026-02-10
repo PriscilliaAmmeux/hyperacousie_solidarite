@@ -35,12 +35,29 @@
 .logo-link {
   display: flex;
   align-items: center;
+  gap: 1rem;
+  text-decoration: none;
 }
 
 .logo {
   height: 6rem;
   width: auto;
   margin-left: 1rem;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  line-height: 1.2;
+}
+
+.logo-text-desktop p {
+  margin: 0;
+  font-family: 'Oleo Script Swash Caps', cursive;
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: var(--color-black);
 }
 
 /* Navigation section */
@@ -147,6 +164,32 @@
 @media (prefers-color-scheme: dark) {
   .nav-link {
     color: var(--nav-text-color);
+  }
+}
+
+/* Responsive: Reduce logo size on tablets and mobile */
+@media (max-width: 1024px) {
+  .logo {
+    height: 4rem;
+    margin-left: 0.5rem;
+  }
+
+  .logo-text p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo {
+    height: 3rem;
+  }
+
+  .logo-text p {
+    font-size: 0.85rem;
+  }
+
+  .logo-link {
+    gap: 0.5rem;
   }
 }
 

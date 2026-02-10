@@ -38,6 +38,11 @@
   max-width: 600px;
 }
 
+.text-content h1 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
 .association-description {
   color: var(--color-black);
   opacity: 0.8;
