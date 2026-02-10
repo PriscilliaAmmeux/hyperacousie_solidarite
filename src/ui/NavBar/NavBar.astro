@@ -1,15 +1,111 @@
 ---
 import Button from '../Button/Button.astro';
-import { getNavigationItems, isCurrentPage } from '../../utils/helpers.ts';
+import { isCurrentPage } from '../../utils/helpers.ts';
 import '../../styles/variables.css';
 import './NavBar.css';
 
 const { currentPath = '' } = Astro.props;
-const navItems = getNavigationItems();
+
+// Structure complète de la navigation pour le menu global
+const navigationStructure = [
+  {
+    title: "Accueil",
+    subtitle: "Page d'orientation",
+    href: "/",
+    items: [
+      { label: "L'association", href: "/#association" },
+      { label: "Nos missions", href: "/#missions" },
+      { label: "L'équipe", href: "/#equipe" },
+      { label: "Télécharger la plaquette", href: "/#plaquette" }
+    ]
+  },
+  {
+    title: "Comprendre l'hyperacousie",
+    href: "/comprendre",
+    items: [
+      { label: "Définition", href: "/comprendre#definition" },
+      { label: "Causes", href: "/comprendre#causes" },
+      { label: "Conséquences", href: "/comprendre#consequences" },
+      { label: "Solutions", href: "/comprendre#solutions" }
+    ]
+  },
+  {
+    title: "Témoignages",
+    href: "/temoignages",
+    items: [
+      { label: "Témoignages écrits", href: "/temoignages#temoignages-ecrits" },
+      { label: "Vidéos", href: "/temoignages#videos" },
+      { label: "Grands formats", href: "/temoignages#grands-formats" },
+      { label: "Parole de soignants", href: "/temoignages#soignants" }
+    ]
+  },
+  {
+    title: "Ressources",
+    href: "/ressources",
+    items: [
+      { label: "Conseils pratiques", href: "/ressources#conseils" },
+      { label: "Aides & démarches", href: "/ressources#aides" },
+      { label: "Ressources scientifiques et témoignages experts", href: "/ressources#scientifiques" },
+      { label: "Réseau & accompagnement", href: "/ressources#reseau" },
+      { label: "Prévention", href: "/ressources#prevention" }
+    ]
+  },
+  {
+    title: "Contact",
+    href: "mailto:hyperacousiesolidarite@gmail.com",
+    items: []
+  }
+];
 ---
+
+<!-- Skip link pour l'accessibilité -->
+<a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+<!-- Annonce pour lecteurs d'écran -->
+<div id="menu-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
 
 <div class="navbar-container">
   <nav class="navbar" role="navigation" aria-label="Navigation principale">
+    <!-- Bouton Menu Global -->
+    <section class="navbar-nav">
+      <button 
+        id="global-menu-toggle"
+        class="global-menu-button"
+        type="button"
+        aria-expanded="false"
+        aria-controls="global-menu-panel"
+        aria-label="Ouvrir le menu de navigation"
+      >
+        <div class="menu-icon-wrapper">
+          <svg 
+            class="burger-icon" 
+            width="24" 
+            height="24" 
+            viewBox="0 0 24 24" 
+            fill="none" 
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path d="M4 6H20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M4 12H20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M4 18H20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          <svg 
+            class="close-icon" 
+            width="24" 
+            height="24" 
+            viewBox="0 0 24 24" 
+            fill="none" 
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path d="M5 5L19 19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M5 19L19 5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </button>
+    </section>
+
     <section class="navbar-logo">
       <a href="/" class="logo-link" aria-label="Retour à l'accueil - Hyperacousie Solidarité">
         <img 
@@ -22,26 +118,6 @@ const navItems = getNavigationItems();
           <p>Solidarité</p>
         </div>
       </a>
-    </section>
-    
-    <section class="navbar-nav">
-      <div class="nav-links" role="list">
-        {navItems.map((item) => (
-          <a 
-            href={item.href}
-            class={`nav-link ${
-              isCurrentPage(item.href, currentPath)
-                ? 'nav-link-active'
-                : 'nav-link-default'
-            }`}
-            role="listitem"
-            aria-current={isCurrentPage(item.href, currentPath) ? 'page' : undefined}
-            tabindex="0"
-          >
-            {item.label}
-          </a>
-        ))}
-      </div>
     </section>
 
     <!-- CTA Button on the right -->
@@ -56,6 +132,61 @@ const navItems = getNavigationItems();
       </Button>
     </section>
   </nav>
+
+  <!-- Panneau de navigation global -->
+  <div 
+    id="global-menu-panel"
+    class="global-menu-panel"
+    role="region"
+    aria-label="Menu de navigation complet"
+    hidden
+  >
+    <div class="global-menu-content">
+      {navigationStructure.map((section) => (
+        <div class="menu-column">
+          <a 
+            href={section.href}
+            class={`menu-column-title ${
+              isCurrentPage(section.href, currentPath) ? 'active' : ''
+            }`}
+            aria-current={isCurrentPage(section.href, currentPath) ? 'page' : undefined}
+          >
+            {section.title}
+            {section.subtitle && <span class="menu-column-subtitle">({section.subtitle})</span>}
+          </a>
+          {section.items.length > 0 && (
+            <ul class="menu-column-links">
+              {section.items.map((item) => (
+                <li>
+                  <a 
+                    href={item.href}
+                    class="menu-column-link"
+                    tabindex={-1}
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      ))}
+      
+      <!-- Bouton CTA dans le menu mobile -->
+      <div class="menu-cta-mobile">
+        <Button 
+          variant="teal" 
+          size="md"
+          href="/adhesions-dons"
+          aria-label="Adhérer à l'association ou faire un don via HelloAsso"
+        >
+          Adhérer / Faire un don
+        </Button>
+      </div>
+    </div>
+  </div>
 </div>
+
+<script is:inline src="/src/ui/NavBar/NavBar.js"></script>
 
 
