@@ -1,8 +1,9 @@
 ---
-import Button from '../Button/Button.astro';
+
 import { isCurrentPage } from '../../utils/helpers.ts';
 import '../../styles/variables.css';
 import './NavBar.css';
+import Button from '../../ui/Button/Button.astro';
 
 const { currentPath = '' } = Astro.props;
 
@@ -184,7 +185,4 @@ const navigationStructure = [
     </div>
   </div>
 </div>
-
-<script is:inline src="/src/ui/NavBar/NavBar.js"></script>
-
-
+<script src="./NavBar.js"></script>
