@@ -8,7 +8,7 @@ const swiper = new Swiper(".short-testimonials-swiper", {
   modules: [Navigation, Pagination],
   slidesPerView: 1,
   spaceBetween: 20,
-  autoHeight: true,
+  autoHeight: false,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -27,9 +27,7 @@ const swiper = new Swiper(".short-testimonials-swiper", {
   },
 });
 
-swiper.on("slideChangeTransitionEnd", function () {
-  swiper.updateAutoHeight(300); // 300ms d'animation, adapte si besoin
-});
+
 
 // Gestion des boutons "Voir plus" / "Voir moins"
 document.addEventListener('click', (e) => {
@@ -55,10 +53,7 @@ document.addEventListener('click', (e) => {
       readLessText.style.display = 'none';
     }
     
-    // Mettre à jour la hauteur du swiper
-    setTimeout(() => {
-      swiper.updateAutoHeight(300);
-    }, 10);
+
   }
 });
 
