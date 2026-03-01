@@ -4,24 +4,30 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-const teamSwiper = new Swiper(".team-swiper", {
+const teamSwiper = new Swiper(".swiper-team", {
   modules: [Navigation, Pagination],
   slidesPerView: 1,
-  spaceBetween: 30,
+  spaceBetween: 20,
+  centeredSlides: true,
+  loop: false,
   pagination: {
-    el: ".swiper-pagination",
+    el: ".pagination-team",
     clickable: true,
   },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".next-team",
+    prevEl: ".prev-team",
   },
   breakpoints: {
-    768: {
+    641: {
       slidesPerView: 1,
+      spaceBetween: 30,
+      centeredSlides: true,
     },
     1024: {
       slidesPerView: 2,
+      spaceBetween: 30,
+      centeredSlides: false,
     },
   },
 });

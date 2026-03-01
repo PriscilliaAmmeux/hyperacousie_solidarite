@@ -16,7 +16,7 @@ const teamMembers = [
     id: 2,
     name: "Barbara",
     image: "/photo-barbara.webp",
-    bio: "Les symptômes sont arrivés insidieusement et une nuit d’aout 2023 un acouphène violent m’a tiré de mon sommeil avec une surdité brusque à gauche. Le lendemain débutait l’enfer de ma vie. L’acouphène violent avait disparu pour laisser place à des sifflements permanents dans les deux oreilles et de l’hyperacousie douloureuse. Depuis ma vie est un enfer. Une errance médicale, l’incompréhension des soignants, le manque d’informations et de sensibilisation m’ont poussé à m’investir dans cette association. Il est temps de faire bouger les choses, de changer notre avenir."
+    bio: "Les symptômes sont arrivés insidieusement et une nuit d’août 2023 un acouphène violent m’a tiré de mon sommeil avec une surdité brusque à gauche. Le lendemain débutait l’enfer de ma vie. L’acouphène violent avait disparu pour laisser place à des sifflements permanents dans les deux oreilles et de l’hyperacousie douloureuse. Depuis ma vie est un enfer. Une errance médicale, l’incompréhension des soignants, le manque d’informations et de sensibilisation m’ont poussé à m’investir dans cette association. Il est temps de faire bouger les choses, de changer notre avenir."
   },
   {
     id: 3,
@@ -26,6 +26,19 @@ const teamMembers = [
   }
  
 ];
+
+// Fonction pour mélanger aléatoirement un tableau (Fisher-Yates shuffle)
+function shuffleArray<T>(array: T[]): T[] {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+}
+
+// Mélanger l'ordre des membres de l'équipe
+const shuffledTeamMembers = shuffleArray(teamMembers);
 ---
 <section id="equipe" class="section-coral-background">
   <div class="team-container">
@@ -37,23 +50,23 @@ const teamMembers = [
       />
     </div>
 
-    <div class="swiper team-swiper">
+    <div class="swiper swiper-team">
       <div class="swiper-wrapper">
-        {teamMembers.map(member => (
-          <div class="swiper-slide">
+        {shuffledTeamMembers.map(member => (
+          <div class="swiper-slide slide-team">
             <Card 
               subtitle={member.name}
               content={member.bio}
               imageSrc={member.image}
               imageAlt={`Photo de ${member.name}`}
-              className="team-card"
+              className="card-team"
             />
           </div>
         ))}
       </div>
-      <div class="swiper-pagination"></div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination pagination-team"></div>
+      <div class="swiper-button-next next-team"></div>
+      <div class="swiper-button-prev prev-team"></div>
     </div>
   </div>
 </section>
