@@ -31,6 +31,8 @@
   min-height: 2.5em;
   display: flex;
   align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .margin-page-comprendre {
@@ -71,7 +73,7 @@
   }
 
   .margin-page-comprendre {
-    margin: 0 0.5rem;
+    margin: 0 1.5rem;
   }
 
   .definition-image-row {

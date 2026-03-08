@@ -416,11 +416,24 @@
   }
 }
 
+/* Cacher le bouton CTA du menu sur desktop par défaut */
+.menu-cta-mobile {
+  display: none;
+}
+
 /* Responsive: Mobile */
 @media (max-width: 768px) {
   .logo {
     height: 4rem;
-    margin-left: 0.5rem;
+    margin-left: 0;
+  }
+
+  .navbar-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    flex: none;
+    width: max-content;
   }
 
   .logo-text-desktop p {
@@ -447,7 +460,7 @@
     display: none;
   }
   
-  /* Afficher le bouton CTA dans le menu mobile */
+  /* Afficher le bouton CTA dans le menu burger sur mobile */
   .menu-cta-mobile {
     display: block;
     margin-top: 2rem;
@@ -455,11 +468,6 @@
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     text-align: center;
   }
-}
-
-/* Cacher le bouton CTA du menu sur desktop */
-.menu-cta-mobile {
-  display: none;
 }
 
 
