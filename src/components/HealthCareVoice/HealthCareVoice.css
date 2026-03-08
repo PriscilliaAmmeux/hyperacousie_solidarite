@@ -71,6 +71,10 @@
   margin-left:2rem;
 }
 
+.section-title {
+  text-align: center;
+}
+
 .healthcare-voices {
   margin: 3rem 2rem;
 }
@@ -133,7 +137,7 @@
     max-height: 250px;
   }
   .margin-text-healthcare {
-    margin-bottom: 2rem;
+   margin: 0 1rem 2rem 1rem;
   }
   .section-title {
     font-size: 1.3rem;

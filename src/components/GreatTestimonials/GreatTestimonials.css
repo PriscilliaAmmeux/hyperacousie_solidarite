@@ -4,6 +4,10 @@
   margin: 2rem 0;
 }
 
+.great-testimonials-section .section-title {
+  text-align: center;
+}
+
 .great-testimonial-card {
   background: var(--color-background-white);
   border-radius: 10px;

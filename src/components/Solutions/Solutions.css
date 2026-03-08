@@ -9,8 +9,8 @@
   box-sizing: border-box;
 }
 
-.margin-bottom {
-  margin-bottom: 2rem;
+.margin-solutions {
+  margin: 0 1.5rem 2rem 1.5rem;
 }
 
 .solutions-container {
@@ -19,6 +19,13 @@
   padding: 0 1rem;
   box-sizing: border-box;
   width: 100%;
+}
+
+.section-title-solutions {
+  text-align: center;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  display: block;
 }
 
 .section-title {
