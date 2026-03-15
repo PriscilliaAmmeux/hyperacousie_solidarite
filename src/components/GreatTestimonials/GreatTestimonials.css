@@ -55,6 +55,15 @@
   color: var(--color-coral) !important;
 }
 
+.great-testimonials-swiper {
+  padding-bottom: 0;
+}
+
+.great-testimonials-swiper .swiper-pagination {
+  position: static !important;
+  margin-top: 1.5rem;
+}
+
 .swiper-pagination-bullet {
   background: #ff6f61 !important;
   opacity: 0.1;
