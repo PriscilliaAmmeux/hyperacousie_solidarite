@@ -92,6 +92,11 @@
   padding: 0 1rem;
 }
 
+.healthcare-voices-swiper .swiper-pagination {
+  position: static !important;
+  margin-top: 1.5rem;
+}
+
 @media (max-width: 900px) {
   .healthcare-voices {
     margin: 2rem 1rem;

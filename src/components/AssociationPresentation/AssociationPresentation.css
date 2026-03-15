@@ -67,7 +67,7 @@
 .parallelogram {
   position: relative;
   width: 90%;
-  height: 12rem;
+  height: 14rem;
   background-color: rgba(131, 244, 214);
   transform: skewX(-15deg);
   padding: 0.5rem 1rem 0rem 1rem;
