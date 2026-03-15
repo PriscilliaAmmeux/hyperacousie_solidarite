@@ -7,8 +7,9 @@
   justify-content: center;
   width: fit-content;
   max-width: 100%;
-  min-width: max-content;
-  flex-shrink: 0;
+  white-space: normal;
+  word-break: break-word;
+  text-align: center;
   font-weight: 500;
   transition: all 0.3s ease;
   border: 1px solid;
@@ -108,5 +109,6 @@
 .btn-content {
   display: flex;
   align-items: center;
-  white-space: nowrap;
+  white-space: normal;
+  word-break: break-word;
 }
