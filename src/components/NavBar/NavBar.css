@@ -379,6 +379,10 @@
   padding-right: 1rem;
 }
 
+.cta-label-mobile {
+  display: none;
+}
+
 /* Accessibility improvements */
 @media (prefers-reduced-motion: reduce) {
   .global-menu-button,
@@ -423,6 +427,11 @@
 
 /* Responsive: Mobile */
 @media (max-width: 768px) {
+  .navbar {
+    padding: 1rem 0;
+    min-height: 88px;
+  }
+
   .logo {
     height: 4rem;
     margin-left: 0;
@@ -457,12 +466,29 @@
   
   /* Cacher le bouton CTA de la navbar sur mobile */
   .navbar-cta {
+    display: flex;
+    position: absolute;
+    right: 1rem;
+    padding-right: 0;
+    z-index: 2;
+  }
+
+  .navbar-cta .btn-base {
+    padding: 0.45rem 0.7rem;
+    font-size: 0.78rem;
+  }
+
+  .cta-label-desktop {
     display: none;
+  }
+
+  .cta-label-mobile {
+    display: inline;
   }
   
   /* Afficher le bouton CTA dans le menu burger sur mobile */
   .menu-cta-mobile {
-    display: block;
+    display: none;
     margin-top: 2rem;
     padding-top: 2rem;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
