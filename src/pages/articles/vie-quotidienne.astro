@@ -20,6 +20,18 @@ import Button from "../../ui/Button/Button.astro";
     subtitle="Comprendre les risques et adopter les bons réflexes"
   />
 
+  <nav class="article-back-nav" aria-label="Navigation retour">
+    <a href="/ressources" class="article-back-link">
+      <span aria-hidden="true" class="article-back-arrow">←</span>
+      <span>Retour aux Ressources</span>
+    </a>
+
+    <a href="/articles/vie-professionnelle" class="article-next-link">
+      <span>Article suivant</span>
+      <span aria-hidden="true" class="article-next-arrow">→</span>
+    </a>
+  </nav>
+
   <article class="article-page">
     {preventionData.sections.map((section) => (
     <section class="article-section">

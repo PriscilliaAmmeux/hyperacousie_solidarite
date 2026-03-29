@@ -28,6 +28,18 @@ description="Protégez les personnes hyperacousiques et hypersensibles au bruit 
     subtitle={vieData.subtitle}
   />
 
+  <nav class="article-back-nav" aria-label="Navigation des articles">
+    <a href="/ressources" class="article-back-link">
+      <span aria-hidden="true" class="article-back-arrow">←</span>
+      <span>Retour aux Ressources</span>
+    </a>
+
+    <a href="/articles/casques-et-ecouteurs" class="article-next-link">
+      <span>Article suivant</span>
+      <span aria-hidden="true" class="article-next-arrow">→</span>
+    </a>
+  </nav>
+
   <main class="article-page" role="main">
     <section class="article-section">
       {vieData.intro.map((text) => (

@@ -8,28 +8,67 @@ import "../../styles/variables.css";
 <section id="plaquette" class="plaquette-section">
   <div class="plaquette-container">
     <div class="plaquette-image-container">
-      <img 
-        src="/plaquette.webp"
-        alt="Illustration de la plaquette de l'association Hyperacousie Solidarité"
-        class="image-plaquette"
-        loading="lazy"
-        width="150"
-        height="auto"
-      />
+      <a
+        href="/plaquette-hyperacousie-solidarite.pdf"
+        download
+        class="image-download-link"
+        aria-label="Télécharger la plaquette"
+      >
+        <img 
+          src="/Photo dépliant triptyque.webp"
+          alt="Illustration de la plaquette de l'association Hyperacousie Solidarité"
+          class="image-plaquette"
+          loading="lazy"
+          width="150"
+          height="auto"
+        />
+      </a>
     </div>
     
     <div class="plaquette-content">
-      <p class="text-bold">"Notre plaquette résume notre mission et nos actions. Feuilletez-la dès maintenant !"</p>
-      <p>À partager sans modération..</p>
+      <p class="text-bold">Télécharger ici le dépliant triptyque de l'association Hyperacousie Solidarité</p>
       <Button 
         variant="teal" 
         size="sm"
         href="/plaquette-hyperacousie-solidarite.pdf"
-        aria-label="Télécharger la plaquette"
+        aria-label="Télécharger le triptyque de l'association Hyperacousie Solidarité"
         target="_blank"
         rel="noopener noreferrer"
       >
-        Télécharger la plaquette
+        Télécharger le triptyque
+      </Button>
+    </div>
+  </div>
+  <div class="plaquette-container">
+    <div class="plaquette-image-container">
+      <a
+        href="/Flyers-A5.pdf"
+        download
+        class="image-download-link"
+        aria-label="Télécharger le flyer au format A5 de l'association Hyperacousie Solidarité"
+      >
+        <img 
+          src="/Flyers-A5.webp"
+          alt="Illustration du flyer de l'association Hyperacousie Solidarité"
+          class="image-plaquette"
+          loading="lazy"
+          width="150"
+          height="auto"
+        />
+      </a>
+    </div>
+    
+    <div class="plaquette-content">
+      <p class="text-bold">Télécharger ici le flyer au format A5 de l'association Hyperacousie Solidarité</p>
+      <Button 
+        variant="teal" 
+        size="sm"
+        href="/Flyers-A5.pdf"
+        aria-label="Télécharger le flyer au format A5"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Télécharger le flyer
       </Button>
     </div>
   </div>
