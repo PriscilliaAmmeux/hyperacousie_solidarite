@@ -1,3 +1,37 @@
+.article-back-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  max-width: 900px;
+  margin: 2rem auto 0 auto;
+  padding: 0 2rem;
+}
+
+.article-back-link,
+.article-next-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-teal, #009688);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.article-back-link:hover,
+.article-back-link:focus-visible,
+.article-next-link:hover,
+.article-next-link:focus-visible {
+  color: #007f74;
+}
+
+.article-back-arrow,
+.article-next-arrow {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
 .article-page {
   margin: 3rem auto;
   max-width: 900px;
@@ -45,6 +79,13 @@ a:hover {
 }
 
 @media (max-width: 900px) {
+  .article-back-nav {
+    margin: 1rem auto 0 auto;
+    padding: 0 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .article-page {
     margin: 1rem;
     padding: 1rem;

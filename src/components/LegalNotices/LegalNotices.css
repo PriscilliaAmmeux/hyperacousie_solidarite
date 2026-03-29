@@ -1,6 +1,6 @@
 .mentions-legales-section {
   max-width: 800px;
-  margin: 2rem auto;
+  margin: 15rem auto;
   padding: 2rem;
   background: rgba(18, 182, 161, 0.5);
   border-radius: 12px;
@@ -73,4 +73,10 @@
 .mentions-legales-link:focus {
   color: var(--color-coral, #ff6f61);
   text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .mentions-legales-section {
+    margin: 6rem 1rem;
+  }
 }

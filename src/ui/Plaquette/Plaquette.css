@@ -2,6 +2,9 @@
 .plaquette-section {
   margin: 4rem 1rem;
   display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
   justify-content: center;
 }
 
@@ -16,9 +19,21 @@
   flex-shrink: 0;
 }
 
+.image-download-link {
+  display: inline-block;
+  line-height: 0;
+}
+
+.image-download-link:focus-visible {
+  outline: 3px solid var(--color-teal, #0f766e);
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+
 .image-plaquette {
   max-width: 120px;
   height: auto;
+  cursor: pointer;
 }
 
 .plaquette-content {

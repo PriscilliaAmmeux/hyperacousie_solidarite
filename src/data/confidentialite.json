@@ -11,17 +11,17 @@
   {
     "id": 2,
     "title": "Données collectées",
-    "content": "Les données personnelles collectées via le formulaire sont : nom, prénom,e-mail, téléphone, message et consentement explicite."
+    "content": "Aucune donnée personnelle n'est collectée automatiquement sur le site. Si vous nous contactez par e-mail via le lien mailto, seules les informations que vous choisissez de transmettre sont traitées."
   },
   {
     "id": 3,
     "title": "Finalité et base légale",
-    "content": "Les données sont collectées uniquement pour répondre aux demandes de contact. La base légale est le consentement, donné via la case à cocher obligatoire du formulaire."
+    "content": "Les données communiquées par e-mail sont utilisées uniquement pour répondre à votre demande. La base légale du traitement est votre consentement, matérialisé par l'envoi volontaire de votre message."
   },
   {
     "id": 4,
     "title": "Destinataires des données",
-    "content": "Les données sont transmises uniquement via EmailJS pour nous être directement envoyées par e-mail. Elles ne sont ni vendues ni partagées."
+    "content": "Les données sont reçues et traitées uniquement par l'association via sa messagerie électronique. Elles ne sont ni vendues ni partagées."
   },
   {
     "id": 5,
@@ -54,16 +54,16 @@
     "title": "Transferts de données",
     "content": [
       {
-        "text": "EmailJS (formulaire de contact) respecte également les standards de protection des données européens."
+        "text": "Aucun outil tiers de formulaire de contact n'est utilisé sur ce site."
       },
       {
-        "text": "Tous ces services disposent de mesures de protection adéquates selon la réglementation européenne."
+        "text": "Les échanges se font directement par e-mail avec l'association."
       }
     ]
   },
   {
     "id": 9,
     "title": "Sécurité",
-    "content": "Aucune mesure particulière n'est utilisée pour le site. Les données sont transmises uniquement via le formulaire de contact."
+    "content": "Les données sont transmises uniquement par e-mail, selon les mesures de sécurité mises en place par votre service de messagerie et celui de l'association."
   }
 ]

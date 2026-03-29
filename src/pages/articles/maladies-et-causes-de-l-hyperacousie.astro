@@ -17,6 +17,19 @@ import "../../styles/maladies.css";
     title={maladiesData.title}
     subtitle="Comprendre les maladies et causes de l’hyperacousie"
   />
+
+  <nav class="article-back-nav" aria-label="Navigation des articles">
+    <a href="/ressources" class="article-back-link">
+      <span aria-hidden="true" class="article-back-arrow">←</span>
+      <span>Retour aux Ressources</span>
+    </a>
+
+    <a href="/articles/vie-quotidienne" class="article-next-link">
+      <span>Article suivant</span>
+      <span aria-hidden="true" class="article-next-arrow">→</span>
+    </a>
+  </nav>
+
   <section class="article-page">
     <div class="intro-flex">
       {maladiesData.image && (
