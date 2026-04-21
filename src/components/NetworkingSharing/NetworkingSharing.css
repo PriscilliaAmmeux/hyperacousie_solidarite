@@ -225,6 +225,11 @@
     grid-column: 1 / 3;
     margin-bottom: 2rem;
   }
+  .networking-card-centered {
+    grid-column: 1 / 3;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /* Desktop: 2 columns for cards except first */
@@ -235,5 +240,10 @@
   .networking-card-list > .networking-card:first-child {
     grid-column: 1 / 3;
     margin-bottom: 2rem;
+  }
+  .networking-card-centered {
+    grid-column: 1 / 3;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
