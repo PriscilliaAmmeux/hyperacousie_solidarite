@@ -1,0 +1,28 @@
+.ticker-banner {
+  width: 100%;
+  background-color: var(--color-teal-transparent);
+  color: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 10px 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.ticker-track {
+  display: inline-flex;
+  gap: 5rem;
+  animation: ticker 18s linear infinite;
+}
+
+.ticker-track span {
+  min-width: max-content;
+  padding: 0 3rem;
+  flex-shrink: 0;
+}
+
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
