@@ -236,4 +236,73 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }, 250);
   });
+
+  // ===== GESTION DES DROPDOWNS DESKTOP =====
+
+  const desktopDropdownToggles = document.querySelectorAll('.desktop-dropdown-toggle');
+
+  function closeAllDesktopDropdowns(except = null) {
+    desktopDropdownToggles.forEach(btn => {
+      if (btn === except) return;
+      const dropdown = btn.closest('.desktop-nav-item').querySelector('.desktop-dropdown');
+      if (!dropdown) return;
+      btn.setAttribute('aria-expanded', 'false');
+      dropdown.classList.remove('open');
+      setTimeout(() => {
+        if (!dropdown.classList.contains('open')) {
+          dropdown.hidden = true;
+          dropdown.querySelectorAll('a').forEach(a => a.setAttribute('tabindex', '-1'));
+        }
+      }, 200);
+    });
+  }
+
+  desktopDropdownToggles.forEach(btn => {
+    const item = btn.closest('.desktop-nav-item');
+    const dropdown = item.querySelector('.desktop-dropdown');
+    if (!dropdown) return;
+
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+      closeAllDesktopDropdowns(btn);
+
+      if (isExpanded) {
+        btn.setAttribute('aria-expanded', 'false');
+        dropdown.classList.remove('open');
+        setTimeout(() => {
+          if (!dropdown.classList.contains('open')) {
+            dropdown.hidden = true;
+            dropdown.querySelectorAll('a').forEach(a => a.setAttribute('tabindex', '-1'));
+          }
+        }, 200);
+      } else {
+        dropdown.hidden = false;
+        dropdown.querySelectorAll('a').forEach(a => a.removeAttribute('tabindex'));
+        requestAnimationFrame(() => dropdown.classList.add('open'));
+        btn.setAttribute('aria-expanded', 'true');
+        // Focus sur le premier lien
+        setTimeout(() => {
+          const firstLink = dropdown.querySelector('a');
+          if (firstLink) firstLink.focus();
+        }, 50);
+      }
+    });
+
+    // Keyboard: close on Escape
+    item.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true') {
+        closeAllDesktopDropdowns();
+        btn.focus();
+      }
+    });
+  });
+
+  // Close desktop dropdowns on outside click
+  document.addEventListener('click', (e) => {
+    const desktopNav = document.querySelector('.desktop-nav');
+    if (desktopNav && !desktopNav.contains(e.target)) {
+      closeAllDesktopDropdowns();
+    }
+  });
 });

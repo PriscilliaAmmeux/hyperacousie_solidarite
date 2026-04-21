@@ -122,6 +122,44 @@ const navigationStructure = [
       </a>
     </section>
 
+    <!-- Navigation desktop (liens + dropdowns) -->
+    <nav class="desktop-nav" aria-label="Navigation principale">
+      {navigationStructure.map((section) => (
+        <div class={`desktop-nav-item${section.items.length > 0 ? ' has-dropdown' : ''}`}>
+          <a
+            href={section.href}
+            class={`desktop-nav-link${isCurrentPage(section.href, currentPath) ? ' active' : ''}`}
+            aria-current={isCurrentPage(section.href, currentPath) ? 'page' : undefined}
+          >
+            {section.title}
+          </a>
+          {section.items.length > 0 && (
+            <>
+              <button
+                class="desktop-dropdown-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-label={`Ouvrir sous-menu ${section.title}`}
+              >
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="dropdown-arrow">
+                  <path d="M2 4L6 8L10 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <ul class="desktop-dropdown" role="menu" hidden>
+                {section.items.map((item) => (
+                  <li role="none">
+                    <a href={item.href} class="desktop-dropdown-link" role="menuitem" tabindex={-1}>
+                      {item.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
+        </div>
+      ))}
+    </nav>
+
     <!-- CTA Button on the right -->
     <section class="navbar-cta">
       <Button 
