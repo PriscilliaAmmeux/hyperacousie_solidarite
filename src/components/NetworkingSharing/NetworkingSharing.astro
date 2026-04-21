@@ -65,6 +65,17 @@ const cards = [
         buttonBotomColor: "teal",
         contentTextButtonBottom: "Rejoindre le groupe Flandres / Pays-Bas",
         link: "https://www.facebook.com/groups/lotgenotenmethyperacusis"
+    },
+    {
+        id: 6,
+        buttonTopColor: "teal",
+        contentTextButtonTop: "Application",
+      img: "/image-illustrant-une-application.webp",
+        title: "Application – matériels adaptés pour les hypers",
+        text:" Cette application regroupe des matériels plus « silencieux » utilisés par la communauté des hyperacousiques, tels que des casques audio, des appareils électroménagers, des outils de bricolage, etc. Elle est conçue pour aider les personnes atteintes d’hyperacousie à trouver des alternatives plus confortables dans leur vie quotidienne.",    
+        buttonBotomColor: "teal",
+        contentTextButtonBottom: "Consulter l’application",
+        link: "https://hyperacousie-solidarite.alwaysdata.net/products?cat=2"
     }
 ]---
 
@@ -78,7 +89,7 @@ const cards = [
   </div>
   <div class="networking-card-list">
     {cards.map((card) => (
-      <div class="networking-card">
+      <div class={`networking-card${card.id === 6 ? ' networking-card-centered' : ''}`}>
   <p class={`networking-card-top-label ${card.buttonTopColor}`}>
     {card.contentTextButtonTop}
   </p>
