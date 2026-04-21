@@ -4,6 +4,7 @@ import { isCurrentPage } from '../../utils/helpers.ts';
 import '../../styles/variables.css';
 import './NavBar.css';
 import Button from '../../ui/Button/Button.astro';
+import Banner from '../Banner/Banner.astro';
 
 const { currentPath = '' } = Astro.props;
 
@@ -63,9 +64,10 @@ const navigationStructure = [
 
 <!-- Annonce pour lecteurs d'écran -->
 <div id="menu-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
-
+ {currentPath === '/' && <Banner />}
 <div class="navbar-container">
   <nav class="navbar" role="navigation" aria-label="Navigation principale">
+   
     <!-- Bouton Menu Global -->
     <section class="navbar-nav">
       <button 
