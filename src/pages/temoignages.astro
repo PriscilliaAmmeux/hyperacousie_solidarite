@@ -13,7 +13,7 @@ import VideoRessource from '../ui/VideoRessource/VideoRessource.astro';
   title="Témoignages Hyperacousie : récits et vidéos de vie réelle"
   description="Découvrez les histoires de personnes vivant avec l’hyperacousie : récits, témoignages vidéos et expériences uniques pour sensibiliser et informer."
 >
-  <div style="text-align:center ;margin-top: 12rem;">
+  <div class="temoignages-title-wrapper">
          <Title text="Témoignages" level='2' />
   </div>
   <ShortTestimonials />
@@ -23,3 +23,16 @@ import VideoRessource from '../ui/VideoRessource/VideoRessource.astro';
   <Presse />
   <SectionButtonMore />
 </Layout>
+
+<style>
+  .temoignages-title-wrapper {
+    text-align: center;
+    margin-top: 12rem;
+  }
+
+  @media (max-width: 700px) {
+    .temoignages-title-wrapper {
+      margin-top: 8rem;
+    }
+  }
+</style>

@@ -14,7 +14,7 @@ import SectionFiches from '../ui/SectionFiches/SectionFiches.astro';
   title="Ressources Hyperacousie : guides, témoignages et cartes"
   description="Accédez à des fiches pratiques, études, témoignages et cartes interactives pour mieux comprendre, prévenir et vivre avec l’hyperacousie."
 >
- <section style="text-align:center; margin-top: 12rem;">
+ <section class="ressources-title-wrapper">
     <Title
       text="Ressources"
       className="section-title-page"
@@ -29,3 +29,16 @@ import SectionFiches from '../ui/SectionFiches/SectionFiches.astro';
 <Plaquette />
 
 </Layout>
+
+<style>
+  .ressources-title-wrapper {
+    text-align: center;
+    margin-top: 12rem;
+  }
+
+  @media (max-width: 700px) {
+    .ressources-title-wrapper {
+      margin-top: 8rem;
+    }
+  }
+</style>
