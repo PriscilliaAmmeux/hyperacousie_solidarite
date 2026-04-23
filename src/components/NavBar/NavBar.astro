@@ -64,7 +64,7 @@ const navigationStructure = [
 
 <!-- Annonce pour lecteurs d'écran -->
 <div id="menu-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
- {currentPath === '/' && <Banner />}
+ {(currentPath === '/' || currentPath === '/adhesions-dons') && <Banner />}
 <div class="navbar-container">
   <nav class="navbar" role="navigation" aria-label="Navigation principale">
    
@@ -125,7 +125,7 @@ const navigationStructure = [
     <!-- Navigation desktop (liens + dropdowns) -->
     <nav class="desktop-nav" aria-label="Navigation principale">
       {navigationStructure.map((section) => (
-        <div class={`desktop-nav-item${section.items.length > 0 ? ' has-dropdown' : ''}`}>
+        <div class={`desktop-nav-item${section.items.length > 0 ? ' has-dropdown' : ''}${isCurrentPage(section.href, currentPath) ? ' is-active' : ''}`}>
           <a
             href={section.href}
             class={`desktop-nav-link${isCurrentPage(section.href, currentPath) ? ' active' : ''}`}
