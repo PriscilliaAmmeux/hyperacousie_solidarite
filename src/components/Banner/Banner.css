@@ -1,4 +1,5 @@
 .ticker-banner {
+  position: relative;
   width: 100%;
   background-color: var(--color-teal-transparent);
   color: #fff;
@@ -8,6 +9,26 @@
   font-size: 0.95rem;
   font-weight: 600;
   letter-spacing: 0.03em;
+}
+
+.ticker-close {
+  position: absolute;
+  top: 50%;
+  right: 0.75rem;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0 0.25rem;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.ticker-close:hover {
+  opacity: 1;
 }
 
 .ticker-track {
