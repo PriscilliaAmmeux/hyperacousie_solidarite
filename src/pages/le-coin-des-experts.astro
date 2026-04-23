@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Title from '../ui/Title/Title.astro';
+import '../styles/le-coin-des-experts.css';
+---
+<Layout
+title="Le coin des experts"
+description="Découvrez les conseils et analyses d'experts en hyperacousie : audiologistes, chercheurs et professionnels de santé partagent leurs connaissances pour mieux comprendre et gérer cette condition.">
+	<section class="experts-hero">
+		<Title text="Le coin des experts" level='2' />
+		<p>
+			Un espace dédié aux contenus scientifiques et au suivi de la recherche autour de l'hyperacousie.
+		</p>
+	</section>
+
+	<section class="experts-block" aria-labelledby="articles-scientifiques-title">
+		<div class="experts-block-header">
+			<Title text="Les articles scientifiques" level='3' />
+			<span class="status-pill">Mise à jour en cours</span>
+		</div>
+
+		
+	</section>
+
+	<section class="experts-block" aria-labelledby="recherche-essais-title">
+		<div class="experts-block-header">
+			<Title text="La recherche et les essais clinique en cours" level='3' />
+			<span class="status-pill">Mise à jour en cours</span>
+		</div>
+		
+	</section>
+</Layout>

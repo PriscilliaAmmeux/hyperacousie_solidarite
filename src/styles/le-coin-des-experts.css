@@ -1,0 +1,56 @@
+
+.experts-hero {
+		max-width: 1100px;
+		margin: 12rem auto 2rem;
+		padding: 0 1.25rem;
+		text-align: center;
+	}
+
+	.experts-hero p {
+		max-width: 100%;
+		font-size: 1.05rem;
+		line-height: 1.65;
+		color: #4e3b37;
+	}
+
+	.experts-block {
+		max-width: 1100px;
+		margin: 0 auto 1.5rem;
+		padding: 1.5rem;
+		border: 1px solid var(--color-teal-transparent);
+		border-radius: 14px;
+		background: linear-gradient(180deg, #fffefc 0%, #fff8f6 100%);
+		box-shadow: 0 10px 24px rgba(60, 25, 20, 0.06);
+	}
+
+	.experts-block-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1rem;
+		margin-bottom: 1rem;
+		flex-wrap: wrap;
+	}
+
+	.status-pill {
+		display: inline-flex;
+		align-items: center;
+		padding: 0.35rem 0.7rem;
+		border-radius: 999px;
+		font-size: 0.8rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
+		background-color: var(--color-coral-transparent);
+	}
+
+	@media (max-width: 700px) {
+		.experts-hero {
+			margin-top: 8rem;
+		}
+
+		.experts-block {
+			margin: 2rem 2rem 4rem 2rem;
+			padding: 1.1rem;
+		}
+	}
