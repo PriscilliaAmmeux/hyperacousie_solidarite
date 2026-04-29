@@ -35,6 +35,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+}
+
+.swiper-team .slide-team .card-team {
+  width: 100%;
 }
 
 /* Individual cards */

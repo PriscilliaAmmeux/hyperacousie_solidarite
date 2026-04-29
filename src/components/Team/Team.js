@@ -7,8 +7,8 @@ import "swiper/css/pagination";
 const teamSwiper = new Swiper(".swiper-team", {
   modules: [Navigation, Pagination],
   slidesPerView: 1,
-  spaceBetween: 20,
-  centeredSlides: true,
+  spaceBetween: 0,
+  centeredSlides: false,
   loop: false,
   pagination: {
     el: ".pagination-team",
@@ -21,8 +21,8 @@ const teamSwiper = new Swiper(".swiper-team", {
   breakpoints: {
     641: {
       slidesPerView: 1,
-      spaceBetween: 30,
-      centeredSlides: true,
+      spaceBetween: 0,
+      centeredSlides: false,
     },
     1024: {
       slidesPerView: 2,
