@@ -3,29 +3,63 @@ import Title from "../../ui/Title/Title.astro";
 import "../../styles/variables.css";
 import "./Presse.css";
 
+type AvatarVariant = {
+	background: string;
+	shape: string;
+	accent: string;
+};
+
+const avatarVariants = [
+	{ background: "#fff4f2", shape: "#ff6f61", accent: "#ffd8d3" },
+	{ background: "#eefbf8", shape: "#12b6a8", accent: "#c9f1ed" },
+	{ background: "#f7efe9", shape: "#3c1914", accent: "#e7c7b8" },
+	{ background: "#f5fbfa", shape: "#3c1914", accent: "#bceae4" },
+] satisfies AvatarVariant[];
+
+const createProfilePreview = ({ background, shape, accent }: AvatarVariant) =>
+	`data:image/svg+xml,${encodeURIComponent(`
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" role="img" aria-hidden="true">
+			<rect width="480" height="320" rx="32" fill="${background}" />
+			<rect x="28" y="28" width="424" height="264" rx="24" fill="#ffffff" fill-opacity="0.78" />
+			<circle cx="118" cy="114" r="54" fill="${accent}" />
+			<circle cx="118" cy="103" r="24" fill="${shape}" />
+			<path d="M72 168c10-28 31-44 46-44s36 16 46 44" fill="${shape}" />
+			<rect x="198" y="86" width="164" height="14" rx="7" fill="${shape}" fill-opacity="0.92" />
+			<rect x="198" y="116" width="130" height="10" rx="5" fill="${shape}" fill-opacity="0.24" />
+			<rect x="198" y="138" width="150" height="10" rx="5" fill="${shape}" fill-opacity="0.18" />
+			<rect x="60" y="216" width="126" height="34" rx="17" fill="${shape}" />
+			<rect x="214" y="222" width="160" height="12" rx="6" fill="${shape}" fill-opacity="0.14" />
+			<rect x="390" y="52" width="34" height="34" rx="17" fill="${accent}" />
+		</svg>
+	`)}`;
+
 const pressArticles = [
 	{
 		title: "Témoignage d'Alexandra",
 		image: "/Article de presse Témoignage-Alexandra.webp",
+		source: "Le courrier de l'ouest Saumur",
 	},
 	{
 		title: "Témoignage de Barbara",
 		image: "/Article de presse Témoignage-Barbara.webp",
+		source: "Journal",
 	},
 	{
 		title: "Témoignage de Florent",
 		image: "/Article de presse Témoignage-Florent.webp",
+		source: "Journal Vienne",
 	},
 	{
 		title: "Témoignage de Nathan",
 		image: "/Article de presse Témoignage-Nathan-2.webp",
+		source: "Journal",
 	},
-].map((article) => ({
+].map((article, index) => ({
 	...article,
 	imageUrl: encodeURI(article.image),
+	previewImage: createProfilePreview(avatarVariants[index % avatarVariants.length]),
 }));
 
-const youtubeEmbedUrl = "https://www.youtube.com/embed/VIDEO_ID";
 ---
 
 <section id="presse" class="press-section">
@@ -44,8 +78,11 @@ const youtubeEmbedUrl = "https://www.youtube.com/embed/VIDEO_ID";
 				rel="noopener noreferrer"
 				aria-label={`Ouvrir ${article.title}`}
 			>
-				<img src={article.imageUrl} alt={article.title} loading="lazy" />
-				<p>{article.title}</p>
+				<img src={article.previewImage} alt={`Illustration profil pour ${article.title}`} loading="lazy" />
+				<div class="press-card-content">
+					<p>{article.title}</p>
+					<span>{article.source}</span>
+				</div>
 			</a>
 		))}
 	</div>
