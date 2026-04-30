@@ -42,43 +42,39 @@ const pressArticles = [
 	{
 		title: "Témoignage de Barbara",
 		image: "/Article de presse Témoignage-Barbara.webp",
-		source: "Journal",
+		source: "La république de Seine-et-Marne",
+		profilePhoto: "/photo-barbara.webp",
 	},
 	{
 		title: "Témoignage de Florent",
 		image: "/Article de presse Témoignage-Florent.webp",
-		source: "Journal Vienne",
+		source: "Journal La Nouvelle République de la Vienne",
 	},
 	{
 		title: "Témoignage de Nathan",
 		image: "/Article de presse Témoignage-Nathan-2.webp",
-		source: "Journal",
+		source: "Le journal des Sables",
+		profilePhoto: "/PHOTO-Nathan.webp",
 	},
-].map((article, index) => ({
-	...article,
-	imageUrl: encodeURI(article.image),
-	previewImage: createProfilePreview(avatarVariants[index % avatarVariants.length]),
-}));
-
+];
 ---
 
-<section id="presse" class="press-section">
-	<Title
-		text="La presse parle de nous"
-		className="mb-4 section-title"
-		level="2"
-	/>
-
-	<div class="press-grid" id="press-grid">
-		{pressArticles.map((article) => (
-			<a
-				class="press-card"
-				href={article.imageUrl}
-				target="_blank"
-				rel="noopener noreferrer"
-				aria-label={`Ouvrir ${article.title}`}
-			>
-				<img src={article.previewImage} alt={`Illustration profil pour ${article.title}`} loading="lazy" />
+<section class="press-section">
+	<Title text="Presse" level="2" className="mb-4 section-title" />
+	<div id="press-grid" class="press-grid">
+		{pressArticles.map((article, index) => (
+			<a href={article.image} download={`${article.title}.webp`} class="press-card">
+				<div class="press-card-image-wrapper">
+					<img src={article.profilePhoto ?? createProfilePreview(avatarVariants[index % avatarVariants.length])} alt={article.profilePhoto ? `Photo de ${article.title}` : `Illustration profil pour ${article.title}`} loading="lazy" />
+					<div class="press-card-badge">
+						<svg class="pdf-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+							<polyline points="7 10 12 15 17 10"/>
+							<line x1="12" y1="15" x2="12" y2="3"/>
+						</svg>
+						<span>Télécharger</span>
+					</div>
+				</div>
 				<div class="press-card-content">
 					<p>{article.title}</p>
 					<span>{article.source}</span>
@@ -87,7 +83,7 @@ const pressArticles = [
 		))}
 	</div>
 
-	<div class="press-video-wrapper ">
+	<div class="press-video-wrapper">
 		<Title text="Interview sur France Inter" level="2" className="mb-4 section-title" />
 		<div class="press-video-frame">
 			<iframe
