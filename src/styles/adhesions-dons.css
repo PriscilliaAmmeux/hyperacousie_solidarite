@@ -1,32 +1,12 @@
 /* ── Hero ── */
 .adhesions-hero {
-  padding: 3.5rem 1.5rem 4rem;
-  background: linear-gradient(
-    135deg,
-    var(--color-coral) 0%,
-    #ff9a8d 50%,
-    var(--color-teal) 100%
-  );
+  padding: 15rem 3.5rem 1.5rem 4rem;
   text-align: center;
-  position: relative;
-  overflow: hidden;
 }
 
 .adhesions-header {
   margin-top: 15rem;
   text-align: center;
-}
-
-.adhesions-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    ellipse at 70% 30%,
-    rgba(255, 255, 255, 0.18) 0%,
-    transparent 65%
-  );
-  pointer-events: none;
 }
 
 .adhesions-hero-inner {
@@ -40,10 +20,15 @@
 }
 
 .adhesions-hero-badges {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-  justify-content: center;
   gap: 2rem;
+  width: 100%;
+}
+
+.adhesions-hero-text-block {
+  text-align: center;
 }
 
 .adhesions-recognition-badge {
@@ -61,86 +46,20 @@
 
 .adhesions-hero-tagline {
   font-size: 1.18rem;
-  color: var(--color-white);
+  color: var(--color-black);
   font-weight: 600;
   line-height: 1.6;
-  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.18);
   max-width: 600px;
   margin: 0 auto;
 }
 
-/* ── Main content ── */
-.adhesions-main {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 3rem 1.5rem 4rem;
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-}
-
-/* How it works pill */
+/* How it works */
 .adhesions-how {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
-}
-
-/* Two-column section */
-.adhesions-cols {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 3rem;
-  align-items: start;
-}
-
-.adhesions-donations-col {
-  min-width: 0;
-}
-
-/* Image stack */
-.adhesions-images-col {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  padding-top: 1rem;
-}
-
-.adhesions-images {
-  position: relative;
-  width: 260px;
-  height: 320px;
-}
-
-.adhesions-img {
-  position: absolute;
-  width: 220px;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
-  transition: transform 0.3s ease;
-}
-
-.adhesions-img:hover {
-  transform: none !important;
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.22);
-}
-
-.img-top {
-  top: 0;
-  left: 0;
-  transform: rotate(-6deg);
-  z-index: 2;
-}
-
-.img-bottom {
-  bottom: 0;
-  right: 0;
-  transform: rotate(6deg);
-  z-index: 1;
+  padding: 2rem 1.5rem 1rem;
 }
 
 /* Donation form link button */
@@ -157,43 +76,18 @@
 }
 
 /* ── Responsive ── */
-@media (max-width: 860px) {
+@media (max-width: 900px) {
   .adhesions-hero {
     margin-top: 7rem;
     padding: 2.5rem 1rem 3rem;
-  }
-
-  .adhesions-cols {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .adhesions-images-col {
-    flex-direction: row;
-    gap: 1.5rem;
-    padding-top: 0;
-  }
-
-  .adhesions-images {
-    width: auto;
-    height: auto;
-    position: static;
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-  }
-
-  .adhesions-img {
-    position: static;
-    width: 130px;
-    transform: none !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
   }
 }
 
 @media (max-width: 540px) {
   .adhesions-hero-badges {
+    grid-template-columns: 1fr;
     gap: 1rem;
+    justify-items: center;
   }
 
   .adhesions-recognition-badge {
@@ -213,9 +107,5 @@
   .adhesions-main {
     padding: 2rem 1rem 3rem;
     gap: 2rem;
-  }
-
-  .adhesions-img {
-    width: 105px;
   }
 }
