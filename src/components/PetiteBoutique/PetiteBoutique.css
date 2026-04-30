@@ -1,0 +1,45 @@
+.petite-boutique {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem 1rem;
+}
+
+.petite-boutique-img {
+  width: 320px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.petite-boutique-content {
+  max-width: 560px;
+}
+
+.petite-boutique-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.25rem;
+}
+
+@media (max-width: 768px) {
+  .petite-boutique {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .petite-boutique-img {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .petite-boutique-content {
+    text-align: center;
+  }
+
+  .petite-boutique-content ul {
+    text-align: left;
+    display: inline-block;
+  }
+}
