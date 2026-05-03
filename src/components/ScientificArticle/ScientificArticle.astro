@@ -1,0 +1,58 @@
+---
+import Button from '../../ui/Button/Button.astro';
+
+export interface Props {
+  title: string;
+  description?: string;
+  authors?: string;
+  year?: string;
+  pdfFrench: string;
+  pdfEnglish: string;
+  pdfFrenchLabel?: string;
+  pdfEnglishLabel?: string;
+}
+
+const {
+  title,
+  description,
+  authors,
+  year,
+  pdfFrench,
+  pdfEnglish,
+  pdfFrenchLabel = 'Français',
+  pdfEnglishLabel = 'English',
+} = Astro.props;
+---
+
+<article class="scientific-article">
+  <div class="article-header">
+    <h4 class="article-title">{title}</h4>
+    {authors && <p class="article-authors">{authors}</p>}
+    {year && <p class="article-year">{year}</p>}
+  </div>
+
+  {description && <p class="article-description">{description}</p>}
+
+  <div class="article-downloads">
+    <Button
+      href={pdfFrench}
+      variant="coral"
+      size="sm"
+      target="_blank"
+      rel="noopener noreferrer"
+   
+    >
+      📄 {pdfFrenchLabel}
+    </Button>
+    <Button
+      href={pdfEnglish}
+      variant="teal"
+      size="sm"
+      target="_blank"
+      rel="noopener noreferrer"
+
+    >
+      📄 {pdfEnglishLabel}
+    </Button>
+  </div>
+</article>

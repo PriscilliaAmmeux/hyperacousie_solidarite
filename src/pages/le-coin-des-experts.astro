@@ -1,32 +1,64 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Title from '../ui/Title/Title.astro';
+import ScientificArticle from '../components/ScientificArticle/ScientificArticle.astro';
+import '../components/ScientificArticle/ScientificArticle.css';
 import '../styles/le-coin-des-experts.css';
 ---
 <Layout
 title="Le coin des experts"
 description="Découvrez les conseils et analyses d'experts en hyperacousie : audiologistes, chercheurs et professionnels de santé partagent leurs connaissances pour mieux comprendre et gérer cette condition.">
 	<section class="experts-hero">
-		<Title text="Le coin des experts" level='2' />
-		<p>
-			Un espace dédié aux contenus scientifiques et au suivi de la recherche autour de l'hyperacousie.
-		</p>
+		<div class="experts-hero-inner">
+			<Title text="Le coin des experts" level='2' />
+			<p>
+				Un espace dédié aux contenus scientifiques et au suivi de la recherche autour de l'hyperacousie.
+			</p>
+		</div>
 	</section>
 
-	<section class="experts-block" aria-labelledby="articles-scientifiques-title">
-		<div class="experts-block-header">
+	<section class="experts-block--articles" aria-labelledby="articles-scientifiques-title">
+		<div class="experts-block-inner">
 			<Title text="Les articles scientifiques" level='3' />
-			<span class="status-pill">Mise à jour en cours</span>
+			<div class="articles-grid">
+				<ScientificArticle
+					title="Cas de choc acoustique avec activation post-traumatique du trijumeau et du système autonome"
+					pdfFrench="/articles-scientifiques/Cas de choc acoustique avec activation post-traumatique du trijumeau et du système autonome - Français.pdf"
+					pdfEnglish="/articles-scientifiques/Case of acoustic shock with  post-trauma trigeminal-autonomic activation.pdf"
+					pdfFrenchLabel="Français"
+					pdfEnglishLabel="English"
+				/>
+				
+				<ScientificArticle
+					title="Un modèle intégratif expliquant l’ensemble des symptômes déclenchés après un choc acoustique"
+					pdfFrench="/articles-scientifiques/Un modèle intégratif expliquant l’ensemble des symptômes déclenchés après un choc acoustique traduit en français.pdf"
+					pdfEnglish="/articles-scientifiques/An Integrative Model Accounting for the Symptom Cluster Triggered After an Acoustic Shock to English.pdf"
+					pdfFrenchLabel="Français"
+					pdfEnglishLabel="English"
+				/>
+				
+				<ScientificArticle
+					title="Syndrome tenseur du tympan tonique chez les patients souffrant d’acouphènes et d’hyperacousie _ une étude de prévalence multi-clinique"
+					pdfFrench="/articles-scientifiques/Syndrome tenseur du tympan tonique chez les patients souffrant d’acouphènes et d’hyperacousie _ une étude de prévalence multi-clinique en Français.pdf"
+					pdfEnglish="/articles-scientifiques/Tonic tensor tympani syndrome in tinnitus and hyperacusis patients - A multi clinic prevalence study.pdf"
+					pdfFrenchLabel="Français"
+					pdfEnglishLabel="English"
+				/>
 		</div>
-
-		
+		</div>
 	</section>
 
-	<section class="experts-block" aria-labelledby="recherche-essais-title">
-		<div class="experts-block-header">
-			<Title text="La recherche et les essais clinique en cours" level='3' />
-			<span class="status-pill">Mise à jour en cours</span>
-		</div>
-		
-	</section>
+	<div class="experts-content">
+		<section class="experts-block experts-block--research" aria-labelledby="recherche-essais-title">
+			<div class="experts-block-header">
+				<Title text="La recherche et les essais cliniques en cours" level='3' />
+				<span class="status-pill status-pill--research">Mise à jour en cours</span>
+			</div>
+			<div class="research-placeholder">
+				<span class="research-placeholder-icon">🔬</span>
+				<p>Cette section sera bientôt enrichie avec les derniers essais cliniques et travaux de recherche en cours sur l'hyperacousie.</p>
+			</div>
+		</section>
+	</div>
+
 </Layout>

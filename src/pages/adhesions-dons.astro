@@ -1,45 +1,37 @@
----
+﻿---
 import Layout from '../layouts/Layout.astro';
 import Title from '../ui/Title/Title.astro';
 import '../styles/variables.css';
 import '../styles/adhesions-dons.css';
-import Donations from '../ui/Donations/Donations.astro';
-import HowWork from '../ui/HowWork/HowWork.astro';
 import ImageMoney from '../ui/imageMoney/imageMoney.astro';
+import AdhesionsSupportGrid from '../components/AdhesionsSupportGrid/AdhesionsSupportGrid.astro';
+import PetiteBoutique from '../components/PetiteBoutique/PetiteBoutique.astro';
 ---
 
 <Layout 
-  title="Adhésions et dons "
-  description="Adhérez à l’association Hyperacousie Solidarité ou faites un don pour soutenir la recherche, la sensibilisation et l’accompagnement des personnes touchées par l’hyperacousie et les troubles auditifs. Découvrez nos offres d’adhésion, nos supports dédiés et les modalités de paiement en ligne, par chèque ou virement. Rejoignez une communauté engagée pour améliorer la qualité de vie et la reconnaissance du handicap auditif."
-
+  title="Adhésions et dons"
+  description="Adhérez à l'association Hyperacousie Solidarité ou faites un don pour soutenir la recherche, la sensibilisation et l'accompagnement des personnes touchées par l'hyperacousie et les troubles auditifs. Découvrez nos offres d'adhésion, nos supports dédiés et les modalités de paiement en ligne, par chèque ou virement. Rejoignez une communauté engagée pour améliorer la qualité de vie et la reconnaissance du handicap auditif."
   >
-  <section class="adhesions-header">
-    <div class="adhesions-header-badges">
-      <ImageMoney width={100} height={100} />
-      <img src="/Pastille-reconnu-d_intérêt-général.webp" alt="Pastille reconnu d'intérêt général" class="adhesions-recognition-badge" width="100" height="100" />
+
+  <!-- Hero -->
+  <section class="adhesions-hero">
+    <div class="adhesions-hero-inner">
+      <div class="adhesions-hero-badges">
+        <ImageMoney width={200} height={200} />
+        <div class="adhesions-hero-text-block">
+          <Title text="Adhésions et dons" level='2' />
+          <p class="adhesions-hero-tagline">
+            Soutenez l'association Hyperacousie Solidarité : adhérez ou faites un don pour permettre nos actions et recevoir nos supports dédiés.
+          </p>
+          <Title text="Comment ça marche ?" level='3' />
+        </div>
+        <img src="/Pastille-reconnu-d_intérêt-général.webp" alt="Pastille reconnu d'intérêt général" class="adhesions-recognition-badge" width="200" height="200" />
+      </div>
     </div>
-    <Title text="Adhésions et dons" level='2' />
-    
-    <section class="adhesions-content">
-    <p class="adhesions-intro">
-      Soutenez l’association Hyperacousie Solidarité: adhérez ou faites un don pour permettre nos actions et recevoir nos supports dédiés.
-    </p>  
-    <HowWork />
-   <section class="adhesions-content-flex">
-  <div class="adhesions-donations-col">
-    <Donations />
-  </div>
-  <div class="adhesions-images-col">
-    <div class="adhesions-images">
-      <img src="/stickers.webp" alt="stickers" class="adhesions-img img-top" width="260" height="auto" />
-      <img src="/carte handicap.webp" alt="carte" class="adhesions-img img-bottom" width="260" height="auto" />
-    </div>
-  </div>
-</section>
-   
-  
-   
   </section>
 
+  <AdhesionsSupportGrid />
+
+  <PetiteBoutique />
 
 </Layout>

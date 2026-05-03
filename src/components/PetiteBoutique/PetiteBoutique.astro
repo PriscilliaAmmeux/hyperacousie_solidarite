@@ -1,0 +1,28 @@
+---
+import './PetiteBoutique.css';
+import Button from '../../ui/Button/Button.astro';
+
+const shopUrl = 'https://www.helloasso.com/associations/hyperacousie-solidarite/boutiques/depliant-hyperacousie-solidarite';
+---
+
+<section class="petite-boutique" aria-labelledby="petite-boutique-title">
+  <a href={shopUrl} target="_blank" rel="noopener noreferrer" aria-label="Accéder à la petite boutique Hyperacousie Solidarité sur HelloAsso">
+    <img src="/La-petite-boutique.webp" alt="La petite boutique" class="petite-boutique-img" width="320" height="auto" loading="lazy" />
+  </a>
+
+  <div class="petite-boutique-content">
+    <p id="petite-boutique-title" class="petite-boutique-subtitle">Partager par <strong>HYPERACOUSIE SOLIDARITÉ</strong></p>
+    <p>Notre petite boutique, où vous trouverez :</p>
+    <ul>
+      <li>des supports de sensibilisation sur l'hyperacousie à diffuser (cabinets médicaux, professionnels de santé…).</li>
+      <li>des stickers roses "handicap auditif" à coller sur vos casques… ou ailleurs :)</li>
+    </ul>
+    <p class="petite-boutique-mention"><em>Participation aux frais uniquement — aucun bénéfice réalisé pour l'association sur ces ventes</em></p>
+
+    <div class="petite-boutique-btn-wrapper">
+      <Button href={shopUrl} target="_blank" rel="noopener noreferrer" variant="coral" size="sm">
+        Accéder à la boutique
+      </Button>
+    </div>
+  </div>
+</section>

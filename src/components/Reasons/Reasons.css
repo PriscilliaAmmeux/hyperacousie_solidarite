@@ -9,8 +9,8 @@
   box-sizing: border-box;
 }
 
-.margin-bottom {
-  margin-bottom: 2rem;
+.margin-reasons {
+  margin-bottom: 2rem
 }
 
 .reasons-container {
@@ -87,6 +87,10 @@
     margin: 2rem 0;
     padding: 2rem 0.5rem;
   }
+
+  .margin-reasons {
+  margin: 0 1.5rem 2rem 1.5rem;
+}
 
   .reasons-container {
     padding: 0 0.5rem;
