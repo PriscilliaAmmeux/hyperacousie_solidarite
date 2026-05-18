@@ -1,3 +1,18 @@
+.petite-boutique-images-droite {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .petite-boutique-images-droite {
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.2rem;
+  }
+}
 .petite-boutique {
   display: flex;
   align-items: flex-start;
