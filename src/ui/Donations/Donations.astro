@@ -3,23 +3,119 @@ import Title from "../Title/Title.astro";
 import '../../styles/variables.css';
 import './Donations.css';
 import Button from "../Button/Button.astro";
+import Card from "../../components/Card/Card.astro";
 
 ---
 
-<section class="explanation">
-  <Title text="Adhésions & Dons" level='3' className="explanation-title"/>
-  <p>
-  Il existe deux types d’adhésion :
-  <ul>
-    <li>
-      <span class="text-bold">Solidaire</span> : envoi gratuit à la demande de 2 stickers «&nbsp;Handicap hyperacousie&nbsp;».
-    </li>
-    <li>
-      <span class="text-bold">Premium</span> : envoi gratuit à la demande de 2 stickers «Handicap hyperacousie» + une carte «Handicap auditif».
-    </li>
-  </ul>
-</p>
-<p>Il est aussi possible de faire un don libre sans adhérer.</p>
+<section class="adhesion-page">
+  <Title text="Choisir mon adhésion" level='3' className="explanation-title"/>
+
+  <div class="adhesion-cards">
+
+    <Card
+      className="adhesion-card adhesion-card--solidaire"
+      imageSrc="/stickers.webp"
+      imageAlt="Stickers Handicap hyperacousie"
+    >
+  
+      <ul class="solidaire-list">
+        <li class="solidaire-bullet-icon">
+          <span class="solidaire-icon" aria-label="coeur" title="coeur">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="vertical-align:middle;"><path d="M12 21c-4.97-4.17-8-6.92-8-10.5C4 6.42 6.42 4 9.5 4c1.54 0 3.04.81 3.94 2.09C14.46 4.81 15.96 4 17.5 4 20.58 4 23 6.42 23 9.5c0 3.58-3.03 6.33-8 10.5z" fill="var(--color-teal)"/><path d="M12 21c-4.97-4.17-8-6.92-8-10.5C4 6.42 6.42 4 9.5 4c1.54 0 3.04.81 3.94 2.09C14.46 4.81 15.96 4 17.5 4 20.58 4 23 6.42 23 9.5c0 3.58-3.03 6.33-8 10.5z" fill-opacity=".2" fill="#fff"/></svg>
+          </span>
+          Envoi gratuit à la demande de 2 stickers "handicap hyperacousie"
+        </li>
+        <li class="solidaire-bullet-icon">
+          <span class="solidaire-icon" aria-label="soutien" title="soutien">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="vertical-align:middle;"><path d="M12 21c-4.97-4.17-8-6.92-8-10.5C4 6.42 6.42 4 9.5 4c1.54 0 3.04.81 3.94 2.09C14.46 4.81 15.96 4 17.5 4 20.58 4 23 6.42 23 9.5c0 3.58-3.03 6.33-8 10.5z" fill="var(--color-teal)"/><path d="M12 21c-4.97-4.17-8-6.92-8-10.5C4 6.42 6.42 4 9.5 4c1.54 0 3.04.81 3.94 2.09C14.46 4.81 15.96 4 17.5 4 20.58 4 23 6.42 23 9.5c0 3.58-3.03 6.33-8 10.5z" fill-opacity=".2" fill="#fff"/></svg>
+          </span>
+          Soutien à nos actions
+        </li>
+      </ul>
+      <div class="adhesion-price" style="margin-bottom:8px; text-align:center;">
+        <span class="adhesion-heart" aria-label="coeur" title="coeur" style="vertical-align:middle;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" style="margin-right:6px;vertical-align:middle;"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="var(--color-teal)"/></svg>
+        </span>
+        <strong style="font-size:1.5rem; color:var(--color-teal);">12&nbsp;€</strong> <span style="font-size:1rem; color:inherit;">/ an</span>
+      </div>
+      <Button
+        variant="teal"
+        size="sm"
+        href="https://www.helloasso.com/associations/hyperacousie-solidarite"
+        aria-label="Adhérer en formule solidaire via HelloAsso"
+        target="_blank"
+        rel="noopener"
+      >
+        J'adhère
+      </Button>
+    </Card>
+
+    <Card
+      className="adhesion-card adhesion-card--premium"
+      imageSrc="/carte%20handicap.webp"
+      imageAlt="Carte handicap auditif"
+    >
+      <ul class="premium-list">
+        <li class="premium-bullet-icon">
+          <span class="premium-icon" aria-label="coeur" title="coeur">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="var(--color-coral)" style="vertical-align:middle;"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          </span>
+          Envoi gratuit à la demande de 2 stickers "handicap hyperacousie"
+        </li>
+        <li class="premium-bullet-icon">
+          <span class="premium-icon" aria-label="coeur" title="coeur">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="var(--color-coral)" style="vertical-align:middle;"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          </span>
+          Envoi d'une carte "Handicap auditif"
+        </li>
+        <li class="solidaire-bullet-icon">
+          <span class="solidaire-icon" aria-label="soutien" title="soutien">
+ <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="var(--color-coral)" style="vertical-align:middle;"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          </span>
+          Soutien à nos actions
+        </li>
+      </ul>
+      <div class="adhesion-price" style="margin-bottom:8px; text-align:center;">
+        <span class="adhesion-heart" aria-label="coeur" title="coeur" style="vertical-align:middle;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="var(--color-coral)" style="margin-right:6px;vertical-align:middle;"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        </span>
+        <strong style="font-size:1.5rem; color:var(--color-coral);">18&nbsp;€</strong> <span style="font-size:1rem; color:inherit;">/ an</span>
+      </div>
+      <Button
+        variant="coral"
+        size="sm"
+        href="https://www.helloasso.com/associations/hyperacousie-solidarite"
+        aria-label="Adhérer en formule premium via HelloAsso"
+        target="_blank"
+        rel="noopener"
+      >
+        J'adhère
+      </Button>
+      <div class="premium-images-container">
+        <img src="/carte%20handicap.webp" alt="Carte handicap auditif" loading="lazy" class="premium-image" />
+        <img src="/stickers.webp" alt="Stickers Handicap hyperacousie" loading="lazy" class="premium-image" />
+      </div>
+    </Card>
+
+    <Card
+      className="adhesion-card adhesion-card--gift"
+      subtitle="🎁 Une boîte de protections auditives offerte"
+      content="Pour chaque nouvelle adhésion, nous vous offrons sur demande, et dans la limite des stocks disponibles, une boîte de protections auditives."
+    >
+      <Button
+        variant="teal"
+        size="sm"
+        href="https://www.helloasso.com/associations/hyperacousie-solidarite"
+        aria-label="Adhérer à l'association via l'offre de bienvenue"
+        target="_blank"
+        rel="noopener"
+      >
+        J'adhère
+      </Button>
+    </Card>
+  </div>
+
+<p class="free-donation-text">Il est aussi possible de faire un don libre sans adhérer.</p>
 <div style="text-align:center;">
   <Button 
     variant="teal" 
@@ -33,7 +129,6 @@ import Button from "../Button/Button.astro";
     Adhérer / Faire un don
   </Button>
 </div>
-  <p> Pour chaque nouvelle adhésion, une boîte de boules quies cire ou mousse offerte sur demande et dans la limite des stocks disponibles.</p>
 
   <div class="donation-form-download">
     <Title text="Paiement par chèque ou virement" level="3" className="donation-form-title" />
