@@ -1,9 +1,57 @@
-.explanation {
+.premium-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.premium-bullet-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  margin-bottom: 0.5em;
+  font-size: 1.08rem;
+}
+.premium-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.7em;
+  height: 1.7em;
+}
+.solidaire-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.solidaire-bullet-icon,
+.premium-bullet-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+  margin-bottom: 0.5em;
+  font-size: 1.08rem;
+  justify-content: flex-start;
+}
+.solidaire-icon,
+.premium-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.5em;
+  min-height: 1.5em;
+  width: 1.5em;
+  height: 1.5em;
+  flex-shrink: 0;
+}
+.adhesion-page {
   margin: 2rem 0;
   padding: 1rem;
-  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  background-color: var(--color-coral-transparent);
 }
 
 .explanation ul {
@@ -15,6 +63,213 @@
   text-align: center;
 }
 
+.adhesion-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+  padding: 0 10rem;
+}
+
+.adhesion-card {
+  border: 2px solid var(--color-teal, teal);
+  background: var(--color-background-white, #fffff7);
+  border-radius: 10px;
+  position: relative;
+  height: auto;
+}
+
+.adhesion-card::before {
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  margin: 0.75rem auto 0;
+  padding: 0.2rem 0.55rem;
+  border-radius: 100px;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.adhesion-card--solidaire {
+  border-color: var(--color-teal, #009688);
+  background: linear-gradient(180deg, #f5fffd 0%, #ffffff 100%);
+}
+
+.adhesion-card--solidaire::before {
+  content: "Formule solidaire";
+  background: #e6f7f4;
+  color: #0a766f;
+}
+
+.adhesion-card--premium {
+  border-color: var(--color-coral, #ff6f61);
+  background: linear-gradient(180deg, #fff4f2 0%, #ffffff 100%);
+}
+
+.adhesion-card--premium::before {
+  content: "Formule premium";
+  background: #ffe8e5;
+  color: #b43f34;
+}
+
+.adhesion-card--gift {
+  grid-column: 1 / -1;
+  width: 100%;
+  margin: 0;
+  border-color: var(--color-teal, #009688);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.04) 0%, #ffffff 100%);
+}
+
+.adhesion-card--gift::before {
+  content: "Offre de bienvenue";
+  background: rgba(0, 0, 0, 0.1);
+  color: var(--color-black, #3c1914);
+}
+
+.adhesion-card--gift .card-content {
+  text-align: center;
+}
+
+.adhesion-card--gift .card-subtitle {
+  color: var(--color-teal, #009688);
+  margin: 0.75rem 0;
+  width: fit-content;
+  max-width: 100%;
+  min-width: 0;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  text-align: center;
+}
+
+.adhesion-card--gift .card-text {
+  margin: 0.25rem auto 1rem;
+  max-width: 58ch;
+  text-align: center;
+}
+
+.adhesion-card .card-content {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+.adhesion-card--solidaire .card-header {
+  display: contents;
+}
+
+.adhesion-card--solidaire .card-image {
+  display: flex;
+  justify-content: center;
+  order: 3;
+}
+
+.adhesion-card--solidaire .card-subtitle {
+  order: 1;
+  text-align: center;
+  margin: 0 0 1rem 0;
+}
+
+.adhesion-card--solidaire .card-list {
+  order: 2;
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.adhesion-card--solidaire .btn-base {
+  order: 4;
+  margin-top: 1rem;
+  align-self: center;
+}
+
+.adhesion-card--premium .card-content {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+.adhesion-card--premium .card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.adhesion-card--premium .card-image {
+  order: 2;
+}
+
+.adhesion-card--premium .card-subtitle {
+  order: 1;
+  text-align: center;
+  margin: 0;
+}
+
+.adhesion-card--premium .card-list {
+  order: 3;
+}
+
+.adhesion-card--premium .premium-images-container {
+  order: 4;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+  align-items: center;
+}
+
+.adhesion-card--premium .btn-base {
+  order: 5;
+  margin-top: auto;
+  align-self: center;
+}
+
+.adhesion-card .card-image img {
+  width: 100%;
+  max-width: 220px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 0;
+}
+
+.adhesion-card--solidaire .card-image img {
+  margin-bottom: 1rem;
+}
+
+.adhesion-card--premium .card-image {
+  display: none;
+}
+
+.premium-image {
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.adhesion-card .card-subtitle {
+  text-align: center;
+  color: var(--color-teal, #009688);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.adhesion-card--premium .card-subtitle {
+  color: var(--color-coral, #ff6f61);
+}
+
+.adhesion-card .card-list {
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.adhesion-card .btn-base {
+  margin-top: auto;
+  align-self: center;
+}
+
 .donation-form-download {
   margin-top: 2rem;
   display: flex;
@@ -22,8 +277,35 @@
   align-items: center;
 }
 
+.free-donation-text {
+  text-align: center;
+}
+
 @media (max-width: 900px) {
   .explanation {
     margin: 0;
+  }
+
+  .adhesion-cards {
+    grid-template-columns: 1fr;
+    padding: 0 0.25rem;
+    gap: 1rem;
+  }
+  .adhesion-card {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+  .solidaire-bullet-icon,
+  .premium-bullet-icon {
+    gap: 0.4em;
+    font-size: 1rem;
+  }
+  .solidaire-icon,
+  .premium-icon {
+    width: 1.3em;
+    height: 1.3em;
+    min-width: 1.3em;
+    min-height: 1.3em;
   }
 }

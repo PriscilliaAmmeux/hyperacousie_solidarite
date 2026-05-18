@@ -4,8 +4,8 @@ import Title from '../ui/Title/Title.astro';
 import '../styles/variables.css';
 import '../styles/adhesions-dons.css';
 import ImageMoney from '../ui/imageMoney/imageMoney.astro';
-import AdhesionsSupportGrid from '../components/AdhesionsSupportGrid/AdhesionsSupportGrid.astro';
 import PetiteBoutique from '../components/PetiteBoutique/PetiteBoutique.astro';
+import Donations from '../ui/Donations/Donations.astro';
 ---
 
 <Layout 
@@ -21,16 +21,19 @@ import PetiteBoutique from '../components/PetiteBoutique/PetiteBoutique.astro';
         <div class="adhesions-hero-text-block">
           <Title text="Adhésions et dons" level='2' />
           <p class="adhesions-hero-tagline">
-            Soutenez l'association Hyperacousie Solidarité : adhérez ou faites un don pour permettre nos actions et recevoir nos supports dédiés.
+            Soutenez l'association Hyperacousie Solidarité : 
           </p>
-          <Title text="Comment ça marche ?" level='3' />
+            adhérez ou faites un don pour permettre nos actions et recevoir nos supports dédiés.
+          <p></p>
+          
         </div>
         <img src="/Pastille-reconnu-d_intérêt-général.webp" alt="Pastille reconnu d'intérêt général" class="adhesions-recognition-badge" width="200" height="200" />
       </div>
     </div>
   </section>
 
-  <AdhesionsSupportGrid />
+       <Donations />
+
 
   <PetiteBoutique />
 
