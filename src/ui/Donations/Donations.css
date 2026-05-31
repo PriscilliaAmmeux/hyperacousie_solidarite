@@ -133,6 +133,9 @@
 
 .adhesion-card--gift .card-subtitle {
   color: var(--color-teal, #009688);
+  font-size: 1.4rem;
+  background: transparent;
+  box-shadow: none;
   margin: 0.75rem 0;
   width: fit-content;
   max-width: 100%;
