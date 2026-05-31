@@ -4,6 +4,7 @@ import '../../styles/variables.css';
 import './Donations.css';
 import Button from "../Button/Button.astro";
 import Card from "../../components/Card/Card.astro";
+import ImageMoney from "../imageMoney/imageMoney.astro";
 
 ---
 
@@ -114,9 +115,13 @@ import Card from "../../components/Card/Card.astro";
       </Button>
     </Card>
   </div>
-
-<p class="free-donation-text">Il est aussi possible de faire un don libre sans adhérer.</p>
 <div style="text-align:center;">
+  <ImageMoney width={100} height={100} />
+</div>
+<p class="free-donation-text">Il est aussi possible de faire un don libre sans adhérer</p>
+<p class="free-donation-text">Pour faire un don défiscalisable à 66 %</p>
+<div style="text-align:center;">
+  
   <Button 
     variant="teal" 
     size="sm"
@@ -131,7 +136,7 @@ import Card from "../../components/Card/Card.astro";
 </div>
 
   <div class="donation-form-download">
-    <Title text="Paiement par chèque ou virement" level="3" className="donation-form-title" />
+    <Title text="🏦 Paiement par chèque ou virement" level="3" className="donation-form-title" />
     <p>
       Pour tout paiement par chèque ou virement, merci de télécharger et compléter le formulaire ci-dessous, puis de le retourner à l’adresse indiquée.
     </p>

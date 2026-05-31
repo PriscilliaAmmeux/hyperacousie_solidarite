@@ -116,8 +116,8 @@
 /* ─── Articles section (full-bleed) ────────────────────────── */
 .experts-block--articles {
   width: 100%;
-  background: var(--color-coral-transparent);
-  padding: 4rem 1.5rem;
+  background: transparent;
+  padding: 1rem 1.5rem;
 }
 
 .experts-block-inner {
@@ -172,7 +172,7 @@
   }
 
   .experts-block--articles {
-    padding: 3rem 1.25rem;
+    padding: 1rem 1.25rem;
   }
 
   .experts-content {

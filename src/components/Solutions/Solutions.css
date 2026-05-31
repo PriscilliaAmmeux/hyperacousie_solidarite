@@ -102,3 +102,12 @@
   min-height: 320px;
   padding: 0 1rem;
 }
+
+.solution-card .card-subtitle {
+  font-size: 1.4rem;
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+  text-align: center;
+}

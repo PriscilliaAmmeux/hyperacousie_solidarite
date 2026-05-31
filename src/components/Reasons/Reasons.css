@@ -68,6 +68,11 @@
 
 .reason-card .card-subtitle {
   text-align: center;
+  font-size: 1.4rem;
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
   margin-bottom: 1rem;
 }
 
