@@ -1,21 +1,55 @@
 import { Swiper } from "swiper";
-import { Navigation } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 let pressVideoSwiper;
+let pressArticlesSwiper;
 
-function shufflePressCards() {
-  const grid = document.getElementById("press-grid");
-  if (!grid) return;
+function shufflePressSlides() {
+  const wrapper = document.querySelector(
+    ".press-articles-swiper .swiper-wrapper",
+  );
+  if (!wrapper) return;
 
-  const cards = Array.from(grid.children);
-  for (let i = cards.length - 1; i > 0; i -= 1) {
+  const slides = Array.from(wrapper.children);
+  for (let i = slides.length - 1; i > 0; i -= 1) {
     const j = Math.floor(Math.random() * (i + 1));
-    [cards[i], cards[j]] = [cards[j], cards[i]];
+    [slides[i], slides[j]] = [slides[j], slides[i]];
   }
 
-  cards.forEach((card) => grid.appendChild(card));
+  slides.forEach((slide) => wrapper.appendChild(slide));
+}
+
+function initPressArticlesSwiper() {
+  if (!document.querySelector(".press-articles-swiper")) return;
+
+  pressArticlesSwiper?.destroy(true, true);
+  pressArticlesSwiper = new Swiper(".press-articles-swiper", {
+    modules: [Navigation, Pagination],
+    slidesPerView: 1,
+    spaceBetween: 16,
+    loop: true,
+    navigation: {
+      nextEl: ".press-articles-nav-next",
+      prevEl: ".press-articles-nav-prev",
+    },
+    pagination: {
+      el: ".press-articles-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      700: {
+        slidesPerView: 2,
+        spaceBetween: 18,
+      },
+      1100: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+    },
+  });
 }
 
 function initPressVideoSwiper() {
@@ -35,7 +69,8 @@ function initPressVideoSwiper() {
 }
 
 function initPressSection() {
-  shufflePressCards();
+  shufflePressSlides();
+  initPressArticlesSwiper();
   initPressVideoSwiper();
 }
 

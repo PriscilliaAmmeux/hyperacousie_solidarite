@@ -75,6 +75,31 @@
   margin-left: 2rem;
 }
 
+.healthcare-header-layout {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.healthcare-header-layout .margin-text-healthcare {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.healthcare-header-image {
+  flex: 0 0 clamp(280px, 32vw, 420px);
+}
+
+.healthcare-header-image .image-with-actions {
+  margin: 0;
+}
+
+.healthcare-header-image .image-with-actions-image {
+  max-height: 320px;
+}
+
 .section-title {
   text-align: center;
 }
@@ -105,6 +130,20 @@
   .healthcare-voices {
     margin: 2rem 1rem;
     max-width: 100vw;
+  }
+  .healthcare-header-layout {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5rem;
+  }
+  .healthcare-header-image {
+    flex: none;
+    max-width: 520px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .healthcare-header-image .image-with-actions-image {
+    max-height: 280px;
   }
   .healthcare-voices-swiper {
     max-width: 100vw;

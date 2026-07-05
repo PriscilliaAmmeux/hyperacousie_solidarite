@@ -26,18 +26,29 @@ const voices = [
 ];
 ---
 <section id="soignants" class="healthcare-voices">
-  <header class="margin-text-healthcare">
-    <Title text="Paroles de soignants" level="2" className="mb-4 section-title"/>
-    <p>Cette rubrique rassemble des témoignages de personnes atteintes d’hyperacousie confrontées à l’incompréhension, à la minimisation ou à des paroles blessantes de la part de soignants. Ces situations sont loin d’être isolées.</p>
-    <p>
-      L’hyperacousie est encore mal connue, mais un patient a avant tout besoin d’être <span class="text-bold">écouté, cru et respecté</span>. Reconnaître la douleur, dire « je ne sais pas » et orienter vers un confrère compétent sont essentiels.</p>
-    <p class="text-bold">Ces témoignages visent à interpeller, à sensibiliser, mais aussi à rappeler le rôle primordial des soignants : accompagner, soutenir et aider, même quand on ne détient pas toutes les réponses.
-    </p>
-    <p>Un mot maladroit peut aggraver une détresse profonde. Une écoute bienveillante, au contraire, peut tout changer.
-    </p>
-    <p>Ces témoignages visent à <span class="text-bold">sensibiliser</span> et rappeler le rôle fondamental des soignants : <span class="text-bold">accompagner et soutenir, même sans toutes les réponses.</span>
-    </p>
-  </header>
+  <div class="healthcare-header-layout">
+    <header class="margin-text-healthcare">
+      <Title text="Paroles de soignants" level="2" className="mb-4 section-title"/>
+      <p>Cette rubrique rassemble des témoignages de personnes atteintes d’hyperacousie confrontées à l’incompréhension, à la minimisation ou à des paroles blessantes de la part de soignants. Ces situations sont loin d’être isolées.</p>
+      <p>
+        L’hyperacousie est encore mal connue, mais un patient a avant tout besoin d’être <span class="text-bold">écouté, cru et respecté</span>. Reconnaître la douleur, dire « je ne sais pas » et orienter vers un confrère compétent sont essentiels.</p>
+      <p class="text-bold">Ces témoignages visent à interpeller, à sensibiliser, mais aussi à rappeler le rôle primordial des soignants : accompagner, soutenir et aider, même quand on ne détient pas toutes les réponses.
+      </p>
+      <p>Un mot maladroit peut aggraver une détresse profonde. Une écoute bienveillante, au contraire, peut tout changer.
+      </p>
+      <p>Ces témoignages visent à <span class="text-bold">sensibiliser</span> et rappeler le rôle fondamental des soignants : <span class="text-bold">accompagner et soutenir, même sans toutes les réponses.</span>
+      </p>
+    </header>
+
+    <div class="healthcare-header-image">
+      <ImageWithActions
+        src={healthcareVoiceImage}
+        alt="Visuel parole de soignants"
+        openLabel="Ouvrir l'image"
+        showDownload={false}
+      />
+    </div>
+  </div>
 
 
 
@@ -59,12 +70,6 @@ const voices = [
   <div class="swiper-pagination"></div>
 </div>
 
-  <ImageWithActions
-    src={healthcareVoiceImage}
-    alt="Visuel parole de soignants"
-    openLabel="Ouvrir l'image"
-    showDownload={false}
-  />
 </section>
 
 <script src="./HealthCareVoice.js" />
