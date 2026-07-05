@@ -203,6 +203,40 @@
     padding: 1.2rem 0;
   }
 
+  .press-card {
+    transition: none;
+  }
+
+  .press-card:hover,
+  .press-card:focus-visible {
+    transform: none;
+    border-color: rgba(60, 25, 20, 0.08);
+    box-shadow: 0 14px 32px rgba(60, 25, 20, 0.08);
+  }
+
+  .press-card-image-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: visible;
+  }
+
+  .press-card img {
+    margin: 0 auto;
+  }
+
+  .press-card-badge {
+    position: static;
+    margin-top: 0.6rem;
+    align-self: center;
+    opacity: 1;
+    transform: none;
+  }
+
+  .press-card-content {
+    text-align: center;
+  }
+
   .press-video-wrapper {
     margin: 1rem 0;
   }
