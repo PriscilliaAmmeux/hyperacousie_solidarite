@@ -72,7 +72,7 @@ const pressArticles = [
 	},
 	{
 		title:"Témoignage d'Aurélien",
-		image: "/articles-presse/Article de presse Témoignage-Aurélien-Bruyat.webp",
+		image: "/articles-presse/Article de presse Témoignage-Aurélien Bruyat.webp",
 		source: "France-Monde",
 		profilePhoto: "/photo-aurélien.webp",
 	}
@@ -83,9 +83,13 @@ const pressArticles = [
 	<Title text="La presse parle de nous" level="2" className="mb-4 section-title" />
 	<div id="press-grid" class="press-grid">
 		{pressArticles.map((article, index) => (
-			<a href={article.image} download={`${article.title}.webp`} class="press-card">
+			<a href={article.image} target="_blank" rel="noopener noreferrer" class="press-card">
 				<div class="press-card-image-wrapper">
 					<img src={article.profilePhoto ?? createProfilePreview(avatarVariants[index % avatarVariants.length])} alt={article.profilePhoto ? `Photo de ${article.title}` : `Illustration profil pour ${article.title}`} loading="lazy" />
+				</div>
+				<div class="press-card-content">
+					<p>{article.title}</p>
+					<span>{article.source}</span>
 					<div class="press-card-badge">
 						<svg class="pdf-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 							<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
@@ -94,10 +98,6 @@ const pressArticles = [
 						</svg>
 						<span>Télécharger</span>
 					</div>
-				</div>
-				<div class="press-card-content">
-					<p>{article.title}</p>
-					<span>{article.source}</span>
 				</div>
 			</a>
 		))}
