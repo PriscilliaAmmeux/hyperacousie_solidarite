@@ -1,0 +1,60 @@
+---
+import './TypeHyperacousie.css';
+import Title from '../../ui/Title/Title.astro';
+
+const types = [
+  {
+    src: '/type-hyperacousie/lhyperacousie sonore.webp',
+    alt: "Illustration de l'hyperacousie sonore",
+    title: "L'hyperacousie sonore",
+  },
+  {
+    src: '/type-hyperacousie/lhyperacousie douloureuse.webp',
+    alt: "Illustration de l'hyperacousie douloureuse",
+    title: "L'hyperacousie douloureuse",
+  },
+  {
+    src: '/type-hyperacousie/lhyperacousie mixte.webp',
+    alt: "Illustration de l'hyperacousie mixte",
+    title: "L'hyperacousie mixte",
+  },
+];
+---
+
+<section class="type-hyperacousie-section">
+  <Title
+    text="Les types d'hyperacousie"
+    className="section-title"
+    level="2"
+  />
+
+  <div class="type-hyperacousie-grid">
+    {types.map((type) => (
+      <figure class="type-hyperacousie-card">
+        <a
+          href={type.src}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="type-hyperacousie-link"
+          aria-label={`Ouvrir ${type.title} dans un nouvel onglet`}
+        >
+          <img
+            src={type.src}
+            alt={type.alt}
+            class="type-hyperacousie-image"
+            loading="lazy"
+          />
+        </a>
+        <figcaption>{type.title}</figcaption>
+        <a
+          href={type.src}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="type-hyperacousie-download"
+        >
+          Ouvrir l'image pour la télécharger
+        </a>
+      </figure>
+    ))}
+  </div>
+</section>

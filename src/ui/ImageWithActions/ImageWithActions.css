@@ -1,0 +1,79 @@
+.image-with-actions {
+  width: 100%;
+  max-width: 980px;
+  margin: 2rem auto;
+}
+
+.image-with-actions-link {
+  display: block;
+  width: 100%;
+  background: #f4f7f7;
+  border: 2px solid rgba(18, 182, 161, 0.3);
+  border-radius: 14px;
+  padding: 0.75rem;
+}
+
+.image-with-actions-image {
+  display: block;
+  width: 100%;
+  max-height: 85vh;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.image-with-actions-buttons {
+  margin-top: 0.9rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.image-with-actions-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 1rem;
+  border-radius: 8px;
+  background: #12b6a1;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.image-with-actions-btn:hover {
+  background: #0f9d8a;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 900px) {
+  .image-with-actions-image {
+    max-height: 70vh;
+  }
+}
+
+@media (max-width: 700px) {
+  .image-with-actions {
+    margin-bottom: 2rem;
+  }
+
+  .image-with-actions-link {
+    padding: 0.5rem;
+  }
+
+  .image-with-actions-image {
+    max-height: 62vh;
+  }
+
+  .image-with-actions-buttons {
+    gap: 0.5rem;
+  }
+
+  .image-with-actions-btn {
+    width: 100%;
+  }
+}

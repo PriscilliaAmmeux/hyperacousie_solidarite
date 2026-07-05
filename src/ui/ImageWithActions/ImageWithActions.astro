@@ -1,0 +1,59 @@
+---
+import "./ImageWithActions.css";
+
+interface Props {
+  src: string;
+  alt: string;
+  openLabel?: string;
+  downloadLabel?: string;
+  downloadName?: string;
+  showDownload?: boolean;
+}
+
+const {
+  src,
+  alt,
+  openLabel = "Ouvrir l'image",
+  downloadLabel = "Telecharger l'image",
+  downloadName,
+  showDownload = false
+} = Astro.props;
+---
+
+<div class="image-with-actions">
+  <a
+    href={src}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="image-with-actions-link"
+    aria-label={`${openLabel} dans un nouvel onglet`}
+  >
+    <img
+      src={src}
+      alt={alt}
+      class="image-with-actions-image"
+      loading="lazy"
+    />
+  </a>
+
+  <div class="image-with-actions-buttons">
+    <a
+      href={src}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="image-with-actions-btn"
+    >
+      {openLabel}
+    </a>
+
+    {showDownload && (
+      <a
+        href={src}
+        download={downloadName}
+        class="image-with-actions-btn"
+      >
+        {downloadLabel}
+      </a>
+    )}
+  </div>
+</div>
