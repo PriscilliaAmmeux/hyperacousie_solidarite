@@ -58,11 +58,29 @@ const pressArticles = [
 		source: "Le journal des Sables",
 		profilePhoto: "/photo-presse/photo-Nathan.webp",
 	},
+	{
+		title:"Témoignage de Mélina",
+		image: "/articles-presse/Article de presse Témoignage-Mélina.webp",
+		source: "",
+		profilePhoto: "/photo-presse/photo-Mélina.webp",
+	},
+	{
+		title:"Témoignage d'Aurélien",
+		image: "/articles-presse/Article de presse Témoignage-Aurélien.webp",
+		source: "Le parisien",
+		profilePhoto: "/photo-aurélien.webp",
+	},
+	{
+		title:"Témoignage d'Aurélien",
+		image: "/articles-presse/Article de presse Témoignage-Aurélien-Bruyat.webp",
+		source: "France-Monde",
+		profilePhoto: "/photo-aurélien.webp",
+	}
 ];
 ---
 
 <section class="press-section">
-	<Title text="Presse" level="2" className="mb-4 section-title" />
+	<Title text="La presse parle de nous" level="2" className="mb-4 section-title" />
 	<div id="press-grid" class="press-grid">
 		{pressArticles.map((article, index) => (
 			<a href={article.image} download={`${article.title}.webp`} class="press-card">
@@ -86,17 +104,38 @@ const pressArticles = [
 	</div>
 
 	<div class="press-video-wrapper">
-		<Title text="Interview sur France Inter" level="2" className="mb-4 section-title" />
-		<div class="press-video-frame">
-			<iframe
-				class="press-video"
-				src="https://www.youtube.com/embed/cn6T4Vt6XuA"
-				title="Interview sur France Inter"
-				loading="lazy"
-				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-				referrerpolicy="strict-origin-when-cross-origin"
-				allowfullscreen
-			></iframe>
+		<Title text="Radio et podcast" level="2" className="mb-4 section-title" />
+		<div class="swiper press-video-swiper">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<div class="press-video-frame">
+						<iframe
+							class="press-video"
+							src="https://www.youtube.com/embed/cn6T4Vt6XuA"
+							title="Interview sur France Inter"
+							loading="lazy"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							referrerpolicy="strict-origin-when-cross-origin"
+							allowfullscreen
+						></iframe>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="press-video-frame">
+						<iframe
+							class="press-video"
+							src="https://www.youtube.com/embed/Lw-RGtAhDP4"
+							title="Interview sur Actu"
+							loading="lazy"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							referrerpolicy="strict-origin-when-cross-origin"
+							allowfullscreen
+						></iframe>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-button-prev press-video-nav-prev"></div>
+			<div class="swiper-button-next press-video-nav-next"></div>
 		</div>
 	</div>
 </section>
