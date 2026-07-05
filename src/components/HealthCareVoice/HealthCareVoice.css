@@ -10,7 +10,9 @@
   align-items: flex-start;
   justify-content: space-between;
   height: 450px;
-  transition: height 0.3s ease, background 0.3s;
+  transition:
+    height 0.3s ease,
+    background 0.3s;
   position: relative;
 }
 
@@ -49,7 +51,9 @@
   cursor: pointer;
   font-size: 0.9em;
   font-weight: 500;
-  transition: background 0.3s, transform 0.2s;
+  transition:
+    background 0.3s,
+    transform 0.2s;
   align-self: center;
   margin-top: auto;
 }
@@ -67,8 +71,8 @@
   display: none;
 }
 
-.margin-text-healthcare{
-  margin-left:2rem;
+.margin-text-healthcare {
+  margin-left: 2rem;
 }
 
 .section-title {
@@ -137,12 +141,12 @@
     padding: 1rem;
     font-size: 1em;
   }
-  
+
   .voice-content.collapsed {
     max-height: 250px;
   }
   .margin-text-healthcare {
-   margin: 0 1rem 2rem 1rem;
+    margin: 0 1rem 2rem 1rem;
   }
   .section-title {
     font-size: 1.3rem;

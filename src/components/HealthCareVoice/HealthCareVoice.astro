@@ -1,8 +1,11 @@
 ---
 import Title from "../../ui/Title/Title.astro";
+import ImageWithActions from "../../ui/ImageWithActions/ImageWithActions.astro";
 import './HealthCareVoice.css';
 import '../../styles/variables.css';
 import { marked } from 'marked';
+
+const healthcareVoiceImage = '/Image%20maltraitance%20pour%20_parole%20de%20soignants_.webp';
 
 const voices = [
   "« Cela faisait à peine deux mois que j’avais déclaré tous les symptômes. Acouphènes, hyperacousie douloureuse avec des brûlures dans les oreilles même dans le silence. Je suis convoquée à la médecine conseil. Le médecin me regarde, je porte mon casque anti-bruit, il me fixe puis me dit : **« Acouphène…acouphène, hyperacousie… (tout en regardant sa feuille), je n’ai aucune case à cocher pour ça !! alors on fait comment ? Comment voyez-vous votre avenir ? »** J’étais au plus mal de ma vie, j’ai été profondément choquée, je ne savais même pas quoi répondre. J’étais au début de la maladie et c’est à ce moment-là que je me suis dit que le chemin allait être très compliqué. Je suis sortie en pleur avec une envie d’en finir. »",
@@ -36,6 +39,8 @@ const voices = [
     </p>
   </header>
 
+
+
    <div class="swiper healthcare-voices-swiper">
   <div class="swiper-wrapper">
     {voices.map((voice, index) => (
@@ -53,6 +58,13 @@ const voices = [
   <div class="swiper-button-next"></div>
   <div class="swiper-pagination"></div>
 </div>
+
+  <ImageWithActions
+    src={healthcareVoiceImage}
+    alt="Visuel parole de soignants"
+    openLabel="Ouvrir l'image"
+    showDownload={false}
+  />
 </section>
 
 <script src="./HealthCareVoice.js" />
