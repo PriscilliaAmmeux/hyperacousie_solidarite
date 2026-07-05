@@ -42,12 +42,6 @@
   box-shadow: 0 18px 40px rgba(60, 25, 20, 0.14);
 }
 
-.press-card:hover .press-card-badge,
-.press-card:focus-visible .press-card-badge {
-  opacity: 1;
-  transform: scale(1);
-}
-
 .press-card-image-wrapper {
   position: relative;
   width: calc(100% - 2rem);
@@ -73,24 +67,22 @@
 }
 
 .press-card-badge {
-  position: absolute;
-  bottom: 0.75rem;
-  right: 0.75rem;
+  position: static;
   display: flex;
+  align-self: center;
+  justify-self: center;
   align-items: center;
   gap: 0.5rem;
   background: rgba(18, 182, 168, 0.95);
   color: white;
   padding: 0.5rem 0.75rem;
+  margin-top: 0.25rem;
+  width: fit-content;
   border-radius: 12px;
   font-size: 0.85rem;
   font-weight: 600;
-  backdrop-filter: blur(4px);
-  opacity: 0;
-  transform: scale(0.95);
-  transition:
-    opacity 0.2s ease,
-    transform 0.2s ease;
+  opacity: 1;
+  transform: none;
   cursor: pointer;
 }
 
@@ -226,11 +218,8 @@
   }
 
   .press-card-badge {
-    position: static;
     margin-top: 0.6rem;
     align-self: center;
-    opacity: 1;
-    transform: none;
   }
 
   .press-card-content {
