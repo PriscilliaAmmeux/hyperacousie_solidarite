@@ -218,8 +218,11 @@
   }
 
   .press-card-badge {
+    position: static;
     margin-top: 0.6rem;
     align-self: center;
+    opacity: 1;
+    transform: none;
   }
 
   .press-card-content {
