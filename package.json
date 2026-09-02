@@ -14,7 +14,7 @@
   "dependencies": {
     "@astrojs/react": "^6.0.4",
     "@emailjs/browser": "^4.4.1",
-    "astro": "^7.0.6",
+    "astro": "^7.2.9",
     "marked": "^18.0.11",
     "react": "^19.1.1",
     "react-dom": "^19.2.8",
