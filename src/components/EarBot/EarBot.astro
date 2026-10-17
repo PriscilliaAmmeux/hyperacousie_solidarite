@@ -1,0 +1,71 @@
+---
+import Button from '../../ui/Button/Button.astro';
+import './EarBot.css';
+
+const botUrl = 'https://enstips.com/fr/earbot-your-hyperacusis-ai-agent/';
+const botTrackingUrl = 'https://enstips.com/fr/earbot-your-hyperacusis-ai-agent/?fbclid=IwY2xjawUzdchleHRuA2FlbQIxMQBwZG9mBXNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR6vC7PXP6HZfKunSsQtuQJ7ZWEpcha5H1wjsGrZV71IiG6qfbXWglDx1IST0g_aem_G7pDSNE9nO5kNpY77WDcwQ';
+const aurelienFacebookUrl = 'https://www.facebook.com/groups/1038131074387271/user/654609752/?__cft__[0]=AZhqypD9DJSfnVfKAW9I_tl6m8Q_uFJ054VY-Y3Wskg7dmnUgpgf_lV9-q4kzbU2lqxRUpEcjhdvaaRMp9_mfA3yyTYbGZxpOPau346GuC2_CCWt4Hg9b0m3CnHQIbN_IO6phBaANzFXbw&__tn__=-]K-R';
+---
+
+<section class="earbot-feature" id="earbot" aria-labelledby="earbot-title">
+	<div class="earbot-feature-content">
+		<p class="earbot-eyebrow">🤖 Un robot IA pour répondre à vos questions sur l’hyperacousie</p>
+		<h2 id="earbot-title">Le BOT d’aurélien</h2>
+		<p>Le voici, le voilà ! @tout le monde</p>
+		<p>
+			Vous vous posez une question sur l’hyperacousie ? Sur ses mécanismes, ses symptômes, les recherches scientifiques ou encore les connaissances disponibles aujourd’hui ?
+		</p>
+		<p>
+			<a href={aurelienFacebookUrl} target="_blank" rel="noopener noreferrer">Aurélien Rumiano</a> a créé EarBot, un agent conversationnel basé sur 26 études scientifiques consacrées à l’hyperacousie, dont les plus récentes, afin de proposer des réponses accessibles et de contribuer à mieux faire connaître cette pathologie.
+		</p>
+
+		<h3>😎 Ecrivez lui en français, il vous répondra en français !</h3>
+		<p>
+			💬 L’objectif est simple : permettre à chacun de poser ses questions, de mieux comprendre l’hyperacousie et de vulgariser les données scientifiques disponibles.
+		</p>
+		<p>
+			Le bot peut également être partagé avec des professionnels de santé, afin de leur permettre d’accéder plus facilement à des informations sur l’hyperacousie et, ainsi contribuer à une meilleure compréhension de cette maladie.
+		</p>
+
+		<h3>⚠️ Un outil informatif, pas un avis médical</h3>
+		<p>Ce bot ne remplace pas un avis médical et peut parfois rester imparfait.</p>
+		<p>
+			Il s’agit avant tout d’un outil informatif et de vulgarisation des données scientifiques, et non d’un outil de diagnostic ou de prise en charge médicale.
+		</p>
+
+		<h3>💡 Et le fonctionnement de ce bot ?</h3>
+		<p>
+			Chaque réponse générée coûte environ 1 centime. Jusqu’à présent, Aurélien prend personnellement en charge ces frais, de manière totalement désintéressée, afin que l’outil reste accessible gratuitement à tous.
+		</p>
+		<p>
+			👉 L’utilisation du bot est gratuite pour l’utilisateur : aucun paiement ne vous sera demandé pour poser vos questions.
+		</p>
+		<p>
+			Afin de permettre au bot de rester accessible au plus grand nombre et d’éviter les abus, un nombre maximal de questions par jour et par utilisateur pourra être mis en place.
+		</p>
+		<p>
+			❤️ Si certaines personnes souhaitent malgré tout participer volontairement aux frais de fonctionnement et aider Aurélien à continuer à faire vivre cet outil, un petit don est possible directement depuis la page du bot.
+		</p>
+		<p>Bien sûr, aucun don n’est obligatoire pour utiliser EarBot.</p>
+
+		<h3>🔗 Découvrez EarBot et posez-lui vos questions :</h3>
+		<div class="earbot-links">
+			<Button
+				class="earbot-cta"
+				variant="teal"
+				size="md"
+				href={botUrl}
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				Découvrir EarBot et poser vos questions
+			</Button>
+		</div>
+
+		<p>
+			Et surtout, n’hésitez pas à nous faire vos retours : questions, remarques, suggestions… vos retours sont précieux pour faire évoluer l’outil.
+		</p>
+		<p>Le lien du bot sera également disponible sur le site de l’association.</p>
+		<p class="earbot-thanks">🙏🏻 Un grand merci à Aurélien pour son travail.</p>
+	</div>
+</section>

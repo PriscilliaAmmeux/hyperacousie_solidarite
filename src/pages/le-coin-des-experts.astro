@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Title from '../ui/Title/Title.astro';
-import Button from '../ui/Button/Button.astro';
+import EarBot from '../components/EarBot/EarBot.astro';
 import ScientificArticle from '../components/ScientificArticle/ScientificArticle.astro';
 import '../components/ScientificArticle/ScientificArticle.css';
 import '../styles/le-coin-des-experts.css';
@@ -19,38 +19,7 @@ description="Découvrez les conseils et analyses d'experts en hyperacousie : aud
 		</div>
 	</section>
 
-	<section class="earbot-feature" id="earbot" aria-labelledby="earbot-title">
-		<div class="earbot-feature-content">
-			<p class="earbot-eyebrow">🤖 Un outil pour explorer les connaissances scientifiques</p>
-			<h2 id="earbot-title">Découvrez EarBot, l’agent IA dédié à l’hyperacousie</h2>
-			<p>
-				Créé par Aurélien Rumiano, EarBot répond en français à vos questions sur les mécanismes,
-				les symptômes et la recherche sur l’hyperacousie. Ses réponses s’appuient sur 26 études
-				scientifiques consacrées à cette pathologie.
-			</p>
-			<p>
-				L’outil est gratuit pour les utilisateurs. Chaque réponse coûte environ un centime,
-				pris en charge jusqu’ici par son créateur. Un don facultatif peut être proposé depuis
-				la page du bot pour contribuer à ses frais de fonctionnement ; aucun paiement n’est
-				requis pour poser des questions.
-			</p>
-			<Button
-				class="earbot-cta"
-				variant="teal"
-				size="md"
-				href="https://enstips.com/fr/earbot-your-hyperacusis-ai-agent/"
-				target="_blank"
-				rel="noopener noreferrer"
-			>
-				Poser une question à EarBot ↗
-			</Button>
-			<p class="earbot-disclaimer">
-				<strong>À savoir :</strong> EarBot est un outil d’information et de vulgarisation. Il ne
-				remplace pas un avis médical et ne permet ni diagnostic ni prise en charge médicale ;
-				ses réponses peuvent être imparfaites.
-			</p>
-		</div>
-	</section>
+	<EarBot />
 	<ScientificResourcesTestimonials />
 
 	<section class="experts-block--articles" aria-labelledby="articles-scientifiques-title">
