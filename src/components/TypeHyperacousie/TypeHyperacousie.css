@@ -51,6 +51,14 @@
   color: #0a4543;
 }
 
+.margin-page-comprendre + .margin-page-comprendre {
+  margin-top: 1.5rem;
+}
+
+.type-hyperacousie-grid + .margin-page-comprendre {
+  margin-top: 2rem;
+}
+
 @media (max-width: 900px) {
   .type-hyperacousie-section {
     margin: 2rem 1rem;
@@ -62,5 +70,8 @@
 
   .type-hyperacousie-image {
     height: 280px;
+  }
+  .margin-page-comprendre {
+    margin: 2rem 2.5rem;
   }
 }

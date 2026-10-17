@@ -8,7 +8,7 @@ import ImageMoney from "../imageMoney/imageMoney.astro";
 
 ---
 
-<section class="adhesion-page">
+<section class="adhesion-page" id="donations">
   <Title text="Choisir mon adhésion" level='3' className="explanation-title"/>
 
   <div class="adhesion-cards">
@@ -98,22 +98,7 @@ import ImageMoney from "../imageMoney/imageMoney.astro";
       </div>
     </Card>
 
-    <Card
-      className="adhesion-card adhesion-card--gift"
-      subtitle="🎁 Une boîte de protections auditives offerte"
-      content="Pour chaque nouvelle adhésion, nous vous offrons sur demande, et dans la limite des stocks disponibles, une boîte de protections auditives."
-    >
-      <Button
-        variant="teal"
-        size="sm"
-        href="https://www.helloasso.com/associations/hyperacousie-solidarite"
-        aria-label="Adhérer à l'association via l'offre de bienvenue"
-        target="_blank"
-        rel="noopener"
-      >
-        J'adhère
-      </Button>
-    </Card>
+    
   </div>
 <div style="text-align:center;">
   <ImageMoney width={100} height={100} />
