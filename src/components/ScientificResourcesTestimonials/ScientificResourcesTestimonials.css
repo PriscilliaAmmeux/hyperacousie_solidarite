@@ -92,7 +92,7 @@
   margin-bottom: 1rem;
 }
 
-.btn-base {
+:where(.resource-custom-card) .btn-base {
   display: inline-flex;
   align-items: center;
   gap: 0.5em;
@@ -102,39 +102,37 @@
   font-size: 0.95rem;
   border: none;
   cursor: pointer;
-  background: #f6f7fa;
-  color: #136dad;
   transition: background 0.2s, color 0.2s;
   margin-top: auto;
   align-self: center;
 }
 
-.btn-blue {
+.resource-custom-card .btn-blue {
   background: none;
   color: #0074d9;
   border: none;
 }
-.btn-blue:hover {
+.resource-custom-card .btn-blue:hover {
   background: none;
   color: #005fa3;
   border: none;
 }
-.btn-gray {
+.resource-custom-card .btn-gray {
   background: #f6f7fa;
   color: #0074d9;
   border: none;
 }
-.btn-gray:hover {
+.resource-custom-card .btn-gray:hover {
   background: #e0e0e0;
   color: #005fa3;
   border: none;
 }
-.btn-tealOpacity {
+.resource-custom-card .btn-tealOpacity {
   background: rgba(18, 182, 168, 0.5);
   color: #3c1914;
   border: none;
 }
-.btn-base svg {
+.resource-custom-card .btn-base svg {
   color: #0074d9;
   font-size: 1.1em;
   vertical-align: middle;

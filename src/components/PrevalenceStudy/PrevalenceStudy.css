@@ -1,0 +1,176 @@
+.prevalence-study {
+  scroll-margin-top: calc(var(--header-height, 120px) + 1rem);
+  padding: 3rem 1.5rem !important;
+  }
+
+.prevalence-study__content {
+  max-width: 900px;
+  margin: 0 auto !important;
+  padding: 2.5rem !important;
+  border: 1px solid rgba(18, 182, 168, 0.2);
+  border-radius: 1.5rem;
+  background: var(--color-background-white, #fffff7);
+  box-shadow: 0 16px 44px rgba(14, 75, 70, 0.1);
+}
+
+.prevalence-study__eyebrow {
+  margin-bottom: 0.75rem !important;
+  color: #087d74;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.prevalence-study__eyebrow span {
+  margin-right: 0.35rem;
+}
+
+.prevalence-study h2 {
+  margin-bottom: 1.5rem !important;
+  color: #145b55;
+  font-size: clamp(1.65rem, 3vw, 2.35rem);
+  line-height: 1.2;
+  text-align: center;
+}
+
+.prevalence-study__copy {
+  display: grid;
+  gap: 1rem;
+  color: #293b3a;
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.prevalence-study__copy p,
+.prevalence-study__appeal p {
+  color: inherit;
+}
+
+.prevalence-study__appeal {
+  display: grid;
+  justify-items: center;
+  gap: 1rem;
+  margin-top: 1.75rem !important;
+  padding: 1.5rem !important;
+  border-left: 4px solid var(--color-coral, #ff6f61);
+  border-radius: 0.75rem;
+  background: #fff4f1;
+  color: #293b3a;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.prevalence-study__appeal > p:first-child {
+  font-weight: 700;
+}
+
+.prevalence-study__tax-note {
+  font-size: 0.92rem;
+}
+
+.prevalence-study__cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem !important;
+}
+
+.prevalence-study__card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 0;
+  padding: 1.25rem !important;
+  border: 1px solid rgba(18, 182, 168, 0.22);
+  border-radius: 1rem;
+  background: #fff;
+  text-align: center;
+}
+
+.prevalence-study__card h3 {
+  color: #145b55;
+  font-size: 1.05rem;
+  line-height: 1.45;
+}
+
+.prevalence-study__video-placeholder,
+.prevalence-study__donation-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 0.7rem;
+}
+
+.prevalence-study__video-placeholder {
+  flex-direction: column;
+  gap: 0.55rem;
+  background: linear-gradient(135deg, #d7efec, #e6f3f8);
+  color: #145b55;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.prevalence-study__play-icon {
+  display: grid;
+  width: 3.25rem;
+  height: 3.25rem;
+  place-items: center;
+  padding-left: 0.2rem;
+  border-radius: 50%;
+  background: var(--color-teal, #12b6a8);
+  color: white;
+  font-size: 1.2rem;
+}
+
+.prevalence-study__donation-link {
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.prevalence-study__donation-link img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.prevalence-study__donation-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(14, 75, 70, 0.18);
+}
+
+.prevalence-study__donation-link:focus-visible {
+  outline: 3px solid #145b55;
+  outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .prevalence-study {
+    padding: 2rem 1rem !important;
+  }
+
+  .prevalence-study__content {
+    padding: 1.4rem !important;
+    border-radius: 1rem;
+  }
+
+  .prevalence-study__copy,
+  .prevalence-study__appeal {
+    font-size: 0.98rem;
+  }
+
+  .prevalence-study__cards {
+    grid-template-columns: 1fr;
+  }
+
+  .prevalence-study__appeal {
+    padding: 1rem !important;
+  }
+}
