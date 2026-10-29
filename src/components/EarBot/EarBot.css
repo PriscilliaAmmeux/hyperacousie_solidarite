@@ -1,0 +1,79 @@
+.earbot-feature {
+  max-width: 1050px;
+  margin: 0 auto 2rem;
+  padding: 0 1.5rem;
+}
+
+.earbot-feature-content {
+  padding: clamp(1.5rem, 4vw, 3rem);
+  border: 1px solid rgba(18, 182, 168, 0.28);
+  border-radius: 20px;
+  background: linear-gradient(135deg, #f4fffd 0%, #fffaf8 100%);
+  box-shadow: 0 12px 32px rgba(60, 25, 20, 0.07);
+}
+
+.earbot-feature h2 {
+  margin-bottom: 1rem !important;
+  color: var(--color-black);
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  line-height: 1.25;
+}
+
+.earbot-feature-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 180px;
+  align-items: center;
+  gap: 2rem;
+}
+
+.earbot-feature p {
+  margin-top: 0.75rem !important;
+  color: #5c4a43 !important;
+  line-height: 1.7;
+}
+
+.earbot-image-button {
+  display: block;
+  overflow: hidden;
+  border: 0;
+  border-radius: 18px;
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.earbot-image-button img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.earbot-image-button:hover {
+  transform: translateY(-3px);
+}
+
+.earbot-image-button:focus-visible {
+  outline: 3px solid #0c7a72;
+  outline-offset: 4px;
+}
+
+@media (max-width: 768px) {
+  .earbot-feature {
+    margin-bottom: 1rem;
+    padding: 0 1.25rem;
+  }
+
+  .earbot-feature-content {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .earbot-feature-layout {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .earbot-image-button {
+    width: min(100%, 220px);
+    margin: 0 auto;
+  }
+}

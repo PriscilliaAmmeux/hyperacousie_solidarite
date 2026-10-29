@@ -1,0 +1,43 @@
+---
+import './EarBot.css';
+
+const botUrl = 'https://enstips.com/fr/earbot-your-hyperacusis-ai-agent/';
+const botImageUrl = 'https://enstips.com/wp-content/uploads/2026/09/earbot.webp';
+---
+
+<section class="earbot-feature" id="earbot" aria-labelledby="earbot-title">
+	<div class="earbot-feature-content">
+		<h2 id="earbot-title">🤖 Un robot IA pour répondre à vos questions sur l’hyperacousie</h2>
+		<div class="earbot-feature-layout">
+			<div class="earbot-feature-copy">
+				<p>
+					Vous avez des questions sur l’hyperacousie ? Découvrez EarBot, un agent conversationnel créé par Aurélien et basé sur 26 études scientifiques consacrées à l’hyperacousie, dont les plus récentes.
+				</p>
+				<p>
+					Posez vos questions en français pour mieux comprendre les mécanismes de l’hyperacousie, ses symptômes et les connaissances scientifiques actuelles.
+				</p>
+				<p>
+					💡 Un outil gratuit, accessible à tous, qui peut également aider les professionnels de santé à mieux comprendre cette pathologie.
+				</p>
+				<p>
+					⚠️ EarBot est un outil d’information et de vulgarisation scientifique. Il ne remplace pas un avis médical et ses réponses peuvent comporter des imprécisions.
+				</p>
+			</div>
+			<a
+				class="earbot-image-button"
+				href={botUrl}
+				target="_blank"
+				rel="noopener noreferrer"
+				aria-label="Découvrir EarBot et poser vos questions (ouvre un nouvel onglet)"
+			>
+				<img
+					src={botImageUrl}
+					alt="Photo d’EarBot, le robot IA spécialisé dans l’hyperacousie"
+					width="1024"
+					height="1024"
+					loading="lazy"
+				/>
+			</a>
+		</div>
+	</div>
+</section>
