@@ -7,6 +7,7 @@ import Button from '../../ui/Button/Button.astro';
 import Banner from '../Banner/Banner.astro';
 
 const { currentPath = '' } = Astro.props;
+const shopUrl = 'https://www.helloasso.com/associations/hyperacousie-solidarite/boutiques/depliant-hyperacousie-solidarite';
 
 // Structure complète de la navigation pour le menu global
 const navigationStructure = [
@@ -55,6 +56,7 @@ const navigationStructure = [
     title: "Le coin des experts",
     href: "/le-coin-des-experts",
     items: [
+      { label: "Découvrir EarBot", href: "/le-coin-des-experts#earbot" },
       { label: "Articles scientifiques", href: "/le-coin-des-experts#articles-scientifiques" },
       { label: "Recherche & essais cliniques", href: "/le-coin-des-experts#recherche-essais" }
     ]
@@ -179,6 +181,9 @@ const navigationStructure = [
         <span class="cta-label-desktop">Adhérer / Faire un don</span>
         <span class="cta-label-mobile">Adhésion<br />Don</span>
       </Button>
+        <Button class="shop-navbar-cta" href={shopUrl} target="_blank" rel="noopener noreferrer" variant="coral" size="sm">
+        Accéder à la boutique
+      </Button>
     </section>
   </nav>
 
@@ -229,6 +234,16 @@ const navigationStructure = [
           aria-label="Adhérer à l'association ou faire un don via HelloAsso"
         >
           Adhérer / Faire un don
+        </Button>
+        <Button
+          class="shop-menu-cta"
+          href={shopUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          variant="coral"
+          size="md"
+        >
+          Accéder à la boutique
         </Button>
       </div>
     </div>

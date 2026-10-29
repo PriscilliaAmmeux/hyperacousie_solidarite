@@ -1,31 +1,66 @@
 ---
-import Button from "../Button/Button.astro";
-
 ---
 
-<div style="display: flex; gap: 2rem; margin: 3rem auto; padding: 0 1rem; max-width: 1200px; flex-wrap: wrap; justify-content: center;">
-  <section id="conseils" style="text-align:center; padding: 2.5rem; flex: 1; min-width: 300px; max-width: 500px; background: #fff; border: 3px solid var(--color-teal); border-radius: 12px;">
-    <p style="font-size: 1.2rem; margin-bottom: 1.5rem; color: var(--color-black); font-weight: 500;">
-      💁‍♀️ Conseils pratiques & repères 
-    </p>
-    <Button
-      variant="teal"
-      size="sm"
-      href="/fiches/fiches-pratiques"
-    >
-     Ici retrouvez (infos, conseils, bonnes pratiques) →
-    </Button>
-  </section>
-  <section id="aides" style="text-align:center; padding: 2.5rem; flex: 1; min-width: 300px; max-width: 500px; background: #fff; border: 3px solid var(--color-teal); border-radius: 12px;">
-    <p style="font-size: 1.2rem; margin-bottom: 1.5rem; color: var(--color-black); font-weight: 500;">
-      👩‍💻  Aides, démarches & accompagnement
-    </p>
-    <Button
-      variant="teal"
-      size="sm"
-      href="/fiches/fiches-reflexes"
-    >
-      ici retrouvez (démarches, droits, administratif) →
-    </Button>
-  </section>
-</div>
+<section class="section-fiches" id="conseils">
+  <a
+    class="section-fiches-link"
+    href="/fiches/fiches-pratiques"
+    aria-label="Découvrir les fiches pratiques"
+  >
+    <img
+      src="/guide-et-fiches.webp"
+      alt="Guide et fiches pratiques : découvrir toutes les fiches pour mieux vivre avec l’hyperacousie"
+      loading="lazy"
+    />
+  </a>
+  <a
+    class="section-fiches-link"
+    id="aides"
+    href="/fiches/fiches-reflexes"
+    aria-label="Découvrir les fiches aides et démarches"
+  >
+    <img
+      src="/aides-et-demarches.webp"
+      alt="Aides et démarches : accéder aux fiches réflexes"
+      loading="lazy"
+    />
+  </a>
+</section>
+
+<style>
+  .section-fiches {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+  }
+
+  .section-fiches-link {
+    display: block;
+    flex: 1 1 0;
+    min-width: 0;
+    border-radius: 12px;
+  }
+
+  .section-fiches-link:focus-visible {
+    outline: 3px solid var(--color-teal);
+    outline-offset: 4px;
+  }
+
+  .section-fiches img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+
+  @media (max-width: 700px) {
+    .section-fiches {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  }
+</style>
